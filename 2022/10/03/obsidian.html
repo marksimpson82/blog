@@ -1,0 +1,837 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Taking notes with Obsidian - Mark’s Devblog</title>
+<meta name="description" content="How do you take notes?">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Mark's Devblog">
+<meta property="og:title" content="Taking notes with Obsidian">
+<meta property="og:url" content="https://marksimpson82.github.io/blog/2022/10/03/obsidian.html">
+
+
+  <meta property="og:description" content="How do you take notes?">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2022-10-03T00:00:00+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://marksimpson82.github.io/blog/2022/10/03/obsidian.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Mark's Devblog",
+      "url": "https://marksimpson82.github.io/blog/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/blog/feed.xml" type="application/atom+xml" rel="alternate" title="Mark's Devblog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/blog/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/blog/">
+          Mark's Devblog
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name"></h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Taking notes with Obsidian">
+    <meta itemprop="description" content="How do you take notes?">
+    <meta itemprop="datePublished" content="2022-10-03T00:00:00+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Taking notes with Obsidian
+</h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          9 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h2 id="how-do-you-take-notes">How do you take notes?</h2>
+
+<p>I’ve been programming professionally since ~2008, and I’ve tried quite a few different approaches during my career.</p>
+
+<h3 id="approach-pencil-and-paper">Approach: pencil and paper</h3>
+<p>There’s something nice about low technology note-taking. I used paper for a good chunk of my time at eeGeo/WRLD3D.</p>
+
+<p>Pros:</p>
+<ul>
+  <li>Using paper lets you (forces you!) to step away from the keyboard for a moment</li>
+  <li>You can take your pad elsewhere and prod at your thoughts elsewhere</li>
+  <li>There’s no real substitute for sketching diagrams quickly on paper</li>
+  <li>You can easily draw attention to more important ideas via highlighters etc.</li>
+</ul>
+
+<p>Cons:</p>
+<ul>
+  <li>Not searchable without a filing system, and even then it won’t be as good as grep</li>
+  <li>You need to file the notes somewhere if you want to keep them around</li>
+  <li>They take up space</li>
+  <li>You can’t easily copy paste via your computer</li>
+  <li>You can’t use hyperlinks or other embedded, digital resources</li>
+</ul>
+
+<h3 id="approach-shared-wiki">Approach: shared wiki</h3>
+<p>We were forced to use a wiki at Realtime Worlds to log our work notes for the day. The idea was that if we invented &amp; patented something novel, we’d have a trail of evidence.
+Similarly, if somebody tried to patent-troll us, we’d also have evidence to refute the claim.</p>
+
+<p>Pros:</p>
+<ul>
+  <li>It was actually kind of nice to have a formalised log of our work / thoughts</li>
+  <li>It was <em>somewhat</em> searchable</li>
+</ul>
+
+<p>Cons:</p>
+<ul>
+  <li>It was cumbersome to edit</li>
+  <li>The search was patchy</li>
+</ul>
+
+<p>On top of this, there were a few problems with <em>enforced &amp; public</em> note-taking (kind of conflated with the wiki model):</p>
+<ul>
+  <li>Having to produce one’s thoughts on demand was a burden</li>
+  <li>You couldn’t write honestly about things</li>
+</ul>
+
+<h3 id="approach-haphazard-txt-files">Approach: haphazard .txt files</h3>
+<p>For short-term tactical work, text files aren’t a bad choice. You can jot your thoughts down, add links to read and search through it later.
+I tended to just shove them in a .txt file named after the bug number, or the name of the feature I was working on. 
+Again, this is something I did a lot of at eeGeo/WRLD3D.</p>
+
+<p>It wasn’t perfect, but it did have its uses.</p>
+
+<p>Pros:</p>
+<ul>
+  <li>You can group notes by the topic easily enough</li>
+  <li>It’s searchable</li>
+</ul>
+
+<p>Cons:</p>
+<ul>
+  <li>Doesn’t support rich media</li>
+  <li>Without conventions &amp; some level of care, it becomes disorganised</li>
+</ul>
+
+<p>In my case, I tended to end up with a temp directory full of notes. I’d fish out the important-looking stuff and commit it somewhere (google doc, bug tracker, commit messages, comments, etc.) and the rest would rot.</p>
+
+<p>After a while, I’d have to switch computers and lose the rest. Not great. There’s been quite a few times where I came up with a pretty smart, novel approach to solving an interesting problem. I can’t remember the details.</p>
+
+<h3 id="approach-using-a-tool-or-a-hybrid-model">Approach: Using a tool (or a hybrid model)</h3>
+<p>I’ve been using <a href="https://obsidian.md/">Obsidian</a> since early 2022, and I’m really, really liking it.</p>
+
+<p>While I heartily recommend Obsidian, it’s not the only note-taking app in town. <a href="https://orgmode.org/">Org Mode</a> is another much talked about tool, for example.</p>
+
+<p>Why do I enjoy Obsidian? Well, it allows me to document anything and everything and keep to a routine.</p>
+
+<p>Pros:</p>
+<ul>
+  <li>It has sane defaults</li>
+  <li>Support for tagging &amp; linking between notes</li>
+  <li>Support for templated, daily notes</li>
+  <li>Support for images and other media</li>
+  <li>It has a plugin system</li>
+  <li>The app itself (on Windows at least) is fairly lightweight
+    <ul>
+      <li>27MB of RAM used on my Windows machine</li>
+    </ul>
+  </li>
+  <li>Multi-platform support (I use it on Windows &amp; MacOS)</li>
+  <li>Mobile support</li>
+  <li>Markdown format, so no crazy proprietary stuff
+    <ul>
+      <li>Which means you can read/write notes however you like</li>
+      <li>If you stop using Obsidian, your notes are in plaintext</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Cons:</p>
+<ul>
+  <li>Closed source</li>
+  <li>Over the ~8 months or so I’ve been using it, they’ve changed the style/layout a lot</li>
+  <li>Not everyone will like using a dedicated GUI app</li>
+  <li>If you use it professionally you have to pay $50 p/a</li>
+</ul>
+
+<h4 id="routine">Routine</h4>
+<p>Obsidian helped me to reinforce a routine. When I open Obsidian, it presents today’s daily note, which looks like this:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh"># Daily Notes</span>
+tags: #daily
+
+<span class="gu">## TODO</span>
+<span class="p">-</span> [ ] Daily walk
+<span class="p">-</span> [ ] Brush teeth at lunchtime
+
+<span class="gu">## General</span>
+</code></pre></div></div>
+<p>The act of checking off items definitely helps.</p>
+
+<p>My 2 items are currently:</p>
+<ol>
+  <li>Since COVID-19, lockdown and WFH started, I became a bit more … torpid. I <em>always</em> want to leave the house. Even if I’m doing other exercise, it’s important to keep moving via walking.</li>
+  <li>When I worked in an office, I brushed my teeth after lunch. I lost that habit after the office was torpedoed. My dentist has been nagging me about it.</li>
+</ol>
+
+<p>I now face the reality of my laziness via my daily notes; an unchecked box looks very bad. It’s just a walk. It’s literally just a 90-second brushing. Those boxes tend to get checked now.</p>
+
+<p>In addition to a daily template, Obsidian comes in really handy for noting things that I’d frequently forget.</p>
+
+<p>For example:</p>
+<h4 id="jobs-interviews--people">Jobs interviews &amp; people</h4>
+<p>I had a job interview at the end of 2021 (which I failed), and another 4 or 5 at the start of 2022. A few of those were early in the process after a few phone interviews, so I dropped out because I’d received offers.</p>
+
+<p>After that round of interviews concluded, pre-Obsidian me would’ve:</p>
+<ul>
+  <li>Had only a few emails and details to go on</li>
+  <li>Thrown out his notes (either because I formatted my PC, or because a notebook got binned)</li>
+  <li>Half-heartedly addressed the weaknesses I needed to look at</li>
+  <li>Barely remembered much about it</li>
+  <li>Probably not followed through</li>
+</ul>
+
+<p>Post-Obsidian me does this a lot better.</p>
+<ul>
+  <li>From each company, I know every person I spoke to, their job titles etc.
+    <ul>
+      <li>I also can remember the people who made a good impression on me and look them up in future!</li>
+    </ul>
+  </li>
+  <li>I have an overview of the interview process
+    <ul>
+      <li>How many stages</li>
+      <li>The questions they asked me</li>
+      <li>The answers I gave</li>
+      <li>My own thoughts on how I performed</li>
+    </ul>
+  </li>
+  <li>Why I didn’t get the job or why I withdrew from the process</li>
+  <li>Or if I did get an offer, exactly what it was</li>
+</ul>
+
+<p>It’s all tied together in a neat bundle and ready to be mined. Committing these thoughts to notes doesn’t take long, and I find writing about it provides a lot of opportunities for self-reflection.</p>
+
+<p>I had been working at my previous company for 11 years, so it was important to me that I didn’t let job-hunting details wash over me.</p>
+
+<h4 id="work-notes">Work notes</h4>
+<p>I’ve been working for Infinity Works since March 2022, and in that time I’ve had to learn new things rapidly.</p>
+
+<p>Note-taking has been useful for organising my thoughts, collecting links and writing my own take on the things I’ve learned.</p>
+
+<p>For example, the first gig involved <a href="https://www.databricks.com/">Databricks</a>, <a href="https://greatexpectations.io/">Great Expectations</a>, <a href="https://azure.microsoft.com/en-gb/products/devops/">Azure DevOps</a> and many other topics I’d never touched before.</p>
+
+<p>Writing was a really useful way to figure out how much I’d learned and how far I still had to go. It helped with prioritisation on what to learn, too. If I forgot something or lost my place, it was written down.</p>
+
+<h4 id="semi-automation-notes">Semi-automation notes</h4>
+<p>Have you ever installed &amp; configured software, but didn’t fully automate it? E.g. at work, you’d tend to have a machine image or a series of scripts to install everything just so. At home? Not so much. Too much effort for something you do once every couple of years.</p>
+
+<p>Can you remember:</p>
+<ul>
+  <li>Everything you need to back up before you wipe your machine?</li>
+  <li>The irritating Windows options you need to toggle?</li>
+  <li>All the programs you’ve got installed</li>
+  <li>The obscure configuration changes you made?</li>
+</ul>
+
+<p>It’s often said that the first step to automation is writing out a list. Notes are the sweet spot for infrequently performed tasks.</p>
+
+<p>E.g. here’s an excerpt from my Windows install notes (automating this would be overkill because it’s complicated and rarely gets used):</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">1.</span> Go to "Add or Remove Programs" and uninstall everything possible
+<span class="p">  1.</span> Can also use <span class="sb">`Remove-AppxPackage`</span> to do this (see below for Cortana)  
+<span class="p">2.</span> Go to Apps &amp; Features -&gt; Optional Features
+<span class="p">  1.</span> Uninstall unneeded programs
+<span class="p">3.</span> Taskbar
+<span class="p">  1.</span> Disable all taskbar integrations, like people/events/weather 
+<span class="p">  2.</span> Display all taskbar icons
+<span class="p">  3.</span> Don't combine taskbar entries
+<span class="p">  4.</span> Display full taskbar entries on all monitors
+<span class="p">4.</span> Start menu
+<span class="p">  1.</span> Delete everything, inc. live tiles etc
+<span class="p">  2.</span> Disable web search in the start menu (I think it was <span class="p">[</span><span class="nv">this</span><span class="p">](</span><span class="sx">https://www.bennetrichter.de/en/tutorials/windows-10-disable-web-search/</span><span class="p">)</span>)
+<span class="p">5.</span> Delete Cortana and other Windows Apps nonsense
+</code></pre></div></div>
+
+<p>Then an embedded powershell script to remove software components that I cribbed from other sources:</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Get-AppxPackage</span><span class="w"> </span><span class="nt">-allusers</span><span class="w"> </span><span class="nx">Microsoft.549981C3F5F10</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Remove-AppxPackage</span><span class="w">
+</span><span class="nx">Get-AppxPackage</span><span class="w"> </span><span class="nt">-allusers</span><span class="w"> </span><span class="nx">Microsoft.WindowsMaps</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Remove-AppxPackage</span><span class="w">
+</span><span class="nx">Get-AppxPackage</span><span class="w"> </span><span class="nt">-allusers</span><span class="w"> </span><span class="nx">Microsoft.People</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Remove-AppxPackage</span><span class="w">
+</span><span class="c"># etc</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Finally, I have a <a href="https://chocolatey.org/">chocolatey</a> script to install my staple programs along with a list of software that’s not available via chocolatey.</p>
+
+<p>This sort of thing is great. I would never remember many of these tips, and I’m free to mix in scripts with instructions as and when it makes sense.</p>
+
+<h4 id="random-things">Random things</h4>
+<p>I’ve written quite a few things over the last year, and keeping the notes has been very useful.</p>
+
+<p>For example:</p>
+<ul>
+  <li>Boiler problems / solutions, and cost/benefit tradeoffs of fixing vs. replacing
+    <ul>
+      <li>Along with niche sites that sell parts for my 2003 boiler!</li>
+      <li>I saved £150, and I have a list of other parts in case it fails again</li>
+    </ul>
+  </li>
+  <li>How to find a good value refurbished Aeron chair</li>
+  <li>Laser eye surgery options</li>
+  <li>Mortgage</li>
+  <li><a href="https://rootmy.tv/">Rooting my TV</a></li>
+  <li>Setting up <a href="https://www.openmediavault.org/">Open Media Vault</a> &amp; <a href="https://www.plex.tv/">Plex</a></li>
+  <li>Fixing my 2010 Kindle when it refused to login (Amazon support were useless, had to figure it out myself)</li>
+  <li>How to build a <a href="https://www.youtube.com/watch?v=l4uCRuO-Ayo">Corsi-Rosenthal Cube</a> (it was hard to find UK resources)</li>
+  <li>De-bloating a Lenovo tablet</li>
+  <li>Recording a few medical issues I’d been having, along with detailed timelines
+    <ul>
+      <li>I <em>really</em> wish I had done this in 2020 when COVID appeared! (I got long COVID, but now I can’t remember how long I was KO’ed by it)</li>
+    </ul>
+  </li>
+</ul>
+
+<p>The only downside to doing a lot of personal note-taking is that it saps the blogging energy.</p>
+
+<h2 id="helix">Helix</h2>
+<p>Oh, and I’ve also been using <a href="https://helix-editor.com/">Helix</a> to write a lot of my notes rather than Obsidian.</p>
+
+<p>Why? Well, it’s very lightweight, accessible from the terminal (which is always open) and I felt like taking my mediocre vim skills a bit further.</p>
+
+<p>I added the following alias to my <code class="language-plaintext highlighter-rouge">.bashrc</code>:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">alias </span><span class="nv">today</span><span class="o">=</span><span class="s2">"cd /c/work/notes &amp;&amp; ./today.sh"</span>
+</code></pre></div></div>
+
+<p>… which then calls this janky script (this is on Windows):</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<span class="nb">set</span> <span class="nt">-euo</span> pipefail
+  
+<span class="nb">readonly </span><span class="nv">today</span><span class="o">=</span>./daily/<span class="si">$(</span><span class="nb">date</span> +%Y<span class="si">)</span>/<span class="si">$(</span><span class="nb">date</span> +%m<span class="si">)</span>/<span class="si">$(</span><span class="nb">date</span> +%F<span class="si">)</span>.md
+  
+<span class="k">if</span> <span class="o">[[</span> <span class="o">!</span> <span class="nt">-f</span> <span class="s2">"</span><span class="nv">$today</span><span class="s2">"</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then
+  </span><span class="nb">echo</span> <span class="s2">"</span><span class="nv">$today</span><span class="s2"> doesn't yet exist; creating from template..."</span>
+  <span class="nb">cp</span> <span class="s2">"./daily/daily_template.md"</span> <span class="s2">"</span><span class="nv">$today</span><span class="s2">"</span>
+<span class="k">fi
+          
+</span>hx <span class="s2">"</span><span class="nv">$today</span><span class="s2">"</span>
+</code></pre></div></div>
+
+<p>I’m quite enjoying Helix, and it’s replaced vim for my utility editor (git commit messages, etc.).</p>
+
+<h2 id="appendix-synchronisingbacking-up">Appendix: synchronising/backing up</h2>
+<p>If you’ve got your notes on one PC, you still need to make them portable or, at the very least, back them up regularly.</p>
+
+<p>There are various ways to do this, and many of them work with with whatever digitised method you choose.</p>
+
+<p>Obsidian has sync as a paid feature, but there other free (or free-ish) ways of doing it:</p>
+<ul>
+  <li>Store your notes in a shared directory with Dropbox, Google Drive, OneDrive etc.</li>
+  <li>Add them to version control</li>
+</ul>
+
+<p>I personally store my work-related notes in Google Drive directory and/or OneDrive depending on the environment.</p>
+
+<p>For personal notes, I synch via a git repo. This is a little cumbersome, but I can live with it.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/blog/tags/helix" class="page__taxonomy-item" rel="tag">helix</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/note-taking" class="page__taxonomy-item" rel="tag">note-taking</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/obsidian" class="page__taxonomy-item" rel="tag">obsidian</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2022-10-03T00:00:00+00:00">October 3, 2022</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Taking+notes+with+Obsidian%20https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2022%2F10%2F03%2Fobsidian.html" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2022%2F10%2F03%2Fobsidian.html" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2022%2F10%2F03%2Fobsidian.html" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/blog/2021/11/04/dotnet5-sgen-parameters.html" class="pagination--pager" title="Parameterising sgen (aka the .NET Microsoft.XmlSerializer.Generator) via a .csproj PropertyGroup
+">Previous</a>
+    
+    
+      <a href="/blog/2022/11/13/herman-miller-aeron.html" class="pagination--pager" title="The Herman Miller Aeron (tall edition)
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2022/11/13/herman-miller-aeron.html" rel="permalink">The Herman Miller Aeron (tall edition)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">tl;dr
+
+  You may need to reduce the Aeron seat height or it’ll destroy your hamstrings
+  If you reduce your seat height, make sure your desk can accomodate i...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2021/11/04/dotnet5-sgen-parameters.html" rel="permalink">Parameterising sgen (aka the .NET Microsoft.XmlSerializer.Generator) via a .csproj PropertyGroup
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">The problem
+If you’ve landed on this post via searching the web, you probably already know what sgen.exe is, and what the 
+Microsoft.XmlSerializer.Generator ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2020/08/10/the-fundamentals-of-automated-testing-setup-structure.html" rel="permalink">The fundamentals of unit testing: Setup structure
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This post is part of a series on unit testing.
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2020/08/05/the-fundamentals-of-automated-testing-data-driven-tests.html" rel="permalink">The fundamentals of unit testing: Data-driven tests
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This post is part of a series on unit testing.
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/blog/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 Mark's Devblog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/blog/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

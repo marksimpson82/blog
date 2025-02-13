@@ -1,0 +1,583 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Code coverage: What it is and what it isn’t - Mark’s Devblog</title>
+<meta name="description" content="Coverage">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Mark's Devblog">
+<meta property="og:title" content="Code coverage: What it is and what it isn’t">
+<meta property="og:url" content="https://marksimpson82.github.io/blog/2009/03/30/code-coverage-what-it-is-and-what-it-isnt.html">
+
+
+  <meta property="og:description" content="Coverage">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2009-03-30T22:34:25+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://marksimpson82.github.io/blog/2009/03/30/code-coverage-what-it-is-and-what-it-isnt.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Mark's Devblog",
+      "url": "https://marksimpson82.github.io/blog/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/blog/feed.xml" type="application/atom+xml" rel="alternate" title="Mark's Devblog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/blog/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/blog/">
+          Mark's Devblog
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name"></h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Code coverage: What it is and what it isn’t">
+    <meta itemprop="description" content="Coverage">
+    <meta itemprop="datePublished" content="2009-03-30T22:34:25+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Code coverage: What it is and what it isn’t
+</h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h2 id="coverage">Coverage</h2>
+
+<p>I recently posted a <a href="http://stackoverflow.com/questions/695811/pitfalls-of-code-coverage/695888#695888">stack overflow answer</a> detailing why imposing coverage requirements can have a negative impact. I think it’s worth recycling here.</p>
+
+<h2 id="what-is-coverage">What is coverage?</h2>
+<p>In grossly simplified terms, code coverage tells you how much of your code was executed when your test suite (typically unit tests) is run. <a href="http://en.wikipedia.org/wiki/Code_coverage">There are different kinds of coverage</a>, but in my experience, most people seem to focus on lines of code as opposed to anything more complicated. I’m not going to delve into anything more complicated regarding what coverage is. There’s plenty of articles out there that explain it better than I can. Instead, I wish to describe some of the potential caveats that come with striving for high levels of coverage.</p>
+
+<h3 id="how-should-i-view-coverage">How should I view coverage?</h3>
+<p>Code coverage tells you what you definitely <strong>haven’t</strong> tested, not what you <strong>have.<br /> </strong></p>
+
+<p>Part of building a valuable unit test suite is finding the most important, high-risk code and asking hard questions of it. You want to make sure the tough stuff works as a priority. Coverage figures have no notion of the ‘importance’ of code, nor the quality of tests. High levels of coverage can be obtained by writing tests that assert on nothing meaningful or do not assert on anything at all, and yet it will be included in the coverage. The only thing coverage proves in these cases is that the code was run and didn’t throw an exception. Big deal.</p>
+
+<p>Many of the most important tests you will ever write are the tests that barely add any coverage at all.</p>
+
+<h3 id="in-context">In context</h3>
+<p>Today, I was writing some unit tests for part of a scheduler I’m creating. The first few tests I wrote (in a minute or two) probably obtained 85% coverage or more in one of my recurrence rules class - it’s a relatively small class with few dependencies.  The tests passed and I bathed in the glow of the NUnit’s green bar.</p>
+
+<p>However, although the obvious cases worked, obvious is not interesting. Obvious is not the stuff that generally fails, nor is it the logic that is hellish to debug (especially when you return to it months later and have to re-acquaint yourself with the code).
+I then spent about a half an hour writing test case after test case containing edge cases where dates overlapped slightly, or the initial scheduled date had not yet been reached, or the start date was after the end date etc. Red, red, red. Damn. Lots and lots of bugs.</p>
+
+<p>Most of them were simple errors that I could fix easily, but they were errors nonetheless. An hour or two later I had fixed my recurrence rules and also written even more tests for extra edge cases. In doing so, I probably added a paltry 5% to my coverage. So the 85% coverage looked really nice, but ultimately proved that the obvious cases worked. It was the <em>other</em> 5% of coverage that proved to be invaluable. The trouble is, to NCover or any piece of coverage software, each percentage point is indistinguishable from the next. Coverage is not qualitative.</p>
+
+<h3 id="more-potential-drawbacks">More potential drawbacks</h3>
+<p>Another problem with setting hard coverage targets is that developers may have to start bending over backwards to test their code to reach the appropriate levels of coverage. There’s making code testable (which I fully approve of!) and then there’s torture. If it is easy to test something up to 100% and you are writing meaningful and useful tests, go for it. However, in most situations the extra effort is just not worth it - there comes a point of diminishing returns beyond which the pain of eeking out those last few percentage points could be spent writing more code, or writing more useful tests for other code.</p>
+
+<p>Every assembly, class and method is different, so setting a <strong>rigid </strong>goal is something I disagree with, unless there’s a very good reason for it (e.g. You’re working at NASA writing the code that will fire the shuttle boosters…)</p>
+
+<h3 id="dont-confuse-quantity-and-quality">Don’t confuse quantity and quality</h3>
+<p>If you set an unrealistic goal, deadlines are approaching and the target looks hard to achieve, folk will just write rubbish tests to ‘top up’ to the target coverage levels. I’d much rather have a solid set of tests and 65% of coverage than down-the-middle tests and 95% coverage. If the 65% coverage tests exhaustively test a smaller, more important/fragile/regression prone part of a project, then they are much more valuable. Period.
+Just remember what the point of automated testing is - <strong>to help make sure your software works</strong>. A tick next to your coverage figure does not prove this. Good, varied testing goes a long way towards it, though.</p>
+
+<h3 id="what-coverage-is-good-for">What coverage <em>is</em> good for</h3>
+<p>Again, I tend to look at coverage as a coarse indicator of what definitely <strong>hasn’t</strong> been tested. If you find out that project x has no tests in area y, then it immediately becomes obvious that there’s a hole in the test suite. You know by the lack of coverage that tests should be written. Similarly, if I can look at a method body and some important paths are not being tested, then they stick out like a sore thumb. So, when properly applied, coverage can be a very useful tool for getting a snapshot of the testing status at multiple levels of granularity, but it should be used as a guide, not as an absolute measure.&lt;/div&gt;</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/blog/tags/coverage" class="page__taxonomy-item" rel="tag">coverage</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/testing" class="page__taxonomy-item" rel="tag">testing</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2009-03-30T22:34:25+00:00">March 30, 2009</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Code+coverage%3A+What+it+is+and+what+it+isn%27t%20https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2009%2F03%2F30%2Fcode-coverage-what-it-is-and-what-it-isnt.html" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2009%2F03%2F30%2Fcode-coverage-what-it-is-and-what-it-isnt.html" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2009%2F03%2F30%2Fcode-coverage-what-it-is-and-what-it-isnt.html" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/blog/2009/03/27/modding-avoid-making-the-same-mistakes-that-i-did-6.html" class="pagination--pager" title="Modding: Avoid making the same mistakes that I did #6
+">Previous</a>
+    
+    
+      <a href="/blog/2009/04/04/modding-avoid-making-the-same-mistakes-that-i-did-7.html" class="pagination--pager" title="Modding: Avoid making the same mistakes that I did #7
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2022/11/13/herman-miller-aeron.html" rel="permalink">The Herman Miller Aeron (tall edition)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">tl;dr
+
+  You may need to reduce the Aeron seat height or it’ll destroy your hamstrings
+  If you reduce your seat height, make sure your desk can accomodate i...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2022/10/03/obsidian.html" rel="permalink">Taking notes with Obsidian
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          9 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">How do you take notes?
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2021/11/04/dotnet5-sgen-parameters.html" rel="permalink">Parameterising sgen (aka the .NET Microsoft.XmlSerializer.Generator) via a .csproj PropertyGroup
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">The problem
+If you’ve landed on this post via searching the web, you probably already know what sgen.exe is, and what the 
+Microsoft.XmlSerializer.Generator ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2020/08/10/the-fundamentals-of-automated-testing-setup-structure.html" rel="permalink">The fundamentals of unit testing: Setup structure
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          6 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This post is part of a series on unit testing.
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/blog/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 Mark's Devblog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/blog/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

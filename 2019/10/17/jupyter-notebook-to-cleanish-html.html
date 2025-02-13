@@ -1,0 +1,641 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Jupyter Notebook to clean(ish) HTML - Mark’s Devblog</title>
+<meta name="description" content="I recently polled /r/competitiveoverwatch (aka /r/cow) users for their thoughts on Overwatch with regards to fun and balance. It was well-received on reddit, so I thought I’d do a quick write-up on the pros &amp; cons of using this approach.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Mark's Devblog">
+<meta property="og:title" content="Jupyter Notebook to clean(ish) HTML">
+<meta property="og:url" content="https://marksimpson82.github.io/blog/2019/10/17/jupyter-notebook-to-cleanish-html.html">
+
+
+  <meta property="og:description" content="I recently polled /r/competitiveoverwatch (aka /r/cow) users for their thoughts on Overwatch with regards to fun and balance. It was well-received on reddit, so I thought I’d do a quick write-up on the pros &amp; cons of using this approach.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2019-10-17T00:12:05+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://marksimpson82.github.io/blog/2019/10/17/jupyter-notebook-to-cleanish-html.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Mark's Devblog",
+      "url": "https://marksimpson82.github.io/blog/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/blog/feed.xml" type="application/atom+xml" rel="alternate" title="Mark's Devblog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/blog/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/blog/">
+          Mark's Devblog
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name"></h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Jupyter Notebook to clean(ish) HTML">
+    <meta itemprop="description" content="I recently polled /r/competitiveoverwatch (aka /r/cow) users for their thoughts on Overwatch with regards to fun and balance. It was well-received on reddit, so I thought I’d do a quick write-up on the pros &amp; cons of using this approach.">
+    <meta itemprop="datePublished" content="2019-10-17T00:12:05+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Jupyter Notebook to clean(ish) HTML
+</h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>I recently polled <a href="https://reddit.com/r/competitiveoverwatch">/r/competitiveoverwatch</a> (aka /r/cow) users for their thoughts on <a href="https://playoverwatch.com/en-gb/">Overwatch</a> with regards to fun and balance. It was well-received on reddit, so I thought I’d do a quick write-up on the pros &amp; cons of using this approach.</p>
+
+<p>You can <a href="https://defragdev.com/overwatch_surveys/2019_09/">read the survey</a> and also check out the <a href="https://github.com/marksimpson82/overwatch_survey">code on github</a>.</p>
+
+<h2 id="overview">Overview</h2>
+
+<p>The survey was created with <a href="https://www.google.com/forms/about/">Google Forms</a>, which produces a raw results <a href="https://www.google.com/sheets/about/">Google Sheets</a> spreadsheet. To analyse the data and generate the graphs, I used <a href="https://pandas.pydata.org/">pandas</a> and <a href="https://seaborn.pydata.org/">seaborn</a> in conjunction with <a href="https://jupyter.org/">Jypyter Notebook</a>, along with <a href="https://jekyllrb.com/">Jekyll</a> to generate fairly clean HTML &amp; CSS.</p>
+
+<p>Most of the pertinent commands are in one place: <a href="https://github.com/marksimpson82/overwatch_survey/blob/master/run_all.sh">run_all.sh</a></p>
+
+<h3 id="step-1-create-the-google-forms-survey">Step 1: Create the Google Forms survey</h3>
+
+<p>This was the most tedious part. While Google Forms is flexible, it also feels fairly clunky. On top of the general questions, I had to create 3 sets of questions per each Overwatch hero alongside the hero’s image:</p>
+
+<ol>
+  <li>Are they fun to play as?</li>
+  <li>Are they fun to play against?</li>
+  <li>Are they balanced?</li>
+</ol>
+
+<p>If there was an easy way of exporting a survey’s raw source (maybe JSON or XML), generating additional templated questions via a script and then re-importing it, I couldn’t see it.</p>
+
+<p>Instead, I created a self-contained Google Form that had the image &amp; the three questions. I then imported this into the parent form, renamed the fields and updated the image… for … all … 31 … heroes.</p>
+
+<p>It was boring, but only took an hour of grunt work.</p>
+
+<h3 id="step-2-export-the-responses-from-google-sheets">Step 2: Export the responses from Google Sheets</h3>
+
+<p>After running the survey, I had a great response: 1200 players took the time to answer it.</p>
+
+<p>Each Google Form has an associated Google Sheets results sheet. It’s simple to export to CSV.</p>
+
+<h3 id="step-3-create-a-more-queryable-data-format">Step 3: Create a more queryable data format</h3>
+
+<p>The original results .csv is a flat spreadsheet with 90+ uniquely-named columns like, “<span data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;I enjoy playing against Ashe&quot;}">I enjoy playing against Ashe</span>”, and a rating between 1.0 &amp; 5.0. This is pretty horrible for querying results, so I transformed the data into a more database-esque format: a single general responses table with a primary key, plus a hero responses table with a foreign key, hero name, response type [“playing_as”, “playing_against”, “balance” and “value”].</p>
+
+<p>This is the sort of quick hackery that is a <a href="https://github.com/marksimpson82/overwatch_survey/blob/master/overwatch_survey/split_into_tables.py">joy to do</a> in Python.</p>
+
+<h3 id="step-4-create-the-notebook">Step 4: Create the notebook</h3>
+
+<p>Not much to say here. Pandas &amp; Seaborn takes a bit of getting used to and there were a few transformations that I couldn’t figure out using idiomatic Pandas code, but the development process was fairly painless.</p>
+
+<p>I will say that there’s a few practices that I found useful, though:</p>
+
+<ul>
+  <li>Avoid file-scoped operations. I tended to wrap my data crunching &amp; graphing operations in functions, and avoided mutating data as much as possible.</li>
+  <li>Avoid using file-scoped variables as much as possible (it’s easy to rely on or mutate something that will have side-effects).</li>
+  <li>Get in the habit of clearing all output &amp; running all notebook cells.</li>
+  <li>If you’re writing something that is useful to a reader, put it in a Markdown cell.</li>
+</ul>
+
+<p>If I were creating a larger project with Notebook, I’d probably start making python modules &amp; calling into them rather than spamming them into the main Notebook page. I.e. don’t fall into the trap of treating Notebook files significantly differently to the usual way of writing Python code.</p>
+
+<h3 id="step-5-strip-unwanted-elements">Step 5: Strip unwanted elements</h3>
+
+<p>I didn’t want to have the code front and centre, as the survey results were not intended for a technical audience - the Python would just get in the way. I tried writing a template for nbconvert to strip out the Python code, but couldn’t get it working. Instead, I just wrote a quick ‘n’ dirty Python regex.</p>
+
+<h3 id="step-6-use-nbconvert--to-markdown">Step 6: Use nbconvert -to markdown</h3>
+
+<p>Why Markdown? Well, I tried nbconvert -to html. While the results look pretty good at a glance, it generates a page with bloated, inline CSS (hundreds and hundreds of lines) along with base64-encoded images that are directly embedded in the HTML.</p>
+
+<p>While this is great for a drag ‘n’ drop experience and for sharing intermediate results (there’s no worrying about forgetting to include assets), it’s not something I would be comfortable serving from my website.</p>
+
+<p>The generated HTML was ~750KB, whereas a markdown variant came in under 270KB!</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jupyter nbconvert <span class="nt">--to</span> markdown <span class="se">\</span>
+  overwatch_survey/analysis.ipynb <span class="nt">--output-dir</span> static_site
+</code></pre></div></div>
+
+<p>OK, so we have fairly clean Markdown, but now what?</p>
+
+<h3 id="step-7-use-jekyll-to-generate-html">Step 7: Use Jekyll to generate HTML</h3>
+
+<p>Doing any kind of webdev install on Windows is a pain, but … oh well. Jekyll is a solid choice and it works well. It also generates much better HTML for my purposes than nbconvert.<span class="pl-s"><span class="pl-pds"><br /> </span></span></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">(</span><span class="nb">cd </span>static_site <span class="o">&amp;&amp;</span> bundle <span class="nb">exec </span>jekyll serve<span class="o">)</span>
+</code></pre></div></div>
+
+<p>That’s all I have to say about that.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/blog/tags/dataviz" class="page__taxonomy-item" rel="tag">dataviz</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/jekyll" class="page__taxonomy-item" rel="tag">jekyll</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/jupyter-notebook" class="page__taxonomy-item" rel="tag">jupyter notebook</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/notebook" class="page__taxonomy-item" rel="tag">notebook</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/overwatch" class="page__taxonomy-item" rel="tag">overwatch</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/pandas" class="page__taxonomy-item" rel="tag">pandas</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/reddit" class="page__taxonomy-item" rel="tag">reddit</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/seaborn" class="page__taxonomy-item" rel="tag">seaborn</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-10-17T00:12:05+00:00">October 17, 2019</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Jupyter+Notebook+to+clean%28ish%29+HTML%20https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2019%2F10%2F17%2Fjupyter-notebook-to-cleanish-html.html" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2019%2F10%2F17%2Fjupyter-notebook-to-cleanish-html.html" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2019%2F10%2F17%2Fjupyter-notebook-to-cleanish-html.html" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/blog/2018/08/22/ms-wheel-mouse-optical-redux-august-2018.html" class="pagination--pager" title="MS Wheel Mouse Optical Redux (August 2018)
+">Previous</a>
+    
+    
+      <a href="/blog/2020/03/29/nvidia-g-sync-black-screen-when-alt-tabbing.html" class="pagination--pager" title="Nvidia + G-SYNC - Black screen when alt-tabbing
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2022/11/13/herman-miller-aeron.html" rel="permalink">The Herman Miller Aeron (tall edition)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">tl;dr
+
+  You may need to reduce the Aeron seat height or it’ll destroy your hamstrings
+  If you reduce your seat height, make sure your desk can accomodate i...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2022/10/03/obsidian.html" rel="permalink">Taking notes with Obsidian
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          9 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">How do you take notes?
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2021/11/04/dotnet5-sgen-parameters.html" rel="permalink">Parameterising sgen (aka the .NET Microsoft.XmlSerializer.Generator) via a .csproj PropertyGroup
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">The problem
+If you’ve landed on this post via searching the web, you probably already know what sgen.exe is, and what the 
+Microsoft.XmlSerializer.Generator ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2020/08/10/the-fundamentals-of-automated-testing-setup-structure.html" rel="permalink">The fundamentals of unit testing: Setup structure
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          6 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This post is part of a series on unit testing.
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/blog/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 Mark's Devblog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/blog/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

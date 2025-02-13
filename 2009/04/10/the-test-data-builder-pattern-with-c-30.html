@@ -1,0 +1,679 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>The Test Data Builder pattern with C# 3.0 - Mark’s Devblog</title>
+<meta name="description" content="Update">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Mark's Devblog">
+<meta property="og:title" content="The Test Data Builder pattern with C# 3.0">
+<meta property="og:url" content="https://marksimpson82.github.io/blog/2009/04/10/the-test-data-builder-pattern-with-c-30.html">
+
+
+  <meta property="og:description" content="Update">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2009-04-10T00:53:14+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://marksimpson82.github.io/blog/2009/04/10/the-test-data-builder-pattern-with-c-30.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Mark's Devblog",
+      "url": "https://marksimpson82.github.io/blog/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/blog/feed.xml" type="application/atom+xml" rel="alternate" title="Mark's Devblog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/blog/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/blog/">
+          Mark's Devblog
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name"></h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="The Test Data Builder pattern with C# 3.0">
+    <meta itemprop="description" content="Update">
+    <meta itemprop="datePublished" content="2009-04-10T00:53:14+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">The Test Data Builder pattern with C# 3.0
+</h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p><strong>Update</strong></p>
+
+<p>Since writing this, I’ve come to prefer the original method chaining style. While the property initialiser style works very well for simple builders, the original method chaining style works a bit better if you have nested builders. See the link in this post for the original; it’s more versatile.</p>
+
+<h3 id="the-problem">The problem</h3>
+
+<p>If you write automated tests, then you are bound to have come across a situation where, during the course of testing your classes, you have to configure them in different ways. This difference may be slight (say, varying one argument passed into a constructor every time), but it is enough to make instantiating the objects a pain. You can’t use a common setup method to make life easier, so that leaves you with two obvious options:</p>
+
+<ol>
+  <li>Instantiate the objects via a direct constructor call</li>
+  <li>Abstract the creation a little and use multiple factory methods</li>
+</ol>
+
+<h3 id="drawbacks">Drawbacks</h3>
+
+<p>The first option is verbose, cumbersome and brittle. Every time the constructor changes or its rules change (e.g. “parameter string houseName must not contain spaces”), you’ll need to update the tests to use the new form. If you have scores of calls, writing and maintaining the tests can consume a lot of time, plus it’s tedious.</p>
+
+<p>The second option may seem appealing, but it also has shortcomings. This is the so called “Object Mother” pattern. You basically have some factory methods (or a test class) that returns objects in various configurations. When you have method names like “CreateHouseWithKitchenSinkAndStairs”, “CreateHouseWIthKitchenSinkAndRoof” and “Create HouseWithRoof” (or equivalent overloaded methods) then you’ll recognise this.</p>
+
+<p>Depending on how much method re-use you can share between tests, this may also be brittle and a lot of effort to maintain. Both ways of doing things also lack clarity when lots of arguments are being passed around - the intent of the test (read: the <em>interesting</em> argument[s]) can be hidden by the noise of setting up safe defaults. E.g. If you have 10 ‘normal’ objects and one badly formatted string that you’re using to make sure that an exception occurs, you want to focus on the argument that will cause the exception, not other parts.</p>
+
+<h3 id="test-data-builders">Test Data Builders</h3>
+
+<p>So… what is this mythical Test Data Builder pattern? It’s actually quite simple, though the syntax can look strange if you haven’t come across fluent interfaces before.</p>
+
+<p>A Test Data Builder is an extension of a standard factory method. The difference between a standard factory and a builder is the way that the builder wires things up. A factory typically has a “Create” call which creates an instance of an object (or objects) in pre-defined configurations, or with some customisability provided via arguments in the Create call, or injected into the factory’s constructor.</p>
+
+<p>A TDB varies this approach by setting up default, safe values to be used to instantiate the class under test. When the builder’s constructor runs, it creates these defaults and stores them as fields. There is usually a one to one correspondence of the class under test’s parameter list and the values stored in the builder.</p>
+
+<p>The cool part is that anyone using the TDB can selectively modify these values by calling methods or setting properties on the TDB. Finally, when the TDB has been configured satisfactorily for the test, its Build method is called, injecting its fields into the class under test’s constructor as arguments.</p>
+
+<p>Nat Pryce posted <a href="http://www.natpryce.com/articles/000714.html">an excellent article on Test Data Builders</a> so I would implore you to read it before reading the rest of this post.</p>
+
+<h3 id="terser-is-more-gooder---c-30">Terser is more gooder - C# 3.0</h3>
+
+<p>Once I’d got my head around the strange fluent interface syntax, I found that example to be invaluable. It got me thinking: what if we could write these builders in an even more concise fashion? Well, we can. C# 3.0 can go one step further and, through the use of object initialisers, eliminate the need for method chaining. This results in terser syntax still.</p>
+
+<p>It’s simple: Instead of using a method per value change, we use a property instead. Since object initialisers are run immediately after a constructor and are nicely grouped, it means we can create and configure our builder in one step.</p>
+
+<p>The following code is provided merely to illustrate the syntax (there’s not much point in using a TDB on a class with so few parameters). Here’s an overly simple example of a Person class to test.</p>
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">/// &lt;summary&gt;The class under test&lt;/summary&gt;</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Person</span>
+<span class="p">{</span>
+  <span class="k">private</span> <span class="k">readonly</span> <span class="kt">string</span> <span class="n">m_name</span><span class="p">;</span>
+  <span class="k">private</span> <span class="k">readonly</span> <span class="n">DateTime</span> <span class="n">m_dateOfBirth</span><span class="p">;</span>
+  <span class="k">private</span> <span class="k">readonly</span> <span class="kt">string</span> <span class="n">m_address</span><span class="p">;</span>
+
+  <span class="k">public</span> <span class="nf">Person</span><span class="p">(</span><span class="kt">string</span> <span class="n">_name</span><span class="p">,</span> <span class="n">DateTime</span> <span class="n">_dateOfBirth</span><span class="p">,</span> <span class="kt">string</span> <span class="n">_address</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="nf">ValidateDateOfBirth</span><span class="p">(</span><span class="n">_dateOfBirth</span><span class="p">);</span>
+    <span class="nf">ValidatePostCode</span><span class="p">(</span><span class="n">_address</span><span class="p">);</span> <span class="c1">// etc.        </span>
+    
+    <span class="n">m_name</span> <span class="p">=</span> <span class="n">_name</span><span class="p">;</span>
+    <span class="n">m_dateOfBirth</span> <span class="p">=</span> <span class="n">_dateOfBirth</span><span class="p">;</span>
+    <span class="n">m_address</span> <span class="p">=</span> <span class="n">_address</span><span class="p">;</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>Here’s the builder. Notice that it has 3 auto properties that match the Person class’s constructor parameter names and types. Default values are instantiated in the constructor, and the properties allow test writers to swap out the defaults for their own specific values.</p>
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">/// &lt;summary&gt;Test data builder for testing the Person class&lt;/summary&gt;</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">PersonTestBuilder</span>
+<span class="p">{</span>
+  <span class="k">public</span> <span class="kt">string</span> <span class="n">Name</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+  <span class="k">public</span> <span class="n">DateTime</span> <span class="n">DateOfBirth</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+  <span class="k">public</span> <span class="kt">string</span> <span class="n">Address</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+
+  <span class="k">public</span> <span class="nf">PersonTestBuilder</span><span class="p">()</span>
+  <span class="p">{</span>
+    <span class="n">Name</span> <span class="p">=</span> <span class="s">"DefaultName"</span><span class="p">;</span>
+    <span class="n">Address</span> <span class="p">=</span> <span class="s">"DefaultAddress"</span><span class="p">;</span>
+    <span class="n">DateOfBirth</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">DateTime</span><span class="p">(</span><span class="m">1920</span><span class="p">,</span> <span class="m">8</span><span class="p">,</span> <span class="m">15</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="k">public</span> <span class="n">Person</span> <span class="nf">Build</span><span class="p">()</span>
+  <span class="p">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">Person</span><span class="p">(</span><span class="n">Name</span><span class="p">,</span> <span class="n">Address</span><span class="p">,</span> <span class="n">DateOfBirth</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Finally, here’s the test code itself. Notice that the only arguments that are varied are the ones that are named in the test. If the builder’s property is not set, the defaults held in the builder are used to construct the instance of the class under test.</p>
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">/// &lt;summary&gt;The actual tests for the person class&lt;/summary&gt;</span>
+<span class="p">[</span><span class="n">TestFixture</span><span class="p">]</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">PersonTests</span>
+<span class="p">{</span>
+  <span class="p">[</span><span class="n">Test</span><span class="p">]</span>
+  <span class="p">[</span><span class="nf">ExpectedException</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="n">RidiculousAgeException</span><span class="p">),</span> <span class="n">ExpectedMessage</span> <span class="p">=</span> <span class="s">"... etc"</span><span class="p">)]</span>
+  <span class="k">public</span> <span class="k">void</span> <span class="nf">Constructor_DateOfBirthInvalid_ThrowsExceptionTest</span><span class="p">()</span>
+  <span class="p">{</span>
+    <span class="k">new</span> <span class="n">PersonTestBuilder</span>
+    <span class="p">{</span>
+      <span class="c1">// Notice that this is now the sole focus!</span>
+      <span class="n">DateOfBirth</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">DateTime</span><span class="p">(</span><span class="m">1200</span><span class="p">,</span> <span class="m">10</span><span class="p">,</span> <span class="m">15</span><span class="p">)</span>
+      <span class="p">}</span>
+    <span class="p">}.</span><span class="nf">Build</span><span class="p">();</span>
+  <span class="p">}</span>
+
+  <span class="p">[</span><span class="n">Test</span><span class="p">]</span>
+  <span class="k">public</span> <span class="k">void</span> <span class="nf">Constructor_AddressTest</span><span class="p">()</span>
+  <span class="p">{</span>
+    <span class="n">Person</span> <span class="n">testPerson</span> <span class="p">=</span> <span class="k">new</span> <span class="n">PersonTestBuilder</span>
+    <span class="p">{</span>
+      <span class="n">Address</span> <span class="p">=</span> <span class="s">"10 Bigglesworth Lane"</span><span class="p">,</span>
+    <span class="p">}.</span><span class="nf">Build</span><span class="p">();</span>
+
+    <span class="n">Assert</span><span class="p">.</span><span class="nf">That</span><span class="p">(</span><span class="n">testPerson</span><span class="p">.</span><span class="n">Address</span><span class="p">,</span>
+      <span class="n">Is</span><span class="p">.</span><span class="nf">EqualTo</span><span class="p">(</span><span class="s">"10 Bigglesworth Lane"</span><span class="p">));</span>  
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>If any of this is unclear, just paste the code into your IDE and step through it in your debugger to see what’s happening (you’ll have to remove the non existent methods &amp; exception test, obviously!)</p>
+
+<h3 id="summary">Summary</h3>
+
+<p>I’ve found the following advantages when using this pattern in tests with large amounts of setup and little commonality in object construction:</p>
+
+<ol>
+  <li>Less fragile. Since object creation is centralised and uses safe values by default, tests are more resistant to change compared to direct constructor calls.</li>
+  <li>Terser test code (extremely important when setup is complicated)</li>
+  <li>The intent of the test is clearer. There is less noise in test code, so you can more easily pick out the arguments/interactions of interest.</li>
+</ol>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/blog/tags/builder" class="page__taxonomy-item" rel="tag">builder</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/c" class="page__taxonomy-item" rel="tag">c#</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/patterns" class="page__taxonomy-item" rel="tag">patterns</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/testing" class="page__taxonomy-item" rel="tag">testing</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2009-04-10T00:53:14+00:00">April 10, 2009</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=The+Test+Data+Builder+pattern+with+C%23+3.0%20https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2009%2F04%2F10%2Fthe-test-data-builder-pattern-with-c-30.html" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2009%2F04%2F10%2Fthe-test-data-builder-pattern-with-c-30.html" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2009%2F04%2F10%2Fthe-test-data-builder-pattern-with-c-30.html" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/blog/2009/04/05/testing-gotchas-weak-references.html" class="pagination--pager" title="Testing gotchas - c# Weak References
+">Previous</a>
+    
+    
+      <a href="/blog/2009/04/18/unit-testing-is-programming.html" class="pagination--pager" title="The pride of a programmer
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2022/11/13/herman-miller-aeron.html" rel="permalink">The Herman Miller Aeron (tall edition)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">tl;dr
+
+  You may need to reduce the Aeron seat height or it’ll destroy your hamstrings
+  If you reduce your seat height, make sure your desk can accomodate i...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2022/10/03/obsidian.html" rel="permalink">Taking notes with Obsidian
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          9 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">How do you take notes?
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2021/11/04/dotnet5-sgen-parameters.html" rel="permalink">Parameterising sgen (aka the .NET Microsoft.XmlSerializer.Generator) via a .csproj PropertyGroup
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">The problem
+If you’ve landed on this post via searching the web, you probably already know what sgen.exe is, and what the 
+Microsoft.XmlSerializer.Generator ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2020/08/10/the-fundamentals-of-automated-testing-setup-structure.html" rel="permalink">The fundamentals of unit testing: Setup structure
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          6 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This post is part of a series on unit testing.
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/blog/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 Mark's Devblog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/blog/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,577 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Internals: To test, or not to test? - Mark’s Devblog</title>
+<meta name="description" content="Prepare for some flimsy and strange analogies.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Mark's Devblog">
+<meta property="og:title" content="Internals: To test, or not to test?">
+<meta property="og:url" content="https://marksimpson82.github.io/blog/2009/10/09/internals-to-test-or-not-to-test.html">
+
+
+  <meta property="og:description" content="Prepare for some flimsy and strange analogies.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2009-10-09T01:01:06+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://marksimpson82.github.io/blog/2009/10/09/internals-to-test-or-not-to-test.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Mark's Devblog",
+      "url": "https://marksimpson82.github.io/blog/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/blog/feed.xml" type="application/atom+xml" rel="alternate" title="Mark's Devblog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/blog/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/blog/">
+          Mark's Devblog
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name"></h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Internals: To test, or not to test?">
+    <meta itemprop="description" content="Prepare for some flimsy and strange analogies.">
+    <meta itemprop="datePublished" content="2009-10-09T01:01:06+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Internals: To test, or not to test?
+</h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>Prepare for some flimsy and strange analogies.</p>
+
+<p>I’ve been reading a few stackoverflow questions dealing with whether you should test the guts of a system as well as the public API. Most of the people who advocated never testing anything but the main class APIs seemed to talk as if these APIs were extremely coarse-grained and any change to the internals would result in major breaking changes to the tests. This strikes me as somewhat strange, as it’s often not the case in my (admittedly limited) experience.</p>
+
+<p>On the other hand, many of the developers who advocated testing the implementation details also advocated test-driven development (TDD); that’s when the penny dropped. To me, this is a good illustration of why designing for testability can make change less painful. Sometimes I cringe when I hear the phrase “agile” bandied about, but it rings true here.</p>
+
+<h3 id="little-bitty-pieces">Little, bitty pieces</h3>
+
+<p>Designing for testability in conjunction with TDD tends to produce loosely coupled classes that have very few responsibilities. You trade more complicated wiring and interactions for unit isolation and simplicity. In the majority of cases, I feel it is an attractive proposition. Instead of one 3000 line class that does everything, I end up with 25 x 50 line classes and the odd bigger one here and there.</p>
+
+<p>Complicated behaviour is usually achieved through composition (inversion of control using constructor injection) and delegation. I consider most of my inner classes to be implementation details, because the user doesn’t get to do anything with them. They’re off sitting in a library somewhere; they’re not exposed to the user. The user gets a hold of the top level class that tells the innards to do the real work (instead of the 3k line class that does <em>everything</em>). I can take any unit in the system off the shelf and test it without a struggle.</p>
+
+<p>So, who is going to suffer more breaking changes and hardship if they test the internals? Is it the developer who writes the all-singing, all-dancing monolithic class, or the developer who writes numerous, small, simple classes that can easily be tested in isolation without any fuss? Since you’re reading a testing blog, I think you know what I’m going to say, and it’s not going to be the twisted brain-wrong of a one-off man mental*.</p>
+
+<h3 id="big-is-awkward">Big is awkward</h3>
+
+<p>Large classes are harder to understand, maintain, refactor and test thoroughly. Furthermore, it is my experience that the biggest classes tend to grow and grow. The bigger it grows, the more ungainly it becomes. Gangly limbs poke out every side; sharp edges are present in abundance. It’ll probably stick the heid on you or <a href="http://www.imdb.com/character/ch0029856/quotes">punch you into paralysis</a>.</p>
+
+<p>Have you ever picked up a huge class and been tasked with adding new functionality and testing it while you go? It’s painful. By the time you’ve worked out which tightrope you’ve got to walk (and fallen off it 20 times due to the principle of <em>most</em> surprise), you’ve wasted a lot of time adding in the new functionality and even more time writing the tests.</p>
+
+<h3 id="small-is-beautiful">Small is beautiful</h3>
+
+<p>Contrast that to a system where you just add a method or two in a simple class (or add a new one) and the maintenance headache is reduced to a dull ache. If it’s easy to write, it’s easier to understand, test, maintain, refactor and - just as importantly - <strong>it’s even easier to throw away</strong>. I don’t get attached to tiny classes or their respective unit tests. They’re like tic-tacs; if I lose one or five, I shrug. Big deal. I get some new ones. Open for delete. Don’t cry you buffoon, it’s just a tic tac.</p>
+
+<p>Misko Hevery recently <a href="http://misko.hevery.com/2009/10/01/cost-of-testing/">posted something interesting</a> on his testing breakdown and, while most of us won’t reach his level of testing efficiency, it’s an interesting read. Misko states that the vast majority of his time is spent writing production code, <strong>not</strong> test code. Yes, the ratio of lines of test and production code produced is almost 1:1, but the time invested is wildly different. Test code is usually verbose, but it’s easy to write out when your classes are small and you test in lockstep.</p>
+
+<p>In summary, I believe testing the guts of your classes can be a worthwhile approach, but designing for testability is paramount when doing so.</p>
+
+<p><a href="http://www.imdb.com/character/ch0017429/quotes">*</a></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/blog/tags/testing" class="page__taxonomy-item" rel="tag">testing</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2009-10-09T01:01:06+00:00">October 9, 2009</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Internals%3A+To+test%2C+or+not+to+test%3F%20https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2009%2F10%2F09%2Finternals-to-test-or-not-to-test.html" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2009%2F10%2F09%2Finternals-to-test-or-not-to-test.html" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2009%2F10%2F09%2Finternals-to-test-or-not-to-test.html" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/blog/2009/09/28/strongly-typed-commandline-arguments.html" class="pagination--pager" title="Strongly typed commandline arguments
+">Previous</a>
+    
+    
+      <a href="/blog/2009/10/26/is-your-test-code-readable.html" class="pagination--pager" title="Is your test code readable?
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2022/11/13/herman-miller-aeron.html" rel="permalink">The Herman Miller Aeron (tall edition)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">tl;dr
+
+  You may need to reduce the Aeron seat height or it’ll destroy your hamstrings
+  If you reduce your seat height, make sure your desk can accomodate i...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2022/10/03/obsidian.html" rel="permalink">Taking notes with Obsidian
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          9 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">How do you take notes?
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2021/11/04/dotnet5-sgen-parameters.html" rel="permalink">Parameterising sgen (aka the .NET Microsoft.XmlSerializer.Generator) via a .csproj PropertyGroup
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">The problem
+If you’ve landed on this post via searching the web, you probably already know what sgen.exe is, and what the 
+Microsoft.XmlSerializer.Generator ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2020/08/10/the-fundamentals-of-automated-testing-setup-structure.html" rel="permalink">The fundamentals of unit testing: Setup structure
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          6 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This post is part of a series on unit testing.
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/blog/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 Mark's Devblog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/blog/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

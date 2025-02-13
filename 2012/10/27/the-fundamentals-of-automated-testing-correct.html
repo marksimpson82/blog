@@ -1,0 +1,609 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>The fundamentals of unit testing: Correct - Mark’s Devblog</title>
+<meta name="description" content="This post is part of a series on unit testing.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Mark's Devblog">
+<meta property="og:title" content="The fundamentals of unit testing: Correct">
+<meta property="og:url" content="https://marksimpson82.github.io/blog/2012/10/27/the-fundamentals-of-automated-testing-correct.html">
+
+
+  <meta property="og:description" content="This post is part of a series on unit testing.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2012-10-27T19:50:56+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://marksimpson82.github.io/blog/2012/10/27/the-fundamentals-of-automated-testing-correct.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Mark's Devblog",
+      "url": "https://marksimpson82.github.io/blog/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/blog/feed.xml" type="application/atom+xml" rel="alternate" title="Mark's Devblog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/blog/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/blog/">
+          Mark's Devblog
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name"></h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="The fundamentals of unit testing: Correct">
+    <meta itemprop="description" content="This post is part of a series on unit testing.">
+    <meta itemprop="datePublished" content="2012-10-27T19:50:56+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">The fundamentals of unit testing: Correct
+</h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>This post is <a href="/blog/2012/10/24/the-fundamentals-of-automated-testing-series.html">part of a series</a> on unit testing.</p>
+
+<p>Once you’ve decided what you’re going to test, chosen a good name and started to write the code, the next step is to make sure that the test is purposeful and correct. This is a simple tip and largely common sense.</p>
+
+<h2 id="does-the-test-codes-functionality-match-its-name">Does the test code’s functionality match its name?</h2>
+
+<p>It is simple to accidentally write a test that purports to test one thing, but actually tests another. E.g.</p>
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="n">Test</span><span class="p">]</span>  
+<span class="k">public</span> <span class="k">void</span> <span class="nf">model_is_loaded_correctly_from_stream</span><span class="p">()</span>  
+<span class="p">{</span>  
+ <span class="c1">// Arrange  </span>
+ <span class="kt">var</span> <span class="n">resourceLoader</span> <span class="p">=</span> <span class="nf">CreateResourceLoader</span><span class="p">();</span>  
+ <span class="kt">var</span> <span class="n">modelDataStream</span> <span class="p">=</span> <span class="nf">CreateModelDataStream</span><span class="p">();</span>
+
+ <span class="c1">// Act  </span>
+ <span class="kt">var</span> <span class="n">loadedResource</span> <span class="p">=</span> <span class="n">resourceLoader</span><span class="p">.</span><span class="nf">LoadFromStream</span><span class="p">(</span><span class="n">modelDataStream</span><span class="p">);</span> <span class="c1">// fine so far</span>
+
+ <span class="c1">// Assert  </span>
+ <span class="n">Assert</span><span class="p">.</span><span class="nf">That</span><span class="p">(</span><span class="n">resourceLoader</span><span class="p">.</span><span class="n">LoadedResources</span><span class="p">,</span> <span class="n">Is</span><span class="p">.</span><span class="nf">EqualTo</span><span class="p">(</span><span class="m">1</span><span class="p">));</span> <span class="c1">// buh?!  </span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>In this test, we can see that it claims to test that loading a model from a stream returns a valid resource. However, the test is then asserting that the loaded resources count has increased. It is not checking the returned resource for correctness. Either the test name is out of date, or it is not testing the correct thing.</p>
+
+<p>If it is the former case, we should rename the test to “loading a model increments the loaded resources count”. If it is the latter case, we should change the test such that we are asserting on the model’s state. How do you know the model has been loaded correctly if you’re not inspecting its vertices, indices and UVs?</p>
+
+<p>If we are misled by our test names, it is irritating because it looks like something is covered, but it’s not. If we’re asserting on the wrong stuff, then our test won’t save us when the unit of code malfunctions. Maybe it’s already bugged.</p>
+
+<h2 id="is-the-assert-meaningful">Is the Assert meaningful?</h2>
+
+<p>All tests should assert against some meaningful result. Put simply, if a test does not prove much, then it is not worth writing or maintaining.</p>
+
+<p>Here is an example of a test that looks useful but, on closer inspection, is doesn’t really prove much at all.</p>
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="n">Test</span><span class="p">]</span>  
+<span class="k">public</span> <span class="k">void</span> <span class="nf">game_properties_are_correctly_serialized</span><span class="p">()</span>  
+<span class="p">{</span>  
+ <span class="c1">// Arrange  </span>
+ <span class="kt">var</span> <span class="n">currentLevel</span> <span class="p">=</span> <span class="m">4</span><span class="p">;</span>  
+ <span class="kt">var</span> <span class="n">playerName</span> <span class="p">=</span> <span class="s">"Steve"</span><span class="p">;</span>  
+ <span class="kt">var</span> <span class="n">game</span> <span class="p">=</span> <span class="nf">CreateGame</span><span class="p">(</span><span class="n">playerName</span><span class="p">,</span> <span class="n">currentLevel</span><span class="p">);</span>  
+ <span class="kt">var</span> <span class="n">serializer</span> <span class="p">=</span> <span class="nf">CreateGamePersistence</span><span class="p">();</span>  
+  
+ <span class="k">using</span><span class="p">(</span><span class="n">Stream</span> <span class="n">stream</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">MemoryStream</span><span class="p">())</span>  
+ <span class="p">{</span>  
+ <span class="c1">// Act  </span>
+ <span class="n">serializer</span><span class="p">.</span><span class="nf">Save</span><span class="p">(</span><span class="n">game</span><span class="p">,</span> <span class="n">stream</span><span class="p">);</span>  
+ <span class="p">}</span>  
+  
+ <span class="n">Assert</span><span class="p">.</span><span class="nf">That</span><span class="p">(</span><span class="k">true</span><span class="p">,</span> <span class="n">Is</span><span class="p">.</span><span class="n">True</span><span class="p">)</span> <span class="c1">// WHAT?!?!?  </span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>I’ve seen the <code class="language-plaintext highlighter-rouge">Assert true == true</code> anti-pattern numerous times. If the assert is missing or tells us nothing useful, the chances are the test isn’t going to prove much, so why are some developers compelled to do it? My guess is that people think, “hmm, I’ve written a test with no asserts, there we go”. If you ever get tempted to do this, don’t! It’s a sign that something is wrong.</p>
+
+<p><strong>Note</strong>: it’s sometimes useful to have methods like this to act as surrogate Main() methods so we can invoke them via a test runner for easy debugging but, in general, it’s not a terribly good idea and you wouldn’t want to run these tests as a part of your normal development workflow.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/blog/tags/fundamentals-of-unit-testing" class="page__taxonomy-item" rel="tag">fundamentals of unit testing</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/testing" class="page__taxonomy-item" rel="tag">testing</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/tips" class="page__taxonomy-item" rel="tag">tips</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2012-10-27T19:50:56+00:00">October 27, 2012</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=The+fundamentals+of+unit+testing%3A+Correct%20https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2012%2F10%2F27%2Fthe-fundamentals-of-automated-testing-correct.html" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2012%2F10%2F27%2Fthe-fundamentals-of-automated-testing-correct.html" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2012%2F10%2F27%2Fthe-fundamentals-of-automated-testing-correct.html" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/blog/2012/10/25/the-fundamentals-of-automated-testing-narrow-focused.html" class="pagination--pager" title="The fundamentals of unit testing: Narrow &amp; Focused
+">Previous</a>
+    
+    
+      <a href="/blog/2012/10/27/the-fundamentals-of-automated-testing-spring-the-trap.html" class="pagination--pager" title="The fundamentals of unit testing: Spring The Trap
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2022/11/13/herman-miller-aeron.html" rel="permalink">The Herman Miller Aeron (tall edition)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">tl;dr
+
+  You may need to reduce the Aeron seat height or it’ll destroy your hamstrings
+  If you reduce your seat height, make sure your desk can accomodate i...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2022/10/03/obsidian.html" rel="permalink">Taking notes with Obsidian
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          9 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">How do you take notes?
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2021/11/04/dotnet5-sgen-parameters.html" rel="permalink">Parameterising sgen (aka the .NET Microsoft.XmlSerializer.Generator) via a .csproj PropertyGroup
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">The problem
+If you’ve landed on this post via searching the web, you probably already know what sgen.exe is, and what the 
+Microsoft.XmlSerializer.Generator ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2020/08/10/the-fundamentals-of-automated-testing-setup-structure.html" rel="permalink">The fundamentals of unit testing: Setup structure
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          6 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This post is part of a series on unit testing.
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/blog/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 Mark's Devblog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/blog/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

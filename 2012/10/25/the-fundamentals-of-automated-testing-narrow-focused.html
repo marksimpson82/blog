@@ -1,0 +1,720 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>The fundamentals of unit testing: Narrow &amp; Focused - Mark’s Devblog</title>
+<meta name="description" content="This post is part of a series on unit testing.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Mark's Devblog">
+<meta property="og:title" content="The fundamentals of unit testing: Narrow &amp; Focused">
+<meta property="og:url" content="https://marksimpson82.github.io/blog/2012/10/25/the-fundamentals-of-automated-testing-narrow-focused.html">
+
+
+  <meta property="og:description" content="This post is part of a series on unit testing.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2012-10-25T23:13:58+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://marksimpson82.github.io/blog/2012/10/25/the-fundamentals-of-automated-testing-narrow-focused.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Mark's Devblog",
+      "url": "https://marksimpson82.github.io/blog/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/blog/feed.xml" type="application/atom+xml" rel="alternate" title="Mark's Devblog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/blog/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/blog/">
+          Mark's Devblog
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name"></h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="The fundamentals of unit testing: Narrow &amp; Focused">
+    <meta itemprop="description" content="This post is part of a series on unit testing.">
+    <meta itemprop="datePublished" content="2012-10-25T23:13:58+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">The fundamentals of unit testing: Narrow &amp; Focused
+</h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>This post is <a href="/blog/2012/10/24/the-fundamentals-of-automated-testing-series.html">part of a series</a> on unit testing.</p>
+
+<p>When it comes to writing unit tests, it pays to be <em>specific</em>.</p>
+
+<p>If you have a narrow &amp; focused test, it will…</p>
+
+<ul>
+  <li>be easy to make a descriptive name for the test</li>
+  <li>perform the bare minimum of work required to achieve its goal.</li>
+  <li>be easy to understand</li>
+  <li>be easy to maintain</li>
+  <li>execute in a shorter period of time</li>
+</ul>
+
+<h2 id="an-unfocused-example">An unfocused example</h2>
+
+<p>To give you an idea of what an unfocused test looks like, consider the following (and yes, I’ve seen plenty of these, both in professional [RTW] &amp; open source code):</p>
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="n">Test</span><span class="p">]</span>  
+<span class="k">public</span> <span class="k">void</span> <span class="nf">StackTestA</span><span class="p">()</span>  
+<span class="p">{</span>  
+ <span class="kt">var</span> <span class="n">stack</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Stack</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;();</span>  
+ <span class="n">Assert</span><span class="p">.</span><span class="nf">That</span><span class="p">(</span><span class="n">stack</span><span class="p">.</span><span class="n">Count</span><span class="p">,</span> <span class="n">Is</span><span class="p">.</span><span class="nf">EqualTo</span><span class="p">(</span><span class="m">0</span><span class="p">));</span> 
+
+ <span class="n">stack</span><span class="p">.</span><span class="nf">Push</span><span class="p">(</span><span class="m">1</span><span class="p">);</span>  
+ <span class="n">Assert</span><span class="p">.</span><span class="nf">That</span><span class="p">(</span><span class="n">stack</span><span class="p">.</span><span class="n">Count</span><span class="p">,</span> <span class="n">Is</span><span class="p">.</span><span class="nf">EqualTo</span><span class="p">(</span><span class="m">1</span><span class="p">));</span> 
+
+ <span class="n">stack</span><span class="p">.</span><span class="nf">Push</span><span class="p">(</span><span class="m">2</span><span class="p">);</span>  
+ <span class="n">Assert</span><span class="p">.</span><span class="nf">That</span><span class="p">(</span><span class="n">stack</span><span class="p">.</span><span class="n">Count</span><span class="p">,</span> <span class="n">Is</span><span class="p">.</span><span class="nf">EqualTo</span><span class="p">(</span><span class="m">2</span><span class="p">));</span> 
+
+ <span class="kt">var</span> <span class="n">p</span> <span class="p">=</span> <span class="n">stack</span><span class="p">.</span><span class="nf">Peek</span><span class="p">();</span>  
+ <span class="n">Assert</span><span class="p">.</span><span class="nf">That</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">Is</span><span class="p">.</span><span class="nf">EqualTo</span><span class="p">(</span><span class="m">2</span><span class="p">);</span>  
+  
+ <span class="n">stack</span><span class="p">.</span><span class="nf">Push</span><span class="p">(</span><span class="m">3</span><span class="p">);</span>  
+ <span class="n">Assert</span><span class="p">.</span><span class="nf">That</span><span class="p">(</span><span class="n">stack</span><span class="p">.</span><span class="n">Count</span><span class="p">,</span> <span class="n">Is</span><span class="p">.</span><span class="nf">EqualTo</span><span class="p">(</span><span class="m">3</span><span class="p">));</span>  
+  
+ <span class="n">stack</span><span class="p">.</span><span class="nf">Pop</span><span class="p">();</span>  
+ <span class="n">Assert</span><span class="p">.</span><span class="nf">That</span><span class="p">(</span><span class="n">stack</span><span class="p">.</span><span class="n">Count</span><span class="p">,</span> <span class="n">Is</span><span class="p">.</span><span class="nf">EqualTo</span><span class="p">(</span><span class="m">2</span><span class="p">));</span>  
+  
+ <span class="kt">bool</span> <span class="n">c0</span> <span class="p">=</span> <span class="n">stack</span><span class="p">.</span><span class="nf">Contains</span><span class="p">(</span><span class="m">1</span><span class="p">);</span>  
+ <span class="n">Assert</span><span class="p">.</span><span class="nf">That</span><span class="p">(</span><span class="n">c0</span><span class="p">,</span> <span class="n">Is</span><span class="p">.</span><span class="n">True</span><span class="p">);</span>  
+  
+ <span class="kt">bool</span> <span class="n">c1</span> <span class="p">=</span> <span class="n">stack</span><span class="p">.</span><span class="nf">Contains</span><span class="p">(</span><span class="m">10000</span><span class="p">);</span>  
+ <span class="n">Assert</span><span class="p">.</span><span class="nf">That</span><span class="p">(</span><span class="n">c1</span><span class="p">,</span> <span class="n">Is</span><span class="p">.</span><span class="n">False</span><span class="p">);</span>  
+  
+ <span class="n">stack</span><span class="p">.</span><span class="nf">Push</span><span class="p">(</span><span class="m">3</span><span class="p">);</span>  
+ <span class="n">Assert</span><span class="p">.</span><span class="nf">That</span><span class="p">(</span><span class="n">stack</span><span class="p">.</span><span class="n">Count</span><span class="p">,</span> <span class="n">Is</span><span class="p">.</span><span class="nf">EqualTo</span><span class="p">(</span><span class="m">3</span><span class="p">));</span> 
+
+ <span class="kt">int</span> <span class="n">popped</span> <span class="p">=</span> <span class="n">stack</span><span class="p">.</span><span class="nf">Pop</span><span class="p">();</span>  
+ <span class="n">Assert</span><span class="p">.</span><span class="nf">That</span><span class="p">(</span><span class="n">popped</span><span class="p">,</span> <span class="n">Is</span><span class="p">.</span><span class="nf">EqualTo</span><span class="p">(</span><span class="m">3</span><span class="p">));</span>  
+ <span class="n">Assert</span><span class="p">.</span><span class="nf">That</span><span class="p">(</span><span class="n">stack</span><span class="p">.</span><span class="n">Count</span><span class="p">,</span> <span class="n">Is</span><span class="p">.</span><span class="nf">EqualTo</span><span class="p">(</span><span class="m">2</span><span class="p">));</span>  
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Can you spot the problems?</p>
+
+<p>Firstly, the name is vague and doesn’t tell us anything about what the test is doing. No mention is made of the state of the unit of code under test, the actions performed or the expectations.</p>
+
+<p>As it happens, we can’t give this test a good name, because it’s a total scattergun effort. Since it does about 7 different things, any attempt to name it will result in a spiel resembling a 9 year old boy’s attempts to describe his summer holidays.</p>
+
+<blockquote>
+  <p>I went to the seaside and I had an ice cream and then I went in the sea and then I saw a seagull and then I was tired so we had chips then we went home. It was good!</p>
+</blockquote>
+
+<p>If we break it down, we can see numerous things being tested.</p>
+
+<ul>
+  <li>The initial state of the class after the constructor runs</li>
+  <li>Pushing an item onto the stack increases the count</li>
+  <li>Popping an item off the stack decreases the count</li>
+  <li>Popping an item off the stack returns the item that was previously at the top of the stack</li>
+  <li>Peeking returns the item that is at the top of the stack</li>
+  <li>Contains returns true when an item is contained in the stack</li>
+  <li>Contains returns false when an item is not contained in the stack</li>
+</ul>
+
+<h2 id="a-minor-improvement">A minor improvement</h2>
+
+<p>OK, so .. there’s a lot of things happening and we want to simplify matters. The obvious thing is to split each of these situations / asserts into their own tests.</p>
+
+<p>A developer then creates the following:</p>
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="n">Test</span><span class="p">]</span>  
+<span class="k">public</span> <span class="k">void</span> <span class="nf">PushPopTest</span><span class="p">()</span>  
+<span class="p">{</span>  
+ <span class="kt">var</span> <span class="n">stack</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Stack</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;();</span>  
+ <span class="n">Assert</span><span class="p">.</span><span class="nf">That</span><span class="p">(</span><span class="n">stack</span><span class="p">.</span><span class="n">Count</span><span class="p">,</span> <span class="n">Is</span><span class="p">.</span><span class="nf">EqualTo</span><span class="p">(</span><span class="m">0</span><span class="p">));</span> 
+
+ <span class="n">stack</span><span class="p">.</span><span class="nf">Push</span><span class="p">(</span><span class="m">1</span><span class="p">);</span>  
+ <span class="n">Assert</span><span class="p">.</span><span class="nf">That</span><span class="p">(</span><span class="n">stack</span><span class="p">.</span><span class="n">Count</span><span class="p">,</span> <span class="n">Is</span><span class="p">.</span><span class="nf">EqualTo</span><span class="p">(</span><span class="m">1</span><span class="p">));</span> 
+
+ <span class="n">stack</span><span class="p">.</span><span class="nf">Push</span><span class="p">(</span><span class="m">2</span><span class="p">);</span>  
+ <span class="n">Assert</span><span class="p">.</span><span class="nf">That</span><span class="p">(</span><span class="n">stack</span><span class="p">.</span><span class="n">Count</span><span class="p">,</span> <span class="n">Is</span><span class="p">.</span><span class="nf">EqualTo</span><span class="p">(</span><span class="m">2</span><span class="p">));</span> 
+
+ <span class="n">stack</span><span class="p">.</span><span class="nf">Push</span><span class="p">(</span><span class="m">3</span><span class="p">);</span>  
+ <span class="n">Assert</span><span class="p">.</span><span class="nf">That</span><span class="p">(</span><span class="n">stack</span><span class="p">.</span><span class="n">Count</span><span class="p">,</span> <span class="n">Is</span><span class="p">.</span><span class="nf">EqualTo</span><span class="p">(</span><span class="m">3</span><span class="p">));</span> 
+
+ <span class="kt">int</span> <span class="n">popped</span> <span class="p">=</span> <span class="n">stack</span><span class="p">.</span><span class="nf">Pop</span><span class="p">();</span>  
+ <span class="n">Assert</span><span class="p">.</span><span class="nf">That</span><span class="p">(</span><span class="n">popped</span><span class="p">,</span> <span class="n">Is</span><span class="p">.</span><span class="nf">EqualTo</span><span class="p">(</span><span class="m">3</span><span class="p">));</span>  
+ <span class="n">Assert</span><span class="p">.</span><span class="nf">That</span><span class="p">(</span><span class="n">stack</span><span class="p">.</span><span class="n">Count</span><span class="p">,</span> <span class="n">Is</span><span class="p">.</span><span class="nf">EqualTo</span><span class="p">(</span><span class="m">2</span><span class="p">));</span>  
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>This is better, but it’s still quite vague; you can’t really describe what the test is doing, the behaviour it is testing or the expectation.</p>
+
+<p>Is it testing the relationship between pushing/popping and the count changing? Is it more interested in the item being popped off the stack? What about the initial state of the object? Hmm!</p>
+
+<p>What can we do to improve matters? Well, let’s get specific.</p>
+
+<h2 id="choosing-a-descriptive-test-name">Choosing a descriptive test name</h2>
+
+<p>This is the most important thing. To name a test, you need three things. You need to know what the situation is, the action performed and the expected result.</p>
+
+<p>In &lt;<strong>x</strong>&gt; situation, when I do &lt;<strong>y</strong>&gt;, &lt;<strong>z</strong>&gt; should happen. For example, “when there are no items on the stack, calling Push() with an item causes the count to be incremented by one”.</p>
+
+<p>Notice that this name talks about <strong>one</strong> specific situation, <strong>one</strong> action and <strong>one</strong> expectation. A well-named test means a developer doesn’t even need to read the method body’s code to understand the intent behind the test. This is crucial. If you can’t understand what your test is proving, how can you expect someone else to make sense of it? If you cannot think of a good name for the test, it is generally a red flag.</p>
+
+<p>Once you have a good understanding of what your test is proving and you’ve chosen a name, we can move on to the nuts and bolts of writing the test.</p>
+
+<h2 id="writing-the-test-code">Writing the test code</h2>
+
+<p>Again, our example is:</p>
+
+<p>in a situation where **<The stack="" is="" empty="">** and **<An item="" is="" pushed="">**, then **<The count="" is="" incremented="" to="" one="">**.</The></An></The></p>
+
+<p>Now let’s translate the sentence into code by writing a test for this single unit and nothing else.</p>
+
+<h3 id="a-focused-test">A focused test</h3>
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="n">Test</span><span class="p">]</span>  
+<span class="k">public</span> <span class="k">void</span> <span class="nf">pushing_an_item_onto_an_empty_stack_increments_count</span><span class="p">()</span>  
+<span class="p">{</span>  
+ <span class="c1">// Arrange  </span>
+ <span class="kt">var</span> <span class="n">stack</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Stack</span><span class="p">&lt;</span><span class="kt">bool</span><span class="p">&gt;();</span>  
+  
+ <span class="c1">// Act  </span>
+ <span class="n">stack</span><span class="p">.</span><span class="nf">Push</span><span class="p">(</span><span class="k">false</span><span class="p">);</span>  
+  
+ <span class="c1">// Assert  </span>
+ <span class="n">Assert</span><span class="p">.</span><span class="nf">That</span><span class="p">(</span><span class="n">stack</span><span class="p">.</span><span class="n">Count</span><span class="p">,</span> <span class="n">Is</span><span class="p">.</span><span class="nf">EqualTo</span><span class="p">(</span><span class="m">1</span><span class="p">));</span>  
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Ta-da! It’s laser beam focused. You can clearly see the arrange, act and assert phases match the name of the test. There is no noise, incidental setup code, spurious actions or orthogonal assertions. It does exactly what is needed and no more.</p>
+
+<p>Furthermore, if this test ever fails, you probably won’t even go as far as attaching a debugger as it’s so clean and simple. Hell’s teeth, I could read the failure message in the console runner and tell you what it’s <em>meant</em> to be proving. My mum could, too.</p>
+
+<p>Finally, if the stack’s behaviour is changed down the road, this test will probably still pass, as it is only asserting against a very specific bit of state (the count). The less you touch in a test (be it arranging, acting or asserting), the smaller the surface area of the test. The smaller the surface area, the less likely it is to break.</p>
+
+<p><strong>Note</strong>: I would normally create a factory method to construct the stack to provide some level of insulation from constructor changes, but I don’t want to pollute an already rather-longer-than-expected post</p>
+
+<h2 id="lots-of-tests">Lots of tests!</h2>
+
+<p>Once your tests reach this level of simplicity and your fully embrace the &lt;<strong>situation</strong>&gt;, &lt;<strong>action</strong>&gt;, &lt;<strong>expectation</strong>&gt; style of thinking / naming, it becomes very easy to dream up new scenarios. Each scenario becomes a separate, focused, stand-alone test.</p>
+
+<p>Off the top of my head:</p>
+
+<ul>
+  <li>When a stack is created, the count is zero</li>
+  <li>When a stack is empty, popping causes an exception to be thrown</li>
+  <li>When a stack has items, peeking returns the top item</li>
+  <li>When a stack has items, peeking does not remove the item from the stack</li>
+  <li>When a stack has items, popping decrements the count</li>
+  <li>When a stack has items, popping returns the item that was previously at the top of the stack</li>
+  <li>When a stack has a specific item, calling contains with that item should return true</li>
+  <li>When a stack does not have a specific item, calling contains with that item should return false</li>
+  <li>etc.</li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/blog/tags/fundamentals-of-unit-testing" class="page__taxonomy-item" rel="tag">fundamentals of unit testing</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/testing" class="page__taxonomy-item" rel="tag">testing</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/tips" class="page__taxonomy-item" rel="tag">tips</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2012-10-25T23:13:58+00:00">October 25, 2012</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=The+fundamentals+of+unit+testing%3A+Narrow+%26+Focused%20https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2012%2F10%2F25%2Fthe-fundamentals-of-automated-testing-narrow-focused.html" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2012%2F10%2F25%2Fthe-fundamentals-of-automated-testing-narrow-focused.html" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2012%2F10%2F25%2Fthe-fundamentals-of-automated-testing-narrow-focused.html" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/blog/2012/10/24/the-fundamentals-of-automated-testing-its-a-skill.html" class="pagination--pager" title="The fundamentals of unit testing: It’s a skill
+">Previous</a>
+    
+    
+      <a href="/blog/2012/10/27/the-fundamentals-of-automated-testing-correct.html" class="pagination--pager" title="The fundamentals of unit testing: Correct
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2022/11/13/herman-miller-aeron.html" rel="permalink">The Herman Miller Aeron (tall edition)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">tl;dr
+
+  You may need to reduce the Aeron seat height or it’ll destroy your hamstrings
+  If you reduce your seat height, make sure your desk can accomodate i...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2022/10/03/obsidian.html" rel="permalink">Taking notes with Obsidian
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          9 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">How do you take notes?
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2021/11/04/dotnet5-sgen-parameters.html" rel="permalink">Parameterising sgen (aka the .NET Microsoft.XmlSerializer.Generator) via a .csproj PropertyGroup
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">The problem
+If you’ve landed on this post via searching the web, you probably already know what sgen.exe is, and what the 
+Microsoft.XmlSerializer.Generator ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2020/08/10/the-fundamentals-of-automated-testing-setup-structure.html" rel="permalink">The fundamentals of unit testing: Setup structure
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          6 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This post is part of a series on unit testing.
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/blog/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 Mark's Devblog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/blog/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

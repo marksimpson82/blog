@@ -1,0 +1,617 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>The big block method (binary search) - Mark’s Devblog</title>
+<meta name="description" content="Have you ever been in this situation? You have thousands of tests in scores of assemblies. All of the tests pass. However, when you run the test suite a second time without closing NUnit (or your test runner of choice) you find hundreds of failures occur in a specific area. I’m not talking about in the same fixture or even the same assembly; this is NUnit wide. Something is trashing the environment, but there are no obvious warning signs.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Mark's Devblog">
+<meta property="og:title" content="The big block method (binary search)">
+<meta property="og:url" content="https://marksimpson82.github.io/blog/2009/05/02/the-big-block-method.html">
+
+
+  <meta property="og:description" content="Have you ever been in this situation? You have thousands of tests in scores of assemblies. All of the tests pass. However, when you run the test suite a second time without closing NUnit (or your test runner of choice) you find hundreds of failures occur in a specific area. I’m not talking about in the same fixture or even the same assembly; this is NUnit wide. Something is trashing the environment, but there are no obvious warning signs.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2009-05-02T17:28:28+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://marksimpson82.github.io/blog/2009/05/02/the-big-block-method.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Mark's Devblog",
+      "url": "https://marksimpson82.github.io/blog/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/blog/feed.xml" type="application/atom+xml" rel="alternate" title="Mark's Devblog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/blog/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/blog/">
+          Mark's Devblog
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name"></h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="The big block method (binary search)">
+    <meta itemprop="description" content="Have you ever been in this situation? You have thousands of tests in scores of assemblies. All of the tests pass. However, when you run the test suite a second time without closing NUnit (or your test runner of choice) you find hundreds of failures occur in a specific area. I’m not talking about in the same fixture or even the same assembly; this is NUnit wide. Something is trashing the environment, but there are no obvious warning signs.">
+    <meta itemprop="datePublished" content="2009-05-02T17:28:28+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">The big block method (binary search)
+</h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>Have you ever been in this situation? You have thousands of tests in scores of assemblies. All of the tests pass. However, when you run the test suite a second time without closing NUnit (or your test runner of choice) you find hundreds of failures occur in a specific area. I’m not talking about in the same fixture or even the same assembly; this is NUnit wide. Something is trashing the environment, but there are no obvious warning signs.</p>
+
+<p>So, we have thousands of tests - the problem could be anywhere. The answer is obviously not “look through all the tests” or “disable one project at a time”, there has to be an easier way…</p>
+
+<h3 id="unrelated-but-applicable">Unrelated, but applicable</h3>
+
+<p>This just happened to me, but tracking down the culprit wasn’t as bad as you’d think.</p>
+
+<p>Something I learned as a budding level designer (circa ~1999) was how to find a leak in my level. A leak in level design occurs when the world is not sealed from the void. A decent analogy is to imagine the inside of the level is a submarine and the walls are the ‘hull’ - if there is a gap anywhere in the hull the water will get in; it will leak.</p>
+
+<p>A leak could be something as tiny and obscure as a 1 unit gap between a wall and a floor. Most walls are 128 to 256 units, so a 1 unit gap is very small. Even now, it’s not really feasible to find one in the editor unless you know exactly where it is.</p>
+
+<p>Half-Life’s goldsrc engine was BSP based; the visibility computations were performed at map compile time. A failure to build VIS data meant that your level caused the game to run at about 3 frames per second.</p>
+
+<p>Unfortunately, tools were really … rudimentary back then. These days pretty much every editor has built in pointfile loading (meaning it will take you directly to the leak!) but back then, you had to be creative.</p>
+
+<h3 id="the-big-block-method">The big block method</h3>
+
+<p>Back when tools weren’t so great, to find leaks in a level, I used the big block method. It’s a very simple technique. Say we have a rubbish, leaky level like so (top down view):</p>
+
+<div style="width: 363px" class="wp-caption alignnone">
+  <img title="Big block" src="https://defragdev.com/blog/images/bigBlockProblem.png" alt="A level, yesterday." width="353" height="289" />
+  
+  <p class="wp-caption-text">
+    A leaky level, yesterday.
+  </p>
+</div>
+
+<p>If one of those connections between walls/floors/ceilings/whatever is not tight, it will leak. We cannot see the site of the leak using our eyes. We cannot be sure where the leak is by simply scrutinising each wall joint or entity. What we can do instead, though, is place a big block over ~50% of the level.</p>
+
+<div style="width: 363px" class="wp-caption alignnone">
+  <img title="50% of the map is now covered" src="https://defragdev.com/blog/images/bigBlockStep1.png" alt="50% of the map is now covered" width="353" height="289" />
+  
+  <p class="wp-caption-text">
+    The red area is a newly created solid block
+  </p>
+</div>
+
+<p>If we compile and find that the leak has disappeared, we know that the leak was definitely in the area that is now covered by the block. On the other hand, if the leak is still present, it’s in the other 50% of the level that remains uncovered. To hone in on the problem area, all we have to do is recursively add blocks to the problem area:</p>
+
+<div style="width: 363px" class="wp-caption alignnone">
+  <img title="Recursively adding blocks half the size of the previous block..." src="https://defragdev.com/blog/images/bigBlockStep2.png" alt="Recursively adding blocks half the size of the previous block..." width="353" height="289" />
+  
+  <p class="wp-caption-text">
+    A smaller block has been added
+  </p>
+</div>
+
+<p>We then recompile and check to see if the leak has disappeared as before. Notice that in <strong>two</strong> steps, we’ve narrowed down the problem’s location to an area of <strong>25%</strong> of the original size! The next step will yield a further 12.5% reduction. We quickly hone in on the problem.</p>
+
+<p>After I started programming, I realised that the leak-finding method I used as a level designer is a simple <a href="http://en.wikipedia.org/wiki/Binary_search_algorithm">binary search</a>.</p>
+
+<h3 id="same-thing-different-discipline">Same thing, different discipline</h3>
+
+<p>Applying the same principle to finding problem tests or code is simple! Divide and conquer.</p>
+
+<p>Open the NUnit test project file and remove 50% of the projects (though in my case, I kept the assembly with the tests that failed, as I needed to see them fail on the second run to know the problem had occurred). Run the tests twice to see if the failure occurs on repeated runs. If they fail, you know your problem is in that group of assemblies. If they pass, you know the problem is in the other half.</p>
+
+<p>It’s then a case of whittling it down in the same way - disable a further 25% of your assemblies, run the tests twice and check the result. Rinse, repeat.</p>
+
+<p>Eventually you will (most likely!) be down to two assemblies - the assembly that exposes the problem and the problem itself. If there’s a large amount of tests and fixtures in the assembly you’re scrutinising, disable half of the fixtures and repeat the process. You will rapidly converge on a fixture and, finally, the test that causes the problem. From then on it, it’s just standard debugging.</p>
+
+<p>In my case, the culprit ended up being a single line of code calling into a method that has been a long-standing part of our code base. It looks totally innocuous, and there is absolutely no way I’d have found so quickly without dividing and conquering.</p>
+
+<p>From the top level, with scores of assemblies and thousands of tests, it may as well be a 1 unit gap.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/blog/tags/c" class="page__taxonomy-item" rel="tag">c#</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/debugging" class="page__taxonomy-item" rel="tag">debugging</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/testing" class="page__taxonomy-item" rel="tag">testing</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2009-05-02T17:28:28+00:00">May 2, 2009</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=The+big+block+method+%28binary+search%29%20https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2009%2F05%2F02%2Fthe-big-block-method.html" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2009%2F05%2F02%2Fthe-big-block-method.html" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2009%2F05%2F02%2Fthe-big-block-method.html" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/blog/2009/04/18/unit-testing-is-programming.html" class="pagination--pager" title="The pride of a programmer
+">Previous</a>
+    
+    
+      <a href="/blog/2009/05/07/l4d-pleasure-and-pain.html" class="pagination--pager" title="L4D - Pleasure and Pain
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2022/11/13/herman-miller-aeron.html" rel="permalink">The Herman Miller Aeron (tall edition)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">tl;dr
+
+  You may need to reduce the Aeron seat height or it’ll destroy your hamstrings
+  If you reduce your seat height, make sure your desk can accomodate i...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2022/10/03/obsidian.html" rel="permalink">Taking notes with Obsidian
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          9 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">How do you take notes?
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2021/11/04/dotnet5-sgen-parameters.html" rel="permalink">Parameterising sgen (aka the .NET Microsoft.XmlSerializer.Generator) via a .csproj PropertyGroup
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">The problem
+If you’ve landed on this post via searching the web, you probably already know what sgen.exe is, and what the 
+Microsoft.XmlSerializer.Generator ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2020/08/10/the-fundamentals-of-automated-testing-setup-structure.html" rel="permalink">The fundamentals of unit testing: Setup structure
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          6 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This post is part of a series on unit testing.
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/blog/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 Mark's Devblog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/blog/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

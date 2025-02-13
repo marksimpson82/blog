@@ -1,0 +1,610 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Unity3d - Profiling calls to Destroy - Mark’s Devblog</title>
+<meta name="description" content="Destroy All … Things">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Mark's Devblog">
+<meta property="og:title" content="Unity3d - Profiling calls to Destroy">
+<meta property="og:url" content="https://marksimpson82.github.io/blog/2011/08/31/unity3d-profiling-calls-to-destroy.html">
+
+
+  <meta property="og:description" content="Destroy All … Things">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2011-08-31T16:39:01+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://marksimpson82.github.io/blog/2011/08/31/unity3d-profiling-calls-to-destroy.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Mark's Devblog",
+      "url": "https://marksimpson82.github.io/blog/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/blog/feed.xml" type="application/atom+xml" rel="alternate" title="Mark's Devblog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/blog/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/blog/">
+          Mark's Devblog
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name"></h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Unity3d - Profiling calls to Destroy">
+    <meta itemprop="description" content="Destroy All … Things">
+    <meta itemprop="datePublished" content="2011-08-31T16:39:01+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Unity3d - Profiling calls to Destroy
+</h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h2 id="destroy-all--things">Destroy All … Things</h2>
+
+<p>I’ve recently been investigating some performance problems in our Unity3d app. In one specific instance (running full screen on a rubbish laptop), there were numerous large performance spikes caused by the nebulous-sounding “Destroy”. After prodding a little bit, Destroy is related to calling <a href="http://unity3d.com/support/documentation/ScriptReference/Object.Destroy.html">GameObject.Destroy()</a>.</p>
+
+<p>Unfortunately, Unity3d’s profiler won’t give you any information related to what types of objects are being destroyed, and wrapping your GameObject.Destroy calls in profiler sections doesn’t help, as Unity3d defers the work for later in the frame (so the methods return nigh-on immediately). As such, you get told “Destroy is taking x ms this frame”, and that’s about it.</p>
+
+<h2 id="finding-the-culprits-with-the-profiler">Finding the culprits with the profiler</h2>
+
+<p>I managed to work around this limitation by (temporarily) changing all GameObject.Destroy() method calls to <a href="http://unity3d.com/support/documentation/ScriptReference/Object.DestroyImmediate.html">GameObject.DestroyImmediate()</a> then wrapping the calls in <a href="http://unity3d.com/support/documentation/ScriptReference/Profiler.BeginSample.html">Profiler.BeginSample()</a> / Profiler.EndSample() pairs.</p>
+
+<p><strong>Note:</strong> If you access your unity instances in the same frame after calling destroy, this probably won’t work for you.</p>
+
+<p>It was then possible to see which resources were doing the damage on the laptop. All of our resource cleanup code was in one place, so it was trivial to do.</p>
+
+<p>The temporarily instrumented code ended up looking something like this, and immediately let us know the culprits. Note this code is just a simplified mockup, but it should give you the gist of the idea:</p>
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// centralised resource cleanup makes profiling simple </span>
+
+<span class="k">private</span> <span class="k">void</span> <span class="n">CleanupResources</span><span class="p">&lt;</span><span class="n">TResource</span><span class="p">&gt;()</span> <span class="p">{</span> 
+  <span class="n">Profiler</span><span class="p">.</span><span class="nf">BeginSample</span><span class="p">(</span><span class="s">"Destroy: "</span> <span class="p">+</span> <span class="k">typeof</span><span class="p">(</span><span class="n">TResource</span><span class="p">).</span><span class="n">Name</span><span class="p">);</span> 
+  <span class="n">IEnumerable</span><span class="p">&lt;</span><span class="n">TResource</span><span class="p">&gt;</span> <span class="n">resources</span> <span class="p">=</span> 
+    <span class="nf">FindResourceOfType</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="n">TResource</span><span class="p">));</span> 
+
+  <span class="k">foreach</span><span class="p">(</span><span class="kt">var</span> <span class="n">resource</span> <span class="k">in</span> <span class="n">resources</span><span class="p">)</span> 
+  <span class="p">{</span> 
+    <span class="n">resource</span><span class="p">.</span><span class="nf">Dispose</span><span class="p">();</span> 
+  <span class="p">}</span> 
+
+  <span class="n">Profiler</span><span class="p">.</span><span class="nf">EndSample</span><span class="p">();</span> 
+<span class="p">}</span>
+ 
+<span class="c1">//... and each Resource type inherits from a common base class </span>
+<span class="c1">// implementing IDisposable. </span>
+<span class="k">public</span> <span class="k">abstract</span> <span class="k">class</span> <span class="nc">Resource</span> <span class="p">:</span> <span class="n">IDisposable</span> 
+<span class="p">{</span> 
+  <span class="k">protected</span> <span class="k">abstract</span> <span class="k">void</span> <span class="nf">CleanupUnityResources</span><span class="p">();</span> 
+ 
+  <span class="k">public</span> <span class="k">void</span> <span class="nf">Dispose</span><span class="p">()</span> 
+  <span class="p">{</span> 
+    <span class="nf">CleanupUnityResources</span><span class="p">();</span> 
+  <span class="p">}</span> 
+<span class="p">}</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">SomeResource</span> <span class="p">:</span> <span class="n">Resource</span> 
+<span class="p">{</span> 
+  <span class="k">private</span> <span class="n">Mesh</span> <span class="n">m_unityMesh</span><span class="p">;</span> <span class="c1">// gets set when resource is locked in </span>
+ 
+  <span class="k">protected</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">CleanupUnityResources</span><span class="p">()</span> 
+  <span class="p">{</span> 
+    <span class="c1">// GameObject.Destroy(m_unityMesh); </span>
+    <span class="n">GameObject</span><span class="p">.</span><span class="nf">DestroyImmediately</span><span class="p">(</span><span class="n">m_unityMesh</span><span class="p">);</span> 
+  <span class="p">}</span> 
+<span class="p">}</span>
+</code></pre></div></div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/blog/tags/c" class="page__taxonomy-item" rel="tag">c#</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/debugging" class="page__taxonomy-item" rel="tag">debugging</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/software" class="page__taxonomy-item" rel="tag">software</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/tips" class="page__taxonomy-item" rel="tag">tips</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/unity3d" class="page__taxonomy-item" rel="tag">Unity3d</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2011-08-31T16:39:01+00:00">August 31, 2011</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Unity3d+-+Profiling+calls+to+Destroy%20https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2011%2F08%2F31%2Funity3d-profiling-calls-to-destroy.html" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2011%2F08%2F31%2Funity3d-profiling-calls-to-destroy.html" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2011%2F08%2F31%2Funity3d-profiling-calls-to-destroy.html" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/blog/2011/08/27/unity3dthreadpool-exceptions.html" class="pagination--pager" title="Unity3d - Threadpool Exceptions
+">Previous</a>
+    
+    
+      <a href="/blog/2011/11/11/valves-response-to-being-hacked.html" class="pagination--pager" title="Valve’s response to being hacked
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2022/11/13/herman-miller-aeron.html" rel="permalink">The Herman Miller Aeron (tall edition)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">tl;dr
+
+  You may need to reduce the Aeron seat height or it’ll destroy your hamstrings
+  If you reduce your seat height, make sure your desk can accomodate i...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2022/10/03/obsidian.html" rel="permalink">Taking notes with Obsidian
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          9 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">How do you take notes?
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2021/11/04/dotnet5-sgen-parameters.html" rel="permalink">Parameterising sgen (aka the .NET Microsoft.XmlSerializer.Generator) via a .csproj PropertyGroup
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">The problem
+If you’ve landed on this post via searching the web, you probably already know what sgen.exe is, and what the 
+Microsoft.XmlSerializer.Generator ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2020/08/10/the-fundamentals-of-automated-testing-setup-structure.html" rel="permalink">The fundamentals of unit testing: Setup structure
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          6 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This post is part of a series on unit testing.
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/blog/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 Mark's Devblog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/blog/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

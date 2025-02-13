@@ -1,0 +1,775 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>The fundamentals of unit testing: Atomic - Mark’s Devblog</title>
+<meta name="description" content="This post is part of a series on unit testing.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Mark's Devblog">
+<meta property="og:title" content="The fundamentals of unit testing: Atomic">
+<meta property="og:url" content="https://marksimpson82.github.io/blog/2012/11/02/the-fundamentals-of-automated-testing-atomic.html">
+
+
+  <meta property="og:description" content="This post is part of a series on unit testing.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2012-11-02T05:47:01+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://marksimpson82.github.io/blog/2012/11/02/the-fundamentals-of-automated-testing-atomic.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Mark's Devblog",
+      "url": "https://marksimpson82.github.io/blog/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/blog/feed.xml" type="application/atom+xml" rel="alternate" title="Mark's Devblog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/blog/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/blog/">
+          Mark's Devblog
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name"></h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="The fundamentals of unit testing: Atomic">
+    <meta itemprop="description" content="This post is part of a series on unit testing.">
+    <meta itemprop="datePublished" content="2012-11-02T05:47:01+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">The fundamentals of unit testing: Atomic
+</h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          7 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>This post is <a href="/blog/2012/10/24/the-fundamentals-of-automated-testing-series.html">part of a series</a> on unit testing.</p>
+
+<p>Every single unit test you write should be atomic.</p>
+
+<h2 id="a-definition">A definition</h2>
+
+<p>Atomic tests are order-independent, relying on and causing no side effects. They neither rely on nor alter shared state; they do not mutate their environment. If a test run involves 2, 10, 100 or 1,000,000 tests, the tests should be able to be executed in any order. If one legitimately fails because a bug has been introduced in the production code, it shouldn’t have a domino effect.</p>
+
+<p>For example, if we have 3 tests named A, B and C, we should be able to run these tests in <em>any</em> order. For a tiny set of 3 tests, there are already 6 ways of arranging the order of execution: ABC, ACB, BAC, BCA, CAB, CBA. If the order ABC is fine, but the order BAC causes test C to fail, then one of the tests is non-atomic.</p>
+
+<p>Put short, a test should be built up and torn down cleanly, leaving no trace of the fact that it has been executed.</p>
+
+<h2 id="why-is-this-important">Why is this important?</h2>
+
+<p>A good automated test has a descriptive name, is implemented using straightforward code and leads us to the cause of the failure without much hassle. When dealing with well written atomic tests, at the very worst, diagnosing the cause of a failure should be a simple debugging job.</p>
+
+<p>However, if non-atomic tests create knock-on effects it introduces a significant maintenance risk, as to diagnose failures, we must understand the whole picture. Instead of just inspecting the local state that exists prior to executing the failing test, we have to start delving into environmental differences (machine configuration, file systems) and <a href="http://blogs.msdn.com/b/cbrumme/archive/2003/04/15/51317.aspx">AppDomain</a> issues (typically global / static state).</p>
+
+<p>While most test failures caused by a lack of atomicity are localised (e.g. tests confined to one fixture start to fail), I’ve personally witnessed a system under test causing hundreds of test failures spanning multiple (seemingly unrelated) fixtures.</p>
+
+<p>Furthermore, if failures cannot be reliably reproduced, it undermines the trust in those tests. People won’t pay attention to them, even if the failures are legitimate. The moment developers see a red build and, without even thinking about it, click the “rebuild” button, you’re entering the world of <a href="http://www.urbandictionary.com/define.php?term=NOMFup">NOMFUP</a>.</p>
+
+<h2 id="tell-tale-signs">Tell Tale Signs</h2>
+
+<p>How can you tell that you have non-atomic tests lurking in your codebase?</p>
+
+<ol>
+  <li>
+    <p>Test runners don’t always find and run tests in the same order - they are often loaded in an arbitrary order. A good example of this phenomenon is the disparity between ReSharper and NUnit. They both execute tests in different orders (or they did last time I checked with a large sample set). If different results can be obtained by running the same tests using different runners, it’s probably caused by non-atomic tests.</p>
+  </li>
+  <li>
+    <p>Running your entire test suite or a subset of it with the <strong>same instance</strong> of the test runner may cause failures the Nth time around. E.g. in .NET land: open the NUnit GUI, load your tests and then repeatedly run the tests.</p>
+  </li>
+</ol>
+
+<p><strong>Note</strong>: There is a combinatorial explosion involved with order dependence, so these two signs aren’t guaranteed to present themselves.. The best defence is to write production &amp; test code bearing a few things in mind.</p>
+
+<h2 id="cause-static-state-in-production-code">Cause: Static State in Production Code</h2>
+
+<p>The biggest offender by far is static state mutated / read by the <em>production</em> code. For most intents and purposes, static is just “global” by another name.</p>
+
+<p>If we have a class under test like the following (please note: do not write code like this!):</p>
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">public</span> <span class="k">class</span> <span class="nc">ModelLoader</span>  
+<span class="p">{</span>  
+ <span class="k">public</span> <span class="n">Model</span> <span class="nf">Load</span><span class="p">(</span><span class="kt">string</span> <span class="n">xml</span><span class="p">)</span>  
+ <span class="p">{</span>
+ <span class="p">...</span> <span class="c1">// some processing occurs then...  </span>
+ <span class="kt">var</span> <span class="n">handle</span> <span class="p">=</span> <span class="n">MemoryManager</span><span class="p">.</span><span class="nf">Allocate</span><span class="p">(</span><span class="n">numVertices</span> <span class="p">*</span> <span class="n">vertexSize</span><span class="p">);</span> <span class="c1">// a static call  </span>
+ <span class="p">}</span>  
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>… and the static dependency:</p>
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">public</span> <span class="k">static</span> <span class="k">class</span> <span class="nc">MemoryManager</span>  
+<span class="p">{</span>  
+ <span class="k">private</span> <span class="k">static</span> <span class="n">MemoryPool</span> <span class="n">m_memoryPool</span><span class="p">;</span>
+
+ <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Init</span><span class="p">()</span>  
+ <span class="p">{</span>  
+ <span class="c1">// does initialisation stuff.  </span>
+ <span class="n">m_memoryPool</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">MemoryPool</span><span class="p">();</span>  
+ <span class="p">}</span>
+
+ <span class="k">public</span> <span class="k">static</span> <span class="n">MemoryHandle</span> <span class="nf">Allocate</span><span class="p">(</span><span class="kt">long</span> <span class="n">numBytes</span><span class="p">)</span>  
+ <span class="p">{</span>  
+ <span class="c1">// this will crash if Init wasn't called  </span>
+ <span class="k">return</span> <span class="n">m_memoryPool</span><span class="p">.</span><span class="nf">DoSomething</span><span class="p">();</span>  
+ <span class="p">}</span>
+
+ <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Quit</span><span class="p">()</span>  
+ <span class="p">{</span>  
+ <span class="c1">// poor man’s Dispose()  </span>
+ <span class="p">}</span>
+</code></pre></div></div>
+
+<p>… then <code class="language-plaintext highlighter-rouge">ModelLoader</code> has an <em>implicit</em> dependency on the <code class="language-plaintext highlighter-rouge">MemoryManager</code>. It’s implicit because there is nothing in the public API to say that this static class <code class="language-plaintext highlighter-rouge">MemoryManager</code> is used, let alone that it must be initialised if we want to use the <code class="language-plaintext highlighter-rouge">ModelLoader</code>. As Misko says, <a href="http://misko.hevery.com/2008/08/17/singletons-are-pathological-liars/">Singletons are pathological liars</a>.</p>
+
+<p>As a result, if we forget to call the static <code class="language-plaintext highlighter-rouge">Init()</code> or <code class="language-plaintext highlighter-rouge">Quit()</code> methods, the state mutations caused by one test will bleed into the next.</p>
+
+<p>Here’s the (horribly non-atomic) test code:</p>
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="n">TestFixture</span><span class="p">]</span>  
+<span class="k">public</span> <span class="k">class</span> <span class="nc">StaticStateHurtsMyBrainTests</span>  
+<span class="p">{</span>  
+  <span class="p">[</span><span class="n">Test</span><span class="p">]</span>  
+  <span class="k">public</span> <span class="k">void</span> <span class="nf">loading_simple_model_xml_returns_valid_model</span><span class="p">()</span>  
+  <span class="p">{</span>  
+    <span class="c1">// Arrange  </span>
+    <span class="n">MemoryManager</span><span class="p">.</span><span class="nf">Init</span><span class="p">();</span> <span class="c1">// static state initialised here!  </span>
+    <span class="kt">var</span> <span class="n">modelLoader</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">ModelLoader</span><span class="p">();</span>
+
+    <span class="c1">// Act. Our class under test depends on implicit static state contained in MemoryManager  </span>
+    <span class="kt">var</span> <span class="n">loadedModel</span> <span class="p">=</span> <span class="n">modelLoader</span><span class="p">.</span><span class="nf">Load</span><span class="p">(</span><span class="s">"&lt;Model Name = ... etc "</span><span class="p">);</span>
+
+    <span class="c1">// Assert  </span>
+    <span class="n">Assert</span><span class="p">.</span><span class="nf">That</span><span class="p">(...)</span> <span class="c1">// Note: we forgot to call MemoryManager.Quit()  </span>
+  <span class="p">}</span>
+
+  <span class="p">[</span><span class="n">Test</span><span class="p">]</span>  
+  <span class="k">public</span> <span class="k">void</span> <span class="nf">loading_model_with_positions_and_uvs_returns_valid_model</span><span class="p">()</span>  
+  <span class="p">{</span>  
+    <span class="c1">// Arrange. Uh oh, we forgot to call MemoryManager.Init()  </span>
+    <span class="kt">var</span> <span class="n">modelLoader</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">ModelLoader</span><span class="p">();</span>
+ 
+    <span class="c1">// Act. MemoryManager isn't initialised; test will fail here. Or will it?!  </span>
+    <span class="kt">var</span> <span class="n">loadedModel</span> <span class="p">=</span> <span class="n">modelLoader</span><span class="p">.</span><span class="nf">Load</span><span class="p">(</span><span class="s">"&lt;Model Name = ... etc"</span><span class="p">);</span>
+ 
+    <span class="c1">// Assert  </span>
+    <span class="n">Assert</span><span class="p">.</span><span class="nf">That</span><span class="p">(</span> <span class="c1">// etc.  </span>
+  <span class="p">}</span>  
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>We’re now in a world of pain. Depending on the order the tests are run <em>and</em> whether individual tests pass or fail, we may obtain different results. Can you see why? The author of the first test has correctly ascertained that the nasty (hidden) MemoryManager dependency must be initialised, but doesn’t shut it down correctly. Since the MemoryManager is a static class, its state remains in the AppDomain from test to test. As a result, the second test will possibly pass, but only if it runs after the first. If the order is switched, we’ll definitely have a minimum of a single failure. These tests are non-atomic.</p>
+
+<h2 id="fix-remove-static-state">Fix: Remove Static State</h2>
+
+<p>To solve this problem, the static state should be replaced with instance-based construction and any functionality that needs access to it should explicitly ask for it via the constructor or other means, like so:</p>
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">public</span> <span class="k">class</span> <span class="nc">ModelLoader</span>  
+<span class="p">{</span>  
+  <span class="k">private</span> <span class="n">MemoryManager</span> <span class="n">m_memoryManager</span><span class="p">;</span>  
+   
+  <span class="k">public</span> <span class="nf">ModelLoader</span><span class="p">(</span><span class="n">MemoryManager</span> <span class="n">memoryManager</span><span class="p">)</span>  
+  <span class="p">{</span>  
+    <span class="n">m_memoryManager</span> <span class="p">=</span> <span class="n">memoryManager</span><span class="p">;</span>  
+  <span class="p">}</span>  
+   
+  <span class="k">public</span> <span class="n">Model</span> <span class="nf">Load</span><span class="p">(</span><span class="kt">string</span> <span class="n">xmlString</span><span class="p">)</span>  
+  <span class="p">{</span>  
+    <span class="p">...</span> <span class="c1">// some processing occurs .. then  </span>
+    <span class="n">m_memoryManager</span><span class="p">.</span><span class="nf">Allocate</span><span class="p">(</span><span class="n">numVertices</span> <span class="p">*</span> <span class="n">vertexSize</span><span class="p">);</span>  
+  <span class="p">}</span>  
+<span class="p">}</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">MemoryManager</span> <span class="c1">// probably implement IDisposable too, but it’s just an example so...  </span>
+<span class="p">{</span>  
+  <span class="k">private</span> <span class="n">MemoryPool</span> <span class="n">m_memoryPool</span><span class="p">;</span>
+ 
+  <span class="k">public</span> <span class="nf">MemoryManager</span><span class="p">()</span>  
+  <span class="p">{</span>  
+    <span class="n">m_memoryPool</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">MemoryPool</span><span class="p">();</span>  
+  <span class="p">}</span>
+ 
+  <span class="k">public</span> <span class="n">MemoryHandle</span> <span class="nf">Allocate</span><span class="p">(</span><span class="kt">long</span> <span class="n">numBytes</span><span class="p">)</span>  
+  <span class="p">{</span>  
+    <span class="k">return</span> <span class="n">m_memoryPool</span><span class="p">.</span><span class="nf">DoSomething</span><span class="p">(</span><span class="n">numBytes</span><span class="p">);</span>  
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>This greatly simplifies the complexity by making dependencies explicit, limiting access and removing the carried over state. We have ensured that the ModelLoader has a properly constructed MemoryManager dependency and that it can be constructed and thrown away without causing side effects.</p>
+
+<p>Do not simply refactor the test code such that it calls static methods before/after each test is run. This is just a bandage over a horrible API. Static state is a bit like playing whackamole – you can thrash most of it into shape, but there’s always a point where it becomes too much to handle.</p>
+
+<p>Tests are microcosms of real usage - if something is hard to use in a test, it is hard to use, period. Unless you <em>really</em> have a need for a static type and you are well-versed in the risks, avoid it.</p>
+
+<h2 id="cause-test-depends-on-filesystem">Cause: Test Depends on Filesystem</h2>
+
+<p>Any test that is dependent on its environment is an integration test. The most common way the environment manifests itself is when dealing with the file system. The filesystem is the filesystem. It persists before, during and after a test run, so it stands to reason that modifying it can cause knock-on effects.</p>
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="n">TestFixture</span><span class="p">]</span>  
+<span class="k">public</span> <span class="k">class</span> <span class="nc">OrderDependentTests</span>  
+<span class="p">{</span>  
+  <span class="k">private</span> <span class="k">const</span> <span class="kt">string</span> <span class="n">Filename</span> <span class="p">=</span> <span class="s">"myfile.txt"</span><span class="p">;</span>
+ 
+  <span class="p">[</span><span class="n">Test</span><span class="p">]</span>  
+  <span class="k">public</span> <span class="k">void</span> <span class="nf">when_the_file_exists_constructor_loads_the_file_contents</span><span class="p">()</span>  
+  <span class="p">{</span>  
+    <span class="c1">// Arrange  </span>
+    <span class="n">File</span><span class="p">.</span><span class="nf">Create</span><span class="p">(</span><span class="n">Filename</span><span class="p">);</span>  
+    <span class="c1">// imagine this opened the file and wrote something in</span>
+    <span class="nf">AddThreeElementsToFile</span><span class="p">(</span><span class="n">Filename</span><span class="p">);</span> 
+   
+    <span class="c1">// Act  </span>
+    <span class="kt">var</span> <span class="n">systemUnderTest</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">TypeLoader</span><span class="p">(</span><span class="n">Filename</span><span class="p">);</span>
+   
+    <span class="c1">// Assert  </span>
+    <span class="n">Assert</span><span class="p">.</span><span class="nf">That</span><span class="p">(</span><span class="n">systemUnderTest</span><span class="p">.</span><span class="n">LoadedTypes</span><span class="p">,</span> 
+      <span class="n">Has</span><span class="p">.</span><span class="n">Count</span><span class="p">.</span><span class="nf">EqualTo</span><span class="p">(</span><span class="m">3</span><span class="p">));</span>  
+  <span class="p">}</span>
+ 
+  <span class="p">[</span><span class="n">Test</span><span class="p">]</span>  
+  <span class="k">public</span> <span class="k">void</span> <span class="nf">when_file_exists_that_contains_only_comments_constructor_doesnt_load_anything</span><span class="p">()</span>  
+  <span class="p">{</span>  
+    <span class="c1">// Arrange  </span>
+    <span class="c1">// this requires the file to exist! Does it? Maybe.</span>
+    <span class="nf">AddCommentToFile</span><span class="p">(</span><span class="n">Filename</span><span class="p">);</span> 
+   
+    <span class="c1">// Act  </span>
+    <span class="kt">var</span> <span class="n">systemUnderTest</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">TypeLoader</span><span class="p">(</span><span class="n">Filename</span><span class="p">);</span>
+   
+    <span class="c1">// Assert  </span>
+    <span class="n">Assert</span><span class="p">.</span><span class="nf">That</span><span class="p">(</span><span class="n">systemUnderTest</span><span class="p">.</span><span class="n">LoadedTypes</span><span class="p">,</span> 
+      <span class="n">Has</span><span class="p">.</span><span class="n">Count</span><span class="p">.</span><span class="nf">EqualTo</span><span class="p">(</span><span class="m">0</span><span class="p">));</span>  
+  <span class="p">}</span>
+ 
+  <span class="p">[</span><span class="n">Test</span><span class="p">]</span>  
+  <span class="k">public</span> <span class="k">void</span> <span class="nf">when_file_does_not_exist_constructor_doesnt_load_anything</span><span class="p">()</span>  
+  <span class="p">{</span>  
+    <span class="c1">// Arrange  </span>
+    <span class="c1">// what happens here if the previous test(s) didn’t run yet?</span>
+    <span class="n">File</span><span class="p">.</span><span class="nf">Delete</span><span class="p">(</span><span class="n">Filename</span><span class="p">);</span> 
+   
+    <span class="c1">// Act  </span>
+    <span class="kt">var</span> <span class="n">systemUnderTest</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">TypeLoader</span><span class="p">(</span><span class="n">Filename</span><span class="p">);</span>
+   
+    <span class="c1">// Assert  </span>
+    <span class="n">Assert</span><span class="p">.</span><span class="nf">That</span><span class="p">(</span><span class="n">systemUnderTest</span><span class="p">.</span><span class="n">LoadedTypes</span><span class="p">,</span> 
+      <span class="n">Has</span><span class="p">.</span><span class="n">Count</span><span class="p">.</span><span class="nf">EqualTo</span><span class="p">(</span><span class="m">0</span><span class="p">));</span>  
+  <span class="p">}</span>  
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Firstly, you should note that these tests touch the file system and are really integration tests. Secondly, if these tests run in the order they’re defined, they’ll pass. However, if the order is mixed up, or the test that relies on the file existing is run in isolation, the test(s) will fail!</p>
+
+<h2 id="fix-dont-rely-on-the-filesystem">Fix: Don’t Rely on the Filesystem</h2>
+
+<p>For unit tests, abstract the production code’s file IO by at least one level. By this, I mean separate the loading &amp; processing of files and their contents. You can still present file loading APIs to the user, but the guts of the implementation uses streams, allowing fast, in-memory unit testing for the more complicated ‘inner’ code.</p>
+
+<p>I wrote a post about this a while back, so <a href="/blog/2009/11/26/avoiding-the-file-system.html">take a look</a>.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/blog/tags/fundamentals-of-unit-testing" class="page__taxonomy-item" rel="tag">fundamentals of unit testing</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/testing" class="page__taxonomy-item" rel="tag">testing</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/tips" class="page__taxonomy-item" rel="tag">tips</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2012-11-02T05:47:01+00:00">November 2, 2012</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=The+fundamentals+of+unit+testing%3A+Atomic%20https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2012%2F11%2F02%2Fthe-fundamentals-of-automated-testing-atomic.html" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2012%2F11%2F02%2Fthe-fundamentals-of-automated-testing-atomic.html" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2012%2F11%2F02%2Fthe-fundamentals-of-automated-testing-atomic.html" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/blog/2012/10/27/the-fundamentals-of-automated-testing-spring-the-trap.html" class="pagination--pager" title="The fundamentals of unit testing: Spring The Trap
+">Previous</a>
+    
+    
+      <a href="/blog/2012/11/04/the-fundamentals-of-automated-testing-repeatable.html" class="pagination--pager" title="The fundamentals of unit testing: Repeatable
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2022/11/13/herman-miller-aeron.html" rel="permalink">The Herman Miller Aeron (tall edition)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">tl;dr
+
+  You may need to reduce the Aeron seat height or it’ll destroy your hamstrings
+  If you reduce your seat height, make sure your desk can accomodate i...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2022/10/03/obsidian.html" rel="permalink">Taking notes with Obsidian
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          9 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">How do you take notes?
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2021/11/04/dotnet5-sgen-parameters.html" rel="permalink">Parameterising sgen (aka the .NET Microsoft.XmlSerializer.Generator) via a .csproj PropertyGroup
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">The problem
+If you’ve landed on this post via searching the web, you probably already know what sgen.exe is, and what the 
+Microsoft.XmlSerializer.Generator ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2020/08/10/the-fundamentals-of-automated-testing-setup-structure.html" rel="permalink">The fundamentals of unit testing: Setup structure
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          6 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This post is part of a series on unit testing.
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/blog/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 Mark's Devblog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/blog/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,706 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Parameterising sgen (aka the .NET Microsoft.XmlSerializer.Generator) via a .csproj PropertyGroup - Mark’s Devblog</title>
+<meta name="description" content="The problem If you’ve landed on this post via searching the web, you probably already know what sgen.exe is, and what the  Microsoft.XmlSerializer.Generator  nuget package does.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Mark's Devblog">
+<meta property="og:title" content="Parameterising sgen (aka the .NET Microsoft.XmlSerializer.Generator) via a .csproj PropertyGroup">
+<meta property="og:url" content="https://marksimpson82.github.io/blog/2021/11/04/dotnet5-sgen-parameters.html">
+
+
+  <meta property="og:description" content="The problem If you’ve landed on this post via searching the web, you probably already know what sgen.exe is, and what the  Microsoft.XmlSerializer.Generator  nuget package does.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2021-11-04T00:00:00+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://marksimpson82.github.io/blog/2021/11/04/dotnet5-sgen-parameters.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Mark's Devblog",
+      "url": "https://marksimpson82.github.io/blog/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/blog/feed.xml" type="application/atom+xml" rel="alternate" title="Mark's Devblog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/blog/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/blog/">
+          Mark's Devblog
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name"></h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Parameterising sgen (aka the .NET Microsoft.XmlSerializer.Generator) via a .csproj PropertyGroup">
+    <meta itemprop="description" content="The problemIf you’ve landed on this post via searching the web, you probably already know what sgen.exe is, and what the Microsoft.XmlSerializer.Generator nuget package does.">
+    <meta itemprop="datePublished" content="2021-11-04T00:00:00+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Parameterising sgen (aka the .NET Microsoft.XmlSerializer.Generator) via a .csproj PropertyGroup
+</h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h2 id="the-problem">The problem</h2>
+<p>If you’ve landed on this post via searching the web, you probably already know what sgen.exe is, and what the 
+<a href="https://docs.microsoft.com/en-us/dotnet/core/additional-tools/xml-serializer-generator"><code class="language-plaintext highlighter-rouge">Microsoft.XmlSerializer.Generator</code></a> 
+nuget package does.</p>
+
+<p>You probably used to <a href="https://docs.microsoft.com/en-us/dotnet/standard/serialization/xml-serializer-generator-tool-sgen-exe">invoke sgen</a> 
+as part of a build script or a post-build .csproj step and parametrise it as you saw fit: e.g. passing <code class="language-plaintext highlighter-rouge">/type:MyType</code> to
+limit it to a single type.</p>
+
+<p>Sgen has historically been flaky to use (as it changed location on disk depending on which Windows SDK was installed 
+and some other factors), so it’s great it’s now done via a nuget package. That’s the good part.</p>
+
+<p>The bad part is that since switching to the 
+<a href="https://docs.microsoft.com/en-us/dotnet/core/additional-tools/xml-serializer-generator"><code class="language-plaintext highlighter-rouge">Microsoft.XmlSerializer.Generator</code></a> 
+nuget package, you’re thinking: “How do I pass arguments to sgen now that it’s automagically invoked via <code class="language-plaintext highlighter-rouge">dotnet build</code>?” 
+and also “where is the documentation?”</p>
+
+<p>I had the same reaction, dear reader. Porting an old C# project to <a href="https://dotnet.microsoft.com/download/dotnet/5.0">.NET 5</a> 
+resulted in sgen exiting with an error, as the default behaviour tries to generate serializers for every type in the 
+target assembly. I don’t want this behaviour for a few reasons:</p>
+
+<ol>
+  <li>It generates code I don’t want or need (and a bulkier serialization assembly)</li>
+  <li>It fails if namespacing is required (Got an assembly containing <code class="language-plaintext highlighter-rouge">NS1.Triangle</code> &amp; <code class="language-plaintext highlighter-rouge">NS2.Triangle</code>? Sgen will 
+fail unless you disambiguate the types via namespacing)</li>
+</ol>
+
+<p>We can fix both issues by simply telling sgen “hey, only generate serialization types for <code class="language-plaintext highlighter-rouge">/type:MyType</code>”. Only now we 
+can’t, because <code class="language-plaintext highlighter-rouge">Microsoft.XmlSerializer.Generator</code> is calling the shots rather than us directly calling sgen.</p>
+
+<h2 id="the-answer">The answer!</h2>
+<p>Blessed art thou, because it wasn’t even possible until 2019 (which seems like an oversight). 
+The answer is in the GitHub <a href="https://github.com/dotnet/corefx/pull/36085">Pull Request</a> that added this functionality.</p>
+
+<p>I haven’t been able to find any official documentation, so this is all we have to go on.</p>
+
+<ol>
+  <li>Open the .csproj containing the serialization types</li>
+  <li>Add a <code class="language-plaintext highlighter-rouge">PropertyGroup</code> section</li>
+  <li>Set one of the properties, using the attribute naming format of <code class="language-plaintext highlighter-rouge">&lt;SGenParamName&gt;</code>, where “ParamName” is a parameter name gleaned from the
+<a href="https://docs.microsoft.com/en-us/dotnet/standard/serialization/xml-serializer-generator-tool-sgen-exe#parameters">sgen documentation</a>
+    <ul>
+      <li>E.g. <code class="language-plaintext highlighter-rouge">type</code> would become <code class="language-plaintext highlighter-rouge">&lt;SGenType&gt;</code></li>
+    </ul>
+  </li>
+  <li>Save the project &amp; then build as normal.</li>
+</ol>
+
+<p>Here’s the example XML from the <a href="https://github.com/dotnet/corefx/pull/36085">PR</a> by <code class="language-plaintext highlighter-rouge">jiayi11</code> (thank you, kind fellow):</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;PropertyGroup&gt;</span>
+    <span class="nt">&lt;SGenReferences&gt;</span>C:\myfolder\abc.dll;C:\myfolder\def.dll<span class="nt">&lt;/SGenReferences&gt;</span>
+    <span class="nt">&lt;SGenTypes&gt;</span>SgenTestProgram.MyType1;SgenTestProgram.MyType2<span class="nt">&lt;/SGenTypes&gt;</span>
+    <span class="nt">&lt;SGenProxyTypes&gt;</span>false<span class="nt">&lt;/SGenProxyTypes&gt;</span>
+    <span class="nt">&lt;SGenVerbose&gt;</span>true<span class="nt">&lt;/SGenVerbose&gt;</span>
+    <span class="nt">&lt;SGenKeyFile&gt;</span>mykey.snk<span class="nt">&lt;/SGenKeyFile&gt;</span>
+    <span class="nt">&lt;SGenDelaySign&gt;</span>true<span class="nt">&lt;/SGenDelaySign&gt;</span>
+<span class="nt">&lt;/PropertyGroup&gt;</span>
+</code></pre></div></div>
+<p>For my use-case (serialization of a single type in a single project), all I needed to add was:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;PropertyGroup&gt;</span>
+    <span class="nt">&lt;SGenTypes&gt;</span>Tools.Blah.MyClass<span class="nt">&lt;/SGenTypes&gt;</span>    
+<span class="nt">&lt;/PropertyGroup&gt;</span>
+</code></pre></div></div>
+<p>That’s it!</p>
+
+<h2 id="a-bonus-tip">A bonus tip</h2>
+<p>The documentation for the 
+<a href="https://docs.microsoft.com/en-us/dotnet/core/additional-tools/xml-serializer-generator"><code class="language-plaintext highlighter-rouge">Microsoft.XmlSerializer.Generator</code></a> 
+doesn’t seem to be 100% up to date for .NET 5 (and .NET 6 is due any day now, too!)</p>
+
+<p>If you’re running with .NET 5, rather than copying the docs that suggest:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dotnet add package Microsoft.XmlSerializer.Generator <span class="nt">-v</span> 1.0.0
+</code></pre></div></div>
+<p>&amp;</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ItemGroup&gt;</span>
+   <span class="nt">&lt;DotNetCliToolReference</span> <span class="na">Include=</span><span class="s">"Microsoft.XmlSerializer.Generator"</span> <span class="na">Version=</span><span class="s">"1.0.0"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/ItemGroup&gt;</span>
+</code></pre></div></div>
+
+<p>… you can the command &amp; XML version to <code class="language-plaintext highlighter-rouge">=5.0.0</code> to get the latest version.</p>
+
+<h2 id="read-on-for-some-background">Read on for some background</h2>
+<p>Anyway, I’ve hopefully saved you some head-banging.</p>
+
+<p>For the rest of you that don’t know what sgen is and are vaguely interested, here’s a short explanation (warning: 
+this is boring, but it’s also useful to know for anyone doing XML serialization).</p>
+
+<h2 id="sgenexe">sgen.exe</h2>
+<p>Sgen is an XML serialization code generator. For a given assembly and (optionally) a type that you want to serialize, it 
+generates a .dll containing the serialization code <strong>at compile-time</strong>.</p>
+
+<p>Let’s say you have a toy project like so:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>project_root
+├── MyApp.sln    
+├── MyConsoleApp
+│   ├── MyConsoleApp.csproj
+│   ├── Program.cs
+├── MyClassLibrary
+│   ├── MyClassLibrary.csproj
+│   ├── NeedsXmlSerialized.cs
+</code></pre></div></div>
+
+<p>Our class <code class="language-plaintext highlighter-rouge">NeedsXmlSerialized.cs</code> needs to be serialized to Xml (or deserialized) during the course of the app run.</p>
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">public</span> <span class="k">class</span> <span class="nc">NeedsXmlSerialized</span> 
+<span class="p">{</span>
+  <span class="k">public</span> <span class="kt">int</span> <span class="n">SomeInt</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>In our Program.cs, we use the <code class="language-plaintext highlighter-rouge">XmlSerializer</code> class to convert our <code class="language-plaintext highlighter-rouge">NeedsXmlSerialized</code> instance to XML:</p>
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">public</span> <span class="k">class</span> <span class="nc">Program</span> 
+<span class="p">{</span>
+  <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span> 
+  <span class="p">{</span>
+    <span class="kt">var</span> <span class="n">serializer</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">XmlSerializer</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="n">NeedsXmlSerialized</span><span class="p">));</span>
+    <span class="k">using</span><span class="p">(</span><span class="kt">var</span> <span class="n">writer</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">StreamWriter</span><span class="p">(</span><span class="s">@"C:\some\file.xml"</span><span class="p">))</span>
+    <span class="p">{</span>
+      <span class="kt">var</span> <span class="n">typeToBeSerialized</span> <span class="p">=</span> <span class="k">new</span> <span class="n">NeedsXmlSerialized</span><span class="p">;</span>
+      <span class="n">typeToBeSerialized</span><span class="p">.</span><span class="n">SomeInt</span> <span class="p">=</span> <span class="m">5</span><span class="p">;</span> 
+      <span class="n">serializer</span><span class="p">.</span><span class="nf">Serialize</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">po</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>OK, so far so good. The program works, and we’ve not even mentioned sgen yet.</p>
+
+<h2 id="if-it-works-already-why-use-sgen">If it works already, why use sgen?</h2>
+<p>The short answer is performance. If the serialization types have not yet been generated, they must be created 
+on-the-fly at <strong>run-time</strong>. I.e. the first time you want to serialize/deserialize your class to/from XML, there is a 
+constant (and large!) stall. The serialization types are then cached &amp; re-used for the rest of the run, but the 
+down-payment can be considerable.</p>
+
+<p>I’ve seen this in production and it’s not pretty, especially in pathological cases where the runtime is short-lived and 
+only does one bout of serialization, e.g.:</p>
+<ul>
+  <li>The program starts up (20ms)</li>
+  <li>It does some CPU-bound work (300ms)</li>
+  <li>XML serialization types are generated on the fly (350ms)</li>
+  <li>Serialize to XML (20ms)</li>
+  <li>The program exits (5ms)</li>
+</ul>
+
+<p>In this case, we spend around half of the program’s runtime generating the serialization types each and every run. This 
+is scandalously wasteful. If you were to gaze at the profiling data, you’ll see a monolithic block of waste that seems 
+to be non-app code.</p>
+
+<p>An even better thing to do is avoid XML serialization and do something else instead. In my case we have no choice, as 
+the file format is sadly non-negotiable.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/blog/tags/csharp" class="page__taxonomy-item" rel="tag">csharp</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/dotnet" class="page__taxonomy-item" rel="tag">dotnet</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/microsoft-xmlserializer-generator" class="page__taxonomy-item" rel="tag">Microsoft.XmlSerializer.Generator</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/sgen" class="page__taxonomy-item" rel="tag">sgen</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-11-04T00:00:00+00:00">November 4, 2021</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Parameterising+sgen+%28aka+the+.NET+Microsoft.XmlSerializer.Generator%29+via+a+.csproj+PropertyGroup%20https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2021%2F11%2F04%2Fdotnet5-sgen-parameters.html" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2021%2F11%2F04%2Fdotnet5-sgen-parameters.html" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2021%2F11%2F04%2Fdotnet5-sgen-parameters.html" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/blog/2020/08/10/the-fundamentals-of-automated-testing-setup-structure.html" class="pagination--pager" title="The fundamentals of unit testing: Setup structure
+">Previous</a>
+    
+    
+      <a href="/blog/2022/10/03/obsidian.html" class="pagination--pager" title="Taking notes with Obsidian
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2022/11/13/herman-miller-aeron.html" rel="permalink">The Herman Miller Aeron (tall edition)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">tl;dr
+
+  You may need to reduce the Aeron seat height or it’ll destroy your hamstrings
+  If you reduce your seat height, make sure your desk can accomodate i...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2022/10/03/obsidian.html" rel="permalink">Taking notes with Obsidian
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          9 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">How do you take notes?
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2020/08/10/the-fundamentals-of-automated-testing-setup-structure.html" rel="permalink">The fundamentals of unit testing: Setup structure
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This post is part of a series on unit testing.
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2020/08/05/the-fundamentals-of-automated-testing-data-driven-tests.html" rel="permalink">The fundamentals of unit testing: Data-driven tests
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This post is part of a series on unit testing.
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/blog/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 Mark's Devblog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/blog/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,636 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Making sense of your codebase: NDepend - Mark’s Devblog</title>
+<meta name="description" content="I was given an NDepend license to play around with (thanks to Patrick) and said I’d blog about it. Apologies for my tardiness!">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Mark's Devblog">
+<meta property="og:title" content="Making sense of your codebase: NDepend">
+<meta property="og:url" content="https://marksimpson82.github.io/blog/2010/01/18/making-sense-of-your-codebase-ndepend.html">
+
+
+  <meta property="og:description" content="I was given an NDepend license to play around with (thanks to Patrick) and said I’d blog about it. Apologies for my tardiness!">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2010-01-18T01:53:04+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://marksimpson82.github.io/blog/2010/01/18/making-sense-of-your-codebase-ndepend.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Mark's Devblog",
+      "url": "https://marksimpson82.github.io/blog/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/blog/feed.xml" type="application/atom+xml" rel="alternate" title="Mark's Devblog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/blog/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/blog/">
+          Mark's Devblog
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name"></h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Making sense of your codebase: NDepend">
+    <meta itemprop="description" content="I was given an NDepend license to play around with (thanks to Patrick) and said I’d blog about it. Apologies for my tardiness!">
+    <meta itemprop="datePublished" content="2010-01-18T01:53:04+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Making sense of your codebase: NDepend
+</h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>I was given an NDepend license to play around with (thanks to Patrick) and said I’d blog about it. Apologies for my tardiness!</p>
+
+<h3 id="what-is-ndepend">What is NDepend?</h3>
+
+<p><a href="http://www.ndepend.com/Features.aspx">NDepend</a> is a piece of software that allows developers to analyse and visualise their code in many interesting ways. Here’s an ancient relic from my hard drive, revived in NDepend:</p>
+
+<p><a href="images/whole_app.png"><img class="alignnone" src="images/whole_app_thumb.png" alt="" width="326" height="228" /></a></p>
+
+<p>As you can see, there’s quite a lot of functionality included. NDepend includes features that allow you to trawl your code for quality problems, identify architectural constraints that have been breached, find untested, complicated code or pinpoint changes between builds and much more. This post will merely scratch the surface, but will hopefully provide some decent information on what NDepend can do for you and your team.</p>
+
+<p>NDepend works with Visual Studio solution files and integrates with Visual Studio, meaning it’s simple to generate an NDepend project based on a solution. You can then press the analyse button and watch NDepend do its thing - it generates a nice HTML report with various visualisations and statistics.</p>
+
+<h3 id="cql-all-the-way">CQL all the way</h3>
+
+<p>NDepend provide a lot of pre-defined metrics out of the box, but its best feature by far (and the one on which most of its functionality is built) is the CQL query language. The SQL / Linq-esque query language allows you to search, filter and order data in a simple fashion. Once you get accustomed to the query language, it is simple to start bashing out meaningful queries.</p>
+
+<p>You enter queries into a command window and the results are displayed instantly. For example, you could write something like this:</p>
+
+<p><img class="alignnone" title="CQL query" src="images/sample_cql_query.png" alt="" width="413" height="82" /></p>
+
+<p>At the time of writing, 82 separate metrics are available; the metrics are grouped by categories including: assembly, namespace, method etc. If you have an idea, then you can probably express that idea via CQL.  Furthermore, your queries can be saved and reused/applied to projects as required.</p>
+
+<p>To write a query, you just tap it into the query editor:</p>
+
+<p><img class="alignnone" title="editor" src="images/query_editor.png" alt="" width="465" height="221" /></p>
+
+<h3 id="dont-be-paralysed-by-choice">Don’t be Paralysed by Choice</h3>
+
+<p>While it is a hugely powerful program, I found it overwhelming to begin with. The default analysis of your code will result in a verbose report including every metric under the sun; some of these are unarguably very useful (Cyclomatic complexity, IL nesting depth) whereas others have a more narrow purpose (suggesting which attributes should be sealed, boxing and unboxing warnings and so on).</p>
+
+<p>Due to the mammoth amount of information in the report, it’s akin to pulling the FxCop lever for the first time. You get metrics-shotgunned in the face and potentially paralysed by choice. As a result, I chose to view the default report as a rough guide for how to use the CQL query language and to give me ideas of how I could form queries that were tailored to my needs. There’s an excellent <a href="http://www.hanselman.com/blog/content/binary/NDepend%20metrics%20placemats%201.1.pdf">placemat PDF available for download</a>, too.</p>
+
+<p>I would encourage first time users to skim the main report for interesting nuggets then immediately begin to play around with the CQL query language :). It’s really cool to think, “I wonder if…”, type a few words and immediately see the question answered.</p>
+
+<h3 id="manual-trawling-versus-ndepend">Manual trawling versus NDepend</h3>
+
+<p>Back when I was a Test Engineer, I was assigned to look at an unfamiliar part of our codebase. I decided to do a little experiment using NDepend to determine its effectiveness (we have a few licenses at work too and are looking to integrate it into our build process at some stage soon). The test was simply this: I would work through the code manually checking each file/type for problems, then I would do a sweep using NDepend to see if it could pick out the same problems (and potentially some others I’d missed).</p>
+
+<p>The sort of things I was looking for included:</p>
+
+<ul>
+  <li>Big balls of mud / God classes</li>
+  <li>Types with the most complicated functionality (high cyclomatic complexity / code nesting level)</li>
+  <li>Types that are heavily used (‘arteries’ of the codebase - failure would be more costly)</li>
+  <li>Types that have poor coverage and high complexity</li>
+</ul>
+
+<p>The results were good. The majority of the problems I had identified during a manual sweep showed up near the top of the query results. It took me a few hours to manually trawl a relatively small portion of the codebase. It took me about an hour to get to grips with the NDepend basics, write some CQL and make sense of the results. I’d say that’s very good going considering I hadn’t used it before.</p>
+
+<p>One thing to watch out for is that some manual tweaking is often required as, if you have some ugly utility classes or use open source software in source form (such as the command line argument parser class that is ubiquitous at work), these sorts of thing monopolise the results. To get around this problem you can ignore these types, either by applying attributes to your types in code, or by adding an explicit exclude via your query (some examples of which are included below).</p>
+
+<h3 id="sample-queries">Sample Queries</h3>
+
+<p>Here’s a few examples of how to express the aforementioned concerns as queries. Note: I’m an NDepend newbie, so there’s probably better ways to do this.</p>
+
+<p><strong>Types that have so many lines of code that it makes your head spin</strong></p>
+
+<p><img title="God" src="images/god_classes.png" alt="" width="413" height="82" /></p>
+
+<p><strong>Complicated nesting</strong></p>
+
+<p><img class="alignnone" title="nesting" src="images/il_nesting.png" alt="" width="413" height="82" /></p>
+
+<p><strong>Complicated methods</strong></p>
+
+<p><img class="alignnone" title="nesting" src="images/complex_methods.png" alt="" width="413" height="82" /></p>
+
+<p><strong>High complexity with poor test coverage</strong></p>
+
+<p><img class="alignnone" title="nesting" src="images/poor_coverage.png" alt="" width="413" height="82" /></p>
+
+<p><strong>‘Popular’ types with poor test coverage</strong></p>
+
+<p><img class="alignnone" title="nesting" src="images/popular_types.png" alt="" width="413" height="82" /></p>
+
+<p>None of these are ‘hard’ rules - you have to play around with them while browsing your codebase (which is easy as NDepend’s CQL editor is constantly updating as you enter the query). You may find that one project has really simple code that doesn’t even register on a solution-wide analysis, whereas another project may hog the results pane. If you have a specific goal in mind, you can iteratively tailor the query to get what you want :).</p>
+
+<h3 id="the-role-of-ndepend">The role of NDepend?</h3>
+
+<p>NDepend is not a silver bullet and doesn’t claim to be - it’s a complementary tool that can be used in addition to buddy systems, code reviews and so forth. Having said that, the amount of information you can mine from your codebase is pretty impressive.</p>
+
+<p>In terms of practical usage, we plan to integrate it into our build system to aid us in identifying potential problems, including code changes not backed by tests, architectural rules (project x is not allowed to reference project y) and general rules of thumb that should be respected (cyclomatic complexity, nesting depth and so forth).</p>
+
+<p>In short, it’s well worth checking out NDepend.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/blog/tags/c" class="page__taxonomy-item" rel="tag">c#</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/ndepend" class="page__taxonomy-item" rel="tag">ndepend</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/software" class="page__taxonomy-item" rel="tag">software</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2010-01-18T01:53:04+00:00">January 18, 2010</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Making+sense+of+your+codebase%3A+NDepend%20https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2010%2F01%2F18%2Fmaking-sense-of-your-codebase-ndepend.html" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2010%2F01%2F18%2Fmaking-sense-of-your-codebase-ndepend.html" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2010%2F01%2F18%2Fmaking-sense-of-your-codebase-ndepend.html" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/blog/2010/01/11/automapper-and-test-data-builders.html" class="pagination--pager" title="AutoMapper and Test Data Builders
+">Previous</a>
+    
+    
+      <a href="/blog/2010/02/13/more-readable-data-driven-tests.html" class="pagination--pager" title="More readable data-driven tests
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2022/11/13/herman-miller-aeron.html" rel="permalink">The Herman Miller Aeron (tall edition)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">tl;dr
+
+  You may need to reduce the Aeron seat height or it’ll destroy your hamstrings
+  If you reduce your seat height, make sure your desk can accomodate i...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2022/10/03/obsidian.html" rel="permalink">Taking notes with Obsidian
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          9 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">How do you take notes?
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2021/11/04/dotnet5-sgen-parameters.html" rel="permalink">Parameterising sgen (aka the .NET Microsoft.XmlSerializer.Generator) via a .csproj PropertyGroup
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">The problem
+If you’ve landed on this post via searching the web, you probably already know what sgen.exe is, and what the 
+Microsoft.XmlSerializer.Generator ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2020/08/10/the-fundamentals-of-automated-testing-setup-structure.html" rel="permalink">The fundamentals of unit testing: Setup structure
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          6 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This post is part of a series on unit testing.
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/blog/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 Mark's Devblog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/blog/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

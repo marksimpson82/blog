@@ -1,0 +1,603 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Data-driven testing tricks - Mark’s Devblog</title>
+<meta name="description" content="It’s a fairly common occurrence - somebody wants to use NUnit’s data driven testing, but they want to vary either the action under test, or the expectation. I.e. they’re not parametrising simple data, they’re parametrising the actions.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Mark's Devblog">
+<meta property="og:title" content="Data-driven testing tricks">
+<meta property="og:url" content="https://marksimpson82.github.io/blog/2010/05/08/data-driven-testing-tricks.html">
+
+
+  <meta property="og:description" content="It’s a fairly common occurrence - somebody wants to use NUnit’s data driven testing, but they want to vary either the action under test, or the expectation. I.e. they’re not parametrising simple data, they’re parametrising the actions.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2010-05-08T21:12:08+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://marksimpson82.github.io/blog/2010/05/08/data-driven-testing-tricks.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Mark's Devblog",
+      "url": "https://marksimpson82.github.io/blog/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/blog/feed.xml" type="application/atom+xml" rel="alternate" title="Mark's Devblog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/blog/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/blog/">
+          Mark's Devblog
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name"></h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Data-driven testing tricks">
+    <meta itemprop="description" content="It’s a fairly common occurrence - somebody wants to use NUnit’s data driven testing, but they want to vary either the action under test, or the expectation. I.e. they’re not parametrising simple data, they’re parametrising the actions.">
+    <meta itemprop="datePublished" content="2010-05-08T21:12:08+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Data-driven testing tricks
+</h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>It’s a fairly common occurrence - somebody wants to use NUnit’s data driven testing, but they want to vary either the action under test, or the expectation. I.e. they’re not parametrising simple <em>data</em>, they’re parametrising the <em>actions</em>.</p>
+
+<p>You cannot encode these things via normal data-driven testing (short of doing really nasty things like passing string names of methods to be invoked or using enums and a dictionary of methods) and even if you use a hackish workaround, it’s unlikely to be flexible or terse.</p>
+
+<p>Test readability is paramount, so if you have some tests written in an unfamiliar style, it is very important to express the intent clearly, too.</p>
+
+<p><strong>NUnit’s data-driven testing</strong></p>
+
+<p>NUnit uses a few mechanisms to parametrise tests. Firstly, for simple test cases, it offers the 
+<a href="http://nunit.org/?p=testCase&amp;r=2.5">TestCase</a> attribute which takes a <code class="language-plaintext highlighter-rouge">params object[]</code> array in its constructor. Each 
+argument passed to the TestCaseAttribute’s constructor is stored, ready for retrieval by the framework.</p>
+
+<p>NUnit does the heavy lifting for us and casts/converts each argument to the test method’s parameter types. Here’s an 
+example where three ints are passed, then correctly mapped to a test method:</p>
+
+<p><img class="alignnone" src="images/simple_data_driven.png" alt="" width="689" height="361" /></p>
+
+<p>The main limitation here is that we can only store intrinsic types. Strings, ints, shorts, bools etc. We can’t new up classes or structs because .NET doesn’t allow it. How the devil do we do something more complicated?</p>
+
+<h3 id="passing-more-complicated-types">Passing more complicated types</h3>
+
+<p>It would appear we’re screwed, but fortunately, we can use the 
+<a href="http://www.nunit.org/index.php?p=testCaseSource&amp;r=2.5">TestCaseSource</a> attribute. There are numerous options for 
+yielding the data, and one of them is to define an IEnumerable<TestCaseData> as a public method of your test class (it 
+works if it's private, but since it's accessed via reflection it's a good idea to keep it public so that ReSharper or 
+other tools do not flag it as unused).</TestCaseData></p>
+
+<p>You can then fill up and yield individual TestCaseData instances in the same 
+fashion as before. Once again, NUnit does the mapping and the heavy lifting for us.</p>
+
+<p><img class="alignnone" src="images/passing_more_complicated_types.png" alt="" width="604" height="379" /></p>
+
+<p>If you do not require any of the fancy SetDescription, ExpectedException etc. stuff associated with the TestCaseData type, you can skip one piece of ceremony by simply yielding your own arbitrary type instead (i.e. change the IEnumerable<TestCaseData> to IEnumerable<MyType> and then simply yield return new MyType()).</MyType></TestCaseData></p>
+
+<h3 id="passing-a-delegate-as-a-parameter-simple">Passing a delegate as a parameter (simple)</h3>
+
+<p>The simplest case is that you want to vary which methods are called. For example, if you have multiple types implementing the same interface or multiple static methods, encoding which method to call is very simple.</p>
+
+<p>Here’s an example from Stackoverflow that <a href="http://stackoverflow.com/questions/2784685/how-do-i-simplify-these-nunit-tests/2784829#2784829">I answered recently</a> where the author wanted to call one of three different static methods, each with the same signature and asserts. The solution was to examine the method signature of the call and then use the appropriate Func&lt;&gt; type (<a href="http://msdn.microsoft.com/en-us/library/018hxwa8.aspx">Funcs and Actions are convenience delegates provided by the .NET framework</a>). It was then easy to parametrise the test by passing in a delegates targeting the appropriate methods.</p>
+
+<p><img class="alignnone" src="images/passing_delegates.png" alt="" width="584" height="443" /></p>
+
+<h3 id="more-advanced-applications">More advanced applications</h3>
+
+<p>Beyond calling simple, stateless methods via delegates or passing non-intrinsic types, you can do a lot of creative and cool stuff. For example, you could new up an instance of a type T in the test body and pass in an Action<T> to call. The test body would create an instance of type T, then apply the action to it. You can even go as far as expressing Act/Assert pairs via a combination of Actions and mocking frameworks. E.g. you could say "when I call method X on the controller, I expect method Y on the model to be called", and so forth.</T></p>
+
+<p>The caveat is that as you do use more and more ‘creative’ types of data-driven testing, it gets less and less readable for other programmers. Always keep checking what you’re doing and determine whether there is a better way to implement the type of testing you’re doing. It’s easy to get carried away when applying new techniques, but it’s often the case that a more verbose but familiar pattern is a better choice.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/blog/tags/c" class="page__taxonomy-item" rel="tag">c#</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/data-driven" class="page__taxonomy-item" rel="tag">data-driven</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/patterns" class="page__taxonomy-item" rel="tag">patterns</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/testing" class="page__taxonomy-item" rel="tag">testing</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/tips" class="page__taxonomy-item" rel="tag">tips</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2010-05-08T21:12:08+00:00">May 8, 2010</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Data-driven+testing+tricks%20https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2010%2F05%2F08%2Fdata-driven-testing-tricks.html" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2010%2F05%2F08%2Fdata-driven-testing-tricks.html" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2010%2F05%2F08%2Fdata-driven-testing-tricks.html" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/blog/2010/03/04/steam-is-testing-my-patience.html" class="pagination--pager" title="Steam is testing my patience
+">Previous</a>
+    
+    
+      <a href="/blog/2010/05/15/castle-dynamicproxy2-quirks.html" class="pagination--pager" title="Castle DynamicProxy2 quirks
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2022/11/13/herman-miller-aeron.html" rel="permalink">The Herman Miller Aeron (tall edition)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">tl;dr
+
+  You may need to reduce the Aeron seat height or it’ll destroy your hamstrings
+  If you reduce your seat height, make sure your desk can accomodate i...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2022/10/03/obsidian.html" rel="permalink">Taking notes with Obsidian
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          9 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">How do you take notes?
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2021/11/04/dotnet5-sgen-parameters.html" rel="permalink">Parameterising sgen (aka the .NET Microsoft.XmlSerializer.Generator) via a .csproj PropertyGroup
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">The problem
+If you’ve landed on this post via searching the web, you probably already know what sgen.exe is, and what the 
+Microsoft.XmlSerializer.Generator ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2020/08/10/the-fundamentals-of-automated-testing-setup-structure.html" rel="permalink">The fundamentals of unit testing: Setup structure
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          6 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This post is part of a series on unit testing.
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/blog/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 Mark's Devblog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/blog/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,656 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Data-Driven Testing with Python - Mark’s Devblog</title>
+<meta name="description" content="Hello tests. It’s been a while since I blogged about automated testing, so it’s nice to welcome an old friend back to the fold. I’ve missed you. I’ve recently started programming in python. I say programming, but what I mean by that is ‘hopelessly jabbing at the keyboard and gawping as my lovingly written code explodes on being invoked’. While I blub.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Mark's Devblog">
+<meta property="og:title" content="Data-Driven Testing with Python">
+<meta property="og:url" content="https://marksimpson82.github.io/blog/2012/05/21/data-driven-testing-with-python.html">
+
+
+  <meta property="og:description" content="Hello tests. It’s been a while since I blogged about automated testing, so it’s nice to welcome an old friend back to the fold. I’ve missed you. I’ve recently started programming in python. I say programming, but what I mean by that is ‘hopelessly jabbing at the keyboard and gawping as my lovingly written code explodes on being invoked’. While I blub.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2012-05-21T22:29:05+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://marksimpson82.github.io/blog/2012/05/21/data-driven-testing-with-python.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Mark's Devblog",
+      "url": "https://marksimpson82.github.io/blog/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/blog/feed.xml" type="application/atom+xml" rel="alternate" title="Mark's Devblog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/blog/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/blog/">
+          Mark's Devblog
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name"></h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Data-Driven Testing with Python">
+    <meta itemprop="description" content="Hello tests. It’s been a while since I blogged about automated testing, so it’s nice to welcome an old friend back to the fold. I’ve missed you. I’ve recently started programming in python. I say programming, but what I mean by that is ‘hopelessly jabbing at the keyboard and gawping as my lovingly written code explodes on being invoked’. While I blub.">
+    <meta itemprop="datePublished" content="2012-05-21T22:29:05+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Data-Driven Testing with Python
+</h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>Hello tests. It’s been a while since I blogged about automated testing, so it’s nice to welcome an old friend back to the fold. I’ve missed you. I’ve recently started programming in python. I say programming, but what I mean by that is ‘hopelessly jabbing at the keyboard and gawping as my lovingly written code explodes on being invoked’. While I blub.</p>
+
+<p>Python is a dynamic programming language. It’s pretty dynamic in its ability to detonate in various ways, too. There’s no compiler to sanity check my elementary mistakes like typos, or dotting onto a method that doesn’t exist. Or accidentally comparing functions instead of values. Or… well, you get the gist.</p>
+
+<p>Anyzoom, the fundamentals of unit testing in python are very simple. I can’t be bothered detailing how to use unittest or a test runner, as there’s nine zillion resources out there on it already.</p>
+
+<h1 id="a-simple-setup">A Simple Setup</h1>
+<p>We’re using <a href="http://docs.python.org/library/unittest.html">unittest</a> as the framework, <a href="http://readthedocs.org/docs/nose/en/latest/">Nose</a> as the runner and <a href="http://pypi.python.org/pypi/teamcity-nose">TeamCity Nose</a> integration. It worked very nicely out of the box, so I can’t complain. Writing tests is simple, but then I wanted to make a data-driven test and…</p>
+
+<h1 id="data-driven">Data Driven?</h1>
+<p>To recap what a data-driven test is: You run the same test logic and assertions, but vary the data. E.g. if you have a test method that is part of a test suite, you’d expected to see something like this (pseudo python code):</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">test</span> <span class="n">data</span> <span class="o">=</span> <span class="n">Vector3D</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">Vector3D</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="mf">1.0</span>
+<span class="n">test</span> <span class="n">data</span> <span class="o">=</span> <span class="n">Vector3D</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">Vector3D</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="o">-</span><span class="mf">1.0</span>
+<span class="n">test</span> <span class="n">data</span> <span class="o">=</span> <span class="n">Vector3D</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">Vector3D</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="mf">0.0</span>
+
+<span class="k">def</span> <span class="nf">test_dot</span><span class="p">(</span><span class="n">vec1</span><span class="p">,</span> <span class="n">vec2</span><span class="p">,</span> <span class="n">expected_result</span><span class="p">):</span>
+  <span class="n">dot</span> <span class="o">=</span> <span class="n">Vector3D</span><span class="p">.</span><span class="n">dot</span><span class="p">(</span><span class="n">vec1</span><span class="p">,</span> <span class="n">vec2</span><span class="p">)</span>
+  <span class="n">assertEquals</span><span class="p">(</span><span class="n">dot</span><span class="p">,</span> <span class="n">expected_result</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Each of the test data cases defined above the function / method would generate a new test case. The test logic would be run 3 times – one for each test input.</p>
+
+<p>Data-driven tests typically take input data, feed it into some method or function, then assert that the produced effect is correct. You’ll often need to pass through an expected result, too.</p>
+
+<h1 id="the-options">The Options</h1>
+
+<p>I had a quick scout around and arrived at two options. There is a third, but it has a limitation that I didn’t much care for.</p>
+
+<h2 id="nose-generators">nose generators</h2>
+
+<p>It sounds like a high-tech energy solution based on harnessing snot. It’s not.</p>
+
+<p>Nose (the test runner we’re using) has a built-in concept of <a href="http://readthedocs.org/docs/nose/en/latest/writing_tests.html#test-generators">test function as generators</a>. This allows users to create multiple test cases out of single tests. At first glance, it looks good. Unfortunately, <a href="http://technomilk.wordpress.com/2012/02/12/multiplying-python-unit-test-cases-with-different-sets-of-data/">as detailed here</a>, it doesn’t work when you’re subclassing unittest.TestSuite which is a common thing to do.</p>
+
+<p>If you don’t care about this limitation <em>and</em> use Nose to run your tests, I actually think this is a nice solution.</p>
+
+<h2 id="ddt">ddt</h2>
+
+<p>Next up is a one called simply, “<a href="http://technomilk.wordpress.com/2012/02/12/multiplying-python-unit-test-cases-with-different-sets-of-data/">ddt</a>”. No prizes for guessing what that acronym stands for (no, really, there is no prize. Stop phoning. This is a repeat, the lines have closed).</p>
+
+<p>To use ddt, decorate your class with @ddt, then add @data to data-driven test methods. Each argument specified as part of the @data decorator generates a test case, so if you have N arguments, you get N test cases.</p>
+
+<p>The examples don’t make it crystal clear, but with ddt, you’re expected to boil down your test case to this single argument. I.e. if you have a few inputs and an expected result, you’re responsible for stashing the data into a containing object and yanking it back out in the test method.</p>
+
+<p>I’m not a massive fan of this approach as I’m quite accustomed to the NUnit style of the test runner reflecting over my test data attribute arguments then <a href="http://www.nunit.org/index.php?p=testCase&amp;r=2.5">passing the correct arguments to my test method automatically</a>. However, it gets the job done and works well enough.</p>
+
+<p>Possibly due to being ill at ease with Python, I made a wrapper object to avoid having to use a dictionary. Personally, I think this makes the test code read better, but this is just a matter of taste.</p>
+
+<p>Note: This bit of code may make a pythonista strangle you with your own tie (I don’t wear one).</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">TestData</span><span class="p">:</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">entries</span><span class="p">):</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">__dict__</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="n">entries</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>It’s then just a case of instantiating a new TestData object every time you want to pass several arguments into a test method, like so:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">@</span><span class="n">data</span><span class="p">(</span>
+  <span class="n">TestData</span><span class="p">(</span><span class="n">vec1</span><span class="o">=</span><span class="n">Vector3D</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">vec2</span><span class="o">=</span><span class="n">Vector3D</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">expected_result</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">),</span>
+  <span class="n">TestData</span><span class="p">(</span><span class="n">vec1</span><span class="o">=</span><span class="n">Vector3D</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">vec2</span><span class="o">=</span><span class="n">Vector3D</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">expected_result</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">),</span>
+  <span class="n">TestData</span><span class="p">(</span><span class="n">vec1</span><span class="o">=</span><span class="n">Vector3D</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">vec2</span><span class="o">=</span><span class="n">Vector3D</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">expected_result</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">)</span>
+<span class="p">)</span>
+  <span class="k">def</span> <span class="nf">test_dot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">test_data</span><span class="p">):</span>
+    <span class="n">vec1</span> <span class="o">=</span> <span class="n">test_data</span><span class="p">.</span><span class="n">vec1</span>
+    <span class="n">vec2</span> <span class="o">=</span> <span class="n">test_data</span><span class="p">.</span><span class="n">vec2</span>
+    <span class="n">dot</span> <span class="o">=</span> <span class="n">Vector3D</span><span class="p">.</span><span class="n">dot</span><span class="p">(</span><span class="n">vec1</span><span class="p">,</span> <span class="n">vec2</span><span class="p">)</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">failUnlessAlmostEqual</span><span class="p">(</span><span class="n">dot</span><span class="p">,</span> <span class="n">test_data</span><span class="p">.</span><span class="n">expected_result</span><span class="p">,</span> <span class="n">places</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><strong>Updated March 2014:</strong> The developers of ddt were nice enough to add an @unpack decorator! You can now provide lists/tuples/dictionaries and, via the magic of @unpack, the list will be split into method arguments.</p>
+
+<p>Documentation is here: <a href="http://ddt.readthedocs.org/en/latest/example.html" title="http://ddt.readthedocs.org/en/latest/example.html">http://ddt.readthedocs.org/en/latest/example.html</a></p>
+
+<h2 id="nose-parameterized">nose-parameterized</h2>
+
+<p>The final option I was made aware of (thanks to my old colleague Gary) is one called <a href="https://github.com/wolever/nose-parameterized">nose-parameterized</a>. As you can imagine, it works with nose. It allows parameterised tests. What’s not to like?</p>
+
+<p>Well, the truth is… This one is almost perfect. Usage (from the documentation):</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">@</span><span class="n">parameterized</span><span class="p">([</span>
+  <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
+  <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span>
+  <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+  <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+<span class="p">])</span>
+<span class="k">def</span> <span class="nf">test_pow</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">exponent</span><span class="p">,</span> <span class="n">expected</span><span class="p">):</span>
+  <span class="n">assert_equal</span><span class="p">(</span><span class="n">math</span><span class="p">.</span><span class="nb">pow</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">exponent</span><span class="p">),</span> <span class="n">expected</span><span class="p">)</span>
+</code></pre></div></div>
+<p>Each tuple’s contents is expanded into the test method’s parameter list, just like momma used to make. Beautiful!</p>
+
+<p>… so why am I using ddt instead? Unfortunately, nose-parameterized does not play nicely with PyCharm. PyCharm lets you run the tests from the IDE and also debug them, but nose-parameterised seems to confuse it.</p>
+
+<p>Gary said, “what are you doing man, using an IDE with Python?” The truth is that I’m not a real man. Yet.</p>
+
+<h1 id="roundup">Roundup</h1>
+
+<p>In all honesty, all three options are viable and it’s mostly down to preference. So there we go: Three good options for data-driven testing. If you have any other good ones, please leave a comment.</p>
+
+<p>Happy testing!</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/blog/tags/data-driven" class="page__taxonomy-item" rel="tag">data-driven</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/python" class="page__taxonomy-item" rel="tag">python</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/software" class="page__taxonomy-item" rel="tag">software</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/testing" class="page__taxonomy-item" rel="tag">testing</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/tips" class="page__taxonomy-item" rel="tag">tips</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2012-05-21T22:29:05+00:00">May 21, 2012</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Data-Driven+Testing+with+Python%20https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2012%2F05%2F21%2Fdata-driven-testing-with-python.html" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2012%2F05%2F21%2Fdata-driven-testing-with-python.html" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2012%2F05%2F21%2Fdata-driven-testing-with-python.html" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/blog/2012/04/16/the-power-of-boy-scouting-git-stash.html" class="pagination--pager" title="The Power of Boy Scouting &amp; Git Stash
+">Previous</a>
+    
+    
+      <a href="/blog/2012/06/08/ea-penalises-its-own-customers-nobody-cares.html" class="pagination--pager" title="EA penalises its existing customers; nobody cares
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2022/11/13/herman-miller-aeron.html" rel="permalink">The Herman Miller Aeron (tall edition)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">tl;dr
+
+  You may need to reduce the Aeron seat height or it’ll destroy your hamstrings
+  If you reduce your seat height, make sure your desk can accomodate i...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2022/10/03/obsidian.html" rel="permalink">Taking notes with Obsidian
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          9 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">How do you take notes?
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2021/11/04/dotnet5-sgen-parameters.html" rel="permalink">Parameterising sgen (aka the .NET Microsoft.XmlSerializer.Generator) via a .csproj PropertyGroup
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">The problem
+If you’ve landed on this post via searching the web, you probably already know what sgen.exe is, and what the 
+Microsoft.XmlSerializer.Generator ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2020/08/10/the-fundamentals-of-automated-testing-setup-structure.html" rel="permalink">The fundamentals of unit testing: Setup structure
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          6 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This post is part of a series on unit testing.
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/blog/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 Mark's Devblog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/blog/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

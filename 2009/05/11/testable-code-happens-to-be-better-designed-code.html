@@ -1,0 +1,634 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Benefits of designing for testability - Mark’s Devblog</title>
+<meta name="description" content="When I started my job as a Software Test Engineer, I had very little knowledge about unit testing. I had a good degree award and a load of acronyms to put on my (in retrospect, rather horrible) CV. I thought I knew a bit about design, encapsulation, patterns, object-oriented programming and all the rest. With a little trepidation, I felt I was ready to face the world as a programmer.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Mark's Devblog">
+<meta property="og:title" content="Benefits of designing for testability">
+<meta property="og:url" content="https://marksimpson82.github.io/blog/2009/05/11/testable-code-happens-to-be-better-designed-code.html">
+
+
+  <meta property="og:description" content="When I started my job as a Software Test Engineer, I had very little knowledge about unit testing. I had a good degree award and a load of acronyms to put on my (in retrospect, rather horrible) CV. I thought I knew a bit about design, encapsulation, patterns, object-oriented programming and all the rest. With a little trepidation, I felt I was ready to face the world as a programmer.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2009-05-11T01:40:23+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://marksimpson82.github.io/blog/2009/05/11/testable-code-happens-to-be-better-designed-code.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Mark's Devblog",
+      "url": "https://marksimpson82.github.io/blog/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/blog/feed.xml" type="application/atom+xml" rel="alternate" title="Mark's Devblog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/blog/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/blog/">
+          Mark's Devblog
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name"></h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Benefits of designing for testability">
+    <meta itemprop="description" content="When I started my job as a Software Test Engineer, I had very little knowledge about unit testing. I had a good degree award and a load of acronyms to put on my (in retrospect, rather horrible) CV. I thought I knew a bit about design, encapsulation, patterns, object-oriented programming and all the rest. With a little trepidation, I felt I was ready to face the world as a programmer.">
+    <meta itemprop="datePublished" content="2009-05-11T01:40:23+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Benefits of designing for testability
+</h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          7 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>When I started my job as a Software Test Engineer, I had very little knowledge about unit testing. I had a good degree award and a load of acronyms to put on my (in retrospect, rather horrible) CV. I thought I knew a bit about design, encapsulation, patterns, object-oriented programming and all the rest. With a little trepidation, I felt I was ready to face the world as a programmer.</p>
+
+<p>I applied for a few programming jobs at Realtime Worlds and did not succeed. After the first rejection, I did not become disheartened. I did what any sensible young chap would do - I went back to the drawing board. I continually improved my skill, learned c#, created some new programs and re-wrote old programs with the knowledge I’d gleaned. Every so often I’d check the website or speak to my friends who worked there, asking if anything suitable was potentially coming up. Eventually, I landed at Realtime Worlds as a Software Test Engineer.</p>
+
+<p>In an ideal world, I would’ve succeeded first time. After all, it was my goal to be a software engineer.</p>
+
+<h3 id="picture-the-scene">Picture the scene</h3>
+
+<p>My tremendously awesome CV plopped onto the doormat, awaiting the arrival of the hiring manager. At 9am on the dot, that fine fellow picked it up and was instantly startled. “Oh my!”, he cried, “Who is this remarkable young gentleman programmer who wishes to join our fine establishment?”</p>
+
+<p>The hiring manager sprinted up the stairs, burst into a CV triage meeting - cheeks purple and lungs wheezing - before hurling my golden-tinted paper across the room.  “Look! Look! We’ve found <em>him</em>”, he honked. The lead programmers threw their hats in the air, linked arms and then danced a merry dance.</p>
+
+<p>The search was over, and the party went on long into the night (though the party did involve programming a Spectrum emulator for the 3DO).</p>
+
+<p>It would’ve been great. Well, in many ways yes. In other ways, no. Hindsight being 20/20, I am actually grateful that I didn’t get my first job doing normal development. Why?</p>
+
+<h3 id="things-wot-i-knew">Things wot I knew</h3>
+
+<p>Firstly, bear in mind the fact that I said I <em>thought</em> I knew about design, encapsulation, this that and the other. I did know a little bit, but I knew precisely <strong>nothing</strong> in the grand scheme of things. Here’s the lowdown:</p>
+
+<ul>
+  <li>
+    <p>My knowledge of patterns was the singleton and some others. I did know some others, but it may as well have just been “singleton”. Lalala, I can’t hear you. I remember the shock when my friend linked my to the <a href="http://steve.yegge.googlepages.com/singleton-considered-stupid">“Singleton considered stupid”</a> article prior to getting a job. “But they’re my best mates!”, I gasped. “Yeah, but they’re stupid”, he replied, before jabbing me in the eye with a stick and berating me for my incompetence.</p>
+  </li>
+  <li>
+    <p>My idea of simplifying problems by breaking them into smaller systems usually involved multiple managers all interacting via singletons.</p>
+  </li>
+  <li>
+    <p>My idea of extensible software was using horribly complicated, deep inheritance hierarchies everywhere. Yeah let’s make this base class and then…</p>
+  </li>
+  <li>
+    <p>Pretty much everything I wrote was tightly coupled. I thought that I had abstracted things away, but in general I just moved problems around. Nearly every class relied on multiple custom, concrete types. I never used factories.</p>
+  </li>
+  <li>
+    <p>I relied on implementation details. I often reached into classes several levels deep. House-&gt;GetKitchen()-&gt;GetSink()-&gt;GetTap(); I didn’t just break the <a href="http://en.wikipedia.org/wiki/Law_of_Demeter">Law of Demeter</a>, I dropped it on the ground and used its smashed remains as a (crap) bouncy castle.</p>
+  </li>
+</ul>
+
+<p>I could go on. In short, as a dumb graduate, I was interested in my craft and enjoyed programming, but I had some bad habits and didn’t understand why a lot of the things I was doing were flat-out wrong, unmaintanable and are diametrically opposed to the principle of least surprise. However, sometimes you don’t find out about these things until you’re forced to broach a particular topic.</p>
+
+<p>The reason I’m so glad to be a software test engineer is that all, and I mean <strong>all</strong>, of these coding horrors were laid bare when I started learning how to test properly. When your code is fundamentally untestable, there is no denying it.</p>
+
+<h3 id="sowing-the-seeds">Sowing the seeds</h3>
+
+<p>As a newbie, I was tasked with writing tests for a lot of our existing codebase. This meant I was exposed to a lot of different structures and idioms of production code written by <strong>everyone.</strong> Some of it was very easy to test; other parts not so much.</p>
+
+<p>We’re a games company and unit testing is not something that has gained widespread acceptance in games. Back then, it was no surprise that the results were variable. I spent months writing loads of tests and it took me <em>a long time</em> to feel like I was doing it in a way that I was happy with.</p>
+
+<p>Anyway, rewind back to when I sucked more than I suck now. Even though I had no idea about what testability concerns should be, I quickly learned through doing. I read articles and kept attempting to write better tests.</p>
+
+<ul>
+  <li>
+    <p>After a couple of weeks, I started rocking back and forth if I saw a static class. “Oh God”, I’d cry, “What do I need to initialise then tear down <em>this time</em>?”</p>
+  </li>
+  <li>
+    <p>After a month, I hated the sight of any class containing scores of methods, lengthy method bodies, multiple indentations of control flow logic etc. “Jeez, what do I need to do to hit <em>this</em> side of the double nested if statement that’s part of a switch which is called in a chain of 8 private methods? If only the logic were split up into nicer chunks…”</p>
+  </li>
+  <li>
+    <p>After another month, I started to wonder why many of the tests I was writing were so slow, given that I was only interested in testing one class at a time. “Oh man!”, I’d exclaim. “Why do I have to create all these slow thing? Bah, I can’t even get at the logic I want to test! If only I could instantiate only what I need and totally control the test environment…”</p>
+  </li>
+  <li>
+    <p>After another month, I reasoned that if an interface were to be provided and the dependencies could be abstracted away into ‘seams’, it made the code infinitely more testable. “Hmm, I see why loose coupling is good…”</p>
+  </li>
+  <li>
+    <p>After another month, I wondered why some of the tests were so fragile. When some system or other changed, the tests for an unrelated class would fail! “Oh… that’s why singletons are frowned upon. The dependencies are hidden!”</p>
+  </li>
+  <li>
+    <p>After another month, a workmate found Misko Hevery’s <a href="http://misko.hevery.com/code-reviewers-guide/">guide to testability</a> and the penny dropped. Like Google’s testing blog logo - it was like switching on a light bulb!</p>
+  </li>
+</ul>
+
+<p>Beyond that day, I’ve kept learning more and more techniques to use as part of my development and testing arsenal. Making my code more testable was the goal, but it has given me so much more. Testability is a great thing, but as with all software engineering techniques, it is not a silver bullet.</p>
+
+<p>The most important thing is that, with seemingly no concerted (separate) effort on my own part, the code I write to be testable is magically a lot better than the way I used to write it.</p>
+
+<h3 id="inadvertent-benefits">Inadvertent Benefits</h3>
+
+<p>As Luke Halliwell <a href="http://lukehalliwell.wordpress.com/2009/01/22/a-rule-of-thumb-and-a-silver-bullet/">succinctly pointed out</a> a while back, testability concerns and good design practices tend to converge. If your code is testable, there’s a greater chance that the problem has been broken down into units of work. Read his summary; it definitely coincides with my own experiences thus far.</p>
+
+<p>Actively seeking out solutions to make code more testable as resulted in some extremely valuable lessons - it has exposed me to new techniques (such as <a href="http://en.wikipedia.org/wiki/Dependency_injection">Dependency Injection</a>) and ways of thinking. These didn’t just alter the way I tested, they fundamentally altered the way I approach the writing of software. In the ~x or so years I’ve been programming, designing for testability has been my single most valuable expedition!</p>
+
+<p>Am I suddenly the world’s greatest programmer? Far from it. I know scores of folk at work who can program circles around me. On the other hand, is my code easier to understand, more maintainable, more cohesive and less tightly coupled compared to what I was writing a year or so ago? Undoubtedly. Are there fewer surprises? You bet. Would anyone who had to maintain my code be inclined to hunt me down and murder me? No. They may perform some sort of grievous wounding, but I will live.</p>
+
+<p>I can’t believe how much I sucked. I definitely <a href="http://www.codinghorror.com/blog/archives/000530.html">suck less</a> this year, though.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/blog/tags/patterns" class="page__taxonomy-item" rel="tag">patterns</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/testing" class="page__taxonomy-item" rel="tag">testing</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2009-05-11T01:40:23+00:00">May 11, 2009</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Benefits+of+designing+for+testability%20https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2009%2F05%2F11%2Ftestable-code-happens-to-be-better-designed-code.html" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2009%2F05%2F11%2Ftestable-code-happens-to-be-better-designed-code.html" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2009%2F05%2F11%2Ftestable-code-happens-to-be-better-designed-code.html" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/blog/2009/05/07/l4d-pleasure-and-pain.html" class="pagination--pager" title="L4D - Pleasure and Pain
+">Previous</a>
+    
+    
+      <a href="/blog/2009/05/15/whats-in-a-name.html" class="pagination--pager" title="What’s in a name?
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2022/11/13/herman-miller-aeron.html" rel="permalink">The Herman Miller Aeron (tall edition)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">tl;dr
+
+  You may need to reduce the Aeron seat height or it’ll destroy your hamstrings
+  If you reduce your seat height, make sure your desk can accomodate i...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2022/10/03/obsidian.html" rel="permalink">Taking notes with Obsidian
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          9 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">How do you take notes?
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2021/11/04/dotnet5-sgen-parameters.html" rel="permalink">Parameterising sgen (aka the .NET Microsoft.XmlSerializer.Generator) via a .csproj PropertyGroup
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">The problem
+If you’ve landed on this post via searching the web, you probably already know what sgen.exe is, and what the 
+Microsoft.XmlSerializer.Generator ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2020/08/10/the-fundamentals-of-automated-testing-setup-structure.html" rel="permalink">The fundamentals of unit testing: Setup structure
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          6 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This post is part of a series on unit testing.
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/blog/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 Mark's Devblog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/blog/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

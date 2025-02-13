@@ -1,0 +1,658 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Focused commits (also: git add -p) - Mark’s Devblog</title>
+<meta name="description" content="Many people use version control as a bucket for their stuff. They commit and merge in some shape or form, and it gets shared with their colleagues. Everyone moves on with their lives. Fire &amp; forget sucks when using distributed version control systems.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Mark's Devblog">
+<meta property="og:title" content="Focused commits (also: git add -p)">
+<meta property="og:url" content="https://marksimpson82.github.io/blog/2018/04/06/focused-commits-also-git-add-p.html">
+
+
+  <meta property="og:description" content="Many people use version control as a bucket for their stuff. They commit and merge in some shape or form, and it gets shared with their colleagues. Everyone moves on with their lives. Fire &amp; forget sucks when using distributed version control systems.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2018-04-06T00:10:28+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://marksimpson82.github.io/blog/2018/04/06/focused-commits-also-git-add-p.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Mark's Devblog",
+      "url": "https://marksimpson82.github.io/blog/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/blog/feed.xml" type="application/atom+xml" rel="alternate" title="Mark's Devblog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/blog/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/blog/">
+          Mark's Devblog
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name"></h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Focused commits (also: git add -p)">
+    <meta itemprop="description" content="Many people use version control as a bucket for their stuff. They commit and merge in some shape or form, and it gets shared with their colleagues. Everyone moves on with their lives. Fire &amp; forget sucks when using distributed version control systems.">
+    <meta itemprop="datePublished" content="2018-04-06T00:10:28+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Focused commits (also: git add -p)
+</h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          6 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>Many people use version control as a bucket for their stuff. They commit and merge in some shape or form, and it gets shared with their colleagues. Everyone moves on with their lives. Fire &amp; forget sucks when using distributed version control systems.</p>
+
+<p>The trouble with this approach is that it gets complicated to track two simple things:</p>
+
+<ol>
+  <li>When was a change introduced?</li>
+  <li>What is the purpose of the change?</li>
+</ol>
+
+<p>How do we use git in a way that makes it easy to track both <em>when</em> a change was introduced, and the <em>intent</em> of the change?</p>
+
+<h2 id="the-when">The when</h2>
+
+<p>The first point (the what) has been written about a lot. The gist of the workflow I use is that constantly rebasing when pulling, and squashing any merges on their way back to master helps a great deal.</p>
+
+<p>I.e. when you’re working on a feature branch and have local commits that haven’t been pushed, use the following to avoid noisy merge commits:</p>
+
+<p><code class="language-plaintext highlighter-rouge">git pull origin mybranch --rebase</code></p>
+
+<p>To keep your own (non-shared) branch up to date with master, but without creating merge commits, periodically do something like:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git pull origin master
+git checkout mybranch
+git rebase master
+</code></pre></div></div>
+
+<p>(Small tip: if you are pushing your own personal branch after rebasing, you can be sure not to nuke anything important by employing <a href="https://developer.atlassian.com/blog/2015/04/force-with-lease/">git push -force-with-lease</a> rather than git push -force).</p>
+
+<p>Then when you’re ready to merge back to master:``</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout master
+git merge mybranch <span class="nt">--squash</span>
+git commit
+</code></pre></div></div>
+
+<p>There are many advantages:</p>
+
+<ul>
+  <li>It keeps the history linear</li>
+  <li>There’s no merge noise</li>
+  <li>It groups related commits</li>
+  <li>Reverting a feature merge is easy (i.e. you can just revert the squashed merge)</li>
+  <li>The default commit message will contain the hashes for all squashed commits, so fine-grained operations &amp; the intent for all of these changes are still there.</li>
+  <li>… and arguably best of all, you can trivially figure out which commits introduced bugs when QA says, “hey, CI build 1923’s frob widget is misbehaving” (when commits are interleaved from a long-running branch, the offending commit may actually show up in the history as being months old).</li>
+</ul>
+
+<p>The only time I deviate from this pattern is when I’m suffering a lot of merge pain - standard rebasing means merging up your <em>individual</em> commits, so it can mean a lot of repeated work needs to be done in areas where merge conflicts frequently occur. You can interactively rebase &amp; squash your branch’s commits to reduce the number of commits that require merging or use <a href="https://git-scm.com/docs/git-rerere">git rerere</a>, but it’s fairly complicated vs. the usual workflow.</p>
+
+<h2 id="the-why">The why</h2>
+
+<p>OK, so that’s the when taken care of. What about the <em>intent</em> behind the code, or a particular commit? This one’s even easier to solve, it just requires some better commit discipline.</p>
+
+<h4 id="committing-a-crime">Committing a crime</h4>
+
+<p>Here’s a quick scenario: A developer, Eddie, has been tasked with improving the performance of an application. Eddie profiles the code and figures out some areas they think need improvements. They make the changes, profile the app and find it’s now 20% faster. Great! Oh, and they also reformatted some source files, made a number of variable names compliant with the company’s coding standards, upversioned a header-only library, refactored some code_and_ added a few missing pieces of dev functionality that made the app easier to work with for profiling.</p>
+
+<p>All told, 45 files have been touched, and 5000 lines of code changed (mainly due to the formatting and library churn). All of these changes are made in one commit, with the a message saying “improving performance of app”.</p>
+
+<p>Four months later, a few bugs are discovered in a seemingly unrelated area of the app, and are traced back to this commit. Another programmer, Irene, is tasked with fixing it.</p>
+
+<h4 id="playing-detective">Playing detective</h4>
+
+<p>Irene loads up the offending commit on github, and immediately gets irked when she spots the “change too large to display” message. At this point, Irene’s day is much worse than it should’ve been.</p>
+
+<p>Was it the formatting changes? I mean, it’s unlikely, but sometimes people make changes by hand and fat-finger a key or transpose something important. The simplest changes can be the most dangerous (think of the number of [ya, yb, yc, xw] errors static analysis tools find…)</p>
+
+<p>Was it the refactoring? It touched a lot of files. Hard to say without reading the code or just reverting them, then re-applying the other changes.</p>
+
+<p>Was it the library upgrade? Again, hard to say. Even if it is, the commit message didn’t say if the new version was added for performance reasons, so perhaps Irene will need to re-profile the app to be sure.</p>
+
+<p>Was it the new functionality? … and so on. It’s really annoying.</p>
+
+<h4 id="better-commits">Better commit(s)</h4>
+
+<p>VCS commits are like code - written once and read thousands of times later (especially in complicated, high-traffic areas of code). They can be precise and explain the background behind the change, or they can be unfocused while burying the reason for making the change in the first place.</p>
+
+<p>While we’re all busy (yes, I make numerous lapses of judgement, too…), there are simple ways you can try to be a good citizen.</p>
+
+<p>Firstly, make your commits as concise as possible. If fixing a bug requires changing precisely two lines, then please change those lines, <em>but nothing more.</em> If your bugfix isn’t resolving all instances of the problem, the next programmer that picks it up has two lines to start pondering. Two! Not 5000. Huge difference.</p>
+
+<p>Secondly, make your commit messages as thoughtful as possible. By this I mean “how can I make the reader understand the change I’ve just made, as well as the context?” There are numerous things to talk about. Off the top of my head:</p>
+
+<ul>
+  <li>Why is the change being made?</li>
+  <li>How does it work?</li>
+  <li>If it’s a complicated change, can you describe the program’s state and how this change helps?</li>
+  <li>Are there any caveats?</li>
+  <li>Where did the solution come from, is there any prior art?</li>
+  <li>Why solve it in this particular way when <other way=""> seems more appropriate?</other></li>
+  <li>Is anything else suffering from the same problem?</li>
+  <li>Is it a hack that needs to be properly fixed in future?</li>
+  <li>Can the change be reverted when library X we’re using ships a fix instead?</li>
+  <li>Are there any bug numbers or related commits worth referencing?</li>
+</ul>
+
+<p>Thirdly, as an addendum to #1: do not include orthogonal changes in a single commit! If you want to change the formatting of a file please do so, but not while also changing its functionality, fixing a bug and adding a feature. Do one, then the others later.</p>
+
+<h4 id="git-add--p">git add -p</h4>
+
+<p>If you find yourself noodling away like I do (“ooh, I’ll just refactor this while I’m here”), it’s easy to find yourself in a situation where you want to make a focused bugfix commit, but the file also has unrelated formatting changes. With a bit of practice, you can use git add -p. The patch (-p) flag allows you to recursively split the file, then stage sections of it. You can then pick and choose which parts to stage &amp; commit! Great.</p>
+
+<p>Certain IDEs also have VCS integration where you can select the hunks to stage, too.</p>
+
+<p>Nothing’s ever free, so when using patch mode, take care that your changes don’t mix &amp; match too much, or you may accidentally take part of change A and roll it in with change B (e.g. you renamed a variable, and failed to notice it crept into a prior commit).</p>
+
+<p>If you’re making large changes, it’s better to just do the work later.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/blog/tags/git" class="page__taxonomy-item" rel="tag">git</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/tips" class="page__taxonomy-item" rel="tag">tips</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/vcs" class="page__taxonomy-item" rel="tag">vcs</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-04-06T00:10:28+00:00">April 6, 2018</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Focused+commits+%28also%3A+git+add+-p%29%20https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2018%2F04%2F06%2Ffocused-commits-also-git-add-p.html" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2018%2F04%2F06%2Ffocused-commits-also-git-add-p.html" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2018%2F04%2F06%2Ffocused-commits-also-git-add-p.html" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/blog/2017/05/12/ms-wheel-mouse-optical-redux-wmo-1-1-windows-10-x64.html" class="pagination--pager" title="MS Wheel Mouse Optical Redux (WMO 1.1 &amp; Windows 10 x64)
+">Previous</a>
+    
+    
+      <a href="/blog/2018/08/22/ms-wheel-mouse-optical-redux-august-2018.html" class="pagination--pager" title="MS Wheel Mouse Optical Redux (August 2018)
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2022/11/13/herman-miller-aeron.html" rel="permalink">The Herman Miller Aeron (tall edition)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">tl;dr
+
+  You may need to reduce the Aeron seat height or it’ll destroy your hamstrings
+  If you reduce your seat height, make sure your desk can accomodate i...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2022/10/03/obsidian.html" rel="permalink">Taking notes with Obsidian
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          9 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">How do you take notes?
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2021/11/04/dotnet5-sgen-parameters.html" rel="permalink">Parameterising sgen (aka the .NET Microsoft.XmlSerializer.Generator) via a .csproj PropertyGroup
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">The problem
+If you’ve landed on this post via searching the web, you probably already know what sgen.exe is, and what the 
+Microsoft.XmlSerializer.Generator ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2020/08/10/the-fundamentals-of-automated-testing-setup-structure.html" rel="permalink">The fundamentals of unit testing: Setup structure
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          6 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This post is part of a series on unit testing.
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/blog/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 Mark's Devblog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/blog/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

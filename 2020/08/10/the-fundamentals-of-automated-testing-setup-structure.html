@@ -1,0 +1,779 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>The fundamentals of unit testing: Setup structure - Mark’s Devblog</title>
+<meta name="description" content="This post is part of a series on unit testing.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Mark's Devblog">
+<meta property="og:title" content="The fundamentals of unit testing: Setup structure">
+<meta property="og:url" content="https://marksimpson82.github.io/blog/2020/08/10/the-fundamentals-of-automated-testing-setup-structure.html">
+
+
+  <meta property="og:description" content="This post is part of a series on unit testing.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2020-08-10T00:00:00+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://marksimpson82.github.io/blog/2020/08/10/the-fundamentals-of-automated-testing-setup-structure.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Mark's Devblog",
+      "url": "https://marksimpson82.github.io/blog/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/blog/feed.xml" type="application/atom+xml" rel="alternate" title="Mark's Devblog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/blog/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/blog/">
+          Mark's Devblog
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name"></h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="The fundamentals of unit testing: Setup structure">
+    <meta itemprop="description" content="This post is part of a series on unit testing.">
+    <meta itemprop="datePublished" content="2020-08-10T00:00:00+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">The fundamentals of unit testing: Setup structure
+</h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>This post is <a href="/blog/2012/10/24/the-fundamentals-of-automated-testing-series.html">part of a series</a> on unit testing.</p>
+
+<h2 id="the-importance-of-test-setup-structure">The importance of test setup structure</h2>
+<p>I’ve already blogged about the importance of well-structured test setup code in this series (have a look at
+<a href="/blog/2014/08/07/the-fundamentals-of-unit-testing-arrange-act-assert.html">Arrange, Act &amp; Assert</a> and 
+<a href="/blog/2012/11/11/the-fundamentals-of-automated-testing-use-factories.html">Use Factories</a>). However, I’ve yet to 
+touch upon the pros &amp; cons of using the built-in framework <code class="language-plaintext highlighter-rouge">setup</code> &amp; <code class="language-plaintext highlighter-rouge">teardown</code> methods.</p>
+
+<h3 id="setup--teardown-methods">Setup &amp; teardown methods?</h3>
+<p>If you’ve used well-known testing frameworks, you’ll likely be familiar with some variant of these. They’re optional 
+methods that the framework runs for you automatically before each test is executed (<code class="language-plaintext highlighter-rouge">setup</code>) and after each test is 
+executed (<code class="language-plaintext highlighter-rouge">teardown</code>).</p>
+
+<p>Here’s a few example links:</p>
+<ul>
+  <li>Python: <a href="https://docs.python.org/3/library/unittest.html"><code class="language-plaintext highlighter-rouge">unittest</code></a> – 
+(<a href="https://docs.python.org/3/library/unittest.html#unittest.TestCase.setUp">setup</a> / 
+<a href="https://docs.python.org/3/library/unittest.html#unittest.TestCase.tearDown">teardown</a>)</li>
+  <li>C#: <a href="https://docs.nunit.org/"><code class="language-plaintext highlighter-rouge">NUnit</code></a> – 
+(<a href="https://docs.nunit.org/articles/nunit/writing-tests/setup-teardown/index.html">SetUp / TearDown</a>)</li>
+  <li>C++: <a href="https://chromium.googlesource.com/external/github.com/google/googletest/+/HEAD/googletest/docs/"><code class="language-plaintext highlighter-rouge">googletest</code></a> 
+– (<a href="https://chromium.googlesource.com/external/github.com/google/googletest/+/HEAD/googletest/docs/faq.md#ctorvssetup">SetUp / TearDown</a>)</li>
+</ul>
+
+<p><strong>Aside</strong>: It should be noted that many test frameworks define additional methods that might execute when a 
+test <code class="language-plaintext highlighter-rouge">fixture</code> (or <code class="language-plaintext highlighter-rouge">class</code>) is created/destroyed, but we’ll just focus on <code class="language-plaintext highlighter-rouge">setup</code> &amp; <code class="language-plaintext highlighter-rouge">teardown</code> for now.</p>
+
+<h3 id="batteries-included">Batteries included?</h3>
+<p>Because these conventional methods are included in the framework, they often become our default way of doing things.</p>
+
+<p>However, I’ve never much cared for using them and I’ll do my best to explain why.</p>
+
+<h2 id="a-contrived-example">A contrived example</h2>
+<p>Before I get going, here’s some example C# test code that uses NUnit’s <code class="language-plaintext highlighter-rouge">SetUp</code> and <code class="language-plaintext highlighter-rouge">TearDown</code> methods. We use NUnit’s 
+<code class="language-plaintext highlighter-rouge">SetUp</code> method to initialise the <code class="language-plaintext highlighter-rouge">BankAccount</code> with no funds available. The tests then make use of the 
+already-initialised <code class="language-plaintext highlighter-rouge">BankAccount</code> instance to test functionality related to depositing funds.</p>
+
+<p>There’s also some iffy-looking static state relating to <code class="language-plaintext highlighter-rouge">AuthenticationService</code>, and we’re leaning on the <code class="language-plaintext highlighter-rouge">SetUp</code> &amp;
+<code class="language-plaintext highlighter-rouge">TearDown</code> methods to make sure the instance is in a good state.</p>
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">BankAccountTests</span> 
+<span class="p">{</span>
+  <span class="k">static</span> <span class="n">AuthenticationService</span> <span class="n">ms_authService</span> <span class="p">=</span> 
+    <span class="k">new</span> <span class="nf">AuthenticationService</span><span class="p">();</span>
+  <span class="n">BankAccount</span> <span class="n">m_account</span><span class="p">;</span>
+
+  <span class="p">[</span><span class="n">SetUp</span><span class="p">]</span>
+  <span class="k">public</span> <span class="k">void</span> <span class="nf">Init</span><span class="p">()</span>
+  <span class="p">{</span>
+    <span class="k">const</span> <span class="kt">decimal</span> <span class="n">InitialBalance</span> <span class="p">=</span> <span class="m">0.0</span><span class="n">m</span><span class="p">;</span>
+    <span class="n">m_account</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">BankAccount</span><span class="p">(</span><span class="n">InitialBalance</span><span class="p">);</span>
+
+    <span class="c1">// let's imagine the account must be marked as accepting deposits</span>
+    <span class="c1">// before we can proceed due to some security features</span>
+    <span class="n">m_account</span><span class="p">.</span><span class="nf">AcceptDeposits</span><span class="p">();</span>  
+    <span class="n">ms_authService</span><span class="p">.</span><span class="nf">Begin</span><span class="p">();</span>
+  <span class="p">}</span>
+  
+  <span class="p">[</span><span class="n">TearDown</span><span class="p">]</span>
+  <span class="k">public</span> <span class="k">void</span> <span class="nf">Cleanup</span><span class="p">()</span>
+  <span class="p">{</span>
+    <span class="n">ms_authService</span><span class="p">.</span><span class="nf">End</span><span class="p">();</span>
+  <span class="p">}</span>
+
+  <span class="p">[</span><span class="n">Test</span><span class="p">]</span>
+  <span class="k">public</span> <span class="k">void</span> <span class="nf">DepositingFundsIncreasesAccountBalance</span><span class="p">()</span>
+  <span class="p">{</span>
+    <span class="n">m_account</span><span class="p">.</span><span class="nf">DepositFunds</span><span class="p">(</span><span class="m">1000.0</span><span class="n">m</span><span class="p">,</span> <span class="n">Currency</span><span class="p">.</span><span class="n">USD</span><span class="p">);</span>
+    
+    <span class="n">Assert</span><span class="p">.</span><span class="nf">That</span><span class="p">(</span><span class="n">m_account</span><span class="p">.</span><span class="n">FundsAvailable</span><span class="p">,</span> <span class="n">Is</span><span class="p">.</span><span class="nf">EqualTo</span><span class="p">(</span><span class="m">1000.0</span><span class="n">m</span><span class="p">));</span>
+  <span class="p">}</span>
+
+  <span class="p">[</span><span class="n">Test</span><span class="p">]</span>
+  <span class="k">public</span> <span class="k">void</span> <span class="nf">WithdrawingFundsThrowsWhenAccountBalanceIsZero</span><span class="p">()</span>
+  <span class="p">{</span>
+    <span class="n">Assert</span><span class="p">.</span><span class="n">Throws</span><span class="p">&lt;</span><span class="n">InsufficientFundsException</span><span class="p">&gt;(</span>
+      <span class="p">()</span> <span class="p">=&gt;</span> <span class="n">m_account</span><span class="p">.</span><span class="nf">WithdrawFunds</span><span class="p">(</span><span class="m">10.0</span><span class="n">m</span><span class="p">,</span> <span class="n">Currency</span><span class="p">.</span><span class="n">USD</span><span class="p">));</span>
+  <span class="p">}</span>
+<span class="p">}</span>  
+</code></pre></div></div>
+
+<p>There’s multiple things I don’t like about this.</p>
+
+<h3 id="problem-the-code-jumps-around-a-lot">Problem: the code jumps around a lot.</h3>
+<p>Because framework methods are ‘automagic’ (they’re similar to
+<a href="http://wiki.c2.com/?TemplateMethodPattern">Template Methods</a>, but are often called via reflection), the code no longer 
+reads in a straight line – it jumps around.</p>
+
+<p>Where do you naturally begin reading the code?</p>
+
+<ul>
+  <li>Do you start from an individual test?</li>
+  <li>Do you start from the arbitrarily named method that has the [<code class="language-plaintext highlighter-rouge">Setup</code>] attribute above it?</li>
+  <li>Hmm, what if the test fixture also uses a 
+<a href="https://docs.nunit.org/articles/nunit/writing-tests/attributes/onetimesetup.html">[<code class="language-plaintext highlighter-rouge">OneTimeSetup</code>]</a> method, too?</li>
+  <li>What if the fixture is derived from a base fixture that has some (or all) of these methods?</li>
+</ul>
+
+<p>It quickly becomes the testing equivalent of voodoo, and the only way to be 100% sure is to step through the code in a 
+debugger. This is <strong>not</strong> what we want in test code. While test code can be verbose at times, it should be as simple as 
+possible.</p>
+
+<p>If you need to share code, follow the same practices as when writing production code. <a href="https://en.wikipedia.org/wiki/Composition_over_inheritance">Prefer composition over 
+inheritance</a> unless there’s a strong reason to do otherwise.</p>
+
+<h3 id="problem-setupteardown-code-quickly-becomes-misleading">Problem: setup/teardown code quickly becomes misleading</h3>
+<p>Adding new tests to an existing fixture is an everyday occurrence.</p>
+
+<p>One day we decide to cover off a potential edge-case by adding a test that ensures a <code class="language-plaintext highlighter-rouge">BankAccount</code> with a positive 
+balance will correctly receive a deposit. Easy, right? We add the following test:</p>
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="n">Test</span><span class="p">]</span>
+<span class="k">public</span> <span class="k">void</span> <span class="nf">DepositingFundsWhenAccountBalanceIsAboveZeroIncreasesBalance</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="c1">// Arrange</span>
+  <span class="k">const</span> <span class="kt">int</span> <span class="n">InitialBalance</span> <span class="p">=</span> <span class="m">1000.0</span><span class="n">m</span><span class="p">;</span>
+  <span class="n">m_account</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">BankAccount</span><span class="p">(</span><span class="n">InitialBalance</span><span class="p">);</span>
+
+  <span class="c1">// Act</span>
+  <span class="n">m_account</span><span class="p">.</span><span class="nf">DepositFunds</span><span class="p">(</span><span class="m">1000.0</span><span class="n">m</span><span class="p">,</span> <span class="n">Currency</span><span class="p">.</span><span class="n">USD</span><span class="p">);</span>
+    
+  <span class="c1">// Assert</span>
+  <span class="n">Assert</span><span class="p">.</span><span class="nf">That</span><span class="p">(</span><span class="n">m_account</span><span class="p">.</span><span class="n">FundsAvailable</span><span class="p">,</span> <span class="n">Is</span><span class="p">.</span><span class="nf">EqualTo</span><span class="p">(</span><span class="m">2000.0</span><span class="n">m</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>There’s a wrinkle, though: we realise that the <code class="language-plaintext highlighter-rouge">[Setup]</code> method has already created a <code class="language-plaintext highlighter-rouge">BankAccount</code> with a balance of 
+zero, and the <code class="language-plaintext highlighter-rouge">[SetUp]</code> method <em>always</em> runs. That’s no good for our test case, though. We work around it by simply 
+re-creating the <code class="language-plaintext highlighter-rouge">BankAccount</code>. Unfortunately, we forgot to call <code class="language-plaintext highlighter-rouge">AcceptDeposits()</code>, so the test fails.</p>
+
+<p>Even in a simple example, the moment the <code class="language-plaintext highlighter-rouge">setup</code> code ceases to apply to <em>all</em> cases in the test fixture, things start 
+to get… muddy.</p>
+
+<p>At best, you’ll apply <em>some</em> setup logic in your <code class="language-plaintext highlighter-rouge">setup</code> method only to finish it off in your specific test methods. 
+This is a type of two-phase initialisation. It’s confusing, especially when the initialisation code jumps around.</p>
+
+<p>At worst, you’ll do misleading work in <code class="language-plaintext highlighter-rouge">setup</code> only to throw it away, or even introduce bugs in the test code. This 
+wastes time and will confuse your fellow programmers.</p>
+
+<p>Another equally questionable solution is to split the fixture in two. We then group the sets of tests into the 
+appropriate fixture depending on their <code class="language-plaintext highlighter-rouge">setup</code> needs. This is very inflexible form of coupling.</p>
+
+<h3 id="problem-setupteardown-code-can-hide-bad-habits">Problem: setup/teardown code can hide bad habits</h3>
+<p>In the example above, we’re able to work-around the problems caused by static state by performing bookkeeping in our
+<code class="language-plaintext highlighter-rouge">setup</code> &amp; <code class="language-plaintext highlighter-rouge">teardown</code> methods.</p>
+
+<p>It’s also quite common to see developers use <code class="language-plaintext highlighter-rouge">setup</code> &amp; <code class="language-plaintext highlighter-rouge">teardown</code> methods to skirt around the fact that they’re 
+<a href="/blog/2012/11/02/the-fundamentals-of-automated-testing-atomic.html">hitting the file system</a> in a unit test (at 
+which point it’s not really a unit test: it’ll run slower &amp; be more prone to breakages).</p>
+
+<p>Tests are consumers of your API, and if you’re having to perform awkward state management via the use of <code class="language-plaintext highlighter-rouge">setup</code> &amp; 
+<code class="language-plaintext highlighter-rouge">teardown</code> to keep things rolling, it’s often a sign that the class under test is not terribly easy to use.</p>
+
+<h3 id="solutions">Solutions</h3>
+<ol>
+  <li><a href="/blog/2012/11/11/the-fundamentals-of-automated-testing-use-factories.html">Use Factories</a></li>
+  <li><a href="http://wiki.c2.com/?ObjectMother">Object Mother</a> (read the caveats, though)</li>
+  <li><a href="http://www.natpryce.com/articles/000714.html">Test Data Builders</a></li>
+</ol>
+
+<p>Each of these alternatives is relatively simple, can be called directly by a test method and offers some level of 
+configurability. Factory methods are the easiest to get going with.</p>
+
+<p>Want a <code class="language-plaintext highlighter-rouge">BankAccount</code> pre-configured with a set balance? No problem! Simply add a method that initialises and returns 
+one. Every test is responsible for its own setup. Tests are no longer coupled to a one-size-fits-all <code class="language-plaintext highlighter-rouge">setup</code> method.</p>
+
+<p>Object Mothers &amp; Test Data Builders require a bit more up-front investment, but they pay it back in spades via providing 
+canned objects with sensible defaults in a variety configurations.</p>
+
+<p>Let’s re-write our example tests to incorporate some of these things:</p>
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">BankAccountTests</span> 
+<span class="p">{</span>
+  <span class="k">private</span> <span class="n">BankAccount</span> <span class="nf">CreateBankAccount</span><span class="p">(</span>
+    <span class="kt">decimal</span> <span class="n">openingBalance</span><span class="p">=</span><span class="m">0.0</span><span class="n">m</span><span class="p">)</span>
+  <span class="p">{</span> 
+    <span class="c1">// we've refactored the production code to get rid of the </span>
+    <span class="c1">// static dependency, so AuthenticationService has gone. </span>
+    <span class="kt">var</span> <span class="n">account</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">BankAccount</span><span class="p">(</span><span class="n">openingBalance</span><span class="p">);</span>
+    <span class="n">account</span><span class="p">.</span><span class="nf">AcceptDeposits</span><span class="p">();</span>
+    <span class="k">return</span> <span class="n">account</span>
+  <span class="p">}</span>  
+  
+  <span class="p">[</span><span class="n">Test</span><span class="p">]</span>
+  <span class="k">public</span> <span class="k">void</span> <span class="nf">DepositingFundsIncreasesAccountBalance</span><span class="p">()</span>
+  <span class="p">{</span>
+    <span class="kt">var</span> <span class="n">account</span> <span class="p">=</span> <span class="nf">CreateBankAccount</span><span class="p">();</span>
+    <span class="n">account</span><span class="p">.</span><span class="nf">DepositFunds</span><span class="p">(</span><span class="m">1000.0</span><span class="n">m</span><span class="p">,</span> <span class="n">Currency</span><span class="p">.</span><span class="n">USD</span><span class="p">);</span>
+    
+    <span class="n">Assert</span><span class="p">.</span><span class="nf">That</span><span class="p">(</span><span class="n">account</span><span class="p">.</span><span class="n">FundsAvailable</span><span class="p">,</span> <span class="n">Is</span><span class="p">.</span><span class="nf">EqualTo</span><span class="p">(</span><span class="m">1000.0</span><span class="n">m</span><span class="p">));</span>
+  <span class="p">}</span>
+
+  <span class="p">[</span><span class="n">Test</span><span class="p">]</span>
+  <span class="k">public</span> <span class="k">void</span> <span class="nf">WithdrawingFundsThrowsWhenAccountBalanceIsZero</span><span class="p">()</span>
+  <span class="p">{</span>
+    <span class="kt">var</span> <span class="n">account</span> <span class="p">=</span> <span class="nf">CreateBankAccount</span><span class="p">();</span>
+
+    <span class="n">Assert</span><span class="p">.</span><span class="n">Throws</span><span class="p">&lt;</span><span class="n">InsufficientFundsException</span><span class="p">&gt;(</span>
+      <span class="p">()</span> <span class="p">=&gt;</span> <span class="n">account</span><span class="p">.</span><span class="nf">WithdrawFunds</span><span class="p">(</span><span class="m">10.0</span><span class="n">m</span><span class="p">,</span> <span class="n">Currency</span><span class="p">.</span><span class="n">USD</span><span class="p">));</span>
+  <span class="p">}</span>
+
+  <span class="p">[</span><span class="n">Test</span><span class="p">]</span>
+  <span class="k">public</span> <span class="k">void</span> 
+    <span class="nf">DepositingFundsWhenAccountBalanceIsAboveZeroIncreasesBalance</span><span class="p">()</span>
+  <span class="p">{</span>
+    <span class="c1">// Arrange</span>
+    <span class="k">const</span> <span class="kt">int</span> <span class="n">OpeningBalance</span> <span class="p">=</span> <span class="m">1000.0</span><span class="n">m</span><span class="p">;</span>
+    <span class="kt">var</span> <span class="n">account</span> <span class="p">=</span> <span class="nf">CreateBankAccount</span><span class="p">(</span><span class="n">OpeningBalance</span><span class="p">);</span>
+
+    <span class="c1">// Act</span>
+    <span class="n">account</span><span class="p">.</span><span class="nf">DepositFunds</span><span class="p">(</span><span class="m">1000.0</span><span class="n">m</span><span class="p">,</span> <span class="n">Currency</span><span class="p">.</span><span class="n">USD</span><span class="p">);</span>
+    
+    <span class="c1">// Assert</span>
+    <span class="n">Assert</span><span class="p">.</span><span class="nf">That</span><span class="p">(</span><span class="n">m_account</span><span class="p">.</span><span class="n">FundsAvailable</span><span class="p">,</span> <span class="n">Is</span><span class="p">.</span><span class="nf">EqualTo</span><span class="p">(</span><span class="m">2000.0</span><span class="n">m</span><span class="p">));</span>
+  <span class="p">}</span>
+<span class="p">}</span>  
+</code></pre></div></div>
+
+<h3 id="conclusion">Conclusion</h3>
+<p>I personally think the refactored test code is a lot easier to understand and extend.</p>
+
+<ul>
+  <li>Each test reads linearly (no more ping-ponging around to understand the execution flow – we’re now dealing with a 
+handful of simple factory methods).</li>
+  <li>Each test can piggy-back on the default setup via a factory method, or have its own specific factory method.</li>
+  <li>We’re no longer using <code class="language-plaintext highlighter-rouge">setup</code>/<code class="language-plaintext highlighter-rouge">teardown</code> methods as a crutch for managing dodgy static dependencies.</li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/blog/tags/fundamentals-of-unit-testing" class="page__taxonomy-item" rel="tag">fundamentals of unit testing</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/testing" class="page__taxonomy-item" rel="tag">testing</a><span class="sep">, </span>
+    
+      <a href="/blog/tags/tips" class="page__taxonomy-item" rel="tag">tips</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-08-10T00:00:00+00:00">August 10, 2020</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=The+fundamentals+of+unit+testing%3A+Setup+structure%20https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2020%2F08%2F10%2Fthe-fundamentals-of-automated-testing-setup-structure.html" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2020%2F08%2F10%2Fthe-fundamentals-of-automated-testing-setup-structure.html" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fmarksimpson82.github.io%2Fblog%2F2020%2F08%2F10%2Fthe-fundamentals-of-automated-testing-setup-structure.html" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/blog/2020/08/05/the-fundamentals-of-automated-testing-data-driven-tests.html" class="pagination--pager" title="The fundamentals of unit testing: Data-driven tests
+">Previous</a>
+    
+    
+      <a href="/blog/2021/11/04/dotnet5-sgen-parameters.html" class="pagination--pager" title="Parameterising sgen (aka the .NET Microsoft.XmlSerializer.Generator) via a .csproj PropertyGroup
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2022/11/13/herman-miller-aeron.html" rel="permalink">The Herman Miller Aeron (tall edition)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">tl;dr
+
+  You may need to reduce the Aeron seat height or it’ll destroy your hamstrings
+  If you reduce your seat height, make sure your desk can accomodate i...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2022/10/03/obsidian.html" rel="permalink">Taking notes with Obsidian
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          9 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">How do you take notes?
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2021/11/04/dotnet5-sgen-parameters.html" rel="permalink">Parameterising sgen (aka the .NET Microsoft.XmlSerializer.Generator) via a .csproj PropertyGroup
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">The problem
+If you’ve landed on this post via searching the web, you probably already know what sgen.exe is, and what the 
+Microsoft.XmlSerializer.Generator ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2020/08/05/the-fundamentals-of-automated-testing-data-driven-tests.html" rel="permalink">The fundamentals of unit testing: Data-driven tests
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This post is part of a series on unit testing.
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/blog/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 Mark's Devblog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/blog/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
