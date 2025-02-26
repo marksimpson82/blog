@@ -14,7 +14,7 @@ tags:
   - sweetlow
   - tips
   - windows
-  - WMO
+  - wmo
 ---
 Back on the WMO train again. I was using Sweetlow's signed driver, but it stopped working again, probably due to 
 Windows updates. You can find the old guide

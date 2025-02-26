@@ -16,7 +16,7 @@ tags:
   - overclocking
   - sensitivity
   - tips
-  - WMO
+  - wmo
 ---
 Back in 2011, I wrote a 
 [fairly gushing post]({% post_url 2011-07-15-ms-wheel-mouse-optical-wmo-1-1 %}) about the Microsoft WMO 1.1/1.1a. 
