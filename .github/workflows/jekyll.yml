@@ -45,7 +45,6 @@ jobs:
         run: |
           rm -f Gemfile.lock
           gem uninstall json
-          gem install json
           bundle install
 
       - name: Setup Pages
