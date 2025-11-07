@@ -44,7 +44,6 @@ jobs:
       - name: Force bundle install with specific platform
         run: |
           rm -f Gemfile.lock
-          gem uninstall json
           bundle install
 
       - name: Setup Pages
