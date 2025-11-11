@@ -19,25 +19,25 @@ Here’s the list of things I’m going to cover (I’ll update the links as I a
 
 Overview:
 
-  * [It’s a skill]({% post_url 2012-10-24-the-fundamentals-of-automated-testing-its-a-skill %}) 
+  * [It’s a skill](@/blog/2012-10-24-the-fundamentals-of-automated-testing-its-a-skill.md) 
 
 General principles to strive for:
 
-  * [Narrow & focussed]({% post_url 2012-10-25-the-fundamentals-of-automated-testing-narrow-focused %}) 
-  * [Correct]({% post_url 2012-10-27-the-fundamentals-of-automated-testing-correct %}) 
-  * [Atomic]({% post_url 2012-11-02-the-fundamentals-of-automated-testing-atomic %}) 
-  * [Repeatable]({% post_url 2012-11-04-the-fundamentals-of-automated-testing-repeatable %}) 
+  * [Narrow & focussed](@/blog/2012-10-25-the-fundamentals-of-automated-testing-narrow-focused.md) 
+  * [Correct](@/blog/2012-10-27-the-fundamentals-of-automated-testing-correct.md) 
+  * [Atomic](@/blog/2012-11-02-the-fundamentals-of-automated-testing-atomic.md) 
+  * [Repeatable](@/blog/2012-11-04-the-fundamentals-of-automated-testing-repeatable.md) 
   * Isolated 
   * Thorough 
 
 General testing tips:
 
-  * [Arrange, Act, Assert]({% post_url 2014-08-07-the-fundamentals-of-unit-testing-arrange-act-assert %}) 
-  * [Spring the trap]({% post_url 2012-10-27-the-fundamentals-of-automated-testing-spring-the-trap %}) 
+  * [Arrange, Act, Assert](@/blog/2014-08-07-the-fundamentals-of-unit-testing-arrange-act-assert.md) 
+  * [Spring the trap](@/blog/2012-10-27-the-fundamentals-of-automated-testing-spring-the-trap.md) 
   * Descriptive naming schemes 
-  * [Draw attention to ‘interesting’ values]({% post_url 2014-08-07-the-fundamentals-of-unit-testing-draw-attention-to-interesting-values %})
-  * [Factory methods]({% post_url 2012-11-11-the-fundamentals-of-automated-testing-use-factories %}) 
-  * [Setup structure]({% post_url 2020-08-10-the-fundamentals-of-automated-testing-setup-structure %}) 
-  * [Tests shouldn’t ape the production code]({% post_url 2012-11-12-the-fundamentals-of-automated-testing-tests-shouldnt-ape-the-production-code %}) 
-  * [KISS]({% post_url 2012-11-04-the-fundamentals-of-automated-testing-kiss %}) 
-  * [Data-Driven testing (same logic, different inputs)]({% post_url 2020-08-05-the-fundamentals-of-automated-testing-data-driven-tests %})
+  * [Draw attention to ‘interesting’ values](@/blog/2014-08-07-the-fundamentals-of-unit-testing-draw-attention-to-interesting-values.md)
+  * [Factory methods](@/blog/2012-11-11-the-fundamentals-of-automated-testing-use-factories.md) 
+  * [Setup structure](@/blog/2020-08-10-the-fundamentals-of-automated-testing-setup-structure.md) 
+  * [Tests shouldn’t ape the production code](@/blog/2012-11-12-the-fundamentals-of-automated-testing-tests-shouldnt-ape-the-production-code.md) 
+  * [KISS](@/blog/2012-11-04-the-fundamentals-of-automated-testing-kiss.md) 
+  * [Data-Driven testing (same logic, different inputs)](@/blog/2020-08-05-the-fundamentals-of-automated-testing-data-driven-tests.md)

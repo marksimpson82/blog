@@ -9,12 +9,12 @@ tags:
   - tips
 ---
 
-This post is [part of a series]({% post_url 2012-10-24-the-fundamentals-of-automated-testing-series %}) on unit testing.
+This post is [part of a series](@/blog/2012-10-24-the-fundamentals-of-automated-testing-series.md) on unit testing.
 
 ## The importance of test setup structure 
 I've already blogged about the importance of well-structured test setup code in this series (have a look at
-[Arrange, Act & Assert]({% post_url 2014-08-07-the-fundamentals-of-unit-testing-arrange-act-assert %}) and 
-[Use Factories]({% post_url 2012-11-11-the-fundamentals-of-automated-testing-use-factories %})). However, I've yet to 
+[Arrange, Act & Assert](@/blog/2014-08-07-the-fundamentals-of-unit-testing-arrange-act-assert.md) and 
+[Use Factories](@/blog/2012-11-11-the-fundamentals-of-automated-testing-use-factories.md)). However, I've yet to 
 touch upon the pros & cons of using the built-in framework `setup` & `teardown` methods.
 
 ### Setup & teardown methods?
@@ -154,14 +154,14 @@ In the example above, we're able to work-around the problems caused by static st
 `setup` & `teardown` methods. 
 
 It's also quite common to see developers use `setup` & `teardown` methods to skirt around the fact that they're 
-[hitting the file system]({% post_url 2012-11-02-the-fundamentals-of-automated-testing-atomic %}) in a unit test (at 
+[hitting the file system](@/blog/2012-11-02-the-fundamentals-of-automated-testing-atomic.md) in a unit test (at 
 which point it's not really a unit test: it'll run slower & be more prone to breakages). 
 
 Tests are consumers of your API, and if you're having to perform awkward state management via the use of `setup` & 
 `teardown` to keep things rolling, it's often a sign that the class under test is not terribly easy to use.
 
 ### Solutions
-1. [Use Factories]({% post_url 2012-11-11-the-fundamentals-of-automated-testing-use-factories %})
+1. [Use Factories](@/blog/2012-11-11-the-fundamentals-of-automated-testing-use-factories.md)
 1. [Object Mother](http://wiki.c2.com/?ObjectMother) (read the caveats, though)
 1. [Test Data Builders](http://www.natpryce.com/articles/000714.html)
 

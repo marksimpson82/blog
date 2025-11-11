@@ -11,7 +11,7 @@ tags:
   - whinges
 ---
 To follow up from my last babblings on the 
-[scourge of expansion packs]({% post_url 2011-12-04-and-another-thing-bf3-expansion-packs %}) and unfair 
+[scourge of expansion packs](@/blog/2011-12-04-and-another-thing-bf3-expansion-packs.md) and unfair 
 advantages, EA/DICE has really put the cat amongst the pigeons with the release of 
 [BF3 Premium](http://battlelog.battlefield.com/bf3/premium/).
 

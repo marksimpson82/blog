@@ -11,7 +11,7 @@ tags:
   - testing
   - tips
 ---
-This post is [part of a series]({% post_url 2012-10-24-the-fundamentals-of-automated-testing-series %}) on unit testing.
+This post is [part of a series](@/blog/2012-10-24-the-fundamentals-of-automated-testing-series.md) on unit testing.
 
 3 is the magic number? No. No, it's not. 
 
@@ -101,4 +101,4 @@ We can go further than this to clean things up still further by doing things suc
 
 * Extract a wrapper test method that calls TryTransfer, but only has one parameter: the amount of USD to withdraw (the other parameters can be satisfied with constants). This draws attention to the important part of the test (varying the value of the USD transfer amount) and also helps insulate the tests from changes to the TryTransfer method. 
 * In the production code, using types that are more appropriate to reduce ambiguity (e.g. in the case of a customer account number, an AccountCredentials class would be more suitable than an int!) 
-* Finally, if lots of things are changed in the tests, but in slightly different ways each time, consider the use of a [Test Data Builder]({% post_url 2009-04-10-the-test-data-builder-pattern-with-c-30 %}). Test data builders are very useful, as the provided defaults are sensible for most cases. As a result, when arranging your test, the only things that are changed in the builder are the things that actually matter. Test data builders can also insulate the tests from breaking changes.
+* Finally, if lots of things are changed in the tests, but in slightly different ways each time, consider the use of a [Test Data Builder](@/blog/2009-04-10-the-test-data-builder-pattern-with-c-30.md). Test data builders are very useful, as the provided defaults are sensible for most cases. As a result, when arranging your test, the only things that are changed in the builder are the things that actually matter. Test data builders can also insulate the tests from breaking changes.

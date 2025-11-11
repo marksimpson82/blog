@@ -11,13 +11,13 @@ tags:
   - testing
   - tips
 ---
-This post is [part of a series]({% post_url 2012-10-24-the-fundamentals-of-automated-testing-series %}) on unit testing.
+This post is [part of a series](@/blog/2012-10-24-the-fundamentals-of-automated-testing-series.md) on unit testing.
 
 "[Arrange, Act, Assert](http://c2.com/cgi/wiki?ArrangeActAssert)" (aka "AAA") is a very simple way to structure your tests – I thoroughly recommend it. It is especially helpful when learning the ropes.
 
 For this post, I’ll use the following example test scenario: When a stack is empty, pushing an item increments the 
 count to one (this example was previously discussed in 
-[Narrow & focussed]({% post_url 2012-10-25-the-fundamentals-of-automated-testing-narrow-focused %}), if you want 
+[Narrow & focussed](@/blog/2012-10-25-the-fundamentals-of-automated-testing-narrow-focused.md), if you want 
 more context)
 
 ```cs
@@ -66,7 +66,7 @@ Put short, it’s a rigid template that serves as an excellent code smell detect
 E.g., once you’ve entered the Assert phase, you should only be verifying results, not performing actions on the class under test. If this occurs, something is likely iffy.
 
 If we return to the 
-[Narrow & focussed]({% post_url 2012-10-25-the-fundamentals-of-automated-testing-narrow-focused %}) post, you’ll 
+[Narrow & focussed](@/blog/2012-10-25-the-fundamentals-of-automated-testing-narrow-focused.md) post, you’ll 
 see that the examples of bad tests cannot follow the AAA scaffolding, as they quickly repeat phases, mixing arranges, 
 acts and asserts all over the place.
 

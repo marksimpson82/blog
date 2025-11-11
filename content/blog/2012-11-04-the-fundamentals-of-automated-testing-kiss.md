@@ -11,7 +11,7 @@ tags:
   - testing
   - tips
 ---
-This post is [part of a series]({% post_url 2012-10-24-the-fundamentals-of-automated-testing-series %}) on unit testing.
+This post is [part of a series](@/blog/2012-10-24-the-fundamentals-of-automated-testing-series.md) on unit testing.
 
 KISS, ([Keep it Simple, Stupid](http://en.wikipedia.org/wiki/KISS_principle)) is a guiding principle in software engineering and it's of vital importance when writing tests. Tests should be straightforward and contain as little logic as possible. 
 
@@ -123,7 +123,7 @@ Add it to a testing helpers namespace and write a few tests for it. You can also
 Leading on from this, I also advocate being as declarative as possible. Basically, in test code, we should endeavour to 
 say _what_ the result should be, not _how_ to calculate it. Do your best to stick to this rule of thumb and it’ll save 
 your life a thousand times over. I’ll talk about this more when I cover 
-"[Don’t ape production code in tests]({% post_url 2012-11-12-the-fundamentals-of-automated-testing-tests-shouldnt-ape-the-production-code %})" 
+"[Don’t ape production code in tests](@/blog/2012-11-12-the-fundamentals-of-automated-testing-tests-shouldnt-ape-the-production-code.md)" 
 in a future post.
 
 ## Test Code is Simple Code

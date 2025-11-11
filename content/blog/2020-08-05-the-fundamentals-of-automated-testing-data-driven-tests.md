@@ -9,7 +9,7 @@ tags:
   - tips
 ---
 
-This post is [part of a series]({% post_url 2012-10-24-the-fundamentals-of-automated-testing-series %}) on unit testing.
+This post is [part of a series](@/blog/2012-10-24-the-fundamentals-of-automated-testing-series.md) on unit testing.
 
 ## Don't Repeat Yourself (DRY) 
 If you've been programming for more than a few years, you've mostly likely heard the phrase [**D**on't **R**epeat 
@@ -50,7 +50,7 @@ can't.
 1. The bulk of the test lines are boilerplate/noise. All we're really interested in is varying the data here. 
 
 For more complicated test cases (especially those that have more intricate 
-[Arrange, Act & Assert]({% post_url 2014-08-07-the-fundamentals-of-unit-testing-arrange-act-assert %})) logic, the
+[Arrange, Act & Assert](@/blog/2014-08-07-the-fundamentals-of-unit-testing-arrange-act-assert.md)) logic, the
 duplication soon gets out of control. 
 
 ### A solution: data-driven testing

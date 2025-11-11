@@ -10,7 +10,7 @@ tags:
 ---
 
 ## Q: How do you take notes? A: Privately.
-As a follow-on from [How do you take notes?]({% post_url 2022-10-30-obsidian %}), I thought I'd write a (very) short update.
+As a follow-on from [How do you take notes?](@/blog/2022-10-30-obsidian.md), I thought I'd write a (very) short update.
 
 tl;dr: I've been using Obsidian for my personal note-taking since 2022, and I really like it.
 - I have a private git repository

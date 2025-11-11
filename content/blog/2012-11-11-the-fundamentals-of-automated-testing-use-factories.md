@@ -11,7 +11,7 @@ tags:
   - testing
   - tips
 ---
-This post is [part of a series]({% post_url 2012-10-24-the-fundamentals-of-automated-testing-series %}) on unit testing.
+This post is [part of a series](@/blog/2012-10-24-the-fundamentals-of-automated-testing-series.md) on unit testing.
 
 Tests are just like normal code in the sense that repeating yourself can cause problems. Practically every single call to new in a test method is a maintenance risk. 
 

@@ -11,7 +11,7 @@ tags:
   - testing
   - tips
 ---
-This post is [part of a series]({% post_url 2012-10-24-the-fundamentals-of-automated-testing-series %}) on unit testing.
+This post is [part of a series](@/blog/2012-10-24-the-fundamentals-of-automated-testing-series.md) on unit testing.
 
 Aping the logic of the class under test is an bad idea when writing tests, but it's an easy mistake to make. 
 
