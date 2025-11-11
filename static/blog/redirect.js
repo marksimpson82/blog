@@ -90,7 +90,7 @@ var redirects = {
 };
 
 (function() {
-  var s = document.location.search;
+  const s = document.location.search;
   if (s in redirects) {
     window.location.replace(redirects[s]);
   }
