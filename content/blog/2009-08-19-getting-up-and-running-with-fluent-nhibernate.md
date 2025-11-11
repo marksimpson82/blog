@@ -1,14 +1,7 @@
----
-id: 369
-title: Getting up and running with Fluent NHibernate
-date: 2009-08-19T23:01:54+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=369
-#permalink: /?p=369
-tags:
-  - 'c#'
----
++++
+title = "Getting up and running with Fluent NHibernate"
+tags = ["c#"]
++++
 I've been meaning to try out NHibernate for a good ol' while. It's a long-established and respected O/R M library and one of the authors (Ayende) writes a blog that I've read for a long time.
 
 Anyway, NHibernate is great, but its object => db mappings are a bit of a pain. They are based on xml which is verbose, fiddly to write and the separation makes refactoring and testing mappings somewhat hard. There are other ways to create mappings in code, such as via attributes, but this approach pollutes your business objects with DB specific code and still doesn't help with the testing issue. This and the lack of a LINQ to NHibernate are the only two main gripes I've heard about NHibernate. The latter problem is getting solved for the next release.

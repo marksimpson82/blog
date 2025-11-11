@@ -1,14 +1,7 @@
----
-id: 173
-title: The pride of a programmer
-date: 2009-04-18T21:14:41+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=173
-#permalink: /?p=173
-tags:
-  - testing
----
++++
+title = "The pride of a programmer"
+tags = ["testing"]
++++
 I was thinking about this the other day, and something struck me (and no, it wasn't a disgruntled developer). Automated testing is a valuable and widely accepted part of the software engineering process. Many companies and organisations require that functionality be well tested prior to it being checked in and integrated into the main version control branch. As a result, developers can spend hour upon hour every week writing unit tests. In many cases, the quantity of test code can be more than double the code being tested!
 
 If you give any programmer a problem to solve, their brains will start whirring and they will come up with numerous solutions. They will draw upon past experiences, new technologies and articles/books they've read. They will use specific parts of the language to elegantly solve the problem in a terse and expressive fashion. When they come up with a really cool solution, others will marvel at it and learn from it.

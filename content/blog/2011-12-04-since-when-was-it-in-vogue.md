@@ -1,15 +1,7 @@
----
-id: 646
-title: Since when was it in vogue...
-date: 2011-12-04T02:20:07+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=646
-#permalink: /?p=646
-tags:
-  - games
-  - whinges
----
++++
+title = "Since when was it in vogue..."
+tags = ["games", "whinges"]
++++
 ... to make aspects of your game totally totally and utterly unbalanced when new players are in the mix? I realise that people are OCD and like collecting shit, but has it _really_ come to this? 
 
 I say this because I’ve finally had the time / hardware upgrade to allow me to play BF3, and what do I find? Every bugger has guns and vehicle perks except me. In some cases this is not so bad (e.g. I can do just fine without heavy barrel and minor _options_ like that) but in other cases it renders the game unplayable for the noobs. E.g. I get in a chopper and get shot down instantly, as I don’t have any countermeasures. The best I can do is wait for a friend to come online who already has chopper perks so I can piggy back off them. 

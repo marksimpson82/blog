@@ -1,16 +1,7 @@
----
-id: 783
-title: "The fundamentals of unit testing: Arrange, Act, Assert"
-date: 2014-08-07T02:32:11+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=783
-#permalink: /?p=783
-tags:
-  - fundamentals of unit testing
-  - testing
-  - tips
----
++++
+title = "The fundamentals of unit testing: Arrange, Act, Assert"
+tags = ["fundamentals of unit testing", "testing", "tips"]
++++
 This post is [part of a series](@/blog/2012-10-24-the-fundamentals-of-automated-testing-series.md) on unit testing.
 
 "[Arrange, Act, Assert](http://c2.com/cgi/wiki?ArrangeActAssert)" (aka "AAA") is a very simple way to structure your tests – I thoroughly recommend it. It is especially helpful when learning the ropes.

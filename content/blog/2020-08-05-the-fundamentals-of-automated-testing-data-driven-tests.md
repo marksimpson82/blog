@@ -1,13 +1,7 @@
----
-title: "The fundamentals of unit testing: Data-driven tests"
-date: 2020-08-05T00:00:00+00:00
-author: Mark Simpson
-layout: single
-tags:
-  - fundamentals of unit testing
-  - testing
-  - tips
----
++++
+title = "The fundamentals of unit testing: Data-driven tests"
+tags = ["fundamentals of unit testing", "testing", "tips"]
++++
 
 This post is [part of a series](@/blog/2012-10-24-the-fundamentals-of-automated-testing-series.md) on unit testing.
 

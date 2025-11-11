@@ -1,16 +1,7 @@
----
-id: 810
-title: "Focused commits (also: git add -p)"
-date: 2018-04-06T00:10:28+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=810
-#permalink: /?p=810
-tags:
-  - git
-  - tips
-  - vcs
----
++++
+title = "Focused commits (also: git add -p)"
+tags = ["git", "tips", "vcs"]
++++
 Many people use version control as a bucket for their stuff. They commit and merge in some shape or form, and it gets shared with their colleagues. Everyone moves on with their lives. Fire & forget sucks when using distributed version control systems.
 
 The trouble with this approach is that it gets complicated to track two simple things:

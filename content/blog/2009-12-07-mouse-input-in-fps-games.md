@@ -1,15 +1,7 @@
----
-id: 461
-title: Mouse Input in FPS Games
-date: 2009-12-07T21:19:36+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=461
-#permalink: /?p=461
-tags:
-  - games
-  - whinges
----
++++
+title = "Mouse Input in FPS Games"
+tags = ["games", "whinges"]
++++
 Am I the only PC gamer that is really, really fussy about mouse input? I say this because it feels like every other PC game I play comes with default input settings that are beyond jarring, yet most reviews fail to mention it.
 
 This typically involves inbuilt mouse acceleration and/or input smoothing. Here's a tip for budding FPS game designers: I have no mouse acceleration because **I don't like it**; adding it a default **non-configurable** behaviour is nothing short of infuriating for someone who is fussy about these things.

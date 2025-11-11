@@ -1,15 +1,7 @@
----
-id: 523
-title: Clownshoes DRM coming soon
-date: 2010-02-18T01:17:30+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=523
-#permalink: /?p=523
-tags:
-  - whinges
-  - drm  
----
++++
+title = "Clownshoes DRM coming soon"
+tags = ["whinges", "drm"]
++++
 Can you believe this [horse shit](http://www.rockpapershotgun.com/2010/02/17/you-maniacs/)? Yes, you read correctly. DRM that requires you to be online. At all times. Not at all irritating. Check the calendar, folks - it's not the first of April.
 
 I've already had enough of the likes of Securom messing up my (paid for) games. My trials and tribulations included misfiring versions of Fallout 3 (randomly stopped working and required a reboot) and Race Driver: GRID (I had to eject the disc prior to starting the game every single time).

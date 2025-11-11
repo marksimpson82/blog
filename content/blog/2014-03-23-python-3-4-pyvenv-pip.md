@@ -1,19 +1,7 @@
----
-id: 761
-title: "Python 3.4 and the three P's: pyvenv, pip & pycharm"
-date: 2014-03-23T21:33:29+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=761
-#permalink: /?p=761
-tags:
-  - pip
-  - pycharm
-  - python
-  - pyvenv
-  - venv
-  - virtualenv
----
++++
+title = "Python 3.4 and the three P's: pyvenv, pip & pycharm"
+tags = ["pip", "pycharm", "python", "pyvenv", "venv", "virtualenv"]
++++
 ## Pip
 
 ... is a nice little package manager for Python, but it was somewhat hamstrung by the clunky install procedure in Python 2.X and early versions of Python 3. With Python 2.x, you’d have to do something like use curl to get setuptools, then use easy install to get pip, then use pip to install packages. Happily, 3.4 now includes pip by default.

@@ -1,15 +1,7 @@
----
-id: 649
-title: And another thing... BF3 Expansion packs
-date: 2011-12-04T16:17:37+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=649
-#permalink: /?p=649
-tags:
-  - games
-  - whinges
----
++++
+title = "And another thing... BF3 Expansion packs"
+tags = ["games", "whinges"]
++++
 From the blurb on the [Battlefield Blog](http://blogs.battlefield.ea.com/battlefield_bad_company/archive/2011/12/01/back-to-karkand-launches-for-the-playstation-3-on-tuesday.aspx) (emphasis mine): 
 
 > Battlefield 3: Back to Karkand is a huge expansion pack featuring four legendary Battlefield maps reimagined in the Frostbite 2 engine. Three new vehicles (the VSTOL fighter jet, Desert Buggy, and an APC), **ten new weapons that you can bring back to the base game**, and a new layer of persistence with our all-new Assignments make this a must-have for any Battlefield fan.

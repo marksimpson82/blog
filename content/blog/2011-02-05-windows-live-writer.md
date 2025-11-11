@@ -1,15 +1,7 @@
----
-id: 614
-title: Windows Live Writer
-date: 2011-02-05T19:50:50+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=614
-#permalink: /?p=614
-tags:
-  - misc
-  - tips
----
++++
+title = "Windows Live Writer"
+tags = ["misc", "tips"]
++++
 **Note**: this is obviously antiquated and no longer relevant!
 
 If you’re still editing your blog using the WordPress (or equivalent) web interface, I’d recommend checking out 

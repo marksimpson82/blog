@@ -1,14 +1,7 @@
----
-id: 89
-title: "Modding: Avoid making the same mistakes that I did #5"
-date: 2009-03-23T21:35:33+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=89
-#permalink: /?p=89
-tags:
-  - modding
----
++++
+title = "Modding: Avoid making the same mistakes that I did #5"
+tags = ["modding"]
++++
 ### The mod leader must do something tangible
 
 _I should qualify this post by saying this is not a dig at those who led at FF towers. I was part of the leadership and we made plenty of mistakes in the first year or two, but in the year before the first release we learned from the mistakes and made changes. We didn't change personnel, we just changed the way we worked. Without those guys heading it up, we wouldn't have released anything.  

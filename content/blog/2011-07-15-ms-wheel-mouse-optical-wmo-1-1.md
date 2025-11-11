@@ -1,23 +1,7 @@
----
-id: 631
-title: MS Wheel Mouse Optical (WMO 1.1)
-date: 2011-07-15T04:54:59+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=631
-#permalink: /?p=631
-tags:
-  - angle snapping
-  - desk
-  - games
-  - gaming
-  - misc
-  - mouse
-  - mouse pad
-  - sensitivity
-  - tips
-  - wmo
----
++++
+title = "MS Wheel Mouse Optical (WMO 1.1)"
+tags = ["angle snapping", "desk", "games", "gaming", "misc", "mouse", "mouse pad", "sensitivity", "tips", "wmo"]
++++
 ## I’m an addict
 
 As a first person shooter (FPS) addict, I play a <span style="text-decoration: line-through;">fair amount</span> shitload of games. I racked up a god-awful number of hours in Team Fortress Classic (I would conservatively estimate over 3000, on account of the fact I played it on and off for several years), 1400+ of Battlefield 2 and now 1000+ of Left 4 Dead. I average ~1 hour a day. I like to tell myself it’s a small time sink and I’m not wasting my life.

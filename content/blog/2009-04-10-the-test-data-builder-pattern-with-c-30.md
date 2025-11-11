@@ -1,17 +1,7 @@
----
-id: 147
-title: The Test Data Builder pattern with C# 3.0
-date: 2009-04-10T00:53:14+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=147
-#permalink: /?p=147
-tags:
-  - 'c#'
-  - patterns
-  - testing
-  - builder
----
++++
+title = "The Test Data Builder pattern with C# 3.0"
+tags = ["c#", "patterns", "testing", "builder"]
++++
 **Update**
 
 Since writing this, I've come to prefer the original method chaining style. While the property initialiser style works very well for simple builders, the original method chaining style works a bit better if you have nested builders. See the link in this post for the original; it's more versatile.

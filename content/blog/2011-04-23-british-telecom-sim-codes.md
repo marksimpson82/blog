@@ -1,16 +1,7 @@
----
-id: 619
-title: "British Telecom: SIM codes"
-date: 2011-04-23T17:07:20+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=619
-#permalink: /?p=619
-tags:
-  - misc
-  - whinges
-  - tips
----
++++
+title = "British Telecom: SIM codes"
+tags = ["misc", "whinges", "tips"]
++++
 **tl;dr summary**
 
 If you’re with a broadband provider other than BT, ask for the SIM code when you’re moving your telephone line.

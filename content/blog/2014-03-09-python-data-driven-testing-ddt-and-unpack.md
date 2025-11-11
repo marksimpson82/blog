@@ -1,17 +1,7 @@
----
-id: 753
-title: Python data-driven testing, ddt and @unpack
-date: 2014-03-09T15:31:05+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=753
-#permalink: /?p=753
-tags:
-  - python
-  - software
-  - testing
-  - tips
----
++++
+title = "Python data-driven testing, ddt and @unpack"
+tags = ["python", "software", "testing", "tips"]
++++
 Several eons ago, [I wrote a blog post](@/blog/2012-05-21-data-driven-testing-with-python.md) about using 
 the python ddt package. My only criticism was that you had to manually pack/unpack the test case arguments.
 

@@ -1,14 +1,7 @@
----
-id: 22
-title: Why write test code?
-date: 2009-03-07T14:10:41+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=22
-#permalink: /?p=22
-tags:
-  - testing
----
++++
+title = "Why write test code?"
+tags = ["testing"]
++++
 It's not uncommon to encounter developers that are wholly resistant to unit/functional/integration testing. Some of them will simply dismiss the idea due to thinking it's new-fangled rubbish ("I never unit test, and my code is fine"). Other developers may recognise the positive impact tests can have, but simply deplore spending any time writing them. Some folk will go to great lengths to either bypass the test writing stage, or write tests in a fashion that gives zero or even negative returns!
 
 So, why should we write tests? At a very high level, the answer is simple: If the tests are well-written, **automated testing helps prove that your software works**. I'm the first person to admit that automated testing is not a silver bullet, but particularly with state-based testing, it can be extremely effective at verifying that **your code does what you think it does**. What you _think_ your code does and what it _actually_ does are two entirely separate things.

@@ -1,15 +1,7 @@
----
-id: 393
-title: Strongly typed commandline arguments
-date: 2009-09-28T01:19:24+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=393
-#permalink: /?p=393
-tags:
-  - 'c#'
-  - nameof
----
++++
+title = "Strongly typed commandline arguments"
+tags = ["c#", "nameof"]
++++
 **edit** - In modern C# you can use the [`nameof() expression`](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/nameof) to do things like this.
 
 I've read quite a bit about [Static Reflection](http://blog.jagregory.com/2009/01/26/introduction-to-static-reflection/ "Static Reflection") and found it to be very appealing, but I hadn't used it... until now! Please have a quick look at the article, as I'm not going to parrot its key points, I'm going to write something that is horrendously over-engineered to solve a trivial problem, instead! P.s. I apologise for interchanging arguments/parameters throughout this post. My attention span is akin to that of a hey did anyone play Batman yet?

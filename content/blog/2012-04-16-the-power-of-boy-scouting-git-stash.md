@@ -1,18 +1,7 @@
----
-id: 654
-title: The Power of Boy Scouting & Git Stash
-date: 2012-04-16T02:04:00+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=654
-#permalink: /?p=654
-tags:
-  - whinges
-  - software
-  - tips
-  - git
-  - git-stash
----
++++
+title = "The Power of Boy Scouting & Git Stash"
+tags = ["whinges", "software", "tips", "git", "git-stash"]
++++
 No, I’m not advocating beavering your way to several badges while wearing ill-fitting shorts, a neckerchief fastened with a woggle and risking a criminal record. I’m talking about [The Boy Scout Rule](http://programmer.97things.oreilly.com/wiki/index.php/The_Boy_Scout_Rule). 
 
 The gist of it:

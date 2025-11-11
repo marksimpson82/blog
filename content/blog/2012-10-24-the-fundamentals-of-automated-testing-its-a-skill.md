@@ -1,16 +1,7 @@
----
-id: 694
-title: "The fundamentals of unit testing: It's a skill"
-date: 2012-10-24T02:00:04+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=694
-#permalink: /?p=694
-tags:
-  - fundamentals of unit testing
-  - testing
-  - tips
----
++++
+title = "The fundamentals of unit testing: It's a skill"
+tags = ["fundamentals of unit testing", "testing", "tips"]
++++
 This post is [part of a series](@/blog/2012-10-24-the-fundamentals-of-automated-testing-series.md) on unit testing.
 
 The first thing I’m writing about is probably the most important. This is a bit of a meandering tale, but it is crucial to understanding the pitfalls of automated testing.

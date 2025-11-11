@@ -1,19 +1,7 @@
----
-id: 632
-title: Unity3d - Threadpool Exceptions
-date: 2011-08-27T15:11:48+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=632
-#permalink: /?p=632
-tags:
-  - 'c#'
-  - debugging
-  - gotchas
-  - software
-  - tips
-  - Unity3d
----
++++
+title = "Unity3d - Threadpool Exceptions"
+tags = ["c#", "debugging", "gotchas", "software", "tips", "Unity3d"]
++++
 A quickie, but something to be _very_ wary of. I’ve been using Unity3d of late (I recommend it – it’s a very opinionated and sometimes quirky bit of software, but it generally works well) and I was recently tasked to parallelise some CPU intensive work. 
 
 I decided, quite reasonably, to use the built-in [ThreadPool](http://msdn.microsoft.com/en-us/library/system.threading.threadpool.aspx) rather than doing my own explicit management of threads, mainly because the work we’re parallelising is sporadic in nature, and it’s easier to use the ThreadPool as a quick first implementation. So far, so good. Everything was going swimmingly, and it appeared to work as advertised. In fact, the main implementation took less than a day.

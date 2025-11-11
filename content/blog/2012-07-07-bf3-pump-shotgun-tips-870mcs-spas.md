@@ -1,15 +1,7 @@
----
-id: 673
-title: BF3 - Pump Shotgun tips (870MCS & SPAS)
-date: 2012-07-07T20:58:49+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=673
-#permalink: /?p=673
-tags:
-  - games
-  - tips
----
++++
+title = "BF3 - Pump Shotgun tips (870MCS & SPAS)"
+tags = ["games", "tips"]
++++
 Non Battlefield 3 players, look away now. Battlefield 3 players who like shotguns or want to get better with them, keep reading.
 
 Firstly, just so you can see that I can actually use shotguns to a vaguely competent level, here's a quick clip showing what the SPAS & Slug can do:

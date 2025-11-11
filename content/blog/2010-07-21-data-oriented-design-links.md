@@ -1,15 +1,7 @@
----
-id: 570
-title: Data oriented design links
-date: 2010-07-21T18:22:11+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=570
-#permalink: /?p=570
-tags:
-  - games
-  - patterns
----
++++
+title = "Data oriented design links"
+tags = ["games", "patterns"]
++++
 I've been doing a little reading around data oriented design of late and thought it was worth sharing some interesting links. Here's my distillation of the reading I've done so far (caveat: I may be talking balls).
 
 **Prelude: Battling Dogma**

@@ -1,16 +1,7 @@
----
-id: 731
-title: "The fundamentals of unit testing: Tests shouldn't ape the production code"
-date: 2012-11-12T02:09:50+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=731
-#permalink: /?p=731
-tags:
-  - fundamentals of unit testing
-  - testing
-  - tips
----
++++
+title = "The fundamentals of unit testing: Tests shouldn't ape the production code"
+tags = ["fundamentals of unit testing", "testing", "tips"]
++++
 This post is [part of a series](@/blog/2012-10-24-the-fundamentals-of-automated-testing-series.md) on unit testing.
 
 Aping the logic of the class under test is an bad idea when writing tests, but it's an easy mistake to make. 

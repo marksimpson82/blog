@@ -1,16 +1,7 @@
----
-id: 698
-title: "The fundamentals of unit testing: Narrow & Focused"
-date: 2012-10-25T23:13:58+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=698
-#permalink: /?p=698
-tags:
-  - fundamentals of unit testing
-  - testing
-  - tips
----
++++
+title = "The fundamentals of unit testing: Narrow & Focused"
+tags = ["fundamentals of unit testing", "testing", "tips"]
++++
 This post is [part of a series](@/blog/2012-10-24-the-fundamentals-of-automated-testing-series.md) on unit testing.
 
 When it comes to writing unit tests, it pays to be _specific_. 

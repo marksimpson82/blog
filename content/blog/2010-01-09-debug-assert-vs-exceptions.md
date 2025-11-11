@@ -1,17 +1,7 @@
----
-id: 467
-title: Debug.Assert vs. Exceptions
-date: 2010-01-09T18:53:30+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=467
-#permalink: /?p=467
-tags:
-  - testing
-  - software
-  - asserts
-  - exceptions
----
++++
+title = "Debug.Assert vs. Exceptions"
+tags = ["testing", "software", "asserts", "exceptions"]
++++
 _"When should I use Debug.Assert and when should I use exceptions?"_ - It's a fairly sensible question to ask, but you've got to sift through a lot of articles to get anything resembling solid guidance on it (<a href="http://stackoverflow.com/questions/1467568/debug-assert-vs-exception-throwing/1468385#1468385">Eric Lippert's stack overflow post is particularly enlightening</a>). I've wrestled with it quite a bit as a programmer and test engineer, so here's my 2 pence.
 
 ## Good rules of thumb I've arrived at

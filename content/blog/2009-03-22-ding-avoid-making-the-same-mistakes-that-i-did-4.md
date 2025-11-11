@@ -1,14 +1,7 @@
----
-id: 82
-title: "Modding: Avoid making the same mistakes that I did #4"
-date: 2009-03-22T20:24:12+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=82
-#permalink: /?p=82
-tags:
-  - modding
----
++++
+title = "Modding: Avoid making the same mistakes that I did #4"
+tags = ["modding"]
++++
 ### Kick problem people in double quick time
 
 Sometimes you ought to kick someone out. It's tough to do, but you have to (or you <span style="font-style: italic;">should</span>). I kicked a few people out of FF and God knows I should have done more of it. I wish I had been more ruthless when I had the capacity to kick.

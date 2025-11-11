@@ -1,15 +1,7 @@
----
-id: 313
-title: What's in a name?
-date: 2009-05-15T01:09:49+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=313
-#permalink: /?p=313
-tags:
-  - testing
-  - tips
----
++++
+title = "What's in a name?"
+tags = ["testing", "tips"]
++++
 One of the things I try to encourage is the careful selection of names. Just as self-documenting code is easier to read, so is a self-documenting test. As I have previously stated, unit testing is programming, too - you can apply the same good practices to tests.
 
 On numerous occasions I've had to review some code and tests. I open the classes and find well-named, self-documenting, loving crafted, carefully designed code. Then I look at the test for that code and find that the same principles have not been applied to the tests. In fact, it's almost like the tests have been written by Evil Chuck, the programmer's alter-ego.

@@ -1,16 +1,7 @@
----
-id: 723
-title: "The fundamentals of unit testing: KISS"
-date: 2012-11-04T18:32:49+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=723
-#permalink: /?p=723
-tags:
-  - fundamentals of unit testing
-  - testing
-  - tips
----
++++
+title = "The fundamentals of unit testing: KISS"
+tags = ["fundamentals of unit testing", "testing", "tips"]
++++
 This post is [part of a series](@/blog/2012-10-24-the-fundamentals-of-automated-testing-series.md) on unit testing.
 
 KISS, ([Keep it Simple, Stupid](http://en.wikipedia.org/wiki/KISS_principle)) is a guiding principle in software engineering and it's of vital importance when writing tests. Tests should be straightforward and contain as little logic as possible. 

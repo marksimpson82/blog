@@ -1,20 +1,8 @@
----
-id: 751
-title: Empathetic Code
-date: 2013-04-30T23:37:13+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=751
-#permalink: /?p=751
-tags:
-  - api
-  - design
-  - empathy
-  - helpful
-  - software
-  - tips
++++
+title = "Empathetic Code"
+tags = ["api", "design", "software", "tips"]
 
----
++++
 I always liked the phrase, “if you’re incapable of empathy, then you shouldn’t be designing APIs”.
 
 I’ve worked with some terrible libraries in the past and the worst ones all had a common design flaw: the author didn’t put themselves in the user’s place. Worse still, sometimes the author _just didn’t give one_. When someone using the code pointed out that something was hard to understand or didn’t make sense, they were met with a snarl and shouted down; “it makes sense; you’re just using it wrong”.

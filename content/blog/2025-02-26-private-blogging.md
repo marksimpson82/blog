@@ -1,13 +1,7 @@
----
-title: "Private Blogging (a.k.a. why this blog is a barren wasteland)"
-date: 2025-02-26T00:00:00+00:00
-author: Mark Simpson
-layout: single
-tags:
-  - blogging
-  - obsidian
-  - note-taking  
----
++++
+title = "Private Blogging (a.k.a. why this blog is a barren wasteland)"
+tags = ["blogging", "obsidian", "note-taking"]
++++
 
 ## Q: How do you take notes? A: Privately.
 As a follow-on from [How do you take notes?](@/blog/2022-10-30-obsidian.md), I thought I'd write a (very) short update.

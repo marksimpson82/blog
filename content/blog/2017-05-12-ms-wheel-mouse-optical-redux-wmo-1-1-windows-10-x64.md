@@ -1,23 +1,7 @@
----
-id: 799
-title: MS Wheel Mouse Optical Redux (WMO 1.1 & Windows 10 x64)
-date: 2017-05-12T01:14:20+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=799
-#permalink: /?p=799
-tags:
-  - 1000hz
-  - games
-  - gaming
-  - hardware
-  - misc
-  - mouse
-  - overclocking
-  - sensitivity
-  - tips
-  - wmo
----
++++
+title = "MS Wheel Mouse Optical Redux (WMO 1.1 & Windows 10 x64)"
+tags = ["gaming", "hardware", "mouse", "overclocking", "tips", "wmo"]
++++
 Back in 2011, I wrote a 
 [fairly gushing post](@/blog/2011-07-15-ms-wheel-mouse-optical-wmo-1-1.md) about the Microsoft WMO 1.1/1.1a. 
 It’s a great mouse. It really is.

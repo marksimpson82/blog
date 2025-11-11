@@ -1,14 +1,7 @@
----
-title: "Parameterising sgen (aka the .NET Microsoft.XmlSerializer.Generator) via a .csproj PropertyGroup"
-date: 2021-11-04T00:00:00+00:00
-author: Mark Simpson
-layout: single
-tags:
-  - sgen
-  - Microsoft.XmlSerializer.Generator
-  - dotnet
-  - csharp
----
++++
+title = "Parameterising sgen (aka the .NET Microsoft.XmlSerializer.Generator) via a .csproj PropertyGroup"
+tags = ["c#", "dotnet", "Microsoft.XmlSerializer.Generator", "sgen"]
++++
 
 ## The problem
 If you've landed on this post via searching the web, you probably already know what sgen.exe is, and what the 

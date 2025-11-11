@@ -1,15 +1,7 @@
----
-id: 529
-title: Steam is testing my patience
-date: 2010-03-04T23:13:55+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=529
-#permalink: /?p=529
-tags:
-  - whinges
-  - steam
----
++++
+title = "Steam is testing my patience"
+tags = ["whinges", "steam"]
++++
 Steam is great; Steam is good. What's not to love about the venerable, all-singing, all-dancing Steam? Well, how about the fact that they shut down their servers for 'routine' maintenance at peak UK gaming hours without forewarning anyone? How about the fact that, without these facilities, you cannot play online or chat to friends? Moreover, how about the fact that Valve doesn't even have the ability to warn its customers to expect the downtime despite having a client installed on every steam user's machine?
 
 I was in the middle of a close game of L4D2 team versus and suffered from some hardware lag, so I quickly restarted L4D2 to try and get a smooth framerate, as did one of my friends. When we attempted to rejoin the game it was not possible; the friends service was down and connecting via the console/server browser was also a non-starter. So, it's game over for tonight. Why do we accept this? I've lauded Valve and generally think Steam is really good, but this is totally unacceptable **and** it's the second time it's happened in a single week which is making me irritable.

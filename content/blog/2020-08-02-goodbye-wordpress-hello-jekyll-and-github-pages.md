@@ -1,10 +1,6 @@
----
-id: 848
-title: Goodbye Wordpress, Hello Jekyll and Github Pages
-date: 2020-08-02T00:00:00+00:00
-author: Mark Simpson
-layout: single
----
++++
+title = "Goodbye Wordpress, Hello Jekyll and Github Pages"
++++
 
 I've been using Wordpress with [34sp.com](https://34sp.com) hosting since the late noughties, and it's time for a 
 change.
@@ -74,15 +70,10 @@ E.g. an old URL might look something like: `https://defragdev.com/blog/?p=50`
 ... which generates Front Matter like this:
 
 ```
----
-id: 847
-title: "Nvidia + G-SYNC - Black screen when alt-tabbing"
-date: 2020-03-29T21:14:28+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=847
++++
+title = "Nvidia + G-SYNC - Black screen when alt-tabbing"
 permalink: /?p=847
----
++++
 ```
 
 The `permalink` doesn't work, as it's a query string (`jekyll serve` will fail with an obscure-looking error). 

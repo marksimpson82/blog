@@ -1,18 +1,7 @@
----
-id: 660
-title: Data-Driven Testing with Python
-date: 2012-05-21T22:29:05+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=660
-#permalink: /?p=660
-tags:
-  - data-driven
-  - python
-  - software
-  - testing
-  - tips  
----
++++
+title = "Data-Driven Testing with Python"
+tags = ["data-driven", "python", "software", "testing", "tips"]
++++
 Hello tests. It’s been a while since I blogged about automated testing, so it’s nice to welcome an old friend back to the fold. I’ve missed you. I’ve recently started programming in python. I say programming, but what I mean by that is ‘hopelessly jabbing at the keyboard and gawping as my lovingly written code explodes on being invoked’. While I blub.
 
 Python is a dynamic programming language. It’s pretty dynamic in its ability to detonate in various ways, too. There’s no compiler to sanity check my elementary mistakes like typos, or dotting onto a method that doesn’t exist. Or accidentally comparing functions instead of values. Or... well, you get the gist.

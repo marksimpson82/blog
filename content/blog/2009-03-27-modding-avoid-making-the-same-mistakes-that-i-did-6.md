@@ -1,14 +1,7 @@
----
-id: 98
-title: "Modding: Avoid making the same mistakes that I did #6"
-date: 2009-03-27T00:56:39+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=98
-#permalink: /?p=98
-tags:
-  - modding
----
++++
+title = "Modding: Avoid making the same mistakes that I did #6"
+tags = ["modding"]
++++
 ### Playtest & Iterate. Lots.
 
 Make an effort to get a weekly playtest up and running. Weekly is _at the very least_. Even if you have 3 attendees and people stay for 15 minutes before they start cutting themselves, it's significantly better than nothing.

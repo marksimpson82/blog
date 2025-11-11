@@ -1,15 +1,7 @@
----
-id: 638
-title: Good support (for once)
-date: 2011-12-01T02:01:00+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=638
-#permalink: /?p=638
-tags:
-  - misc
-  - whinges
----
++++
+title = "Good support (for once)"
+tags = ["misc", "whinges"]
++++
 ... kinda. I recently built a new computer and one of the parts I received was faulty. The heatsink bracket had a missing thread, so it was impossible to screw the brackets together.
 
 I emailed [Novatech](http://www.novatech.co.uk/) support, assuming I was in for the full, painful returns rigmarole, but was pleasantly surprised, but also befuddled at the hoop jumping I had to do. 

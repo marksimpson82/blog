@@ -1,15 +1,7 @@
----
-id: 611
-title: Unit? Integration? Functional? Wha?
-date: 2011-02-05T19:39:14+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=611
-#permalink: /?p=611
-tags:
-  - software
-  - testing
----
++++
+title = "Unit? Integration? Functional? Wha?"
+tags = ["software", "testing"]
++++
 I answered a question titled, “[What’s the difference between unit, functional, acceptance and integration tests?](http://stackoverflow.com/questions/4904096/whats-the-difference-between-unit-functional-acceptance-and-integration-tests)” on Stackoverflow and thought it’d be useful to re-post the answer here for future reference.
 
 Depending on where you look, you'll get slightly different answers. I've read about the subject a lot, and here's my distillation; again, these are slightly woolly and others may disagree. Indeed, certain companies have their own terminology and categorisations (see [testerab’s answer](http://stackoverflow.com/questions/4904096/whats-the-difference-between-unit-functional-acceptance-and-integration-tests/4908086#4908086))

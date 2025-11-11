@@ -1,16 +1,7 @@
----
-id: 238
-title: The big block method (binary search)
-date: 2009-05-02T17:28:28+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=238
-#permalink: /?p=238
-tags:
-  - 'c#'
-  - debugging
-  - testing
----
++++
+title = "The big block method (binary search)"
+tags = ["c#", "debugging", "testing"]
++++
 Have you ever been in this situation? You have thousands of tests in scores of assemblies. All of the tests pass. However, when you run the test suite a second time without closing NUnit (or your test runner of choice) you find hundreds of failures occur in a specific area. I'm not talking about in the same fixture or even the same assembly; this is NUnit wide. Something is trashing the environment, but there are no obvious warning signs.
 
 So, we have thousands of tests - the problem could be anywhere. The answer is obviously not "look through all the tests" or "disable one project at a time", there has to be an easier way...

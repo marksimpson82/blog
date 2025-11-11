@@ -1,16 +1,7 @@
----
-id: 789
-title: "The fundamentals of unit testing: draw attention to 'interesting' values"
-date: 2014-08-07T21:51:25+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=789
-#permalink: /?p=789
-tags:
-  - fundamentals of unit testing
-  - testing
-  - tips
----
++++
+title = "The fundamentals of unit testing: draw attention to 'interesting' values"
+tags = ["fundamentals of unit testing", "testing", "tips"]
++++
 This post is [part of a series](@/blog/2012-10-24-the-fundamentals-of-automated-testing-series.md) on unit testing.
 
 3 is the magic number? No. No, it's not. 

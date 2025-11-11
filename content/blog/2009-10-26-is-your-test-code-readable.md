@@ -1,15 +1,7 @@
----
-id: 421
-title: Is your test code readable?
-date: 2009-10-26T01:31:05+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=421
-#permalink: /?p=421
-tags:
-  - testing
-  - tips
----
++++
+title = "Is your test code readable?"
+tags = ["testing", "tips"]
++++
 One of the things that _really_ slashes the return on investment in testing is unreadable code. "This is pretty obvious", you say. "What's the point in a blog post about something so obvious?" What's not obvious is that the very people writing these tests are unaware of it. Maybe you do it as well. Given that this blog post is about _things we don't know we do_, I think it's a fair bet that I've also recently written test code that was convoluted without realising it, too.
 
 It's mostly down to testing in a vacuum. The tests are often functionally fine. However, as with nearly all code, maintenance is easily overlooked. On the day that the test was written, it made sense to the author. They understood the logic they wanted to test and how to implement it. Code written, job done.

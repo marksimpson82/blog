@@ -1,16 +1,7 @@
----
-id: 653
-title: Moving Origin Games to a different drive
-date: 2011-12-11T14:13:41+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=653
-#permalink: /?p=653
-tags:
-  - games
-  - software
-  - tips
----
++++
+title = "Moving Origin Games to a different drive"
+tags = ["games", "software", "tips"]
++++
 I wanted to move my BF3 install to my SSD but couldn’t figure out how to do it. Numerous posts suggested things, but none worked until I found this:
 
 From the EA forums:

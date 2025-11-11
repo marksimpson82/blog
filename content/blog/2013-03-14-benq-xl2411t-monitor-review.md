@@ -1,16 +1,7 @@
----
-id: 744
-title: Benq XL2411T Monitor Review
-date: 2013-03-14T01:37:29+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=744
-#permalink: /?p=744
-tags:
-  - games
-  - hardware
-  - misc
----
++++
+title = "Benq XL2411T Monitor Review"
+tags = ["games", "hardware", "misc"]
++++
 Before I review the Benq, it’s worth giving a bit of background about the monitors I’ve owned up till now.
 
 ## Dell P1110

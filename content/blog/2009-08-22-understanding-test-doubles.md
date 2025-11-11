@@ -1,16 +1,7 @@
----
-id: 377
-title: Understanding test doubles
-date: 2009-08-22T16:10:36+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=377
-#permalink: /?p=377
-tags:
-  - 'c#'
-  - testing
-  - tips
----
++++
+title = "Understanding test doubles"
+tags = ["c#", "testing", "tips"]
++++
 There is a bewildering array of types of 'mock' object available to a tester. The canonical list of test doubles was probably coined by the venerable Martin Fowler in his article ["Mocks Aren't Stubs"](http://martinfowler.com/articles/mocksArentStubs.html) and, to me, this list is fairly complete and makes sense. The reason it makes sense is that I've manually written classes that perform these roles.
 
   * I needed to fill out a parameter list with non-null objects, so I created a dumb class with absolutely no implementation.

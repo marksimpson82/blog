@@ -1,18 +1,7 @@
----
-id: 633
-title: Unity3d - Profiling calls to Destroy
-date: 2011-08-31T16:39:01+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=633
-#permalink: /?p=633
-tags:
-  - 'c#'
-  - debugging
-  - software
-  - tips
-  - Unity3d
----
++++
+title = "Unity3d - Profiling calls to Destroy"
+tags = ["c#", "debugging", "software", "tips", "Unity3d"]
++++
 ## Destroy All ... Things
 
 I’ve recently been investigating some performance problems in our Unity3d app. In one specific instance (running full screen on a rubbish laptop), there were numerous large performance spikes caused by the nebulous-sounding “Destroy”. After prodding a little bit, Destroy is related to calling [GameObject.Destroy()](http://unity3d.com/support/documentation/ScriptReference/Object.Destroy.html).

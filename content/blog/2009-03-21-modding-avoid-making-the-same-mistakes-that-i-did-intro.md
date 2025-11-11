@@ -1,14 +1,7 @@
----
-id: 45
-title: "Modding: Avoid making the same mistakes that I did #1"
-date: 2009-03-21T20:28:51+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=45
-#permalink: /?p=45
-tags:
-  - modding
----
++++
+title = "Modding: Avoid making the same mistakes that I did #1"
+tags = ["modding"]
++++
 ### Background
 
 Although these days I spent most of my time writing code and being concerned with the automation of testing, it was once not so. Prior to joining Realtime Worlds as a Software Test Engineer (a programming discipline), I spent a lot of my time creating levels for the Half-Life (goldsrc) and Half-Life 2 (source) game engines. In fact, at one point I fully intended to try and forge a career as a level designer rather than a programmer.

@@ -1,20 +1,7 @@
----
-id: 552
-title: Castle DynamicProxy2 quirks
-date: 2010-05-15T15:35:31+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=552
-#permalink: /?p=552
-tags:
-  - 'c#'
-  - gotchas
-  - patterns
-  - software
-  - castle-dynamic-proxy
-  - aop
-  - advice
----
++++
+title = "Castle DynamicProxy2 quirks"
+tags = ["c#", "gotchas", "patterns", "software", "castle-dynamic-proxy", "aop", "advice"]
++++
 I've been faffing around with [Castle.DynamicProxy2](http://www.castleproject.org/dynamicproxy/index.html) a bit lately and it's a pretty interesting bit of kit. Castle Dynamic Proxy (CDP) allows you to dynamically generate proxies at runtime to weave aspects of behaviour into existing types. Aspect oriented programming is typically employed for implementing crosscutting concerns such as logging, performance measuring, raising INotifyPropertyChanged and various other types of repetitive and/or orthogonal concerns. I'm a newbie to this stuff so I won't say much more on AOP.
 
 While I really like CDP, I've found that the documentation and tutorials (the best of which is <span>Krzysztof Koźmic</span>'s excellent [tutorial series](http://kozmic.pl/archive/2009/04/27/castle-dynamic-proxy-tutorial.aspx)) aren't particularly explicit on **how** CDP achieves its effects, and sometimes these details are important.

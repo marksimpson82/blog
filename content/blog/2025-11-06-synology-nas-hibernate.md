@@ -1,13 +1,7 @@
----
-title: "Making my Synology DS224+ NAS hibernate"
-date: 2025-11-06T00:00:00+00:00
-author: Mark Simpson
-layout: single
-tags:
-  - dsm
-  - synology
-  - nas
----
++++
+title = "Making my Synology DS224+ NAS hibernate"
+tags = ["dsm", "synology", "nas"]
++++
 
 ## My old setup: Intel NUC, Jellyfin and a Roku stick
 I've run an Intel NUC with the [Open Media Vault (OMV)](https://en.wikipedia.org/wiki/OpenMediaVault) distro and an external USB HDD since 2022. For my media server software, I started out with Plex and used it for a few years, but ultimately tired of the constant drip of stealthy on-by-default social features, live TV and so on. I swapped from Plex to Jellyfin and have been very happy with my choice. Jellyfin feels like a much more pleasant experience where my preferences are respected.

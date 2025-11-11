@@ -1,16 +1,7 @@
----
-id: 726
-title: "The fundamentals of unit testing: Use factory methods!"
-date: 2012-11-11T06:03:47+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=726
-#permalink: /?p=726
-tags:
-  - fundamentals of unit testing
-  - testing
-  - tips
----
++++
+title = "The fundamentals of unit testing: Use factory methods!"
+tags = ["fundamentals of unit testing", "testing", "tips"]
++++
 This post is [part of a series](@/blog/2012-10-24-the-fundamentals-of-automated-testing-series.md) on unit testing.
 
 Tests are just like normal code in the sense that repeating yourself can cause problems. Practically every single call to new in a test method is a maintenance risk. 

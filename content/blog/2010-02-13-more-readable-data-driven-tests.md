@@ -1,17 +1,7 @@
----
-id: 514
-title: More readable data-driven tests
-date: 2010-02-13T18:28:00+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=514
-#permalink: /?p=514
-tags:
-  - 'c#'
-  - testing
-  - tips
-  - data-driven
----
++++
+title = "More readable data-driven tests"
+tags = ["c#", "testing", "tips", "data-driven"]
++++
 When the logic of a test method remains constant but the data varies, data-driven testing is a great tool. It allows you, the test author, to write compact code and to add new test cases rapidly. Unfortunately, data-driven tests have a disadvantage: The inputs are often less readable.
 
 ### A simple example

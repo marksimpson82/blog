@@ -1,15 +1,7 @@
----
-id: 274
-title: Benefits of designing for testability
-date: 2009-05-11T01:40:23+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=274
-#permalink: /?p=274
-tags:
-  - patterns
-  - testing
----
++++
+title = "Benefits of designing for testability"
+tags = ["patterns", "testing"]
++++
 When I started my job as a Software Test Engineer, I had very little knowledge about unit testing. I had a good degree award and a load of acronyms to put on my (in retrospect, rather horrible) CV. I thought I knew a bit about design, encapsulation, patterns, object-oriented programming and all the rest. With a little trepidation, I felt I was ready to face the world as a programmer.
 
 I applied for a few programming jobs at Realtime Worlds and did not succeed. After the first rejection, I did not become disheartened. I did what any sensible young chap would do - I went back to the drawing board. I continually improved my skill, learned c#, created some new programs and re-wrote old programs with the knowledge I'd gleaned. Every so often I'd check the website or speak to my friends who worked there, asking if anything suitable was potentially coming up. Eventually, I landed at Realtime Worlds as a Software Test Engineer.

@@ -1,16 +1,7 @@
----
-id: 704
-title: "The fundamentals of unit testing: Correct"
-date: 2012-10-27T19:50:56+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=704
-#permalink: /?p=704
-tags:
-  - fundamentals of unit testing
-  - testing
-  - tips
----
++++
+title = "The fundamentals of unit testing: Correct"
+tags = ["fundamentals of unit testing", "testing", "tips"]
++++
 This post is [part of a series](@/blog/2012-10-24-the-fundamentals-of-automated-testing-series.md) on unit testing.
 
 Once you’ve decided what you’re going to test, chosen a good name and started to write the code, the next step is to make sure that the test is purposeful and correct. This is a simple tip and largely common sense.

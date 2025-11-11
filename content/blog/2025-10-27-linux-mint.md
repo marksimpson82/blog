@@ -1,13 +1,7 @@
----
-title: "Windows 10 support ending? Linux Mint for my parents"
-date: 2025-10-27T00:00:00+00:00
-author: Mark Simpson
-layout: single
-tags:
-  - linux
-  - windows
-  - tpm
----
++++
+title = "Windows 10 support ending? Linux Mint for my parents"
+tags = ["linux", "windows", "tpm"]
++++
 
 As a long-in-the-tooth software engineer, I'm getting to the end of my tether with Windows. I've lived through (and used) practically every version of Windows from 3.1 through to Windows 11, and the direction of travel is negative. Into the sewer, even.
 

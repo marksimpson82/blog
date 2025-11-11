@@ -1,18 +1,7 @@
----
-id: 597
-title: Normal service to resume shortly
-date: 2010-10-17T16:58:28+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=597
-#permalink: /?p=597
-tags:
-  - misc
-  - MyWorld
-  - whinges
-  - life
-  - career
----
++++
+title = "Normal service to resume shortly"
+tags = ["misc", "MyWorld", "whinges", "life", "career"]
++++
 I've had an ... interesting few months.
 
 Realtime Worlds went into administration and then collapsed. It was quite abrupt; abrupt to the point where even the more cynical amongst us (i.e. me) didn't see it coming. We'd done some cursory back-of-the-fag-packet calculations in the pub and reckoned there was roughly another year of funding in place; we'd also been assured in the past that MyWorld was not at the mercy of APB's performance.

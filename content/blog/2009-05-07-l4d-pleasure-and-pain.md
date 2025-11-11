@@ -1,14 +1,7 @@
----
-id: 251
-title: L4D - Pleasure and Pain
-date: 2009-05-07T01:03:16+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=251
-#permalink: /?p=251
-tags:
-  - games
----
++++
+title = "L4D - Pleasure and Pain"
+tags = ["games"]
++++
 Left4Dead is ridiculously good. I can't quite get over how tremendously visceral, tense, hilarious and fun it is. I'm one of those people who tries games, but only latches onto one in a big way every couple of years; I haven't loved a game like this since TFC or BF2. I've already played over 200 hours of it; I can't stop playing it. It's multi-faceted; it has different ways of playing to suit my moods.
 
 I love the camaraderie and the shared experience. Many of my friends have bought it and can't stop playing it. We jabber away about last night's games like a bunch of dullards. "Haha, that tank that smashed a car through the front door and incapped us all". "Oh, did you see that pounce I did off the crane that knocked the other two survivors off the edge?". "haha, when we were all waiting to go up the ladder and a boomer dropped down right in the middle, then we all played pass the boomer".

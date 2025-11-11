@@ -1,14 +1,7 @@
----
-id: 122
-title: "Modding: Avoid making the same mistakes that I did #7"
-date: 2009-04-04T17:02:24+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=122
-#permalink: /?p=122
-tags:
-  - modding
----
++++
+title = "Modding: Avoid making the same mistakes that I did #7"
+tags = ["modding"]
++++
 ### Forget fancy websites, PR and advertising
 
 When creating Fortress Forever, we generally depended on TFC players who had modding skills to get us up and running. As a result, the moment other TF mods started threatening to spring up, we felt it was a good time to put up a website to ensure that we were visible to anyone interested in working on a Source TF mod. Since we had a website set up, we added all of the usual _content_ to it, got some forums and started doing interviews and media releases etc.

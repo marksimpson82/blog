@@ -1,15 +1,7 @@
----
-id: 110
-title: "Code coverage: What it is and what it isn't"
-date: 2009-03-30T22:34:25+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=110
-#permalink: /?p=110
-tags:
-  - testing
-  - coverage
----
++++
+title = "Code coverage: What it is and what it isn't"
+tags = ["testing", "coverage"]
++++
 ## Coverage
 
 I recently posted a [stack overflow answer](http://stackoverflow.com/questions/695811/pitfalls-of-code-coverage/695888#695888) detailing why imposing coverage requirements can have a negative impact. I think it's worth recycling here.

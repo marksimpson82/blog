@@ -1,14 +1,7 @@
----
-id: 66
-title: "Modding: Avoid making the same mistakes that I did #3"
-date: 2009-03-22T20:13:55+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=66
-#permalink: /?p=66
-tags:
-  - modding
----
++++
+title = "Modding: Avoid making the same mistakes that I did #3"
+tags = ["modding"]
++++
 ### Don't expect too much, but DO remove slackers
 
 Modding is unpaid, so you cannot and should not expect to be able to slave-drive people. Modding is also carried out during people's free time - don't expect the earth. Give people a bit of slack for getting their work done. If someone drops off for a few weeks or a month due to other commitments and they're up front about it, that's fine. Be straight with people and expect the same in return.

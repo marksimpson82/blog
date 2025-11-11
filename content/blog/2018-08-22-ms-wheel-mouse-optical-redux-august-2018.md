@@ -1,21 +1,7 @@
----
-id: 815
-title: MS Wheel Mouse Optical Redux (August 2018)
-date: 2018-08-22T16:46:54+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=815
-#permalink: /?p=815
-tags:
-  - driver
-  - games
-  - hardware
-  - mouse
-  - sweetlow
-  - tips
-  - windows
-  - wmo
----
++++
+title = "MS Wheel Mouse Optical Redux (August 2018)"
+tags = ["driver", "games", "hardware", "mouse", "sweetlow", "tips", "windows", "wmo"]
++++
 Back on the WMO train again. I was using Sweetlow's signed driver, but it stopped working again, probably due to 
 Windows updates. You can find the old guide
 [here](@/blog/2017-05-12-ms-wheel-mouse-optical-redux-wmo-1-1-windows-10-x64.md).

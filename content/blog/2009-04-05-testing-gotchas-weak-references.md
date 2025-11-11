@@ -1,16 +1,7 @@
----
-id: 129
-title: Testing gotchas - c# Weak References
-date: 2009-04-05T02:55:49+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=129
-#permalink: /?p=129
-tags:
-  - 'c#'
-  - gotchas
-  - testing
----
++++
+title = "Testing gotchas - c# Weak References"
+tags = ["c#", "gotchas", "testing"]
++++
 If you ever have to test a class that uses a [WeakReference](http://msdn.microsoft.com/en-us/library/system.weakreference.aspx), or even just have to _use_ Weak References, be very careful. Numerous strange-looking things can occur when [Weak References](http://msdn.microsoft.com/en-us/library/system.weakreference.aspx) are involved.
 
 If you have even a cursory understanding of the [.NET Garbage Collector](http://msdn.microsoft.com/en-us/library/0xy59wtx.aspx) (GC), you will know that it keeps track of objects. When an object is no longer strongly referenced, the GC will potentially collect it, freeing up its resources. This causes the object to 'disappear'. So, if you have a strong reference to an object in your program, you are generally safe in the assumption that the object will stick around. The GC won't pull the carpet from under you while you're using that object.

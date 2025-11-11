@@ -1,14 +1,7 @@
----
-id: 61
-title: "Modding: Avoid making the same mistakes that I did #2"
-date: 2009-03-21T21:01:48+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=61
-#permalink: /?p=61
-tags:
-  - modding
----
++++
+title = "Modding: Avoid making the same mistakes that I did #2"
+tags = ["modding"]
++++
 ### Keep your team as small as possible
 
 There are numerous reasons for this. Firstly, keeping the team small keeps expectations low. Things remain friendly and it tends to foster an attitude of "we're in this together". If you're working on something with a handful of friends or dedicated workers (who will likely become good friends!) then you feel inclined to pull for the team that little bit more. When FF was just starting, I felt guilty if I let the side down because there were maybe 5-10 people tops who were depending on me, nearly all of whom were working very hard themselves. I'd say we made much more progress (at least in terms of productivity per person) in the early days when our team was tight knit. There wasn't much in the way of politics at that time, and things were much simpler to keep track of.

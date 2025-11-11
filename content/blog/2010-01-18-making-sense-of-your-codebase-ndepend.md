@@ -1,16 +1,7 @@
----
-id: 482
-title: "Making sense of your codebase: NDepend"
-date: 2010-01-18T01:53:04+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=482
-#permalink: /?p=482
-tags:
-  - 'c#'
-  - software
-  - ndepend
----
++++
+title = "Making sense of your codebase: NDepend"
+tags = ["c#", "software", "ndepend"]
++++
 I was given an NDepend license to play around with (thanks to Patrick) and said I'd blog about it. Apologies for my tardiness!
 
 ### What is NDepend?

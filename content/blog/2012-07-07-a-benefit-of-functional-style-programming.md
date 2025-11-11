@@ -1,19 +1,7 @@
----
-id: 675
-title: "Functional-style programming - Easy debugging!"
-date: 2012-07-07T21:34:15+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=675
-#permalink: /?p=675
-tags:
-  - 'c#'
-  - debugging
-  - MyWorld
-  - patterns
-  - software
-  - tips
----
++++
+title = "Functional-style programming - Easy debugging!"
+tags = ["c#", "debugging", "MyWorld", "patterns", "software", "tips"]
++++
 Ever since LINQ arrived in C# land, a lot of people have been using a functional style of programming without even perhaps being conscious of it. 
 
 I always chuckle when I read the words "functional style", because I picture grim marches across a barren landscape, brutalist architecture and people with beards. 

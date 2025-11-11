@@ -1,16 +1,7 @@
----
-id: 636
-title: Valve's response to being hacked
-date: 2011-11-11T22:24:33+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=636
-#permalink: /?p=636
-tags:
-  - games
-  - misc
-  - whinges
----
++++
+title = "Valve's response to being hacked"
+tags = ["games", "misc", "whinges"]
++++
 ... was very, very disappointing. I’m somewhat befuddled by the extremely low key response to the incident. 
 
 ## Visibility

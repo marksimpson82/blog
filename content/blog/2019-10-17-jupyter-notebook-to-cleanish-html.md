@@ -1,21 +1,7 @@
----
-id: 837
-title: Jupyter Notebook to clean(ish) HTML
-date: 2019-10-17T00:12:05+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=837
-#permalink: /?p=837
-tags:
-  - dataviz
-  - jekyll
-  - jupyter notebook
-  - notebook
-  - overwatch
-  - pandas
-  - reddit
-  - seaborn
----
++++
+title = "Jupyter Notebook to clean(ish) HTML"
+tags = ["dataviz", "jekyll", "jupyter notebook", "notebook", "overwatch", "pandas", "reddit", "seaborn"]
++++
 I recently polled [/r/competitiveoverwatch](https://reddit.com/r/competitiveoverwatch) (aka /r/cow) users for their thoughts on [Overwatch](https://playoverwatch.com/en-gb/) with regards to fun and balance. It was well-received on reddit, so I thought I'd do a quick write-up on the pros & cons of using this approach.
 
 You can [read the survey](https://defragdev.com/overwatch_surveys/2019_09/) and also check out the [code on github](https://github.com/marksimpson82/overwatch_survey).

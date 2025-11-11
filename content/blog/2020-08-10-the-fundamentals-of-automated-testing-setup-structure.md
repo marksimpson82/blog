@@ -1,13 +1,7 @@
----
-title: "The fundamentals of unit testing: Setup structure"
-date: 2020-08-10T00:00:00+00:00
-author: Mark Simpson
-layout: single
-tags:
-  - fundamentals of unit testing
-  - testing
-  - tips
----
++++
+title = "The fundamentals of unit testing: Setup structure"
+tags = ["fundamentals of unit testing", "testing", "tips"]
++++
 
 This post is [part of a series](@/blog/2012-10-24-the-fundamentals-of-automated-testing-series.md) on unit testing.
 

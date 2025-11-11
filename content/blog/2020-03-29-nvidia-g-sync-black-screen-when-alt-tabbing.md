@@ -1,18 +1,7 @@
----
-id: 847
-title: Nvidia + G-SYNC - Black screen when alt-tabbing
-date: 2020-03-29T21:14:28+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=847
-#permalink: /?p=847
-tags:
-  - nvidia
-  - g-sync
-  - black-screen
-  - bugs
-  - tips
----
++++
+title = "Nvidia + G-SYNC - Black screen when alt-tabbing"
+tags = ["nvidia", "g-sync", "black-screen", "bugs", "tips"]
++++
 **tl;dr:** It seems G-SYNC related. I fixed it by installing the monitor driver, then toggling G-SYNC on/off. 
 
 **The problem**

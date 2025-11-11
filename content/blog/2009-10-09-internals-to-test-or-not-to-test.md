@@ -1,14 +1,7 @@
----
-id: 407
-title: "Internals: To test, or not to test?"
-date: 2009-10-09T01:01:06+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=407
-#permalink: /?p=407
-tags:
-  - testing
----
++++
+title = "Internals: To test, or not to test?"
+tags = ["testing"]
++++
 Prepare for some flimsy and strange analogies.
 
 I've been reading a few stackoverflow questions dealing with whether you should test the guts of a system as well as the public API. Most of the people who advocated never testing anything but the main class APIs seemed to talk as if these APIs were extremely coarse-grained and any change to the internals would result in major breaking changes to the tests. This strikes me as somewhat strange, as it's often not the case in my (admittedly limited) experience.

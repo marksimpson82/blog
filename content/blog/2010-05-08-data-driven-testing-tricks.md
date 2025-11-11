@@ -1,18 +1,7 @@
----
-id: 534
-title: Data-driven testing tricks
-date: 2010-05-08T21:12:08+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=534
-#permalink: /?p=534
-tags:
-  - 'c#'
-  - patterns
-  - testing
-  - tips
-  - data-driven
----
++++
+title = "Data-driven testing tricks"
+tags = ["c#", "patterns", "testing", "tips", "data-driven"]
++++
 It's a fairly common occurrence - somebody wants to use NUnit's data driven testing, but they want to vary either the action under test, or the expectation. I.e. they're not parametrising simple _data_, they're parametrising the _actions_.
 
 You cannot encode these things via normal data-driven testing (short of doing really nasty things like passing string names of methods to be invoked or using enums and a dictionary of methods) and even if you use a hackish workaround, it's unlikely to be flexible or terse.

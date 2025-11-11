@@ -1,17 +1,7 @@
----
-id: 668
-title: The wonders of Debugger.Launch()
-date: 2012-07-03T22:46:16+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=668
-#permalink: /?p=668
-tags:
-  - 'c#'
-  - debugging
-  - software
-  - tips
----
++++
+title = "The wonders of Debugger.Launch()"
+tags = ["c#", "debugging", "software", "tips"]
++++
 Ever worked on a project that involved spawning new .NET processes? (as in, one [arbitrary] program launches another .NET executable) I’ve had to do this on quite a few occasions over the years and the one thing that always saves my bacon when it comes to understanding and fixing bugs is [Debugger.Launch()](http://msdn.microsoft.com/en-us/library/system.diagnostics.debugger.launch.aspx).
 
 A common scenario is as follows:

@@ -1,16 +1,7 @@
----
-id: 438
-title: Avoiding the file system
-date: 2009-11-26T20:21:31+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=438
-#permalink: /?p=438
-tags:
-  - 'c#'
-  - patterns
-  - testing
----
++++
+title = "Avoiding the file system"
+tags = ["c#", "patterns", "testing"]
++++
 Going from experience and, as illustrated by Misko's recent presentation, the more dependencies you have on your environment, the less trustworthy and maintainable your tests become. One of the foremost offenders in this area is touching the file system.
 
 Any time someone says "hey, I'm trying to open a file in a unit test...", my first reaction is to say "woah", and not in the "I know Kung Fu" way! If you introduce a dependency on the file system, bad things are more likely to happen. You now depend on something that may not be there/accessible/consistent etc. Ever written a test that tried to access a common file, or read a file that something else may write to? It's horrible.

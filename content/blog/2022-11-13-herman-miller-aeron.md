@@ -1,17 +1,7 @@
----
-title: "The Herman Miller Aeron (tall edition)"
-date: 2022-11-13T00:00:00+00:00
-author: Mark Simpson
-layout: single
-tags:
-  - chairs
-  - herman_miller 
-  - aeron
-  - tall
-  - fully_jarvis
-  - desk
-  - standing_desk
----
++++
+title = "The Herman Miller Aeron (tall edition)"
+tags = ["chairs", "herman miller", "aeron", "fully jarvis", "desk", "standing desk"]
++++
 
 ## tl;dr
 - You may need to reduce the Aeron seat height or it'll destroy your hamstrings

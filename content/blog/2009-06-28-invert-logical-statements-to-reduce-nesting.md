@@ -1,15 +1,7 @@
----
-id: 357
-title: Invert logical statements to reduce nesting
-date: 2009-06-28T18:32:31+00:00
-author: Mark Simpson
-layout: single
-guid: https://defragdev.com/blog/?p=357
-#permalink: /?p=357
-tags:
-  - 'c#'
-  - software
----
++++
+title = "Invert logical statements to reduce nesting"
+tags = ["c#", "software"]
++++
 As a test engineer, I spend a lot of my time reading -and making sense of- other people's code. I find it interesting that logically equivalent, re-arranged code can be much more easily understood. Some of this follows on from the layout / style guide in the excellent [Code Complete](http://www.cc2e.com/ "code complete 2"). Perhaps I have unknowingly assimilated these idioms from reading, understanding and ultimately copying the layout of 'good' code. Either way, they're useful from a testing point of view, as it's simpler to reason about code that doesn't jump around so much.
 
 As has been stated many times before, in general, the best programmers are the ones who program around the limitations of the human brain. E.g. splitting a method into self documented sub methods, reducing nesting depth, reducing number of exits from a loop, grouping related logical statements and so forth.
