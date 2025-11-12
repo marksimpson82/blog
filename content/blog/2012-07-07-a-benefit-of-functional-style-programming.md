@@ -10,28 +10,28 @@ One particular facet of programming in a functional style is where, rather than 
 
 ## The status quo
 
-First, let’s consider business-as-usual. Imagine you’re debugging a part of your program that is doing something complicated. The program is written in the usual imperative, OO style; that is to say, when method calls occur, state is mutated.
+First, let's consider business-as-usual. Imagine you're debugging a part of your program that is doing something complicated. The program is written in the usual imperative, OO style; that is to say, when method calls occur, state is mutated.
 
-It’s often the case that an object with state either mutates itself, or is mutated by other objects. Once that code has been executed, the old object state is gone. It’s done one. It ain’t comin’ back, Billy. When you observe the result and see a problem, the data trail goes cold. All you can see is the state of the object _after_ it has been mutated. Sometimes you can work your way backwards, but in other cases the mental gymnastics are too complicated. Sometimes you weep hot salty tears.
+It's often the case that an object with state either mutates itself, or is mutated by other objects. Once that code has been executed, the old object state is gone. It's done one. It ain't comin' back, Billy. When you observe the result and see a problem, the data trail goes cold. All you can see is the state of the object _after_ it has been mutated. Sometimes you can work your way backwards, but in other cases the mental gymnastics are too complicated. Sometimes you weep hot salty tears.
 
 To reproduce the bug, you need to get the program back into its original state and observe proceedings as they happen. This can be tricky, especially when the reproduction steps are unknown.
 
 ## Step forward, functional style
 
-If you’re simply transforming some data D by some function F, you get something like `F(D) = D’`. 
+If you're simply transforming some data D by some function F, you get something like `F(D) = D'`. 
 
-`D’` is a new object or structure. The original input data `D` remains untouched. If your program is incorrect after the transformation, all of the original state still exists. 
+`D'` is a new object or structure. The original input data `D` remains untouched. If your program is incorrect after the transformation, all of the original state still exists. 
 
-You can simply break in the VS debugger then use the “Set Next Statement” to rewind the execution to an arbitrary point. As long as the operations have no side effects, you can do this as many times as you want or to any depth. It’s almost like you recorded the drama on tape and rewound it.
+You can simply break in the VS debugger then use the "Set Next Statement" to rewind the execution to an arbitrary point. As long as the operations have no side effects, you can do this as many times as you want or to any depth. It's almost like you recorded the drama on tape and rewound it.
 
-## Stuff wot I’m doing
+## Stuff wot I'm doing
 
-The current program I’m working on is developed using a series of stages. It goes something like this:
+The current program I'm working on is developed using a series of stages. It goes something like this:
 
-“Take this raw json input, build a graph. Take the graph, build a higher level representation with bells on. Take the higher level representation with bells on, build a triangle mesh with texture coordinates.”
+"Take this raw json input, build a graph. Take the graph, build a higher level representation with bells on. Take the higher level representation with bells on, build a triangle mesh with texture coordinates."
 
 At pretty much every stage, I am transforming input data into something new rather than mutating an existing structure. There is precisely one part where I mutate data. Guess where I spent the most time debugging it when unexpected input data caused it to crash? Yup, the mutation bit. 
 
 We have terabytes of data to crunch. It is vital to be able to reproduce crashes in a deterministic fashion.
 
-I’m not claiming this style of programming is a silver bullet or applicable everywhere, but it does have its charms.
+I'm not claiming this style of programming is a silver bullet or applicable everywhere, but it does have its charms.

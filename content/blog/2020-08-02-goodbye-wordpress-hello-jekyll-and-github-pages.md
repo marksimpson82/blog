@@ -8,9 +8,7 @@ change.
 ## Reasons for switching
 I've got a few reasons for making the switch:
 1. Wordpress is a permanent security and maintenance risk.
-
 2. Authoring posts using markdown is a lot more pleasant & predictable.
-
 3. [34sp.com](https://34sp.com) sadly withdrew their personal hosting product and forcibly migrated me to a professional one. 
 
 In short, it's a clunk dev experience and fairly expensive.
@@ -28,7 +26,6 @@ Organisation sites are limited to one per user or organisation, but you can have
 I created two repos (caveat: I'm in 'just-make-it-work-mode', so exercise your own judgement):
 1. [`<myusername>.github.io`](https://github.com/marksimpson82/marksimpson82.github.io) for my (2007!) root website 
 content
-
 2. [`blog`](https://github.com/marksimpson82/blog) for my blog 
 
 The former will serve content for [https://defragdev.com](https://defragdev.com) & the latter for 
@@ -70,10 +67,10 @@ E.g. an old URL might look something like: `https://defragdev.com/blog/?p=50`
 ... which generates Front Matter like this:
 
 ```
-+++
-title = "Nvidia + G-SYNC - Black screen when alt-tabbing"
+---
+title: Nvidia + G-SYNC - Black screen when alt-tabbing
 permalink: /?p=847
-+++
+---
 ```
 
 The `permalink` doesn't work, as it's a query string (`jekyll serve` will fail with an obscure-looking error). 

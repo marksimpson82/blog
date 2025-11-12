@@ -39,7 +39,7 @@ public void adding_two_numbers_returns_the_sum()
 }
 ```
 
-Although this doesn't look like the end of the world, we can see that the test method line "Assert.That(result, Is.EqualTo(**1 + 2**))" is directly replicating the logic in the Add method. This is “aping”.
+Although this doesn't look like the end of the world, we can see that the test method line "Assert.That(result, Is.EqualTo(**1 + 2**))" is directly replicating the logic in the Add method. This is "aping".
 
 ## Why is this a bad thing?
 
@@ -47,7 +47,7 @@ This is bad for a few reasons. Firstly, if the class under test is bugged and th
 
 Secondly, when writing tests, if state can be tested, it should be done using as declarative a style as possible - we don't want to say **how** we get to the answer, just **what** it should be. 
 
-I don't want to see the test code literally add 1 and 2 to get 3. Instead, I want to see 3 in the test. Here’s a fixed-up version of the test that does not ape the production code:
+I don't want to see the test code literally add 1 and 2 to get 3. Instead, I want to see 3 in the test. Here's a fixed-up version of the test that does not ape the production code:
 
 ```cs
 [Test]  
@@ -64,17 +64,17 @@ public void adding_two_numbers_returns_the_sum()
 }
 ```
 
-You should always scan your test code looking for this anti-pattern. The example I’ve cited is very simple, but I’ve seen a lot of real world code that has succumbed to aping the production code resulting in bugs going undiscovered. 
+You should always scan your test code looking for this anti-pattern. The example I've cited is very simple, but I've seen a lot of real world code that has succumbed to aping the production code resulting in bugs going undiscovered. 
 
 ## Validating your answers
 
-You may be thinking, “OK genius, so you skipped adding 1 and 2 in the test code, but you must’ve known to follow the addition algorithm in your head to be able to come up with the answer of 3. How do you know your brain didn’t get it wrong and the test is bugged?” 
+You may be thinking, "OK genius, so you skipped adding 1 and 2 in the test code, but you must've known to follow the addition algorithm in your head to be able to come up with the answer of 3. How do you know your brain didn't get it wrong and the test is bugged?" 
 
-It’s a good question and the truth is, it’s often the case that it’s not clear-cut. However, there are steps you can take to validate your answers (or at least be a little more sure of them).
+It's a good question and the truth is, it's often the case that it's not clear-cut. However, there are steps you can take to validate your answers (or at least be a little more sure of them).
 
-* Don’t just assume you’ve got it right first time. Double check it for a few minutes more. 
+* Don't just assume you've got it right first time. Double check it for a few minutes more. 
 * Write out some notes on paper (I sometimes do the testing version of truth tables). 
 * Maybe you have a specification for this particular part. Use it to check the answer (stop laughing at the back, there! – it occasionally does happen; e.g. conventions for a maths library). 
-* Use an alternative method to come up with the same answer (it’s often the case that the same value can be calculated via multiple algorithms / schemes). 
-* Use an existing implementation to corroborate your findings. E.g. if you’re writing a test to make sure that JSON is validated correctly, then check that [JSONLint.com](http://jsonlint.com/) agrees with your test results. 
-* If you’re not sure how to corroborate an exact answer, then check any invariants you’re aware of as a smoke test. If any of the invariants don’t hold, your answer is probably wrong.
+* Use an alternative method to come up with the same answer (it's often the case that the same value can be calculated via multiple algorithms / schemes). 
+* Use an existing implementation to corroborate your findings. E.g. if you're writing a test to make sure that JSON is validated correctly, then check that [JSONLint.com](http://jsonlint.com/) agrees with your test results. 
+* If you're not sure how to corroborate an exact answer, then check any invariants you're aware of as a smoke test. If any of the invariants don't hold, your answer is probably wrong.

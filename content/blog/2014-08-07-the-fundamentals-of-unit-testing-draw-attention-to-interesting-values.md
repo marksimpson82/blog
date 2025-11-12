@@ -6,7 +6,7 @@ This post is [part of a series](@/blog/2012-10-24-the-fundamentals-of-automated-
 
 3 is the magic number? No. No, it's not. 
 
-Magic numbers/strings/other values in all walks of programming are a readability and maintenance liability. It’s quite common to see all kinds of literals being littered through test code. It’s quite easy to simply switch off and treat test code as a second class citizen.
+Magic numbers/strings/other values in all walks of programming are a readability and maintenance liability. It's quite common to see all kinds of literals being littered through test code. It's quite easy to simply switch off and treat test code as a second class citizen.
 
 To illustrate this point, please tell me what this does
 
@@ -29,7 +29,7 @@ It's not exactly crystal clear, is it? Although the naming of this test can and 
 
 ## Replace literals with named consts 
 
-Let's change 500 to a named constant. Let’s also change the test name while we’re at it.
+Let's change 500 to a named constant. Let's also change the test name while we're at it.
 
 ```cs
 [Test]  
@@ -45,7 +45,7 @@ public void when_the_car_fuel_tank_capacity_is_too_low_and_fuel_is_added_an_exce
 }
 ```
 
-Now that's much clearer. We can see what the value represents, the units it's measured in and its place in the test. Some people shit the bed when they see really long story-like variable names in tests, but they’re generally a help, not a hindrance.
+Now that's much clearer. We can see what the value represents, the units it's measured in and its place in the test. Some people shit the bed when they see really long story-like variable names in tests, but they're generally a help, not a hindrance.
 
 While the previous example is simple, this tip makes much more of a difference in situations where a function/method/constructor has numerous parameters, but the test is largely focused on only one of them. How do you know which one to pay attention to?
 
@@ -65,9 +65,9 @@ public void when_account_balance_is_low_money_transfers_fail_when_would_be_overd
 }
 ```
 
-Fine, this is a crufty-looking API, but in certain circumstances, it’s quite common to see functions/constructors that take multiple arguments of a similar type. At a glance, how can you tell which of the arguments is the one of interest to the test? Is it 1000, 42 or 602402? What is the significance of any of them? Which one is causing the transfer to fail?
+Fine, this is a crufty-looking API, but in certain circumstances, it's quite common to see functions/constructors that take multiple arguments of a similar type. At a glance, how can you tell which of the arguments is the one of interest to the test? Is it 1000, 42 or 602402? What is the significance of any of them? Which one is causing the transfer to fail?
 
-Let’s use a named const to draw attention to the interesting argument.
+Let's use a named const to draw attention to the interesting argument.
 
 ```cs
 [Test]  
@@ -86,7 +86,7 @@ public void when_account_balance_is_low_money_transfers_fail_when_would_be_overd
 }
 ```
 
-Turns out the 42 is the number of cents in the transfer, and that 602402 is just a dummy customer number we’re passing through. 
+Turns out the 42 is the number of cents in the transfer, and that 602402 is just a dummy customer number we're passing through. 
 
 We can go further than this to clean things up still further by doing things such as:
 

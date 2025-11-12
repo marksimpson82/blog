@@ -4,7 +4,7 @@ tags = ["fundamentals of unit testing", "testing", "tips"]
 +++
 This post is [part of a series](@/blog/2012-10-24-the-fundamentals-of-automated-testing-series.md) on unit testing.
 
-The main purpose of automated testing is to highlight problems with correctness in production code. When a test fails, it means, “something is wrong here; we have a bug in our production code!” I’m sorry about your canary. It died a valiant death.
+The main purpose of automated testing is to highlight problems with correctness in production code. When a test fails, it means, "something is wrong here; we have a bug in our production code!" I'm sorry about your canary. It died a valiant death.
 
 ## Tests Should be Repeatable
 
@@ -16,9 +16,9 @@ If a unit test cannot yield the same result with every single test run, then it 
 
 An unreliable, flaky test is analogous to a car alarm that has been going off for two days. There _might_ be something wrong, but nobody will pay any attention to it. 
 
-Most people who’ve worked with large test suites will have experienced a particular situation from time to time – the case where a handful of the tests intermittently fail. Developers quickly recognise the problematic test name(s) and exclaim, “these tests sometimes fail for no reason”. The next step is to click the “rebuild” button on the continuous integration server. Without changing a thing, the tests pass. Hooray! If you joined in with the cheering, then please punch yourself in the face (it was a ruse).
+Most people who've worked with large test suites will have experienced a particular situation from time to time – the case where a handful of the tests intermittently fail. Developers quickly recognise the problematic test name(s) and exclaim, "these tests sometimes fail for no reason". The next step is to click the "rebuild" button on the continuous integration server. Without changing a thing, the tests pass. Hooray! If you joined in with the cheering, then please punch yourself in the face (it was a ruse).
 
-When folk mindlessly click the “rebuild” button, we’ve lost. At this juncture, the developers don’t trust the tests. Remember when I said that the purpose of tests is to act as a canary in the mine? Well, the canary died and, rather than saying “everyone out of the shaft!” their first reaction was to send in more, as perhaps the first one had asthma or died of natural causes. If people merely gloss over the root cause of the failure and try to make the failure “go away”, this signals a collective shift into [NOMFuP](http://www.urbandictionary.com/define.php?term=NOMFup)-land. If you’re unfamiliar with NOMFuP, I recommend watching [The Thick of It](http://uk.imdb.com/title/tt0459159/).
+When folk mindlessly click the "rebuild" button, we've lost. At this juncture, the developers don't trust the tests. Remember when I said that the purpose of tests is to act as a canary in the mine? Well, the canary died and, rather than saying "everyone out of the shaft!" their first reaction was to send in more, as perhaps the first one had asthma or died of natural causes. If people merely gloss over the root cause of the failure and try to make the failure "go away", this signals a collective shift into [NOMFuP](http://www.urbandictionary.com/define.php?term=NOMFup)-land. If you're unfamiliar with NOMFuP, I recommend watching [The Thick of It](http://uk.imdb.com/title/tt0459159/).
 
 > **[Malcolm Tucker](http://uk.imdb.com/name/nm0134922/)**: NOMFuP.  
 > **[Jamie](http://uk.imdb.com/name/nm0383467/)**: Eh?  
@@ -38,9 +38,9 @@ Any kind of unit test involving threading should set alarm bells ringing. Thread
 
 I.e. if threading is used in tests, that test is by default not a unit test. You should note that neither the test nor the class under test should be creating threads.
 
-While there’s nothing inherently wrong about using threads in integration/functional tests, careful decisions have to be made about how to make each test robust. Threading is notoriously easy to get wrong and introduces the scope for several classes of bugs you won’t see in single-threaded code.
+While there's nothing inherently wrong about using threads in integration/functional tests, careful decisions have to be made about how to make each test robust. Threading is notoriously easy to get wrong and introduces the scope for several classes of bugs you won't see in single-threaded code.
 
-Here's an example of a test that spins up a thread (again, please do not use this as an example of how to do things, as it’s flawed in several ways). I’ve highlighted the lines in the test body that involve threading concerns:
+Here's an example of a test that spins up a thread (again, please do not use this as an example of how to do things, as it's flawed in several ways). I've highlighted the lines in the test body that involve threading concerns:
 
 ```cs
 [Test]  
@@ -63,13 +63,13 @@ Ignoring the non-descriptive name and the lack of a meaningful assert, this is a
 
 The main reason to avoid threading in unit tests is that threading is dependent on the machine configuration. Microsoft discovered the vast majority of its Windows threading bugs when running integration/end to end tests on an eight core machine. However, the same tests passed without an issue on machines with one or two cores. Bearing this in mind, do you _really_ want to play Russian roulette with your unit tests? I don't. 
 
-As I said, I’m not trying to entirely dissuade folk from testing threaded code, but to be aware that they’re not unit tests and that special care and consideration must be taken when doing so. 
+As I said, I'm not trying to entirely dissuade folk from testing threaded code, but to be aware that they're not unit tests and that special care and consideration must be taken when doing so. 
 
 ### Timing
 
 Timing is related to threading, but typically manifests itself as the test code having to work around timing issues present in the class under test (as opposed to spinning up threads in the test code). 
 
-Here's an example (again, please don’t etc. and so forth – it’s not great code): 
+Here's an example (again, please don't etc. and so forth – it's not great code): 
 
 ```cs
 [Test]  
@@ -91,7 +91,7 @@ public void LoadRequestTest()
 }
 ```
 
-The name isn’t very helpful, but let’s just focus on the timing concerns. Notice that there is no sign of threading. The production code is spinning up threads under the hood, though. Aside from the difficulty understanding the intent of the test, the test relies on the magic number of 10 milliseconds. Presumably something (I'm not quite sure what) takes time to process, so the loop has 100 iterations in which to succeed, and a value to wait after each pass of the loop. 
+The name isn't very helpful, but let's just focus on the timing concerns. Notice that there is no sign of threading. The production code is spinning up threads under the hood, though. Aside from the difficulty understanding the intent of the test, the test relies on the magic number of 10 milliseconds. Presumably something (I'm not quite sure what) takes time to process, so the loop has 100 iterations in which to succeed, and a value to wait after each pass of the loop. 
 
 Not only does this test have readability issues and a load of logic cooked in, but it is sensitive to timing issues. Just because 10 milliseconds was an adequate sleep value on one PC doesn't mean it will work on another. Worse still, if functionality that this class relies on changes or the machine is overloaded when the test runs, the test may fail. I've seen this multiple times when flaky tests run fine on developer machines, but fail on CI server(s) because they're under more load. Furthermore, this test is running-in-molasses _slooooooooow_ due to the Sleep() call.
 
@@ -99,7 +99,7 @@ Not only does this test have readability issues and a load of logic cooked in, b
 
 There are a few ways to improve these problems or eliminate them entirely in unit test situations. 
 
-### Don’t unit test threaded code
+### Don't unit test threaded code
 
 The first and simplest suggestion is to avoid writing unit tests for threaded or timing-sensitive code. If you are stuck with inflexible threading model and cannot change it, write integration tests with plenty of timing slack, instead. If you can change the code, read on. 
 

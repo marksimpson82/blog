@@ -8,9 +8,9 @@ Windows updates. You can find the old guide
 
 I'm on Windows 10 Home 64-bit, version 1803. Here's how to get it working at the time of writing.
 
-The main google result is not the actual official Sweetlow post. It links to a thread on the overclock.net forums that was not made by Sweetlow. Instead, follow the instructions on Sweetlow’s official (and up to date!) [post](https://www.overclock.net/forum/375-mice/1589644-usb-mouse-hard-overclocking-2000-hz.html).
+The main google result is not the actual official Sweetlow post. It links to a thread on the overclock.net forums that was not made by Sweetlow. Instead, follow the instructions on Sweetlow's official (and up to date!) [post](https://www.overclock.net/forum/375-mice/1589644-usb-mouse-hard-overclocking-2000-hz.html).
 
-Unfortunately, the ‘vanilla’ signed driver no longer works for me, but I would recommend trying the main instructions first.
+Unfortunately, the ‘vanilla' signed driver no longer works for me, but I would recommend trying the main instructions first.
 
 > I had to use a workaround that is covered in his post. Specifically, the part where he says:  
 > 2. If you have EHCI (USB2.0) Controller only on version x64 1703+ or any controller on version 1803+ use these drivers and (Test Mode or atsiv method with non Test Mode)
@@ -43,11 +43,11 @@ We're going to download the official Sweetlow package (which contains the instal
 1. Navigate to "official"
 1. Replace its DRIVER\AMD64\hidusbf.sys + DRIVER\AMD64\1khz\hidusbf.sys with it (I suspect the installer uses the first of these, but I haven't checked for sure, so replace both)
 1. Still in "official", run setup.exe
-1. Check the “Filter On Device” box
+1. Check the "Filter On Device" box
 1. Change the rate to 1000hz
-1. Click the “Install Service” button
-1. Click the “Restart” button
+1. Click the "Install Service" button
+1. Click the "Restart" button
 1. Close setup.exe
 1. Open mouserate.exe (or browse to <a href="https://zowie.benq.com/en-eu/support/mouse-rate-checker.html" rel="nofollow">https://zowie.benq.com/en-eu/support/mouse-rate-checker.html</a>) and check your hz
 
-If that didn’t work, reboot. If you mess it up and your mouse stops working, simply go to device manager, uninstall the WMO via remove device, then unplug it before plugging it back in. You're then OK to try again.
+If that didn't work, reboot. If you mess it up and your mouse stops working, simply go to device manager, uninstall the WMO via remove device, then unplug it before plugging it back in. You're then OK to try again.
