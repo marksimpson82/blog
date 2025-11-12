@@ -1,6 +1,7 @@
 +++
 title = "Making sense of your codebase: NDepend"
 tags = ["c#", "software", "ndepend"]
+path = "/blog/2010/01/18/making-sense-of-your-codebase-ndepend.html"
 +++
 I was given an NDepend license to play around with (thanks to Patrick) and said I'd blog about it. Apologies for my tardiness!
 

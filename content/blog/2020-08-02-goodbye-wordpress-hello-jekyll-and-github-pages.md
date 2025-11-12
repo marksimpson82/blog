@@ -1,5 +1,6 @@
 +++
 title = "Goodbye Wordpress, Hello Jekyll and Github Pages"
+path = "/blog/2020/08/02/goodbye-wordpress-hello-jekyll-and-github-pages.html"
 +++
 
 I've been using Wordpress with [34sp.com](https://34sp.com) hosting since the late noughties, and it's time for a 

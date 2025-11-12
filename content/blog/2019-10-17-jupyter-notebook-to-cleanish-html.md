@@ -1,6 +1,7 @@
 +++
 title = "Jupyter Notebook to clean(ish) HTML"
 tags = ["dataviz", "jekyll", "jupyter notebook", "notebook", "overwatch", "pandas", "reddit", "seaborn"]
+path = "/blog/2019/10/17/jupyter-notebook-to-cleanish-html.html"
 +++
 I recently polled [/r/competitiveoverwatch](https://reddit.com/r/competitiveoverwatch) (aka /r/cow) users for their thoughts on [Overwatch](https://playoverwatch.com/en-gb/) with regards to fun and balance. It was well-received on reddit, so I thought I'd do a quick write-up on the pros & cons of using this approach.
 

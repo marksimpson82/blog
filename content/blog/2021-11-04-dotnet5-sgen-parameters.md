@@ -1,6 +1,7 @@
 +++
 title = "Parameterising sgen (aka the .NET Microsoft.XmlSerializer.Generator) via a .csproj PropertyGroup"
 tags = ["c#", "dotnet", "Microsoft.XmlSerializer.Generator", "sgen"]
+path = "/blog/2021/11/04/dotnet5-sgen-parameters.html"
 +++
 
 ## The problem

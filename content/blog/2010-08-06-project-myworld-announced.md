@@ -1,6 +1,7 @@
 +++
 title = "Project: MyWorld announced"
 tags = ["games", "MyWorld", "life", "career"]
+path = "/blog/2010/08/06/project-myworld-announced.html"
 +++
 We finally announced our [minature-version-of-real-world-as-a-platform-for-games project](http://playmyworld.com) last week. Image shamelessly nicked from [Luke's blog](http://lukehalliwell.wordpress.com/2010/08/05/project-myworld/):
 

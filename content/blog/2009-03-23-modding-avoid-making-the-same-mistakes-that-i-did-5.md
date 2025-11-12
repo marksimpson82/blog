@@ -1,6 +1,7 @@
 +++
 title = "Modding: Avoid making the same mistakes that I did #5"
 tags = ["modding"]
+path = "/blog/2009/03/23/modding-avoid-making-the-same-mistakes-that-i-did-5.html"
 +++
 ### The mod leader must do something tangible
 

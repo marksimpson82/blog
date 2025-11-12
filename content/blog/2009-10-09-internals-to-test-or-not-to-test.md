@@ -1,6 +1,7 @@
 +++
 title = "Internals: To test, or not to test?"
 tags = ["testing"]
+path = "/blog/2009/10/09/internals-to-test-or-not-to-test.html"
 +++
 Prepare for some flimsy and strange analogies.
 

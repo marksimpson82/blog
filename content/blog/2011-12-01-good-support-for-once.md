@@ -1,6 +1,7 @@
 +++
 title = "Good support (for once)"
 tags = ["misc", "whinges"]
+path = "/blog/2011/12/01/good-support-for-once.html"
 +++
 ... kinda. I recently built a new computer and one of the parts I received was faulty. The heatsink bracket had a missing thread, so it was impossible to screw the brackets together.
 

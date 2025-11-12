@@ -1,6 +1,7 @@
 +++
 title = "Mouse Input in FPS Games"
 tags = ["games", "whinges"]
+path = "/blog/2009/12/07/mouse-input-in-fps-games.html"
 +++
 Am I the only PC gamer that is really, really fussy about mouse input? I say this because it feels like every other PC game I play comes with default input settings that are beyond jarring, yet most reviews fail to mention it.
 

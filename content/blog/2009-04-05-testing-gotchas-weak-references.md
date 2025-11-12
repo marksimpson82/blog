@@ -1,6 +1,7 @@
 +++
 title = "Testing gotchas - c# Weak References"
 tags = ["c#", "gotchas", "testing"]
+path = "/blog/2009/04/05/testing-gotchas-weak-references.html"
 +++
 If you ever have to test a class that uses a [WeakReference](http://msdn.microsoft.com/en-us/library/system.weakreference.aspx), or even just have to _use_ Weak References, be very careful. Numerous strange-looking things can occur when [Weak References](http://msdn.microsoft.com/en-us/library/system.weakreference.aspx) are involved.
 

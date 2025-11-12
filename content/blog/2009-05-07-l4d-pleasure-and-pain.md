@@ -1,6 +1,7 @@
 +++
 title = "L4D - Pleasure and Pain"
 tags = ["games"]
+path = "/blog/2009/05/07/l4d-pleasure-and-pain.html"
 +++
 Left4Dead is ridiculously good. I can't quite get over how tremendously visceral, tense, hilarious and fun it is. I'm one of those people who tries games, but only latches onto one in a big way every couple of years; I haven't loved a game like this since TFC or BF2. I've already played over 200 hours of it; I can't stop playing it. It's multi-faceted; it has different ways of playing to suit my moods.
 

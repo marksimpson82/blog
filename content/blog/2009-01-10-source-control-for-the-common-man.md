@@ -1,5 +1,6 @@
 +++
 title = "Source control for the common man"
+path = "/blog/2009/01/10/source-control-for-the-common-man.html"
 +++
 Due to barely taking a day off during my first six months (my own choice), I accrued so many unused holidays that I found myself with a stretch of 17 or 18 days of holiday over Christmas. Now, I've never been one to shy away from laying around for prolonged periods, but this time around I found myself restless after a week or so. In the end, I cracked; I started programming quite a bit - just pottering around doing my own personal experiments.
 

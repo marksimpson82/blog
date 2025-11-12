@@ -1,6 +1,7 @@
 +++
 title = "Stackoverflow is good... but"
 tags = ["whinges", "software"]
+path = "/blog/2011/01/30/stackoverflow-is-good-but.html"
 +++
 Stackoverflow is a phenomenally useful resource with a huge community. You can post questions that span the full gamut of programming, from ponderous questions like, "what makes a great programmer?" through to the very specific, "why does this LINQ code fail to compile?". I've gleaned quite a lot of useful things from that site and occasionally resorted to posting questions, too. However, it does lack something.
 

@@ -1,6 +1,7 @@
 +++
 title = "Video recording with MSI Afterburner"
 tags = ["games", "software", "tips"]
+path = "/blog/2012/07/15/video-recording-with-msi-afterburner.html"
 +++
 I've used this application for half a year now, but had no idea that it has the ability to capture video. 
 

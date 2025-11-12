@@ -1,6 +1,7 @@
 +++
 title = "Multiple Mocks?"
 tags = ["c#", "patterns", "testing", "tips"]
+path = "/blog/2011/02/09/multiple-mocks.html"
 +++
 This post was in response to a post on the [fragmental.tw blog](http://fragmental.tw/2010/12/14/one-mock-per-test-considered-not-awesome/) (the comments aren't working for me, so I thought I'd post it here) which I read via [Roy Osherove](http://www.osherove.com/blog/2011/2/9/multiple-mocks-asserts-and-hidden-results.html).
 

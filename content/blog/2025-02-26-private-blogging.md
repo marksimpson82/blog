@@ -1,6 +1,7 @@
 +++
 title = "Private Blogging (a.k.a. why this blog is a barren wasteland)"
 tags = ["blogging", "obsidian", "note-taking"]
+path = "/blog/2025/02/26/private-blogging.html"
 +++
 
 ## Q: How do you take notes? A: Privately.

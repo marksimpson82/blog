@@ -1,6 +1,7 @@
 +++
 title = "Python 3.4 and the three P's: pyvenv, pip & pycharm"
 tags = ["pip", "pycharm", "python", "pyvenv", "venv", "virtualenv"]
+path = "/blog/2014/03/23/python-3-4-pyvenv-pip.html"
 +++
 ## Pip
 

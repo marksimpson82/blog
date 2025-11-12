@@ -1,6 +1,7 @@
 +++
 title = "The Herman Miller Aeron (tall edition)"
 tags = ["chairs", "herman miller", "aeron", "fully jarvis", "desk", "standing desk"]
+path = "/blog/2022/11/13/herman-miller-aeron.html"
 +++
 
 ## tl;dr

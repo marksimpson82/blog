@@ -1,6 +1,7 @@
 +++
 title = "Benefits of designing for testability"
 tags = ["patterns", "testing"]
+path = "/blog/2009/05/11/testable-code-happens-to-be-better-designed-code.html"
 +++
 When I started my job as a Software Test Engineer, I had very little knowledge about unit testing. I had a good degree award and a load of acronyms to put on my (in retrospect, rather horrible) CV. I thought I knew a bit about design, encapsulation, patterns, object-oriented programming and all the rest. With a little trepidation, I felt I was ready to face the world as a programmer.
 

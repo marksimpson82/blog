@@ -1,6 +1,7 @@
 +++
 title = "Data oriented design links"
 tags = ["games", "patterns"]
+path = "/blog/2010/07/21/data-oriented-design-links.html"
 +++
 I've been doing a little reading around data oriented design of late and thought it was worth sharing some interesting links. Here's my distillation of the reading I've done so far (caveat: I may be talking balls).
 

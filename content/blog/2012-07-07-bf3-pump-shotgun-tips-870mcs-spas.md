@@ -1,6 +1,7 @@
 +++
 title = "BF3 - Pump Shotgun tips (870MCS & SPAS)"
 tags = ["games", "tips"]
+path = "/blog/2012/07/07/bf3-pump-shotgun-tips-870mcs-spas.html"
 +++
 Non Battlefield 3 players, look away now. Battlefield 3 players who like shotguns or want to get better with them, keep reading.
 

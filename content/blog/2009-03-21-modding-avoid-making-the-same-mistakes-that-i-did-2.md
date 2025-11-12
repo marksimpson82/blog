@@ -1,6 +1,7 @@
 +++
 title = "Modding: Avoid making the same mistakes that I did #2"
 tags = ["modding"]
+path = "/blog/2009/03/21/modding-avoid-making-the-same-mistakes-that-i-did-2.html"
 +++
 ### Keep your team as small as possible
 

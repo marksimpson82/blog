@@ -1,6 +1,7 @@
 +++
 title = "The pride of a programmer"
 tags = ["testing"]
+path = "/blog/2009/04/18/unit-testing-is-programming.html"
 +++
 I was thinking about this the other day, and something struck me (and no, it wasn't a disgruntled developer). Automated testing is a valuable and widely accepted part of the software engineering process. Many companies and organisations require that functionality be well tested prior to it being checked in and integrated into the main version control branch. As a result, developers can spend hour upon hour every week writing unit tests. In many cases, the quantity of test code can be more than double the code being tested!
 

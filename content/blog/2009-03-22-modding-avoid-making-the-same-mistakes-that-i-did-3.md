@@ -1,6 +1,7 @@
 +++
 title = "Modding: Avoid making the same mistakes that I did #3"
 tags = ["modding"]
+path = "/blog/2009/03/22/modding-avoid-making-the-same-mistakes-that-i-did-3.html"
 +++
 ### Don't expect too much, but DO remove slackers
 

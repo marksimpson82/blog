@@ -1,6 +1,7 @@
 +++
 title = "Code coverage: What it is and what it isn't"
 tags = ["testing", "coverage"]
+path = "/blog/2009/03/30/code-coverage-what-it-is-and-what-it-isnt.html"
 +++
 ## Coverage
 

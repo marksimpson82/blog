@@ -1,6 +1,7 @@
 +++
 title = "Since when was it in vogue..."
 tags = ["games", "whinges"]
+path = "/blog/2011/12/04/since-when-was-it-in-vogue.html"
 +++
 ... to make aspects of your game totally totally and utterly unbalanced when new players are in the mix? I realise that people are OCD and like collecting shit, but has it _really_ come to this? 
 

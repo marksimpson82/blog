@@ -1,6 +1,7 @@
 +++
 title = "Modding: Avoid making the same mistakes that I did #6"
 tags = ["modding"]
+path = "/blog/2009/03/27/modding-avoid-making-the-same-mistakes-that-i-did-6.html"
 +++
 ### Playtest & Iterate. Lots.
 

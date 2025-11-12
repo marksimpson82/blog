@@ -1,5 +1,6 @@
 +++
 title = "Crayon syntax highlighter"
+path = "/blog/2014/08/23/crayon-syntax-highlighter.html"
 +++
 I've tried to install a couple of different syntax highlighters in the past and was thoroughly unimpressed. They either failed to install cleanly, didn't work or had numerous issues that rendered them useless.
 

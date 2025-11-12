@@ -1,6 +1,7 @@
 +++
 title = "The Test Data Builder pattern with C# 3.0"
 tags = ["c#", "patterns", "testing", "builder"]
+path = "/blog/2009/04/10/the-test-data-builder-pattern-with-c-30.html"
 +++
 **Update**
 

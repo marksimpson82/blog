@@ -1,6 +1,7 @@
 +++
 title = "Modding: Avoid making the same mistakes that I did #1"
 tags = ["modding"]
+path = "/blog/2009/03/21/modding-avoid-making-the-same-mistakes-that-i-did-intro.html"
 +++
 ### Background
 

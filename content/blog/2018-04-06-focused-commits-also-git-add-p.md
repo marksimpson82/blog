@@ -1,6 +1,7 @@
 +++
 title = "Focused commits (also: git add -p)"
 tags = ["git", "tips", "vcs"]
+path = "/blog/2018/04/06/focused-commits-also-git-add-p.html"
 +++
 Many people use version control as a bucket for their stuff. They commit and merge in some shape or form, and it gets shared with their colleagues. Everyone moves on with their lives. Fire & forget sucks when using distributed version control systems.
 

@@ -1,6 +1,7 @@
 +++
 title = "Unit? Integration? Functional? Wha?"
 tags = ["software", "testing"]
+path = "/blog/2011/02/05/unit-integration-functional-wha.html"
 +++
 I answered a question titled, "[What's the difference between unit, functional, acceptance and integration tests?](http://stackoverflow.com/questions/4904096/whats-the-difference-between-unit-functional-acceptance-and-integration-tests)" on Stackoverflow and thought it'd be useful to re-post the answer here for future reference.
 

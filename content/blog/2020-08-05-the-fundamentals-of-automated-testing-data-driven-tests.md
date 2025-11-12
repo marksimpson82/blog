@@ -1,6 +1,7 @@
 +++
 title = "The fundamentals of unit testing: Data-driven tests"
 tags = ["fundamentals of unit testing", "testing", "tips"]
+path = "/blog/2020/08/05/the-fundamentals-of-automated-testing-data-driven-tests.html"
 +++
 
 This post is [part of a series](@/blog/2012-10-24-the-fundamentals-of-automated-testing-series.md) on unit testing.

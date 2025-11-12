@@ -1,6 +1,7 @@
 +++
 title = "Gigabyte GeForce GTX 560 Ti OC - Avoid"
 tags = ["misc", "whinges", "tips"]
+path = "/blog/2011/12/01/gigabyte-geforce-gtx-560-ti-ocavoid.html"
 +++
 [This card](http://www.google.co.uk/products/catalog?hl=en&safe=off&q=gigabyte+geforce+gtx+560ti+oc&gs_upl=336l603l1l704l3l1l0l1l1l0l95l95l1l2l0&bav=on.2,or.r_gc.r_pw.r_cp.,cf.osb&biw=1920&bih=1096&um=1&ie=UTF-8&tbm=shop&cid=1323606381779257544&sa=X&ei=iOHWTrGKA9Gg8gP8vL3rDQ&ved=0CDIQ8wIwAA), amongst various other factory overclocked GTX 560 Tis are [causing problems](http://forums.whirlpool.net.au/archive/1639211) for lots of people. There are various 560 Ti cards that have the OC postfix which stands for "Overclocked", but the Gigabyte one seems to be the biggest offender.
 

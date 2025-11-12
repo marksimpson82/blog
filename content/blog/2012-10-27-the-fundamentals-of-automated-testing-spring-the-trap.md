@@ -1,6 +1,7 @@
 +++
 title = "The fundamentals of unit testing: Spring The Trap"
 tags = ["fundamentals of unit testing", "testing", "tips"]
+path = "/blog/2012/10/27/the-fundamentals-of-automated-testing-spring-the-trap.html"
 +++
 This post is [part of a series](@/blog/2012-10-24-the-fundamentals-of-automated-testing-series.md) on unit testing.
 

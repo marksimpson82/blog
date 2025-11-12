@@ -1,6 +1,7 @@
 +++
 title = "Unity3d - Threadpool Exceptions"
 tags = ["c#", "debugging", "gotchas", "software", "tips", "Unity3d"]
+path = "/blog/2011/08/27/unity3dthreadpool-exceptions.html"
 +++
 A quickie, but something to be _very_ wary of. I've been using Unity3d of late (I recommend it – it's a very opinionated and sometimes quirky bit of software, but it generally works well) and I was recently tasked to parallelise some CPU intensive work. 
 

@@ -1,6 +1,7 @@
 +++
 title = "British Telecom: SIM codes"
 tags = ["misc", "whinges", "tips"]
+path = "/blog/2011/04/23/british-telecom-sim-codes.html"
 +++
 **tl;dr summary**
 

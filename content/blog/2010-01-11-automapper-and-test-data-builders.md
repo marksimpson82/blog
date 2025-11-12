@@ -1,6 +1,7 @@
 +++
 title = "AutoMapper and Test Data Builders"
 tags = ["c#", "patterns", "testing", "tips", "automapper"]
+path = "/blog/2010/01/11/automapper-and-test-data-builders.html"
 +++
 I've recently been tinkering with WCF and, as many people already know, writing data transfer objects is a pain in the balls. Nobody likes writing repetitive, duplicate and tedious code, so I was delighted when I read about [AutoMapper](http://www.codeplex.com/AutoMapper). It works really nicely; with convention over configuration, you can bang out the entity => data transfer code in no time, the conversions are less error prone, the tests stay in sync and you're left to concentrate on more important things.
 

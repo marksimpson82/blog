@@ -1,6 +1,7 @@
 +++
 title = "Is your test code readable?"
 tags = ["testing", "tips"]
+path = "/blog/2009/10/26/is-your-test-code-readable.html"
 +++
 One of the things that _really_ slashes the return on investment in testing is unreadable code. "This is pretty obvious", you say. "What's the point in a blog post about something so obvious?" What's not obvious is that the very people writing these tests are unaware of it. Maybe you do it as well. Given that this blog post is about _things we don't know we do_, I think it's a fair bet that I've also recently written test code that was convoluted without realising it, too.
 

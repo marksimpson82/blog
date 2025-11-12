@@ -1,6 +1,7 @@
 +++
 title = "Windows Live Writer"
 tags = ["misc", "tips"]
+path = "/blog/2011/02/05/windows-live-writer.html"
 +++
 **Note**: this is obviously antiquated and no longer relevant!
 

@@ -1,6 +1,7 @@
 +++
 title = "Making my Synology DS224+ NAS hibernate"
 tags = ["dsm", "synology", "nas"]
+path = "/blog/2025/11/06/synology-nas-hibernate.html"
 +++
 
 ## My old setup: Intel NUC, Jellyfin and a Roku stick

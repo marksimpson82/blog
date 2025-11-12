@@ -1,6 +1,7 @@
 +++
 title = "Normal service to resume shortly"
 tags = ["misc", "MyWorld", "whinges", "life", "career"]
+path = "/blog/2010/10/17/normal-service-to-resume-shortly.html"
 +++
 I've had an ... interesting few months.
 

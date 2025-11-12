@@ -1,6 +1,7 @@
 +++
 title = "Getting up and running with Fluent NHibernate"
 tags = ["c#"]
+path = "/blog/2009/08/19/getting-up-and-running-with-fluent-nhibernate.html"
 +++
 I've been meaning to try out NHibernate for a good ol' while. It's a long-established and respected O/R M library and one of the authors (Ayende) writes a blog that I've read for a long time.
 

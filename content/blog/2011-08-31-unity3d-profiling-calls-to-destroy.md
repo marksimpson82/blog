@@ -1,6 +1,7 @@
 +++
 title = "Unity3d - Profiling calls to Destroy"
 tags = ["c#", "debugging", "software", "tips", "Unity3d"]
+path = "/blog/2011/08/31/unity3d-profiling-calls-to-destroy.html"
 +++
 ## Destroy All ... Things
 

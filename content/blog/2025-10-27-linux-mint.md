@@ -1,6 +1,7 @@
 +++
 title = "Windows 10 support ending? Linux Mint for my parents"
 tags = ["linux", "windows", "tpm"]
+path = "/blog/2025/10/27/linux-mint.html"
 +++
 
 As a long-in-the-tooth software engineer, I'm getting to the end of my tether with Windows. I've lived through (and used) practically every version of Windows from 3.1 through to Windows 11, and the direction of travel is negative. Into the sewer, even.

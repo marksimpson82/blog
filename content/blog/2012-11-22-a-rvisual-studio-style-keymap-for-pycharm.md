@@ -1,6 +1,7 @@
 +++
 title = "A R#/Visual Studio style keymap for PyCharm"
 tags = ["keymap", "pycharm", "python", "software", "tips"]
+path = "/blog/2012/11/22/a-rvisual-studio-style-keymap-for-pycharm.html"
 +++
 PyCharm is a lovely little IDE for Python by the splendid JetBrains, but the built-in Visual Studio keymap is not much like the default VS/R# settings I'm accustomed to. I've rustled up a quick version that restores all of the easy to remember refactoring key combinations (Ctrl-Shift-R, Ctrl-R, Action Key etc.) along with some of the common navigation ones (Ctrl, comma for recent files and so forth).
 

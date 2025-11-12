@@ -1,6 +1,7 @@
 +++
 title = "Debug.Assert vs. Exceptions"
 tags = ["testing", "software", "asserts", "exceptions"]
+path = "/blog/2010/01/09/debug-assert-vs-exceptions.html"
 +++
 _"When should I use Debug.Assert and when should I use exceptions?"_ - It's a fairly sensible question to ask, but you've got to sift through a lot of articles to get anything resembling solid guidance on it (<a href="http://stackoverflow.com/questions/1467568/debug-assert-vs-exception-throwing/1468385#1468385">Eric Lippert's stack overflow post is particularly enlightening</a>). I've wrestled with it quite a bit as a programmer and test engineer, so here's my 2 pence.
 

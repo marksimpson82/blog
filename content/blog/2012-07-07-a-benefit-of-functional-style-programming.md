@@ -1,6 +1,7 @@
 +++
 title = "Functional-style programming - Easy debugging!"
 tags = ["c#", "debugging", "MyWorld", "patterns", "software", "tips"]
+path = "/blog/2012/07/07/a-benefit-of-functional-style-programming.html"
 +++
 Ever since LINQ arrived in C# land, a lot of people have been using a functional style of programming without even perhaps being conscious of it. 
 

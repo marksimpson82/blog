@@ -1,6 +1,7 @@
 +++
 title = "The big block method (binary search)"
 tags = ["c#", "debugging", "testing"]
+path = "/blog/2009/05/02/the-big-block-method.html"
 +++
 Have you ever been in this situation? You have thousands of tests in scores of assemblies. All of the tests pass. However, when you run the test suite a second time without closing NUnit (or your test runner of choice) you find hundreds of failures occur in a specific area. I'm not talking about in the same fixture or even the same assembly; this is NUnit wide. Something is trashing the environment, but there are no obvious warning signs.
 

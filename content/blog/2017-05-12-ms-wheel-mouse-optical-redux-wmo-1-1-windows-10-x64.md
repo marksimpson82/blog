@@ -1,6 +1,7 @@
 +++
 title = "MS Wheel Mouse Optical Redux (WMO 1.1 & Windows 10 x64)"
 tags = ["gaming", "hardware", "mouse", "overclocking", "tips", "wmo"]
+path = "/blog/2017/05/12/ms-wheel-mouse-optical-redux-wmo-1-1-windows-10-x64.html"
 +++
 Back in 2011, I wrote a 
 [fairly gushing post](@/blog/2011-07-15-ms-wheel-mouse-optical-wmo-1-1.md) about the Microsoft WMO 1.1/1.1a. 

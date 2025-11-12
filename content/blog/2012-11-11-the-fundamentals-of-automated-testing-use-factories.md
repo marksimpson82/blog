@@ -1,6 +1,7 @@
 +++
 title = "The fundamentals of unit testing: Use factory methods!"
 tags = ["fundamentals of unit testing", "testing", "tips"]
+path = "/blog/2012/11/11/the-fundamentals-of-automated-testing-use-factories.html"
 +++
 This post is [part of a series](@/blog/2012-10-24-the-fundamentals-of-automated-testing-series.md) on unit testing.
 

@@ -1,6 +1,7 @@
 +++
 title = "MS Wheel Mouse Optical (WMO 1.1)"
 tags = ["angle snapping", "desk", "games", "gaming", "misc", "mouse", "mouse pad", "sensitivity", "tips", "wmo"]
+path = "/blog/2011/07/15/ms-wheel-mouse-optical-wmo-1-1.html"
 +++
 ## I'm an addict
 

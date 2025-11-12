@@ -1,6 +1,7 @@
 +++
 title = "Clownshoes DRM coming soon"
 tags = ["whinges", "drm"]
+path = "/blog/2010/02/18/clownshoes-drm-coming-soon.html"
 +++
 Can you believe this [horse shit](http://www.rockpapershotgun.com/2010/02/17/you-maniacs/)? Yes, you read correctly. DRM that requires you to be online. At all times. Not at all irritating. Check the calendar, folks - it's not the first of April.
 

@@ -1,6 +1,7 @@
 +++
 title = "The wonders of Debugger.Launch()"
 tags = ["c#", "debugging", "software", "tips"]
+path = "/blog/2012/07/03/the-wonders-of-debugger-launch.html"
 +++
 Ever worked on a project that involved spawning new .NET processes? (as in, one [arbitrary] program launches another .NET executable) I've had to do this on quite a few occasions over the years and the one thing that always saves my bacon when it comes to understanding and fixing bugs is [Debugger.Launch()](http://msdn.microsoft.com/en-us/library/system.diagnostics.debugger.launch.aspx).
 

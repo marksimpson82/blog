@@ -1,6 +1,7 @@
 +++
 title = "No longer a software engineer in test"
 tags = ["life", "career"]
+path = "/blog/2009/10/31/no-longer-a-software-engineer-in-test.html"
 +++
 .. I've swapped jobs at Realtime Worlds; I'm now a plain ol' software engineer. As a result, there'll be no more test engineering for me.
 

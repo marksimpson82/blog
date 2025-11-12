@@ -1,6 +1,7 @@
 +++
 title = "Understanding test doubles"
 tags = ["c#", "testing", "tips"]
+path = "/blog/2009/08/22/understanding-test-doubles.html"
 +++
 There is a bewildering array of types of 'mock' object available to a tester. The canonical list of test doubles was probably coined by the venerable Martin Fowler in his article ["Mocks Aren't Stubs"](http://martinfowler.com/articles/mocksArentStubs.html) and, to me, this list is fairly complete and makes sense. The reason it makes sense is that I've manually written classes that perform these roles.
 

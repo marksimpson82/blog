@@ -1,6 +1,7 @@
 +++
 title = "Strongly typed commandline arguments"
 tags = ["c#", "nameof"]
+path = "/blog/2009/09/28/strongly-typed-commandline-arguments.html"
 +++
 **edit** - In modern C# you can use the [`nameof() expression`](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/nameof) to do things like this.
 

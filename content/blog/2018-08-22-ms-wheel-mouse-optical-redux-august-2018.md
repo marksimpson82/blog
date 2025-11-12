@@ -1,6 +1,7 @@
 +++
 title = "MS Wheel Mouse Optical Redux (August 2018)"
 tags = ["driver", "games", "hardware", "mouse", "sweetlow", "tips", "windows", "wmo"]
+path = "/blog/2018/08/22/ms-wheel-mouse-optical-redux-august-2018.html"
 +++
 Back on the WMO train again. I was using Sweetlow's signed driver, but it stopped working again, probably due to 
 Windows updates. You can find the old guide

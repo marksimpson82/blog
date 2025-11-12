@@ -1,6 +1,7 @@
 +++
 title = "Nvidia + G-SYNC - Black screen when alt-tabbing"
 tags = ["nvidia", "g-sync", "black-screen", "bugs", "tips"]
+path = "/blog/2020/03/29/nvidia-g-sync-black-screen-when-alt-tabbing.html"
 +++
 **tl;dr:** It seems G-SYNC related. I fixed it by installing the monitor driver, then toggling G-SYNC on/off. 
 

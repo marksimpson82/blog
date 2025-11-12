@@ -1,6 +1,7 @@
 +++
 title = "The Power of Boy Scouting & Git Stash"
 tags = ["whinges", "software", "tips", "git", "git-stash"]
+path = "/blog/2012/04/16/the-power-of-boy-scouting-git-stash.html"
 +++
 No, I'm not advocating beavering your way to several badges while wearing ill-fitting shorts, a neckerchief fastened with a woggle and risking a criminal record. I'm talking about [The Boy Scout Rule](http://programmer.97things.oreilly.com/wiki/index.php/The_Boy_Scout_Rule). 
 

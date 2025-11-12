@@ -1,6 +1,7 @@
 +++
 title = "Avoiding the file system"
 tags = ["c#", "patterns", "testing"]
+path = "/blog/2009/11/26/avoiding-the-file-system.html"
 +++
 Going from experience and, as illustrated by Misko's recent presentation, the more dependencies you have on your environment, the less trustworthy and maintainable your tests become. One of the foremost offenders in this area is touching the file system.
 

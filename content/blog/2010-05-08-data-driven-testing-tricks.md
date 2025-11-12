@@ -1,6 +1,7 @@
 +++
 title = "Data-driven testing tricks"
 tags = ["c#", "patterns", "testing", "tips", "data-driven"]
+path = "/blog/2010/05/08/data-driven-testing-tricks.html"
 +++
 It's a fairly common occurrence - somebody wants to use NUnit's data driven testing, but they want to vary either the action under test, or the expectation. I.e. they're not parametrising simple _data_, they're parametrising the _actions_.
 

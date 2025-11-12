@@ -1,6 +1,7 @@
 +++
 title = "EA penalises its existing customers; nobody cares"
 tags = ["games", "whinges"]
+path = "/blog/2012/06/08/ea-penalises-its-own-customers-nobody-cares.html"
 +++
 To follow up from my last babblings on the 
 [scourge of expansion packs](@/blog/2011-12-04-and-another-thing-bf3-expansion-packs.md) and unfair 

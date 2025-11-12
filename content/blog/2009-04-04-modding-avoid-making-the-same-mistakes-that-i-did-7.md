@@ -1,6 +1,7 @@
 +++
 title = "Modding: Avoid making the same mistakes that I did #7"
 tags = ["modding"]
+path = "/blog/2009/04/04/modding-avoid-making-the-same-mistakes-that-i-did-7.html"
 +++
 ### Forget fancy websites, PR and advertising
 

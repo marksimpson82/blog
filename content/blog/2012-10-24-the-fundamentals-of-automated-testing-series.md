@@ -1,6 +1,7 @@
 +++
 title = "The fundamentals of unit testing (series)"
 tags = ["fundamentals of unit testing", "testing", "tips"]
+path = "/blog/2012/10/24/the-fundamentals-of-automated-testing-series.html"
 +++
 I've not written about testing for a while, but I still enjoy writing automated tests (I am boring) and trying to coach people on good testing practices (I am boring), so hopefully this series will be a useful refresher.
 

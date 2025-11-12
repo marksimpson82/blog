@@ -1,6 +1,7 @@
 +++
 title = "Valve's response to being hacked"
 tags = ["games", "misc", "whinges"]
+path = "/blog/2011/11/11/valves-response-to-being-hacked.html"
 +++
 ... was very, very disappointing. I'm somewhat befuddled by the extremely low key response to the incident. 
 

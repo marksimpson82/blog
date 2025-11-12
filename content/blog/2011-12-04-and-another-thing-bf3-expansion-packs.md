@@ -1,6 +1,7 @@
 +++
 title = "And another thing... BF3 Expansion packs"
 tags = ["games", "whinges"]
+path = "/blog/2011/12/04/and-another-thing-bf3-expansion-packs.html"
 +++
 From the blurb on the [Battlefield Blog](http://blogs.battlefield.ea.com/battlefield_bad_company/archive/2011/12/01/back-to-karkand-launches-for-the-playstation-3-on-tuesday.aspx) (emphasis mine): 
 

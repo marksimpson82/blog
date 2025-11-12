@@ -2,6 +2,7 @@
 title = "Empathetic Code"
 tags = ["api", "design", "software", "tips"]
 
+path = "/blog/2013/04/30/empathetic-code.html"
 +++
 I always liked the phrase, "if you're incapable of empathy, then you shouldn't be designing APIs".
 

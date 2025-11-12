@@ -1,6 +1,7 @@
 +++
 title = "Modding: Avoid making the same mistakes that I did #4"
 tags = ["modding"]
+path = "/blog/2009/03/22/ding-avoid-making-the-same-mistakes-that-i-did-4.html"
 +++
 ### Kick problem people in double quick time
 

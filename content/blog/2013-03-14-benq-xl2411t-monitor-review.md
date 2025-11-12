@@ -1,6 +1,7 @@
 +++
 title = "Benq XL2411T Monitor Review"
 tags = ["games", "hardware", "misc"]
+path = "/blog/2013/03/14/benq-xl2411t-monitor-review.html"
 +++
 Before I review the Benq, it's worth giving a bit of background about the monitors I've owned up till now.
 

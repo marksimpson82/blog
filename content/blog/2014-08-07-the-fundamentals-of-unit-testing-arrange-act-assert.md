@@ -1,6 +1,7 @@
 +++
 title = "The fundamentals of unit testing: Arrange, Act, Assert"
 tags = ["fundamentals of unit testing", "testing", "tips"]
+path = "/blog/2014/08/07/the-fundamentals-of-unit-testing-arrange-act-assert.html"
 +++
 This post is [part of a series](@/blog/2012-10-24-the-fundamentals-of-automated-testing-series.md) on unit testing.
 

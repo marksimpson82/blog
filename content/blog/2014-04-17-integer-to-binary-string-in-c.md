@@ -1,6 +1,7 @@
 +++
 title = "Integer to binary string in c#"
 tags = ["binary", "bitwise", "c#", "decimal", "python", "tips"]
+path = "/blog/2014/04/17/integer-to-binary-string-in-c.html"
 +++
 Python has the terribly useful functionality of [bin()](https://docs.python.org/2/library/functions.html#bin) to do this, but what about C#?
 

@@ -1,6 +1,7 @@
 +++
 title = "What's in a name?"
 tags = ["testing", "tips"]
+path = "/blog/2009/05/15/whats-in-a-name.html"
 +++
 One of the things I try to encourage is the careful selection of names. Just as self-documenting code is easier to read, so is a self-documenting test. As I have previously stated, unit testing is programming, too - you can apply the same good practices to tests.
 

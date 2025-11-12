@@ -1,6 +1,7 @@
 +++
 title = "Moving Origin Games to a different drive"
 tags = ["games", "software", "tips"]
+path = "/blog/2011/12/11/moving-origin-games-to-a-different-drive.html"
 +++
 I wanted to move my BF3 install to my SSD but couldn't figure out how to do it. Numerous posts suggested things, but none worked until I found this:
 
