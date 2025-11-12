@@ -1,10 +1,11 @@
-Personal blog built with Jekyll and Minimal Mistakes.
+Personal blog built with [Zola](https://www.getzola.org) and [Tera](https://keats.github.io/tera/) templating (similar to liquid).
 
-# Setup
-```bash
-bundle install
+## Setup (Windows)
+```powershell
+choco install zola -y
 ```
 
+## Build & Serve
 ```bash
-bundle exec jekyll serve
+zola serve
 ```
