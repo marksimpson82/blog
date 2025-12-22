@@ -83,7 +83,7 @@ I thought these were pretty wide of the mark, as A) I have a GPU and intend to u
 
 The results were pretty much instant (also: the "View Reliability History" tool is super useful and I had no idea it was a thing):
 
-| ![system_reliability.jpg](../images/system_reliability.jpg) | 
+| ![system_reliability.jpg](https://defragdev.com/blog/images/2025/12/system_reliability.jpg) | 
 |:--:| 
 | *No more crashes after the 15th* |
 
