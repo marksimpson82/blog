@@ -1,5 +1,5 @@
 ---
-title: "Fixing my AMD 7800X3D's Crashes at Idle"
+title: "Fixing AMD 7800X3D YouTube Crashes"
 date: 2025-10-27T00:00:00+00:00
 author: Mark Simpson
 layout: single
