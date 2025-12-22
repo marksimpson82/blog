@@ -58,7 +58,7 @@ If you do not set this option, you'll receive an error message even when BitWard
 Could not open a connection to your authentication agent.
 ```
 
-This is because the default `ssh` / `ssh-add` executables for git bash on Windows are different from the Windows defaults
+This is because the default `ssh` / `ssh-add` executables for git bash on Windows are different from the Windows defaults, and BitWarden is hooking into the OpenSSH versions, not the Git Bash ones.
 
 Let's use a standard windows cmd prompt and see where our `ssh` / `ssh-add` binaries live:
 

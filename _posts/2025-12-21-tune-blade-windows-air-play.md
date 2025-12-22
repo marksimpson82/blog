@@ -1,6 +1,6 @@
 ---
 title: "Airplay on Windows with TuneBlade"
-date: 2025-12-22T00:00:00+00:00
+date: 2025-12-21T00:00:00+00:00
 author: Mark Simpson
 layout: single
 tags:
