@@ -38,9 +38,10 @@ No. I've got enough cables around the place, thanks.
 ## Solution: [TuneBlade](http://www.tuneblade.com/)
 I honestly feel like a bit of a dope, as [TuneBlade](http://www.tuneblade.com/) has been around for a while and is an AirPlay-compatible implementation for Windows that can stream to receivers. A license is a mere £8 -- great value!
 
-Step 1: Install TuneBlade
-Step 2: Select your AirPlay-compatible device
-Step 3: Reduce the audio delay down to sub-second (default is a 2s delay) to reduce lag
-Step 4: Play some music
+Steps:
+1. Install TuneBlade
+1. Select your AirPlay-compatible device
+1. Reduce the audio delay down to sub-second (default is a 2s delay) to reduce lag
+1. Play some music
 
 That's all there is to it! I can now stream my Windows PC audio to my Yamaha WXC-50 receiver. It's not _quite_ as slick as using a Mac, but it's close.
