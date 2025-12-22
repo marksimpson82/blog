@@ -41,7 +41,11 @@ Could not open a connection to your authentication agent.
 1. However, it'll fail when trying to test the SSH agent via `ssh-add -L`
 1. Skip ahead to the tutorial step that details how to change the `core.sshCommand`
 
-It should then work. I've submitted feedback and a suggested fix to the page (on 2025-12-21), so hopefully they'll re-organise the steps. The `core.sshCommand` bit is currently tucked away under git commit signing, which is **not** needed to secure your SSH keys with BitWarden, hence why I think it should be moved earlier in the guide.
+It should then work. 
+
+The `core.sshCommand` bit is currently tucked away under a git commit signing section later in the page, but this configuration step is needed to get the basic BitWarden ssh agent working when using git bash.
+
+I've submitted feedback and a suggested fix to the page (on 2025-12-21), so hopefully they'll re-organise the steps. 
 
 ## Longer version
 Again, this is for Windows. I don't think this affects Mac/Linux users.
@@ -62,8 +66,8 @@ This is because the default `ssh` / `ssh-add` executables for git bash on Window
 
 Let's use a standard windows cmd prompt and see where our `ssh` / `ssh-add` binaries live:
 
-```shell
-# windows cmd -- you can see the OpenSSH binaries are first in $PATH
+```bat
+# windows cmd -- you can see the OpenSSH binaries are first in %PATH%
 where ssh
 C:\Windows\System32\OpenSSH\ssh.exe <- this is first in %PATH% and correct
 C:\Program Files\Git\usr\bin\ssh.exe 
