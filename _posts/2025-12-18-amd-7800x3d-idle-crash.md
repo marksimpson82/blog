@@ -1,6 +1,6 @@
 ---
 title: "Fixing AMD 7800X3D YouTube Crashes"
-date: 2025-10-27T00:00:00+00:00
+date: 2025-11-22T00:00:00+00:00
 author: Mark Simpson
 layout: single
 tags:
