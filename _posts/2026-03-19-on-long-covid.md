@@ -46,13 +46,13 @@ We also know that so-called "long haulers" are in the millions in most countries
 I've been infected with COVID twice, and both infections resulted in long COVID with a range of symptoms.
 
 ### Infection one: April 2020
-I would've been 37 at the time. I weighed around 89 kg (196 lbs) at 6'6 (198 cm). I was pretty fit and strong, could hit a 30kg weighted pull-up and a 50kg weighted dip -- hardly record-breaking stuff, but good going for me. Around that time, I ran 3 half-marathons in successive weeks for fun. Again, I was fitter than the average Joe. While I'm sure being fit and healthy helped, it did not stop COVID doing a number on me.
+I would've been 37 at the time. I weighed around 89 kg (196 lbs) at 6'6 (198 cm). I was pretty fit and strong, could hit a 30 kg weighted pull-up and a 50 kg weighted dip -- hardly record-breaking stuff, but good going for me. Around that time, I ran 3 half-marathons in successive weeks for fun. This is all to say, I was fitter than the average Joe. While I'm sure being fit and healthy helped, it did not stop COVID doing a number on me.
 
 I was well-briefed on COVID and was generally pretty careful. I prioritised ventilation, stopped taking public transport & taxis and generally played it safe. I _thought_ the gym was relatively safe, as it was quiet and the big door(tm) at the front was open. This was hubris -- I should've been even more cautious.
 
 Looking back, we didn't know a great deal about COVID. The major broadcasters in the UK weren't mentioning that losing your sense of taste and smell was a symptom. This was a new experience for me, so I did a bit of digging on the web and decided to self-isolate for two weeks. I'm glad I did because I was due to visit my family.
 
-The bout of COVID itself was a non-event. It felt no worse than a cold plus the aforementioned loss of taste and smell. I was back doing home gym stuff and running immediately afterwards with seemingly no ill effects. Easy.
+The bout of COVID itself was a non-event. It felt no worse than a cold, plus the aforementioned loss of taste and smell. I was back doing home gym stuff and running immediately afterwards with seemingly no ill effects. Easy.
 
 ### Long COVID one
 A few weeks or perhaps a month later (I didn't keep a diary, sadly), things took an unexpected turn: I was struck down by crippling fatigue. The exhaustion was so all-encompassing that I didn't even register the headache -- the two were entwined, inseparable and crushing.
@@ -78,7 +78,7 @@ Anyway, I noticed something new: heart palpitations. Several times a day, apropo
 
 I returned to exercise. I ran, I lifted weights. But when I raised my heart-rate, I noticed the palpitations increased in frequency. Exercise was now tied to negative physical effects.
 
-This went on for years, and I finally got a 24 hour heart monitor in 2023 that allowed a cardiologist to diagnose me with intermittent first degree heart block (along with a bunch of other scary-sounding but ultimately benign conditions). COVID likely was to blame.
+This went on for years, and I finally got a 24 hour heart monitor in 2023 that allowed a cardiologist to diagnose me with intermittent first-degree heart block (along with a bunch of other scary-sounding but ultimately benign conditions). COVID likely was to blame.
 
 As I previously mentioned, myocardial infarctions (heart attacks) occur at an elevated rate in people who've recently had COVID. I didn't have a heart attack, but it's yet another thing that COVID can cause, and it shows up in every country's catch-all excess mortality figures.
 
@@ -124,7 +124,7 @@ Over the course of the week, crushing fatigue duly pressed me into the ground; e
 
 I've twice had my eyes tested at the optician to rule out eye-strain as a contributing factor. The dentist is pretty confident that my unerupted wisdom teeth are not causing referred pain, as such pain is rarely bilateral. A brain MRI came back showing that, yes, I have a brain and no, there's nothing sinister on the scan. Last time I took my blood pressure, it was bang-on 120/60.
 
-The annoying thing with long COVID is that many laboratory and diagnostic tests look normal. Doctors may doubt you (luckly mine has been supportive). You may even doubt yourself at times. Sometimes I wonder if I just need to pull myself together, but a few hours or days later I am forcefully disavowed of those doubts as I struggle to decant myself from bed. We go round again.
+The annoying thing with long COVID is that many laboratory and diagnostic tests look normal. Doctors may doubt you (luckily, mine has been supportive). You may even doubt yourself at times. Sometimes I wonder if I just need to pull myself together, but a few hours or days later I am forcefully disavowed of those doubts as I struggle to decant myself from bed. We go round again.
 
 #### Fatigue, Fatigue, Fatigue
 Here's where long COVID confounds you. Many people with long COVID _can_ do things in the moment. But, like buying _Big TV_ on tick or drinking 4 pints in an hour, you will pay for it down the line.
@@ -147,7 +147,7 @@ The interplay between these aspects is unpredictable. Sometimes I'm fine, someti
 For stat and symptom tracking, I bought myself a [cheap FitBit Inspire 3](https://www.ebay.co.uk/sch/i.html?_nkw=fitbit+inspire+3) (you can pick these up refurbished for cheap on eBay - around £30) in early 2025 and also track my HRV/pulse with the free [Visible app](https://www.makevisible.com/). Combined, I can track things like:
 - Sleep quality and duration (Awake, Light Sleep, REM Sleep, Deep Sleep)
 - Resting Heart Rate (RHR)
-- Heart Rate Variable (HRV)
+- Heart Rate Variability (HRV)
 
 I can recommend this combination because it can offer insight into your physical state -- either warning you that something is off (RHR is high, HRV is low) when you're unaware you should be taking it easy, or offering confirmation that yes, you are indeed feeling 'off' .
 
@@ -199,7 +199,7 @@ For general wellbeing and mildly reducing depression: (this is the useful versio
   - The recommendation I read was to go for EPA at around ~60% of the Omega-3 total, and ~40% DHA. 
   - Take between 1,000 and 1,500 mg of Omega-3 per day (2 or 3 of those caps does the trick, but you may want to start with one cap and ramp up over time)
 
-There are many potential and promising treatments, but this post is long enough as it is. The main thing is to perodically review the literature and only plump for low-risk and accessible treatments. There are a lot of things I  _want_ to try, but I can't get access to them via the NHS, and there are no clinical trials in my area.
+There are many potential and promising treatments, but this post is long enough as it is. The main thing is to periodically review the literature and only plump for low-risk and accessible treatments. There are a lot of things I  _want_ to try, but I can't get access to them via the NHS, and there are no clinical trials in my area.
 
 For me, the combination of LDN and Amitriptyline likely improved my sleep quality. I was around 10 months in when I started taking them, and sleep rapidly became productive and refreshing which was a godsend, as I was depressed and cracking up. My REM sleep metrics also improved a great deal, going from 40% of expected up to more like 80%. 
 
