@@ -16,7 +16,7 @@ Before I start, here's an amazingly on-the-money primer on how Chronic Fatigue S
 
 I should also mention that [long COVID encompasses multiple phenotypes](https://bmjopenrespres.bmj.com/content/11/1/e001907). By this, researchers find there are common sub-groups of long COVID patients who have one or more symptom clusters (e.g. Fatigue, Cardiovascular, Neurological).
 
-The CFS 'phenotype' of long COVID closely tracks with CFS itself. Sufferers are often misunderstoodm or forgotten.
+The CFS 'phenotype' of long COVID closely tracks with CFS itself. Sufferers are often misunderstood or forgotten.
 
 ## Deaths are down, but COVID-19 is not "over"
 The world's collective leadership seems to be pretending that COVID is over, and we've all moved on. 
@@ -38,7 +38,7 @@ There are several reasons for the drops in death rates:
  It's not all good news, though. We also know that, amongst other things:
 - Each successive COVID infection has a chance of causing long COVID
 - All-cause mortality increases for a prolonged period after a person is infected with COVID
-- COVID infections cause a reduction of gray matter in the brain
+- COVID infections cause a reduction of grey matter in the brain
 
 We also know that so-called "long haulers" are in the millions in most countries. While most recover inside a year, many do not.
 
@@ -55,15 +55,15 @@ Looking back, we didn't know a great deal about COVID. The major broadcasters in
 The bout of COVID itself was a non-event. It felt no worse than a cold plus the aforementioned loss of taste and smell. I was back doing home gym stuff and running immediately afterwards with seemingly no ill effects. Easy.
 
 ### Long COVID one
-A few weeks or perhaps a month later (I didn't keep a diary, sadly), things took an unexpected turn: I was struck down crippling fatigue. The exhaustion was so all-encompassing that I didn't even register the headache -- the two were entwined, inseparable and crushing.
+A few weeks or perhaps a month later (I didn't keep a diary, sadly), things took an unexpected turn: I was struck down by crippling fatigue. The exhaustion was so all-encompassing that I didn't even register the headache -- the two were entwined, inseparable and crushing.
 
-The only way I can explain the feeling that you're a toddler that's run a marathon, you've got the raging abdabs and you're basically crabby as fuck -- you will fall asleep at the drop of a hat. 50% of your cells are already asleep. 25% are in that dozing phase (where deep sleepers are nominally awake, but can have conversations they don't remember) and the final 25% are technically awake, but in power saving mode and soon to shut down. 
+The only way I can explain the feeling is that you're a toddler that's run a marathon, you've got the raging abdabs and you're basically crabby as fuck -- you will fall asleep at the drop of a hat. 50% of your cells are already asleep. 25% are in that dozing phase (where deep sleepers are nominally awake, but can have conversations they don't remember) and the final 25% are technically awake, but in power saving mode and soon to shut down. 
 
 There was no known thing called "Long COVID" back then, so I was confused and perturbed in equal measure. My former flatmate had suffered from a prolonged bout of post-viral fatigue after contracting glandular fever, and that was the only thing I could think of that was comparable.
 
-I would clamber out of bed in the mornings and 'go' to work (part-time, remote working as a software engineer), but find I couldn't stay awake long enough to be productive. I was supposed to work two days a week as a temporary gig, but had to split my two days of work into four or five smaller sessions. Even two hours a day was a challenge -- it took an age to complete simple tasks. I'd often wake up, 'work' for an hour, and then go back to bed, defeated.
+I would clamber out of bed in the mornings and 'go' to work (part-time, remote working as a software engineer), but found I couldn't stay awake long enough to be productive. I was supposed to work two days a week as a temporary gig, but had to split my two days of work into four or five smaller sessions. Even two hours a day was a challenge -- it took an age to complete simple tasks. I'd often wake up, 'work' for an hour, and then go back to bed, defeated.
 
-Bed is good when you're ill though, right? In a cruel twisted of fate, bed was arguably worse. When lying down, there was a sensation of pressure on my chest. My upper chest ached. The moment I drifted off, I would wake up feeling like I'd not taken a breath for minutes. I didn't know it at the time, but the symptoms were possibly pericarditis (inflammation of the heart lining) -- more on this later.
+Bed is good when you're ill though, right? In a cruel twist of fate, bed was arguably worse. When lying down, there was a sensation of pressure on my chest. My upper chest ached. The moment I drifted off, I would wake up feeling like I'd not taken a breath for minutes. I didn't know it at the time, but the symptoms were possibly pericarditis (inflammation of the heart lining) -- more on this later.
 
 Anyway, this went on for weeks, and then months. I don't know how long exactly because, again, I didn't keep a symptom diary. I saw the GP multiple times in June, so it likely tailed off after that and I recovered.
 
@@ -106,7 +106,7 @@ So anyway, I'd had some unpleasant months and my quality of life was slightly di
 ### Infection two: September 2024
 Time flies. I was 41. I'm pretty sure I picked up the COVID infection on the train back from Edinburgh. I'd been on a whisky-tasting tour with a friend and succumbed to pint-mania after an excellent day out. At least I got infected doing something fun rather than buying reduced price fishcakes in Lidl.
 
-On the the train back, I broke my rule: I was half-cut and dosed off without putting on my mask. I was rudely woken 20 minutes later by a rude berk with a barking, hacking cough. They were clearly ill but travelled without a mask. I put on my mask and moved carriage but alas, too little, too late.
+On the train back, I broke my rule: I was half-cut and dozed off without putting on my mask. I was rudely woken 20 minutes later by a rude berk with a barking, hacking cough. They were clearly ill but travelled without a mask. I put on my mask and moved carriage but alas, too little, too late.
 
 Unlike my first go around, this COVID infection was hellish. It was like proper flu. If you've ever had the proper flu (where you are bed-bound, sweating yet freezing, coughing to the point where your throat is raw and feeling like you've been swaddled in a sleeping bag and summarily beaten with hammers), you'll know what I mean. It lasted two weeks. 
 
