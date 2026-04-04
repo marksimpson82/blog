@@ -156,7 +156,7 @@ I have symptoms suggesting [dysautonomia ](https://www.rdash.nhs.uk/services/lon
 #### Quality of Life
 Here's a graph from the [ME/CFS Wiki Page](https://en.wikipedia.org/wiki/Myalgic_encephalomyelitis/chronic_fatigue_syndrome#Illness_severity) that tells a story (scroll down...):
 
-![Health-Related Quality of Life]({{ '/assets/images/2026/03/cfs-quality-of-life.png' }})
+![Health-Related Quality of Life]({{ '/assets/images/2026/03/cfs-quality-of-life.png' | relative_url }})
 
 Misery is not a competition, but I want people to understand that dealing with chronic fatigue that permeates most areas of your life is generally a shite experience and I wouldn't recommend it.
 
