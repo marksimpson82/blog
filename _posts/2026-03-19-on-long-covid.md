@@ -151,7 +151,7 @@ For stat and symptom tracking, I bought myself a [cheap FitBit Inspire 3](https:
 
 I can recommend this combination because it can offer insight into your physical state -- either warning you that something is off (RHR is high, HRV is low) when you're unaware you should be taking it easy, or offering confirmation that yes, you are indeed feeling 'off'. For example, I picked up a viral infection in January and ...
 
-![Visible app showing RHR/HRV changes]({{ '/assets/images/2026/03/visible-hrv-rhr.png' | relative_url }})
+![Visible app showing RHR/HRV changes]({{ '/assets/images/2026/03/visible-hrv-rhr.jpg' | relative_url }})
 
 I have symptoms suggesting [dysautonomia ](https://www.rdash.nhs.uk/services/long-covid/dysautonomia-in-long-covid/), too. Sometimes my heart will race when I stand or walk, but not always. I've had a heart-rate reading of 130 bpm after a quick shower. My heart-rate peaked at 158 bpm while walking up a hill a few weeks back. Sometimes gentle activity causes spikes. Other days it is normal. If you don't track, you don't know.
 
