@@ -23,7 +23,7 @@ The world's collective leadership seems to be pretending that COVID is over, and
 
 Firstly, I will acknowledge that COVID is now endemic and no longer represents a major risk to the average person in terms of deaths and hospitalisations. The figures don't lie in that respect.
 
-![Historical hospitalisation and mortality rates for COVID-19 in England]({{ '/assets/images/2026/03/hospitalised_and_deaths_covid.png' | relative_url }})
+![Historical hospitalisation and mortality rates for COVID-19 in England]({{ '/assets/images/2026/03/hospitalised-and-deaths-covid.png' | relative_url }})
 
 There are several reasons for the drops in death rates:
 1. Many at-risk/infirm people died early in the pandemic, and cannot die again (pithy, but you get the gist -- I still miss [John Prine](https://www.youtube.com/watch?v=nXbEFTv9zr0) and many other folks who we sadly lost)
@@ -31,7 +31,7 @@ There are several reasons for the drops in death rates:
 1. From mid-2021 onwards, vaccinations protect against hospitalisation and death (look at that Omicron wave in 2022 compared to 2020!)
 1. Prior COVID infections also protect against hospitalisation and death
 
-**Aside**: Most people (falsely!) believe the Omicron variant of COVID was significantly less deadly compared to the original variant, but this is a misconception. Omicron was highly _transmissible_ (it spread freely) and was just as _severe_ as the **original** variant of COVID; it just didn't _feel_ like it because 
+**Aside**: Most people (falsely!) believe the Omicron variant of COVID was significantly less deadly compared to the original variant, but this is a misconception. Omicron was highly _transmissible_ (it spread freely) and was just as _severe_ as the **original** variant of COVID; it just didn't feel like it because:
 1. The Delta variant was much nastier
 1. The population was benefitting from (I sound like a COVID estate agent, sorry) some of the things I'd previously mentioned.
 
@@ -149,7 +149,9 @@ For stat and symptom tracking, I bought myself a [cheap FitBit Inspire 3](https:
 - Resting Heart Rate (RHR)
 - Heart Rate Variability (HRV)
 
-I can recommend this combination because it can offer insight into your physical state -- either warning you that something is off (RHR is high, HRV is low) when you're unaware you should be taking it easy, or offering confirmation that yes, you are indeed feeling 'off' .
+I can recommend this combination because it can offer insight into your physical state -- either warning you that something is off (RHR is high, HRV is low) when you're unaware you should be taking it easy, or offering confirmation that yes, you are indeed feeling 'off'. For example, I picked up a viral infection in January and ...
+
+![Visible app showing RHR/HRV changes]({{ '/assets/images/2026/03/visible-hrv-rhr.png' | relative_url }})
 
 I have symptoms suggesting [dysautonomia ](https://www.rdash.nhs.uk/services/long-covid/dysautonomia-in-long-covid/), too. Sometimes my heart will race when I stand or walk, but not always. I've had a heart-rate reading of 130 bpm after a quick shower. My heart-rate peaked at 158 bpm while walking up a hill a few weeks back. Sometimes gentle activity causes spikes. Other days it is normal. If you don't track, you don't know.
 
@@ -180,7 +182,7 @@ Fatigue comes in self-moderating waves. It's self-moderating because when you're
 
 I'm not a stoic by any means. I frequently feel pretty bad about the whole thing, but then I bounce back, Partridge-style. A-Ha! And write annoying blog posts. A-Ha!
 
-Finally, I did likely respond to some treatments.
+Finally, I likely responded to some treatments -- though it's hard to say for sure, as sometimes you just get better by coincidence and the treatment had no effect.
 
 #### Treatments
 There's a lot of experimental treatments flying about and this is a whole other post to make, but in short:
@@ -190,7 +192,7 @@ There's a lot of experimental treatments flying about and this is a whole other 
   - For headaches -- this is a fairly standard migraine medication stack
   - I unfortunately had to get referred to a neurologist to access this
 - [G-NiiB (SIM01) Probiotics](https://g-niib-uk.com/)
-  - For fatigue. See [this paper](https://www.thelancet.com/journals/laninf/article/PIIS1473-3099(23)00685-0/fulltext), but no idea if it does anything just yet.
+  - For fatigue. See [this paper](https://www.thelancet.com/journals/laninf/article/PIIS1473-3099(23)00685-0/fulltext), but no idea if it does anything just yet
 
 For general wellbeing and mildly reducing depression: (this is the useful version of stuff you see plastered on the back of a bus, asking, _"Feeling Tired?"_, except you're not getting rinsed for a useless multi-vitamin):
 - [Vitamin D3](https://nutravita.com/products/vitamin-d3-4000iu-softgel-capsules-400-days-supply) (4000 IU)  
