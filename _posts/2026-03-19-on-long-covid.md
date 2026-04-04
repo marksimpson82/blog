@@ -23,7 +23,7 @@ The world's collective leadership seems to be pretending that COVID is over, and
 
 Firstly, I will acknowledge that COVID is now endemic and no longer represents a major risk to the average person in terms of deaths and hospitalisations. The figures don't lie in that respect.
 
-![Historical hospitalisation and mortality rates for COVID-19 in England](/images/2026/03/hospitalised_and_deaths_covid.png)
+![Historical hospitalisation and mortality rates for COVID-19 in England]({{ '/assets/images/2026/03/hospitalised_and_deaths_covid.png' | relative_url }})
 
 There are several reasons for the drops in death rates:
 1. Many at-risk/infirm people died early in the pandemic, and cannot die again (pithy, but you get the gist -- I still miss [John Prine](https://www.youtube.com/watch?v=nXbEFTv9zr0) and many other folks who we sadly lost)
@@ -131,7 +131,7 @@ Here's where long COVID confounds you. Many people with long COVID _can_ do thin
 
 I liken this to Wile E. Coyote from _The Road Runner_: he runs out over the cliff and stands in thin air. Gravity is paused, but he _will_ fall.
 
-![Wile E. Coyote hanging in mid-air](/images/2026/03/wile-e-coyote.png)
+![Wile E. Coyote hanging in mid-air]({{ '/assets/images/2026/03/wile-e-coyote.png' | relative_url }})
 
 It's also a bit like having a malfunctioning battery with no charge level shown. Sometimes the capacity is as expected. Other times, it is flat and you're unknowingly running on fumes.
 
@@ -156,7 +156,7 @@ I have symptoms suggesting [dysautonomia ](https://www.rdash.nhs.uk/services/lon
 #### Quality of Life
 Here's a graph from the [ME/CFS Wiki Page](https://en.wikipedia.org/wiki/Myalgic_encephalomyelitis/chronic_fatigue_syndrome#Illness_severity) that tells a story (scroll down...):
 
-![Health-Related Quality of Life](/images/2026/03/cfs-quality-of-life.png)
+![Health-Related Quality of Life]({{ '/assets/images/2026/03/cfs-quality-of-life.png' }})
 
 Misery is not a competition, but I want people to understand that dealing with chronic fatigue that permeates most areas of your life is generally a shite experience and I wouldn't recommend it.
 
