@@ -30,7 +30,7 @@ It would've been great. Well, in many ways yes. In other ways, no. Hindsight bei
 
 Firstly, bear in mind the fact that I said I _thought_ I knew about design, encapsulation, this that and the other. I did know a little bit, but I knew precisely **nothing** in the grand scheme of things. Here's the lowdown:
 
-- My knowledge of patterns was the singleton and some others. I did know some others, but it may as well have just been "singleton". Lalala, I can't hear you. I remember the shock when my friend linked my to the <a href="http://steve.yegge.googlepages.com/singleton-considered-stupid">"Singleton considered stupid"</a> article prior to getting a job. "But they're my best mates!", I gasped. "Yeah, but they're stupid", he replied, before jabbing me in the eye with a stick and berating me for my incompetence.
+- My knowledge of patterns was the singleton and some others. I did know some others, but it may as well have just been "singleton". Lalala, I can't hear you. I remember the shock when my friend linked my to the <a href="https://steve.yegge.googlepages.com/singleton-considered-stupid">"Singleton considered stupid"</a> article prior to getting a job. "But they're my best mates!", I gasped. "Yeah, but they're stupid", he replied, before jabbing me in the eye with a stick and berating me for my incompetence.
 
 - My idea of simplifying problems by breaking them into smaller systems usually involved multiple managers all interacting via singletons.
 
@@ -38,7 +38,7 @@ Firstly, bear in mind the fact that I said I _thought_ I knew about design, enca
 
 - Pretty much everything I wrote was tightly coupled. I thought that I had abstracted things away, but in general I just moved problems around. Nearly every class relied on multiple custom, concrete types. I never used factories.
 
-- I relied on implementation details. I often reached into classes several levels deep. House->GetKitchen()->GetSink()->GetTap(); I didn't just break the <a href="http://en.wikipedia.org/wiki/Law_of_Demeter">Law of Demeter</a>, I dropped it on the ground and used its smashed remains as a (crap) bouncy castle.
+- I relied on implementation details. I often reached into classes several levels deep. House->GetKitchen()->GetSink()->GetTap(); I didn't just break the <a href="https://en.wikipedia.org/wiki/Law_of_Demeter">Law of Demeter</a>, I dropped it on the ground and used its smashed remains as a (crap) bouncy castle.
 
 I could go on. In short, as a dumb graduate, I was interested in my craft and enjoyed programming, but I had some bad habits and didn't understand why a lot of the things I was doing were flat-out wrong, unmaintanable and are diametrically opposed to the principle of least surprise. However, sometimes you don't find out about these things until you're forced to broach a particular topic.
 
@@ -62,7 +62,7 @@ Anyway, rewind back to when I sucked more than I suck now. Even though I had no 
 
 - After another month, I wondered why some of the tests were so fragile. When some system or other changed, the tests for an unrelated class would fail! "Oh... that's why singletons are frowned upon. The dependencies are hidden!"
 
-- After another month, a workmate found Misko Hevery's [guide to testability](http://misko.hevery.com/code-reviewers-guide/) and the penny dropped. Like Google's testing blog logo - it was like switching on a light bulb!
+- After another month, a workmate found Misko Hevery's [guide to testability](https://misko.hevery.com/code-reviewers-guide/) and the penny dropped. Like Google's testing blog logo - it was like switching on a light bulb!
 
 Beyond that day, I've kept learning more and more techniques to use as part of my development and testing arsenal. Making my code more testable was the goal, but it has given me so much more. Testability is a great thing, but as with all software engineering techniques, it is not a silver bullet.
 
@@ -70,10 +70,10 @@ The most important thing is that, with seemingly no concerted (separate) effort 
 
 ### Inadvertent Benefits
 
-As Luke Halliwell [succinctly pointed out](http://lukehalliwell.wordpress.com/2009/01/22/a-rule-of-thumb-and-a-silver-bullet/) a while back, testability concerns and good design practices tend to converge. If your code is testable, there's a greater chance that the problem has been broken down into units of work. Read his summary; it definitely coincides with my own experiences thus far.
+As Luke Halliwell [succinctly pointed out](https://lukehalliwell.wordpress.com/2009/01/22/a-rule-of-thumb-and-a-silver-bullet/) a while back, testability concerns and good design practices tend to converge. If your code is testable, there's a greater chance that the problem has been broken down into units of work. Read his summary; it definitely coincides with my own experiences thus far.
 
-Actively seeking out solutions to make code more testable as resulted in some extremely valuable lessons - it has exposed me to new techniques (such as [Dependency Injection](http://en.wikipedia.org/wiki/Dependency_injection)) and ways of thinking. These didn't just alter the way I tested, they fundamentally altered the way I approach the writing of software. In the ~x or so years I've been programming, designing for testability has been my single most valuable expedition!
+Actively seeking out solutions to make code more testable as resulted in some extremely valuable lessons - it has exposed me to new techniques (such as [Dependency Injection](https://en.wikipedia.org/wiki/Dependency_injection)) and ways of thinking. These didn't just alter the way I tested, they fundamentally altered the way I approach the writing of software. In the ~x or so years I've been programming, designing for testability has been my single most valuable expedition!
 
 Am I suddenly the world's greatest programmer? Far from it. I know scores of folk at work who can program circles around me. On the other hand, is my code easier to understand, more maintainable, more cohesive and less tightly coupled compared to what I was writing a year or so ago? Undoubtedly. Are there fewer surprises? You bet. Would anyone who had to maintain my code be inclined to hunt me down and murder me? No. They may perform some sort of grievous wounding, but I will live.
 
-I can't believe how much I sucked. I definitely [suck less](http://www.codinghorror.com/blog/archives/000530.html) this year, though.
+I can't believe how much I sucked. I definitely [suck less](https://www.codinghorror.com/blog/archives/000530.html) this year, though.

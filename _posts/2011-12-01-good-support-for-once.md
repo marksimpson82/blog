@@ -12,11 +12,11 @@ tags:
 ---
 ... kinda. I recently built a new computer and one of the parts I received was faulty. The heatsink bracket had a missing thread, so it was impossible to screw the brackets together.
 
-I emailed [Novatech](http://www.novatech.co.uk/) support, assuming I was in for the full, painful returns rigmarole, but was pleasantly surprised, but also befuddled at the hoop jumping I had to do. 
+I emailed [Novatech](https://www.novatech.co.uk/) support, assuming I was in for the full, painful returns rigmarole, but was pleasantly surprised, but also befuddled at the hoop jumping I had to do. 
 
 # The good
 
-I described the problem and told them exactly which bracket was unusable (the [Zalman CNPS 10X Quiet](http://www.guru3d.com/article/zalman-cnps-10x-quiet-and-extreme-review/) comes with three mounting brackets for different motherboard types, and only the LGA 1155 bracket was faulty). I only had to wait to speak on the phone for about 30 seconds of hold music the second time I phoned. 
+I described the problem and told them exactly which bracket was unusable (the [Zalman CNPS 10X Quiet](https://www.guru3d.com/article/zalman-cnps-10x-quiet-and-extreme-review/) comes with three mounting brackets for different motherboard types, and only the LGA 1155 bracket was faulty). I only had to wait to speak on the phone for about 30 seconds of hold music the second time I phoned. 
 
 Most importantly, I received a new bracket in the post the next day, and you can’t say that about most places.
 

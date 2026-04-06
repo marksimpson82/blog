@@ -17,4 +17,4 @@ the python ddt package. My only criticism was that you had to manually pack/unpa
 
 Happily, the developers of ddt were nice enough to add an @unpack decorator! You can now provide lists/tuples/dictionaries and, via the magic of @unpack, the list will be split into method arguments.
 
-Documentation is here: [http://ddt.readthedocs.org/en/latest/example.html](http://ddt.readthedocs.org/en/latest/example.html "http://ddt.readthedocs.org/en/latest/example.html")
+Documentation is here: [https://ddt.readthedocs.org/en/latest/example.html](https://ddt.readthedocs.org/en/latest/example.html "https://ddt.readthedocs.org/en/latest/example.html")

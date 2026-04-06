@@ -20,7 +20,7 @@ Python is a dynamic programming language. It’s pretty dynamic in its ability t
 Anyzoom, the fundamentals of unit testing in python are very simple. I can’t be bothered detailing how to use unittest or a test runner, as there’s nine zillion resources out there on it already. 
 
 # A Simple Setup
-We’re using [unittest](http://docs.python.org/library/unittest.html) as the framework, [Nose](http://readthedocs.org/docs/nose/en/latest/) as the runner and [TeamCity Nose](http://pypi.python.org/pypi/teamcity-nose) integration. It worked very nicely out of the box, so I can’t complain. Writing tests is simple, but then I wanted to make a data-driven test and...
+We’re using [unittest](https://docs.python.org/library/unittest.html) as the framework, [Nose](https://readthedocs.org/docs/nose/en/latest/) as the runner and [TeamCity Nose](https://pypi.python.org/pypi/teamcity-nose) integration. It worked very nicely out of the box, so I can’t complain. Writing tests is simple, but then I wanted to make a data-driven test and...
 
 # Data Driven?
 To recap what a data-driven test is: You run the same test logic and assertions, but vary the data. E.g. if you have a test method that is part of a test suite, you’d expected to see something like this (pseudo python code):
@@ -47,19 +47,19 @@ I had a quick scout around and arrived at two options. There is a third, but it 
 
 It sounds like a high-tech energy solution based on harnessing snot. It’s not. 
 
-Nose (the test runner we’re using) has a built-in concept of [test function as generators](http://readthedocs.org/docs/nose/en/latest/writing_tests.html#test-generators). This allows users to create multiple test cases out of single tests. At first glance, it looks good. Unfortunately, [as detailed here](http://technomilk.wordpress.com/2012/02/12/multiplying-python-unit-test-cases-with-different-sets-of-data/), it doesn’t work when you’re subclassing unittest.TestSuite which is a common thing to do. 
+Nose (the test runner we’re using) has a built-in concept of [test function as generators](https://readthedocs.org/docs/nose/en/latest/writing_tests.html#test-generators). This allows users to create multiple test cases out of single tests. At first glance, it looks good. Unfortunately, [as detailed here](https://technomilk.wordpress.com/2012/02/12/multiplying-python-unit-test-cases-with-different-sets-of-data/), it doesn’t work when you’re subclassing unittest.TestSuite which is a common thing to do. 
 
 If you don’t care about this limitation _and_ use Nose to run your tests, I actually think this is a nice solution.
 
 ## ddt
 
-Next up is a one called simply, “[ddt](http://technomilk.wordpress.com/2012/02/12/multiplying-python-unit-test-cases-with-different-sets-of-data/)”. No prizes for guessing what that acronym stands for (no, really, there is no prize. Stop phoning. This is a repeat, the lines have closed).
+Next up is a one called simply, “[ddt](https://technomilk.wordpress.com/2012/02/12/multiplying-python-unit-test-cases-with-different-sets-of-data/)”. No prizes for guessing what that acronym stands for (no, really, there is no prize. Stop phoning. This is a repeat, the lines have closed).
 
 To use ddt, decorate your class with @ddt, then add @data to data-driven test methods. Each argument specified as part of the @data decorator generates a test case, so if you have N arguments, you get N test cases.
 
 The examples don’t make it crystal clear, but with ddt, you’re expected to boil down your test case to this single argument. I.e. if you have a few inputs and an expected result, you’re responsible for stashing the data into a containing object and yanking it back out in the test method.
 
-I’m not a massive fan of this approach as I’m quite accustomed to the NUnit style of the test runner reflecting over my test data attribute arguments then [passing the correct arguments to my test method automatically](http://www.nunit.org/index.php?p=testCase&r=2.5). However, it gets the job done and works well enough. 
+I’m not a massive fan of this approach as I’m quite accustomed to the NUnit style of the test runner reflecting over my test data attribute arguments then [passing the correct arguments to my test method automatically](https://www.nunit.org/index.php?p=testCase&r=2.5). However, it gets the job done and works well enough. 
 
 Possibly due to being ill at ease with Python, I made a wrapper object to avoid having to use a dictionary. Personally, I think this makes the test code read better, but this is just a matter of taste.
 
@@ -88,7 +88,7 @@ It’s then just a case of instantiating a new TestData object every time you wa
 
 **Updated March 2014:** The developers of ddt were nice enough to add an @unpack decorator! You can now provide lists/tuples/dictionaries and, via the magic of @unpack, the list will be split into method arguments.
 
-Documentation is here: [http://ddt.readthedocs.org/en/latest/example.html](http://ddt.readthedocs.org/en/latest/example.html "http://ddt.readthedocs.org/en/latest/example.html")
+Documentation is here: [https://ddt.readthedocs.org/en/latest/example.html](https://ddt.readthedocs.org/en/latest/example.html "https://ddt.readthedocs.org/en/latest/example.html")
 
 ## nose-parameterized
 

@@ -12,7 +12,7 @@ tags:
   - asserts
   - exceptions
 ---
-_"When should I use Debug.Assert and when should I use exceptions?"_ - It's a fairly sensible question to ask, but you've got to sift through a lot of articles to get anything resembling solid guidance on it (<a href="http://stackoverflow.com/questions/1467568/debug-assert-vs-exception-throwing/1468385#1468385">Eric Lippert's stack overflow post is particularly enlightening</a>). I've wrestled with it quite a bit as a programmer and test engineer, so here's my 2 pence.
+_"When should I use Debug.Assert and when should I use exceptions?"_ - It's a fairly sensible question to ask, but you've got to sift through a lot of articles to get anything resembling solid guidance on it (<a href="https://stackoverflow.com/questions/1467568/debug-assert-vs-exception-throwing/1468385#1468385">Eric Lippert's stack overflow post is particularly enlightening</a>). I've wrestled with it quite a bit as a programmer and test engineer, so here's my 2 pence.
 
 ## Good rules of thumb I've arrived at
 1. Asserts are not a replacement for robust code that functions correctly independent of configuration. They are complementary debugging aids.
@@ -21,7 +21,7 @@ _"When should I use Debug.Assert and when should I use exceptions?"_ - It's a fa
 
 1. If an assert trips (either in a unit test or during normal application usage), the class containing the assert is the prime suspect, as it has somehow managed to get into an invalid state (i.e. it's bugged).
   
-For all other errors - typically down to environment (network connection lost) or misuse (caller passed a null value) - it's much nicer and more understandable to use hard checks & exceptions. If an exception occurs, the caller knows it's likely their fault. This is what makes the .NET base class libraries a joy to develop with - it usually clear when you are misusing an API, resulting in fewer <a href="http://www.pragprog.com/the-pragmatic-programmer/extracts/tips">"select is broken"</a> moments. It fails early and clearly communicates the reason for failure.
+For all other errors - typically down to environment (network connection lost) or misuse (caller passed a null value) - it's much nicer and more understandable to use hard checks & exceptions. If an exception occurs, the caller knows it's likely their fault. This is what makes the .NET base class libraries a joy to develop with - it usually clear when you are misusing an API, resulting in fewer <a href="https://www.pragprog.com/the-pragmatic-programmer/extracts/tips">"select is broken"</a> moments. It fails early and clearly communicates the reason for failure.
 
 You should be able to test and use your class with erroneous input, bad state, invalid order of operations and any other conceivable error condition and an assert should <strong>never</strong> trip expectedly. 
 

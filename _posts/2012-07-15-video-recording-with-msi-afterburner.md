@@ -15,4 +15,4 @@ I’ve used this application for half a year now, but had no idea that it has th
 
 It’s slightly more configurable than FRAPS, the file sizes are smaller and, crucially, it doesn’t seem to degrade in performance when recording for multiple minutes. My registered copy of FRAPS causes massive system lag after a few minutes of recording (as in, I’ll drop from 60 fps down to 3 fps, and it’ll just constantly ping-pong between 3 and 60 fps until I stop the recording).
 
-MSI Afterburner works perfectly for me. [Give it a try](http://event.msi.com/vga/afterburner/download.htm)
+MSI Afterburner works perfectly for me. [Give it a try](https://event.msi.com/vga/afterburner/download.htm)

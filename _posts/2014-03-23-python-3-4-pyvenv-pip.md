@@ -31,7 +31,7 @@ First, set up a virtual environment using pyvenv:
 Open a command prompt in the directory you’d like to create the virtual environment, then run the following command:
 
 ```
-C:\your_python_dir\python C:\your_python_dir\Tools\Scripts\pyvenv my_env_name
+python C:\your_python_dir\Tools\Scripts\pyvenv my_env_name
 ```
 
 Then, run:
@@ -48,7 +48,7 @@ At this point, you can start installing stuff with pip!
 pip install beautifulsoup4
 ```
 
-[<img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" alt="image" src="https://defragdev.com/blog/images/2014/03/image_thumb.png" width="681" height="346" border="0" />](https://defragdev.com/blog/images/2014/03/image.png)
+![Installing beautifulsoup with pip]({{ '/assets/images/2014/03/pip_install.png' | relative_url }})
 
 Not bad. Much simpler than in olden times.
 
@@ -58,10 +58,10 @@ Not bad. Much simpler than in olden times.
 
 I’m running v3.0 of PyCharm at home, so I can’t speak for earlier versions. To associate a virtual environment with your project, click File –> Settings, then find “Python Interpreters” under “Project Interpreter”.
 
-[<img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" alt="image" src="https://defragdev.com/blog/images/2014/03/image_thumb1.png" width="786" height="428" border="0" />](https://defragdev.com/blog/images/2014/03/image1.png)
+![pycharm env editor, showing executables]({{ '/assets/images/2014/03/pycharm_interpreter.png' | relative_url }})
 
 Click the + at the top right hand pane of the window, then select “Local”. Navigate to the virtual env directory you just created, then find the Python executable under the scripts dir.
 
-[<img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px; border-top-width: 0px" alt="image" src="https://defragdev.com/blog/images/2014/03/image_thumb2.png" width="244" height="213" border="0" />](https://defragdev.com/blog/images/2014/03/image2.png)
+![pycharm, selecting the interpreter]({{ '/assets/images/2014/03/pycharm_interpreter2.png' | relative_url }})
 
 You can now associate this virtual environment with your project. PyCharm automatically switches it up when you load your projects. No more cross contamination of packages!

@@ -27,7 +27,7 @@ Anyway, if you have a hard dependency on the file system, consider the alternati
 
 ### Alternative approaches
 
-Firstly, [abstract the file operations to](http://stackoverflow.com/questions/1528134/unit-testing-file-i-o/1528243#1528243) some degree. You can do numerous things here, from changing the internal loading strategy (via [Dependency Injection](http://en.wikipedia.org/wiki/Dependency_injection)) to - even better - separating the loading/use of the file so that the consumer of the file's contents **doesn't even have to care** about the loading strategy.
+Firstly, [abstract the file operations to](https://stackoverflow.com/questions/1528134/unit-testing-file-i-o/1528243#1528243) some degree. You can do numerous things here, from changing the internal loading strategy (via [Dependency Injection](https://en.wikipedia.org/wiki/Dependency_injection)) to - even better - separating the loading/use of the file so that the consumer of the file's contents **doesn't even have to care** about the loading strategy.
 
 Once you've done this, you no longer need to use files in your unit tests, as you can use plain ol' strings, streams or even just directly construct instances to represent the contents of the file.
 
@@ -94,7 +94,7 @@ Once you're no longer dependent on the file system, you are free to use one of m
   * Just declare your data inline in the test methods as a const string, or as a const/readonly field of the test fixture. This works well for small amounts of text.
 
   * Add your test files as text file resources. You can then access the file contents as a static string property. This is handy, as you get a strongly typed resource name and don't need to mess around with paths + copying files. This works well for larger sets of data, or data you want to re-use in multiple tests.
-  * Use embedded resources & [GetManifestResourceStream](http://msdn.microsoft.com/en-us/library/xc4235zt.aspx). This is slightly messier; it doesn't require copying files, but it does require that the namespace + filenames used to reference the embedded resources are correct (runtime failures ahoy). You also need to handle streams when using this method.
+  * Use embedded resources & [GetManifestResourceStream](https://msdn.microsoft.com/en-us/library/xc4235zt.aspx). This is slightly messier; it doesn't require copying files, but it does require that the namespace + filenames used to reference the embedded resources are correct (runtime failures ahoy). You also need to handle streams when using this method.
 
 If my loading logic deals with strings, I tend to just build an 'inner' parser that works with the strings, then wrap it in another class that opens and reads files, then passes the (raw) string to the 'inner' parser class. This allows me to thoroughly test the parsing logic independent of the file system, but also means I can re-use it for test classes or other cases. I.e. I can exercise more of the production code without any of the file system pain :)
 

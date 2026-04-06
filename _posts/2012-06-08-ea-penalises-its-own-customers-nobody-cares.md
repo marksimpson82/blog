@@ -13,7 +13,7 @@ tags:
 To follow up from my last babblings on the 
 [scourge of expansion packs]({% post_url 2011-12-04-and-another-thing-bf3-expansion-packs %}) and unfair 
 advantages, EA/DICE has really put the cat amongst the pigeons with the release of 
-[BF3 Premium](http://battlelog.battlefield.com/bf3/premium/).
+[BF3 Premium](https://battlelog.battlefield.com/bf3/premium/).
 
 I bought BF3 premium because I view £40 for 5 expansion packs as a reasonable price (even if I already own Back to Karkand and don’t receive a discount or extra copy, ala Steam). However, read about the other features and you’ll notice the following blurb,
 

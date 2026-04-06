@@ -12,7 +12,7 @@ tags:
 ---
 **edit** - In modern C# you can use the [`nameof() expression`](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/nameof) to do things like this.
 
-I've read quite a bit about [Static Reflection](http://blog.jagregory.com/2009/01/26/introduction-to-static-reflection/ "Static Reflection") and found it to be very appealing, but I hadn't used it... until now! Please have a quick look at the article, as I'm not going to parrot its key points, I'm going to write something that is horrendously over-engineered to solve a trivial problem, instead! P.s. I apologise for interchanging arguments/parameters throughout this post. My attention span is akin to that of a hey did anyone play Batman yet?
+I've read quite a bit about [Static Reflection](https://blog.jagregory.com/2009/01/26/introduction-to-static-reflection/ "Static Reflection") and found it to be very appealing, but I hadn't used it... until now! Please have a quick look at the article, as I'm not going to parrot its key points, I'm going to write something that is horrendously over-engineered to solve a trivial problem, instead! P.s. I apologise for interchanging arguments/parameters throughout this post. My attention span is akin to that of a hey did anyone play Batman yet?
 
 A bit of background on something I'm working on: I have a c# app that is responsible for starting other processes. Every now and then, the arguments/parameters go out of sync - I change the parameter list in the callee process and the caller, with its piddly weakly-typed guesses, causes the callee to bomb out as the arguments supplied do not match the parameters required.
 
@@ -35,7 +35,7 @@ But oh, oh no! I'd renamed "IceCream" to "JimmyNeedsSomeIceCream" or removed it.
 
 ### You need a target to hit
 
-Firstly, I'll say that if you have non-trivial arguments to parse, the first piece of the puzzle [is to grab a good parser](http://stackoverflow.com/questions/491595/best-way-to-parse-command-line-arguments-in-c). I use one written by [Peter Hallam](http://blogs.msdn.com/peterhal/archive/2004/10/23/246731.aspx) (the link on his blog forwards you to a defunct site, but you can find the source in loads of open source projects) which works really nicely. I think I'd rather stop a bus with my face than write another crap command line parser, so it's always nice to drop an existing, proven one in.
+Firstly, I'll say that if you have non-trivial arguments to parse, the first piece of the puzzle [is to grab a good parser](https://stackoverflow.com/questions/491595/best-way-to-parse-command-line-arguments-in-c). I use one written by [Peter Hallam](https://blogs.msdn.com/peterhal/archive/2004/10/23/246731.aspx) (the link on his blog forwards you to a defunct site, but you can find the source in loads of open source projects) which works really nicely. I think I'd rather stop a bus with my face than write another crap command line parser, so it's always nice to drop an existing, proven one in.
 
 Here's an example arguments class. Notice that the types are not strings, they can be any simple type that can be parsed:
 
@@ -71,7 +71,7 @@ Here's my barely modified example based on the first link in this post:
 
 ```c#
 /// <summary>
-/// http://www.lostechies.com/blogs/gabrielschenker/archive/2009/02/03/dynamic-reflection-versus-static-reflection.aspx
+/// https://www.lostechies.com/blogs/gabrielschenker/archive/2009/02/03/dynamic-reflection-versus-static-reflection.aspx
 /// </summary>
 public static class StaticReflection
 {

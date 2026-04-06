@@ -12,10 +12,10 @@ tags:
 ---
 ## Coverage
 
-I recently posted a [stack overflow answer](http://stackoverflow.com/questions/695811/pitfalls-of-code-coverage/695888#695888) detailing why imposing coverage requirements can have a negative impact. I think it's worth recycling here.
+I recently posted a [stack overflow answer](https://stackoverflow.com/questions/695811/pitfalls-of-code-coverage/695888#695888) detailing why imposing coverage requirements can have a negative impact. I think it's worth recycling here.
 
 ## What is coverage?
-In grossly simplified terms, code coverage tells you how much of your code was executed when your test suite (typically unit tests) is run. <a href="http://en.wikipedia.org/wiki/Code_coverage">There are different kinds of coverage</a>, but in my experience, most people seem to focus on lines of code as opposed to anything more complicated. I'm not going to delve into anything more complicated regarding what coverage is. There's plenty of articles out there that explain it better than I can. Instead, I wish to describe some of the potential caveats that come with striving for high levels of coverage.
+In grossly simplified terms, code coverage tells you how much of your code was executed when your test suite (typically unit tests) is run. <a href="https://en.wikipedia.org/wiki/Code_coverage">There are different kinds of coverage</a>, but in my experience, most people seem to focus on lines of code as opposed to anything more complicated. I'm not going to delve into anything more complicated regarding what coverage is. There's plenty of articles out there that explain it better than I can. Instead, I wish to describe some of the potential caveats that come with striving for high levels of coverage.
 
 ### How should I view coverage?
 Code coverage tells you what you definitely <strong>haven't</strong> tested, not what you <strong>have.<br /> </strong>

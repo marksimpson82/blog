@@ -19,7 +19,7 @@ In short, most programmers will think critically about problems before, during a
 
 So, why is it that some folk just **stop thinking** when they put on their unit testing hat? I fully understand that testing is not as glamorous or fun as banging out production code, but that's no reason to accept sub-par test code.
 
-Given that unit testing is part of the software development cycle, I personally think that anyone who [phones in](http://www.urbandictionary.com/define.php?term=phoned+it+in) their test code **is doing themselves a disservice**. If you do the minimum possible amount of work, do not think critically about what you're doing and ultimately learn nothing from it, then that's a lot of time that is thrown away every week.
+Given that unit testing is part of the software development cycle, I personally think that anyone who [phones in](https://www.urbandictionary.com/define.php?term=phoned+it+in) their test code **is doing themselves a disservice**. If you do the minimum possible amount of work, do not think critically about what you're doing and ultimately learn nothing from it, then that's a lot of time that is thrown away every week.
 
 It also doesn't say much about you as a developer if you phone it in. "Pff, functioning software, who needs that?"
 
@@ -31,7 +31,7 @@ Firstly, the most obvious point is that, if it's hard to test something due to i
 
 If you simply shrug your shoulders and plough on, you'll probably run into all kinds of obstacles. For example, you may have to initialise the environment to be **just right** for your test, then carefully negate the results of the test in the teardown. But then what if the test order matters? How will you know? I've been in this situation before and it's not pleasant. It was such a battle getting the environment configured correctly for each test that I lost the will to live. Plus the tests ran incredibly slowly.
 
-One of the major benefits of unit testing is that it encourage you to split up functionality into discrete units. It just so happens that the discrete units are more easily understood as a result. I liken it to building blocks. Instead of having a monolithic structure (or, as less kind folk would call it, a [big ball of mud](http://en.wikipedia.org/wiki/Big_ball_of_mud)), you have a load of little blocks. Not only are the blocks much easier to understand on their own, but they are much nicer to work with. I won't bang on about this much because it's nothing new (see [Test Driven Development](http://en.wikipedia.org/wiki/Test_driven_development)).
+One of the major benefits of unit testing is that it encourage you to split up functionality into discrete units. It just so happens that the discrete units are more easily understood as a result. I liken it to building blocks. Instead of having a monolithic structure (or, as less kind folk would call it, a [big ball of mud](https://en.wikipedia.org/wiki/Big_ball_of_mud)), you have a load of little blocks. Not only are the blocks much easier to understand on their own, but they are much nicer to work with. I won't bang on about this much because it's nothing new (see [Test Driven Development](https://en.wikipedia.org/wiki/Test_driven_development)).
 
 I don't always practice TDD, but at the very least I try to test classes/methods not long after I've written them. Putting it off any longer tends to result in having to write a lot of test code at once, which sucks. If you don't like writing test code and you save up the tests for later, it's like putting off doing your school homework. It hangs over you like a cloud... and then you have to do it all at once on a Sunday night. Why punish yourself? :)
 
@@ -43,7 +43,7 @@ When writing tests, I am constantly looking for the following warning signs:
 
   * You have to configure the environment / concrete collaborators in a fashion that you barely understand yourself (how is anyone else meant to deal with this?)
   * You can't easily test certain conditions or logical branches due to tight coupling (e.g. trying to test the behaviour of a class when one of its collaborators throws an exception that could occur in production systems, such as a network connection exception)
-  * The test code is disproportionately large compared to the class under test due to repetition. The [DRY](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself) principle isn't just for production code (though tests should favour readability if push comes to shove).
+  * The test code is disproportionately large compared to the class under test due to repetition. The [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) principle isn't just for production code (though tests should favour readability if push comes to shove).
   * The test code is convoluted. It is not clear what is going on, the test names are poor and it doesn't help you understand the class under test.
   * The tests are brittle, causing them to frequently break, and break badly (e.g. a change in a concrete collaborator breaks tests that shouldn't really depend on it, resulting in a debugging session rather than a simple fix...)
   * The test code could be refactored to use patterns to cut down on the noise (see previous Test Data Builder post).

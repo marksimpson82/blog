@@ -13,7 +13,7 @@ tags:
 ---
 This post is [part of a series]({% post_url 2012-10-24-the-fundamentals-of-automated-testing-series %}) on unit testing.
 
-"[Arrange, Act, Assert](http://c2.com/cgi/wiki?ArrangeActAssert)" (aka "AAA") is a very simple way to structure your tests – I thoroughly recommend it. It is especially helpful when learning the ropes.
+"[Arrange, Act, Assert](https://c2.com/cgi/wiki?ArrangeActAssert)" (aka "AAA") is a very simple way to structure your tests – I thoroughly recommend it. It is especially helpful when learning the ropes.
 
 For this post, I’ll use the following example test scenario: When a stack is empty, pushing an item increments the 
 count to one (this example was previously discussed in 

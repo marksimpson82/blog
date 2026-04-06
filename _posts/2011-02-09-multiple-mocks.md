@@ -12,15 +12,14 @@ tags:
   - testing
   - tips
 ---
-This post was in response to a post on the [fragmental.tw blog](http://fragmental.tw/2010/12/14/one-mock-per-test-considered-not-awesome/) (the comments aren’t working for me, so I thought I’d post it here) which I read via [Roy Osherove](http://www.osherove.com/blog/2011/2/9/multiple-mocks-asserts-and-hidden-results.html).
+This post was in response to a post on the [fragmental.tw blog](https://fragmental.tw/2010/12/14/one-mock-per-test-considered-not-awesome/) (the comments aren’t working for me, so I thought I’d post it here) which I read via [Roy Osherove](https://www.osherove.com/blog/2011/2/9/multiple-mocks-asserts-and-hidden-results.html).
 
 Basically, the author was querying Roy Osherove’s rule of thumb that stated, “more than one mock per test is harmful”.
 
 He then goes on to provide an example where one action has two identifiable/observable results, and two mocks are used.
 
 **Figure 53b: Two Mocks (I’m so, so, sorry)**
-
-[<img style="background-image: none; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; padding-top: 0px; border: 0px;" title="image" src="https://defragdev.com/blog/images/2011/02/image_thumb.png" border="0" alt="image" width="244" height="244" />](https://defragdev.com/blog/images/2011/02/image.png)
+![moccasins]({{ '/assets/images/2011/02/moccasins.png' | relative_url }})
 
 Firstly, it was a rule of thumb (or at least I read it that way). I don’t see guidelines or so called “best practices” as edicts. You’re allowed to exercise discretionary thought and bend the rule when it doesn’t quite fit your situation.
 
@@ -67,7 +66,7 @@ public class when_updating_social_network_status
 }
 ```
 
-For simple mocking, you can use RhinoMocks' stub.AssertWasCalled() (confusing terminology) rather than .Expect(); this keeps things nicely separated and each test is tiny and only verifies the things it is interested in. If one of them fails, you still have the separation & readability.
+For simple mocking, you can use RhinoMocks' `stub.AssertWasCalled()` (confusing terminology) rather than `.Expect()`; this keeps things nicely separated and each test is tiny and only verifies the things it is interested in. If one of them fails, you still have the separation & readability.
 
 The downside is that you have to go through the setup phase to follow the test and the test fixture is slightly less cohesive (as fields are set that aren’t used in every single test), but it's not too bad and I feel it's a sensible tradeoff.
 
