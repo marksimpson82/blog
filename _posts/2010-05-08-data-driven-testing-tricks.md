@@ -20,7 +20,6 @@ You cannot encode these things via normal data-driven testing (short of doing re
 Test readability is paramount, so if you have some tests written in an unfamiliar style, it is very important to express the intent clearly, too.
 
 **NUnit's data-driven testing**
-
 NUnit uses a few mechanisms to parametrise tests. Firstly, for simple test cases, it offers the 
 [TestCase](https://nunit.org/?p=testCase&r=2.5) attribute which takes a `params object[]` array in its constructor. Each 
 argument passed to the TestCaseAttribute's constructor is stored, ready for retrieval by the framework. 
@@ -28,12 +27,32 @@ argument passed to the TestCaseAttribute's constructor is stored, ready for retr
 NUnit does the heavy lifting for us and casts/converts each argument to the test method's parameter types. Here's an 
 example where three ints are passed, then correctly mapped to a test method:
 
-<img class="alignnone" src="images/simple_data_driven.png" alt="" width="689" height="361" /> 
+```c#
+[TestFixture]
+public class SimpleDataDrivenTest
+{
+  [TestCase(1, 1, 0)]
+  [TestCase(1, 2, 0)]
+  [TestCase(4, 2, 1)]
+  [TestCase(10, 10, 0)] // etc
+  public void HasNextPage_WhenNextPageDoesNotExist_ReturnsFalse(int itemCount, int pageSize, int pageIndex)
+  {
+    var pagedList = CreatePagedList(itemCount, pageSize, pageIndex);
+    Assert.That(pagedList.HasNextPage, Is.False,
+      "shouldn't be a next page, as there are not enough items");
+
+}
+  private IPagedList CreatePagedList(int itemCount, int pageSize, int pageIndex)
+  {
+  // imagine this creates a new instance of PagedList<T> with the above arguments as inputs
+  throw new NotImplementedException();
+  }
+}
+```
 
 The main limitation here is that we can only store intrinsic types. Strings, ints, shorts, bools etc. We can't new up classes or structs because .NET doesn't allow it. How the devil do we do something more complicated?
 
 ### Passing more complicated types
-
 It would appear we're screwed, but fortunately, we can use the 
 [TestCaseSource](https://www.nunit.org/index.php?p=testCaseSource&r=2.5) attribute. There are numerous options for 
 yielding the data, and one of them is to define an IEnumerable<TestCaseData> as a public method of your test class (it 
@@ -72,7 +91,6 @@ public class NonIntrinsicDataDrivenTests
 If you do not require any of the fancy SetDescription, ExpectedException etc. stuff associated with the TestCaseData type, you can skip one piece of ceremony by simply yielding your own arbitrary type instead (i.e. change the IEnumerable<TestCaseData> to IEnumerable<MyType> and then simply yield return new MyType()).
 
 ### Passing a delegate as a parameter (simple)
-
 The simplest case is that you want to vary which methods are called. For example, if you have multiple types implementing the same interface or multiple static methods, encoding which method to call is very simple.
 
 Here's an example from Stackoverflow that [I answered recently](https://stackoverflow.com/questions/2784685/how-do-i-simplify-these-nunit-tests/2784829#2784829) where the author wanted to call one of three different static methods, each with the same signature and asserts. The solution was to examine the method signature of the call and then use the appropriate Func<> type ([Funcs and Actions are convenience delegates provided by the .NET framework](https://msdn.microsoft.com/en-us/library/018hxwa8.aspx)). It was then easy to parametrise the test by passing in a delegates targeting the appropriate methods.
@@ -108,7 +126,6 @@ public class SomeTestFixture
 ```
 
 ### More advanced applications
-
-Beyond calling simple, stateless methods via delegates or passing non-intrinsic types, you can do a lot of creative and cool stuff. For example, you could new up an instance of a type T in the test body and pass in an Action<T> to call. The test body would create an instance of type T, then apply the action to it. You can even go as far as expressing Act/Assert pairs via a combination of Actions and mocking frameworks. E.g. you could say "when I call method X on the controller, I expect method Y on the model to be called", and so forth.
+Beyond calling simple, stateless methods via delegates or passing non-intrinsic types, you can do a lot of creative and cool stuff. For example, you could new up an instance of a type `T` in the test body and pass in an `Action<T>` to call. The test body would create an instance of type `T`, then apply the action to it. You can even go as far as expressing `Act`/`Assert` pairs via a combination of Actions and mocking frameworks. E.g. you could say "when I call method X on the controller, I expect method Y on the model to be called", and so forth.
 
 The caveat is that as you do use more and more 'creative' types of data-driven testing, it gets less and less readable for other programmers. Always keep checking what you're doing and determine whether there is a better way to implement the type of testing you're doing. It's easy to get carried away when applying new techniques, but it's often the case that a more verbose but familiar pattern is a better choice.

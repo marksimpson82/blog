@@ -15,7 +15,6 @@ tags:
 When the logic of a test method remains constant but the data varies, data-driven testing is a great tool. It allows you, the test author, to write compact code and to add new test cases rapidly. Unfortunately, data-driven tests have a disadvantage: The inputs are often less readable.
 
 ### A simple example
-
 Let's take an example; testing Rob Conery's [PagedList implementation](https://blog.wekeroad.com/2007/12/10/aspnet-mvc-pagedlistt/). A page is basically a slice of the data returned by a linq query. If more data exists beyond the 'slice' represented by the PagedList<T> instance, its "HasNextPage" property should return true to indicate that it is available. Now, suppose we want to test whether a particular page has a next available page. Three things spring to mind that can influence the result: The page size, the current page index and the number of items in the list.
 
 Here's a quick data-driven test for HasNextPage:
@@ -28,10 +27,10 @@ public class SimpleDataDrivenTest
   [TestCase(1, 2, 0)]
   [TestCase(4, 2, 1)]
   [TestCase(10, 10, 0)] // etc
-  public void HashextPage_WhenNextPageDoesNotExist_ReturnsFalse(int itemCount, int pageSize, int pageIndex)
+  public void HasNextPage_WhenNextPageDoesNotExist_ReturnsFalse(int itemCount, int pageSize, int pageIndex)
   {
     var pagedList = CreatePagedList(itemCount, pageSize, pageIndex);
-    Assert.That(pagedList. HasliextPage, Is.False,
+    Assert.That(pagedList.HasNextPage, Is.False,
       "shouldn't be a next page, as there are not enough items");
 
 }
@@ -76,7 +75,6 @@ public class PageTestCaseAttribute : TestCaseAttribute
 ```
 
 ### The end result
-
 Finally, we apply these attributes to our data-driven test, significantly improving the readability!
 
 ```c#
