@@ -12,7 +12,7 @@ I've been meaning to write something about long COVID for a while since I'm dire
 
 Before I start, here's an amazingly on-the-money primer on how Chronic Fatigue Syndrome (CFS) is often (mis)perceived by the general public (The Armando Iannucci Shows is a largely forgotten gem):
 
-[https://www.youtube.com/watch?v=BDhoM_vhIeo](https://www.youtube.com/watch?v=BDhoM_vhIeo)
+{% include video id="BDhoM_vhIeo" provider="youtube" %}
 
 I should also mention that [long COVID encompasses multiple phenotypes](https://bmjopenrespres.bmj.com/content/11/1/e001907). By this, researchers find there are common sub-groups of long COVID patients who have one or more symptom clusters (e.g. Fatigue, Cardiovascular, Neurological).
 
@@ -129,7 +129,7 @@ The annoying thing with long COVID is that many laboratory and diagnostic tests 
 #### Fatigue, Fatigue, Fatigue
 Here's where long COVID confounds you. Many people with long COVID _can_ do things in the moment. But, like buying _Big TV_ on tick or drinking 4 pints in an hour, you will pay for it down the line.
 
-I liken this to Wile E. Coyote from _The Road Runner_: he runs out over the cliff and stands in thin air. Gravity is paused, but he _will_ fall.
+I liken this to Wile E. Coyote from _The Road Runner_: he runs out over the cliff and stands in thin air. Gravity is paused for a little while, but not long.
 
 ![Wile E. Coyote hanging in mid-air]({{ '/assets/images/2026/03/wile-e-coyote.png' | relative_url }})
 
@@ -170,10 +170,9 @@ Everyone is affected differently. I'm lucky in that many basics I take for grant
 - Walking slowly (I try to keep the distances short and my heart-rate low)
 
 #### How people perceive CFS
-To an external observer things can look normal at times. However, bear in mind that when you meet someone who has chronic fatigue or any hidden illness, you will almost always be seeing them on a day where they're able to face the world.
+Things can look normal to an observer. However, bear in mind that when you meet someone who has chronic fatigue or any hidden illness, you will likely be seeing them on a good day. If they were having a bad day, they'd be at home.
 
 You do not see that person when they're crashing, sleeping all hours and generally feeling terrible.
-
 
 #### Some positives (for me, at least!)
 Firstly, I'm quite lucky compared to some. Many long haulers cannot get out of bed for very long (or at all), hold a conversation, read a book or smell the literal or metaphorical roses. They exist and not much more.
