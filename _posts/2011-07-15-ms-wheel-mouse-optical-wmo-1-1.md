@@ -19,7 +19,6 @@ tags:
   - wmo
 ---
 ## I’m an addict
-
 As a first person shooter (FPS) addict, I play a <span style="text-decoration: line-through;">fair amount</span> shitload of games. I racked up a god-awful number of hours in Team Fortress Classic (I would conservatively estimate over 3000, on account of the fact I played it on and off for several years), 1400+ of Battlefield 2 and now 1000+ of Left 4 Dead. I average ~1 hour a day. I like to tell myself it’s a small time sink and I’m not wasting my life.
 
 In that time I’ve gone through countless mice, mouse pads and a few desks, too. If you <span style="text-decoration: line-through;">waste</span> spend an inordinately large amount of time doing something, it’s worth making sure that your time-wasting is enjoyable as possible. I recently bought a new mouse. Here is some _highly interesting*_ discourse for mouse enthusiasts.
@@ -31,39 +30,31 @@ Everyone else: **I am warning you. Look away now**.
 _*may not be true_
 
 ## Caveat Emptor
-
 I’ve been gleefully using MX5xx series mice for the best part of a decade. The MX518 is a fine, spangly beast. It looks a bit like this:
 
 **An MX518, yesterday.**
-
-[<img style="background-image: none; padding-left: 0px; padding-right: 0px; display: inline; padding-top: 0px; border: 0px;" title="image" src="https://defragdev.com/blog/images/2011/07/image_thumb.png" alt="image" width="224" height="224" border="0" />](https://defragdev.com/blog/images/2011/07/image.png)
+![MX518]({{ '/assets/images/2011/07/image.png' | relative_url }})
 
 However, I recently stumbled across the ‘feature’ the MX518 has that’s commonly referred to as “angle snapping”, “prediction” or “correction”. What is angle snapping? Well, at the hardware or driver level, if your movements stay under some arbitrary threshold, the mouse input is subtly altered to keep your ‘lines’ straight.
 
 Here’s the effect in action. A common test is to draw some horizontal and vertical lines in MS Paint. Notice that my MX518-created lines are eerily straight for large sections. If you’re pixel aiming at someone’s head with a rifle, this is not helpful.
 
-[<img style="background-image: none; padding-left: 0px; padding-right: 0px; display: inline; padding-top: 0px; border: 0px;" title="mouse_lines" src="https://defragdev.com/blog/images/2011/07/mouse_lines_thumb.png" alt="mouse_lines" width="244" height="244" border="0" />](https://defragdev.com/blog/images/2011/07/mouse_lines.png)
+![Horizontal mouse lines]({{ '/assets/images/2011/07/mouse_lines.png' | relative_url }})
 
 **Note:** This is a feature that is found in several mice, including gaming mice. In some cases (such as the Logitech G series and the Razer Death Adder), you can disable the “feature” using the driver. As that bloke off Art Attack used to say, “Try it yourself.”
 
 ## Time for a Change
-
 The MX518 I use at work (I have two) recently had a wheely bad fault and, having discovered the most-likely-non-issue that is angle snapping, I decided to unnecessarily obsess over it and buy something else.
 
 Because that will make me a Quake Live Pro, of course... (oh and sometimes it’s fun to change things)
 
-<img class="wlEmoticon wlEmoticon-smile" style="border-style: none;" src="https://defragdev.com/blog/images/2011/07/wlEmoticon-smile.png" alt="Smile" /> 
-
 ## Things to be aware of
-
 Before I delve into specifics, here’s some guidelines for purchasing a new gaming mouse.
 
 ### Laser Mice Suck
-
 Firstly, steer well clear of Laser Mice - their tracking sucks. They're expensive. Even people who are endorsed by these brands [don’t use these mice](https://news.fatal1ty.com/fatal1ty-blog/fatal1ty-frags-blog-3rd-frag-mouse-sensitivity/) – laser has not yet caught up with the best optical has to offer, so don’t be fooled by the notion that newer is better.
 
 ### DPI is overrated
-
 All of this DPI nonsense seems to have little to do with mouse performance and tracking characteristics. All a higher DPI count seems to do is multiply your sensitivity by a factor using hardware and/or a mouse driver (much the same as turning up your sensitivity in windows and/or ingame).
 
 Older mice with lower DPI can potentially track better than newer laser mice with 5600000000000 bajillion DPI. In short, it’s largely a marketing gimmick.
@@ -71,11 +62,9 @@ Older mice with lower DPI can potentially track better than newer laser mice wit
 Most of the professional quake players [use 400 or 800 DPI](https://www.esreality.com/index.php?a=post&id=2009534) coupled with a low sensitivity, so why would you ever need a 5600 DPI mouse? Answers on a postcard.
 
 ### Mouse Drivers Aren’t Always Needed
-
 If your mouse is perfectly serviceable without installing drivers, try the mouse both with and without the drivers. I’ve had mice that worked well both with and without. I used the setpoint drivers for my MX518 solely to turn off the silly DPI switching buttons, but I’m not using any drivers with my new mouse.
 
 ### Kill Windows Mouse Acceleration
-
 Like [Poison Sockets](https://www.youtube.com/watch?v=D2gqThOfHu4), Windows Mouse Acceleration is a hazard to your health. It’s terrible. [Switch it off](https://www.techpowerup.com/downloads/763/CPL_Mouse_Fix.html) using the [CPL mouse fix](https://www.techpowerup.com/downloads/763/CPL_Mouse_Fix.html). This version works with Windows 7 64 bit – I can’t guarantee anything else, but there’s another version that works with XP floating around.
 
 Mouse acceleration means that physical distance you move the mouse isn’t the sole factor for your aiming. If you use it, it should be a conscious decision, not something foisted upon you by windows in a ham-fisted fashion.
@@ -83,7 +72,6 @@ Mouse acceleration means that physical distance you move the mouse isn’t the s
 If you insist on using mouse acceleration, either use the driver settings for your mouse or, even better, set up acceleration using in-game settings (newish half life and quake-based engine games offer customisable acceleration settings).
 
 ### Negative Acceleration
-
 [Even with today’s space-age technology and fretful nerdery, mouse tracking is not yet perfect.](https://www.esreality.com/index.php?a=longpost&id=1265679&page=4)
 
 Most optical gaming mice on the market today can handle extreme speeds without losing their minds (as in, it’s almost humanly impossible to totally totally baffle the sensor while furiously turning around). However, if you play with a low sensitivity and use a large mouse mat (I’m talking at least > 20cm of mouse movement to turn 360 degrees) there is the possibility of suffering from negative acceleration.
@@ -93,26 +81,14 @@ Negative acceleration occurs when the sensor continues to recognise input, but c
 The optimum mouse setting is one where physically moving the mouse the same distance maps to the same logical game input. Negative acceleration erodes this consistency.
 
 [The ESRreality MouseScore](https://www.esreality.com/index.php?a=longpost&id=1265679&page=4) offers the clearest explanation.
-
 It should be noted that, but for all the worst offenders, this is only a concern for low sensitivity gamers, and certain mice have workarounds available ([such as increasing the USB polling rate](https://www.overclock.net/mice/596276-changing-usb-polling-rate-1000hz-lower.html) via Windows).
 
 ## The Contenders
-
 After researching the pitfalls, I did a cursory bit of [reading around](https://www.esreality.com/index.php?a=post&id=1836580) and discovered that roughly half of the best competitive Quake Live players use (or used) one of the following (crappy-looking) mice:
 
-<li style="list-style-type: none">
-  <ul>
-    <li>
-      <a href="https://www.microsoft.com/uk/hardware/mouseandkeyboard/productdetails.aspx?pid=008">Microsoft Wheel Mouse Optical</a> (commonly abbreviated to <strong>WMO</strong> or <strong>WMO 1.1</strong>),
-    </li>
-    <li>
-      <a href="https://www.microsoft.com/uk/hardware/oempartners/ProductDetails.aspx?pid=018">IntelliMouse Optical</a> (<strong>IMO</strong>)
-    </li>
-    <li>
-      <a href="https://www.microsoft.com/hardware/en-us/p/intellimouse-explorer-3.0">IntelliMouse Explorer 3.0</a> (<strong>IME 3.0</strong>).
-    </li>
-  </ul>
-</li>
+- [Microsoft Wheel Mouse Optical](https://www.microsoft.com/uk/hardware/mouseandkeyboard/productdetails.aspx?pid=008) (abbreviated to **WMO** or **WMO 1.1**)
+- [Microsoft Intellimouse Optical](https://www.microsoft.com/uk/hardware/oempartners/ProductDetails.aspx?pid=018) (**IMO**)
+- [Microsoft Intellimouse Explorer 3.0](https://www.microsoft.com/hardware/en-us/p/intellimouse-explorer-3.0) (**IME 3.0**)
 
 None of these mice is billed as a gaming mouse and they’re all dirt cheap. Bizarrely, Microsoft don’t really talk up this fact or try to cash in. They’re like a trio of unassuming murderers living next door. Strange.
 
@@ -127,14 +103,12 @@ The rest of the mice like the Death Adder all have strong reviews, but furtively
 Anyway, I chose...
 
 ## The Wheel Mouse Optical 1.1
-
 After drinking in the details posted in various nerd forums, I plumped for the WMO 1.1 at [£14.99 from Maplins](https://www.maplin.co.uk/microsoft-wheel-mouse-optical-33021) (product code: D66-00074) ordered via Amazon.
 
 As far as I can tell, there’s no problem with stock or versions. If you get one that was manufactured in the last 90 years, it ought to be a version with the sensor that’s good for gaming.
 
 **The WMO 1.1**
-
-[<img style="background-image: none; padding-left: 0px; padding-right: 0px; display: inline; padding-top: 0px; border: 0px;" title="image" src="https://defragdev.com/blog/images/2011/07/image_thumb1.png" alt="image" width="244" height="244" border="0" />](https://defragdev.com/blog/images/2011/07/image1.png)
+![MX518]({{ '/assets/images/2011/07/image1.png' | relative_url }})
 
 My first port of call was to uninstall my old logitech setpoint mouse drivers. I then plugged in the new mouse and cancelled the intellipoint driver installation process. There’s no need to install drivers for this mouse, so it’s one less thing to worry about.
 
