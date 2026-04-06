@@ -61,7 +61,7 @@ If we compile and find that the leak has disappeared, we know that the leak was 
 
 We then recompile and check to see if the leak has disappeared as before. Notice that in **two** steps, we've narrowed down the problem's location to an area of **25%** of the original size! The next step will yield a further 12.5% reduction. We quickly hone in on the problem.
 
-After I started programming, I realised that the leak-finding method I used as a level designer is a simple [binary search](http://en.wikipedia.org/wiki/Binary_search_algorithm).
+After I started programming, I realised that the leak-finding method I used as a level designer is a simple [binary search](https://en.wikipedia.org/wiki/Binary_search_algorithm).
 
 ### Same thing, different discipline
 

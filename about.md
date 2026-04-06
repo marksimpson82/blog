@@ -4,7 +4,7 @@ title: About
 date: 2008-11-08T18:31:47+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?page_id=2
+guid: https://defragdev.com/blog/?page_id=2
 ---
 My name is Mark, and I’m a software engineer. I started out life as a Software Engineer in Test and remain ill to this very day.
 

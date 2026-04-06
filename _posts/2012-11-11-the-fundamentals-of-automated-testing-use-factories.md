@@ -62,7 +62,7 @@ This has tangible benefits. Firstly, it only takes maybe 5 seconds of work (extr
 
 Secondly, the tests and the creation of objects are separated to improve maintainability. 
 
-Thirdly, it often makes the test code easier to read. If the factory method were inlined in the test code, it adds a load of noise. All the test needs is a default configuration of the order service. We only worry about the details if it's relevant. Most test fixtures only need a handful of factory methods; for those that require more varied configurations, check out the [Test Data Builder](http://c2.com/cgi/wiki?TestDataBuilder) and [Object Mother](http://c2.com/cgi/wiki?ObjectMother) patterns (though be wary of over-using the Object Mother pattern as not only does it have a stupid name, but it’s inflexible and has other problems) . 
+Thirdly, it often makes the test code easier to read. If the factory method were inlined in the test code, it adds a load of noise. All the test needs is a default configuration of the order service. We only worry about the details if it's relevant. Most test fixtures only need a handful of factory methods; for those that require more varied configurations, check out the [Test Data Builder](https://c2.com/cgi/wiki?TestDataBuilder) and [Object Mother](https://c2.com/cgi/wiki?ObjectMother) patterns (though be wary of over-using the Object Mother pattern as not only does it have a stupid name, but it’s inflexible and has other problems) . 
 
 An alternative to this approach is to use a parameterised factory method and/or optional parameters.
 

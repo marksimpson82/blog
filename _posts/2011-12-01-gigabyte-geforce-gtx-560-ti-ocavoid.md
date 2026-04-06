@@ -11,7 +11,7 @@ tags:
   - whinges
   - tips
 ---
-[This card](http://www.google.co.uk/products/catalog?hl=en&safe=off&q=gigabyte+geforce+gtx+560ti+oc&gs_upl=336l603l1l704l3l1l0l1l1l0l95l95l1l2l0&bav=on.2,or.r_gc.r_pw.r_cp.,cf.osb&biw=1920&bih=1096&um=1&ie=UTF-8&tbm=shop&cid=1323606381779257544&sa=X&ei=iOHWTrGKA9Gg8gP8vL3rDQ&ved=0CDIQ8wIwAA), amongst various other factory overclocked GTX 560 Tis are [causing problems](http://forums.whirlpool.net.au/archive/1639211) for lots of people. There are various 560 Ti cards that have the OC postfix which stands for “Overclocked”, but the Gigabyte one seems to be the biggest offender.
+[This card](https://www.google.co.uk/products/catalog?hl=en&safe=off&q=gigabyte+geforce+gtx+560ti+oc&gs_upl=336l603l1l704l3l1l0l1l1l0l95l95l1l2l0&bav=on.2,or.r_gc.r_pw.r_cp.,cf.osb&biw=1920&bih=1096&um=1&ie=UTF-8&tbm=shop&cid=1323606381779257544&sa=X&ei=iOHWTrGKA9Gg8gP8vL3rDQ&ved=0CDIQ8wIwAA), amongst various other factory overclocked GTX 560 Tis are [causing problems](https://forums.whirlpool.net.au/archive/1639211) for lots of people. There are various 560 Ti cards that have the OC postfix which stands for “Overclocked”, but the Gigabyte one seems to be the biggest offender.
 
 # tl;dr summary:
 
@@ -35,13 +35,13 @@ Gigabyte users only. Either RMA the card and ask for a different model or...
 
 ## Flash the BIOS
 
-Firstly, download [Gigabyte’s EasyBoost utility](http://www.gigabyte.com/support-downloads/utility.aspx?cg=3). Use this tool to flash your Gigabyte 560 Ti OC card to the latest BIOS. It has an auto select feature, so it shouldn’t be too dangerous. **Note**: The only visible effect of this is that the voltage will be upped from 1.000V to 1.037V (verifed using [MSI Afterburner](http://event.msi.com/vga/afterburner/download.htm)).
+Firstly, download [Gigabyte’s EasyBoost utility](https://www.gigabyte.com/support-downloads/utility.aspx?cg=3). Use this tool to flash your Gigabyte 560 Ti OC card to the latest BIOS. It has an auto select feature, so it shouldn’t be too dangerous. **Note**: The only visible effect of this is that the voltage will be upped from 1.000V to 1.037V (verifed using [MSI Afterburner](https://event.msi.com/vga/afterburner/download.htm)).
 
 Try that for size. It _might_ be all you need. Play for a while and see if it’s solid. Some players have had success with just this one step. Unfortunately, I still crashed (albeit a slightly less frequently). With that BIOS ‘fix’, I could play for about 10 minutes before crashing, so it was a step in the right direction.
 
 ## Underclock your card to reference 560 Ti levels
 
-Next, download [MSI Afterburner](http://event.msi.com/vga/afterburner/download.htm). It’s made by MSI, but supports most card makes including Gigabyte 560 Ti OCs. Now, use the overclocking functionality to underclock (yes, underclock) your card to the following reference 560 Ti clocks:
+Next, download [MSI Afterburner](https://event.msi.com/vga/afterburner/download.htm). It’s made by MSI, but supports most card makes including Gigabyte 560 Ti OCs. Now, use the overclocking functionality to underclock (yes, underclock) your card to the following reference 560 Ti clocks:
 
 * Core Clock (Mhz) : 822
 * Shader Clock (Mhz) : 1644

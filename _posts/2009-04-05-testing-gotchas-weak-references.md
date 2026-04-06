@@ -11,9 +11,9 @@ tags:
   - gotchas
   - testing
 ---
-If you ever have to test a class that uses a [WeakReference](http://msdn.microsoft.com/en-us/library/system.weakreference.aspx), or even just have to _use_ Weak References, be very careful. Numerous strange-looking things can occur when [Weak References](http://msdn.microsoft.com/en-us/library/system.weakreference.aspx) are involved.
+If you ever have to test a class that uses a [WeakReference](https://msdn.microsoft.com/en-us/library/system.weakreference.aspx), or even just have to _use_ Weak References, be very careful. Numerous strange-looking things can occur when [Weak References](https://msdn.microsoft.com/en-us/library/system.weakreference.aspx) are involved.
 
-If you have even a cursory understanding of the [.NET Garbage Collector](http://msdn.microsoft.com/en-us/library/0xy59wtx.aspx) (GC), you will know that it keeps track of objects. When an object is no longer strongly referenced, the GC will potentially collect it, freeing up its resources. This causes the object to 'disappear'. So, if you have a strong reference to an object in your program, you are generally safe in the assumption that the object will stick around. The GC won't pull the carpet from under you while you're using that object.
+If you have even a cursory understanding of the [.NET Garbage Collector](https://msdn.microsoft.com/en-us/library/0xy59wtx.aspx) (GC), you will know that it keeps track of objects. When an object is no longer strongly referenced, the GC will potentially collect it, freeing up its resources. This causes the object to 'disappear'. So, if you have a strong reference to an object in your program, you are generally safe in the assumption that the object will stick around. The GC won't pull the carpet from under you while you're using that object.
 
 Weak References, on the other hand, do **not** stop the GC from collecting the object they refer to. In certain circumstances, it can be advantageous to use Weak References because you do want to use/observe/whatever an object, but you don't want to stop it from being collected. So far so good. All obvious stuff.
 
@@ -59,7 +59,7 @@ The main problem is that it won't happen every time. The GC is _non-deterministi
 
 ### The solution
 
-The good folks at Microsoft they provided a very simple static method call to solve this particular problem; enter [GC.KeepAlive](http://msdn.microsoft.com/en-us/library/system.gc.keepalive.aspx). Placing a call to GC.KeepAlive(builder) at the end of this test method will ensure that the object we're referring to will not be collected until after the GC.KeepAlive call has been made. Problem solved.
+The good folks at Microsoft they provided a very simple static method call to solve this particular problem; enter [GC.KeepAlive](https://msdn.microsoft.com/en-us/library/system.gc.keepalive.aspx). Placing a call to GC.KeepAlive(builder) at the end of this test method will ensure that the object we're referring to will not be collected until after the GC.KeepAlive call has been made. Problem solved.
 
 ```c#
 [Test]

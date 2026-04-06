@@ -41,7 +41,7 @@ A TDB varies this approach by setting up default, safe values to be used to inst
 
 The cool part is that anyone using the TDB can selectively modify these values by calling methods or setting properties on the TDB. Finally, when the TDB has been configured satisfactorily for the test, its Build method is called, injecting its fields into the class under test's constructor as arguments.
 
-Nat Pryce posted [an excellent article on Test Data Builders](http://www.natpryce.com/articles/000714.html) so I would implore you to read it before reading the rest of this post.
+Nat Pryce posted [an excellent article on Test Data Builders](https://www.natpryce.com/articles/000714.html) so I would implore you to read it before reading the rest of this post.
 
 ### Terser is more gooder - C# 3.0
 

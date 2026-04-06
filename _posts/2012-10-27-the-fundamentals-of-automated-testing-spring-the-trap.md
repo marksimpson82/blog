@@ -13,7 +13,7 @@ tags:
 ---
 This post is [part of a series]({% post_url 2012-10-24-the-fundamentals-of-automated-testing-series %}) on unit testing.
 
-This is a lesson I learned from the [Pragmatic Unit Testing](http://pragprog.com/book/utc2/pragmatic-unit-testing-in-c-with-nunit) book. Five years later and it’s still a tool that I frequently reach for – it’s simple and incredibly useful.
+This is a lesson I learned from the [Pragmatic Unit Testing](https://pragprog.com/book/utc2/pragmatic-unit-testing-in-c-with-nunit) book. Five years later and it’s still a tool that I frequently reach for – it’s simple and incredibly useful.
 
 ## Who tests the tests?
 
@@ -101,7 +101,7 @@ The test now should fail, as the class under test no longer does the correct thi
 
 ### TDD
 
-[Write your code test-first](http://en.wikipedia.org/wiki/Test-driven_development). I’m not going to go into much detail on this, as TDD is more of a _development_ style than a _testing_ style, and it’s a much bigger investment to commit to doing TDD-with-bells-on. 
+[Write your code test-first](https://en.wikipedia.org/wiki/Test-driven_development). I’m not going to go into much detail on this, as TDD is more of a _development_ style than a _testing_ style, and it’s a much bigger investment to commit to doing TDD-with-bells-on. 
 
 The reason TDD reduces the chance of creating a bugged test is that the test is created first and **must** fail before you write the production code. If it does not fail, then you know the test is surely incorrect (how can a test pass when the functionality it’s testing is not yet implemented? It can’t!) 
 

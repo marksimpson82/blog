@@ -22,7 +22,7 @@ Test readability is paramount, so if you have some tests written in an unfamilia
 **NUnit's data-driven testing**
 
 NUnit uses a few mechanisms to parametrise tests. Firstly, for simple test cases, it offers the 
-[TestCase](http://nunit.org/?p=testCase&r=2.5) attribute which takes a `params object[]` array in its constructor. Each 
+[TestCase](https://nunit.org/?p=testCase&r=2.5) attribute which takes a `params object[]` array in its constructor. Each 
 argument passed to the TestCaseAttribute's constructor is stored, ready for retrieval by the framework. 
 
 NUnit does the heavy lifting for us and casts/converts each argument to the test method's parameter types. Here's an 
@@ -35,7 +35,7 @@ The main limitation here is that we can only store intrinsic types. Strings, int
 ### Passing more complicated types
 
 It would appear we're screwed, but fortunately, we can use the 
-[TestCaseSource](http://www.nunit.org/index.php?p=testCaseSource&r=2.5) attribute. There are numerous options for 
+[TestCaseSource](https://www.nunit.org/index.php?p=testCaseSource&r=2.5) attribute. There are numerous options for 
 yielding the data, and one of them is to define an IEnumerable<TestCaseData> as a public method of your test class (it 
 works if it's private, but since it's accessed via reflection it's a good idea to keep it public so that ReSharper or 
 other tools do not flag it as unused). 
@@ -51,7 +51,7 @@ If you do not require any of the fancy SetDescription, ExpectedException etc. st
 
 The simplest case is that you want to vary which methods are called. For example, if you have multiple types implementing the same interface or multiple static methods, encoding which method to call is very simple.
 
-Here's an example from Stackoverflow that [I answered recently](http://stackoverflow.com/questions/2784685/how-do-i-simplify-these-nunit-tests/2784829#2784829) where the author wanted to call one of three different static methods, each with the same signature and asserts. The solution was to examine the method signature of the call and then use the appropriate Func<> type ([Funcs and Actions are convenience delegates provided by the .NET framework](http://msdn.microsoft.com/en-us/library/018hxwa8.aspx)). It was then easy to parametrise the test by passing in a delegates targeting the appropriate methods.
+Here's an example from Stackoverflow that [I answered recently](https://stackoverflow.com/questions/2784685/how-do-i-simplify-these-nunit-tests/2784829#2784829) where the author wanted to call one of three different static methods, each with the same signature and asserts. The solution was to examine the method signature of the call and then use the appropriate Func<> type ([Funcs and Actions are convenience delegates provided by the .NET framework](https://msdn.microsoft.com/en-us/library/018hxwa8.aspx)). It was then easy to parametrise the test by passing in a delegates targeting the appropriate methods.
 
 <img class="alignnone" src="images/passing_delegates.png" alt="" width="584" height="443" /> 
 

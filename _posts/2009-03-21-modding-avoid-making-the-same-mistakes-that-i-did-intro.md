@@ -13,7 +13,7 @@ tags:
 
 Although these days I spent most of my time writing code and being concerned with the automation of testing, it was once not so. Prior to joining Realtime Worlds as a Software Test Engineer (a programming discipline), I spent a lot of my time creating levels for the Half-Life (goldsrc) and Half-Life 2 (source) game engines. In fact, at one point I fully intended to try and forge a career as a level designer rather than a programmer.
 
-Anyway, the reason I mention I'm bringing this up is that I spent three+ years working on a mod called [Fortress Forever](http://fortress-forever.com) (hereafter referred to as FF). During the development of FF, we learned as we went along. Almost none of us had ever made a mod before. As the years rolled by, we made a lot of mistakes. **A lot**. Countless errors, big and small. I was one of the modders who took it upon themselves to try and organise and direct the way we were working, so I had a good view of what was going on. Oh, and I also had the chance to balls-up plenty of things myself.
+Anyway, the reason I mention I'm bringing this up is that I spent three+ years working on a mod called [Fortress Forever](https://fortress-forever.com) (hereafter referred to as FF). During the development of FF, we learned as we went along. Almost none of us had ever made a mod before. As the years rolled by, we made a lot of mistakes. **A lot**. Countless errors, big and small. I was one of the modders who took it upon themselves to try and organise and direct the way we were working, so I had a good view of what was going on. Oh, and I also had the chance to balls-up plenty of things myself.
 
 ### What I'm going to cover
 

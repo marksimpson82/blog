@@ -27,11 +27,11 @@ Put short, a test should be built up and torn down cleanly, leaving no trace of 
 
 A good automated test has a descriptive name, is implemented using straightforward code and leads us to the cause of the failure without much hassle. When dealing with well written atomic tests, at the very worst, diagnosing the cause of a failure should be a simple debugging job.
 
-However, if non-atomic tests create knock-on effects it introduces a significant maintenance risk, as to diagnose failures, we must understand the whole picture. Instead of just inspecting the local state that exists prior to executing the failing test, we have to start delving into environmental differences (machine configuration, file systems) and [AppDomain](http://blogs.msdn.com/b/cbrumme/archive/2003/04/15/51317.aspx) issues (typically global / static state).
+However, if non-atomic tests create knock-on effects it introduces a significant maintenance risk, as to diagnose failures, we must understand the whole picture. Instead of just inspecting the local state that exists prior to executing the failing test, we have to start delving into environmental differences (machine configuration, file systems) and [AppDomain](https://blogs.msdn.com/b/cbrumme/archive/2003/04/15/51317.aspx) issues (typically global / static state).
 
 While most test failures caused by a lack of atomicity are localised (e.g. tests confined to one fixture start to fail), I've personally witnessed a system under test causing hundreds of test failures spanning multiple (seemingly unrelated) fixtures.
 
-Furthermore, if failures cannot be reliably reproduced, it undermines the trust in those tests. People won't pay attention to them, even if the failures are legitimate. The moment developers see a red build and, without even thinking about it, click the “rebuild” button, you’re entering the world of [NOMFUP](http://www.urbandictionary.com/define.php?term=NOMFup). 
+Furthermore, if failures cannot be reliably reproduced, it undermines the trust in those tests. People won't pay attention to them, even if the failures are legitimate. The moment developers see a red build and, without even thinking about it, click the “rebuild” button, you’re entering the world of [NOMFUP](https://www.urbandictionary.com/define.php?term=NOMFup). 
 
 ## Tell Tale Signs
 
@@ -85,7 +85,7 @@ public static class MemoryManager
  }
 ```
 
-... then `ModelLoader` has an _implicit_ dependency on the `MemoryManager`. It's implicit because there is nothing in the public API to say that this static class `MemoryManager` is used, let alone that it must be initialised if we want to use the `ModelLoader`. As Misko says, [Singletons are pathological liars](http://misko.hevery.com/2008/08/17/singletons-are-pathological-liars/). 
+... then `ModelLoader` has an _implicit_ dependency on the `MemoryManager`. It's implicit because there is nothing in the public API to say that this static class `MemoryManager` is used, let alone that it must be initialised if we want to use the `ModelLoader`. As Misko says, [Singletons are pathological liars](https://misko.hevery.com/2008/08/17/singletons-are-pathological-liars/). 
 
 As a result, if we forget to call the static `Init()` or `Quit()` methods, the state mutations caused by one test will bleed into the next. 
 

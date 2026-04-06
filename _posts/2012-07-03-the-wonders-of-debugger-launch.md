@@ -12,12 +12,12 @@ tags:
   - software
   - tips
 ---
-Ever worked on a project that involved spawning new .NET processes? (as in, one [arbitrary] program launches another .NET executable) I’ve had to do this on quite a few occasions over the years and the one thing that always saves my bacon when it comes to understanding and fixing bugs is [Debugger.Launch()](http://msdn.microsoft.com/en-us/library/system.diagnostics.debugger.launch.aspx).
+Ever worked on a project that involved spawning new .NET processes? (as in, one [arbitrary] program launches another .NET executable) I’ve had to do this on quite a few occasions over the years and the one thing that always saves my bacon when it comes to understanding and fixing bugs is [Debugger.Launch()](https://msdn.microsoft.com/en-us/library/system.diagnostics.debugger.launch.aspx).
 
 A common scenario is as follows:
 
 * Program / Script A is launched
-* Program / Script A makes a call to launch .NET Program B (e.g. via [`Process.Start()`](http://msdn.microsoft.com/en-us/library/system.diagnostics.process.start.aspx))
+* Program / Script A makes a call to launch .NET Program B (e.g. via [`Process.Start()`](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.start.aspx))
 * .NET Program B throws an exception and it’s not immediately clear why.
 * The world ends. 
 
@@ -49,4 +49,4 @@ public static class AttachableRunner
 
 This does just fine for debugging most problems. 
 
-**Note**: It won’t attach properly if your program causes an unhandled exception to be thrown on a a thread other than the main thread. I’ll leave that as an exercise for the reader (\*cough\* [AppDomain.UnhandledException](http://msdn.microsoft.com/en-us/library/system.appdomain.unhandledexception.aspx) can help, but won’t give you as much useful information beyond standard callstack info).
+**Note**: It won’t attach properly if your program causes an unhandled exception to be thrown on a a thread other than the main thread. I’ll leave that as an exercise for the reader (\*cough\* [AppDomain.UnhandledException](https://msdn.microsoft.com/en-us/library/system.appdomain.unhandledexception.aspx) can help, but won’t give you as much useful information beyond standard callstack info).

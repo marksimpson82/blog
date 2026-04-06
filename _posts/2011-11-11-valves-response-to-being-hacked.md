@@ -35,4 +35,4 @@ Furthermore, as it happens, I do have a forum account, but it was tied to an old
 
 In my opinion, there should be a general email going out to **all** steam customers via their login emails, plus unavoidable notifications on the steam client, website & forums.
 
-So how did I find out? <http://www.rockpapershotgun.com/> was the messenger for me, not Valve itself. Perhaps I am the exception, but I somehow doubt it.
+So how did I find out? <https://www.rockpapershotgun.com/> was the messenger for me, not Valve itself. Perhaps I am the exception, but I somehow doubt it.

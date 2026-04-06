@@ -15,7 +15,7 @@ I was given an NDepend license to play around with (thanks to Patrick) and said 
 
 ### What is NDepend?
 
-[NDepend](http://www.ndepend.com/Features.aspx) is a piece of software that allows developers to analyse and visualise their code in many interesting ways. Here's an ancient relic from my hard drive, revived in NDepend:
+[NDepend](https://www.ndepend.com/Features.aspx) is a piece of software that allows developers to analyse and visualise their code in many interesting ways. Here's an ancient relic from my hard drive, revived in NDepend:
 
 [<img class="alignnone" src="images/whole_app_thumb.png" alt="" width="326" height="228" />](images/whole_app.png)
 
@@ -41,7 +41,7 @@ To write a query, you just tap it into the query editor:
 
 While it is a hugely powerful program, I found it overwhelming to begin with. The default analysis of your code will result in a verbose report including every metric under the sun; some of these are unarguably very useful (Cyclomatic complexity, IL nesting depth) whereas others have a more narrow purpose (suggesting which attributes should be sealed, boxing and unboxing warnings and so on).
 
-Due to the mammoth amount of information in the report, it's akin to pulling the FxCop lever for the first time. You get metrics-shotgunned in the face and potentially paralysed by choice. As a result, I chose to view the default report as a rough guide for how to use the CQL query language and to give me ideas of how I could form queries that were tailored to my needs. There's an excellent [placemat PDF available for download](http://www.hanselman.com/blog/content/binary/NDepend%20metrics%20placemats%201.1.pdf), too.
+Due to the mammoth amount of information in the report, it's akin to pulling the FxCop lever for the first time. You get metrics-shotgunned in the face and potentially paralysed by choice. As a result, I chose to view the default report as a rough guide for how to use the CQL query language and to give me ideas of how I could form queries that were tailored to my needs. There's an excellent [placemat PDF available for download](https://www.hanselman.com/blog/content/binary/NDepend%20metrics%20placemats%201.1.pdf), too.
 
 I would encourage first time users to skim the main report for interesting nuggets then immediately begin to play around with the CQL query language :). It's really cool to think, "I wonder if...", type a few words and immediately see the question answered.
 

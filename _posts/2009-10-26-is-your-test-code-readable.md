@@ -16,7 +16,7 @@ It's mostly down to testing in a vacuum. The tests are often functionally fine. 
 
 ### In the court of the test engineer, readability is king
 
-In my opinion, readability in tests is the **number one** thing. If your fellow programmers and your future self cannot decipher what a test is proving, the test becomes worthless. If a monstrously bearded mathematics genius solved solved [P versus NP](http://en.wikipedia.org/wiki/P_%3D_NP_problem) but failed to write an understandable proof, it would all be for nothing.
+In my opinion, readability in tests is the **number one** thing. If your fellow programmers and your future self cannot decipher what a test is proving, the test becomes worthless. If a monstrously bearded mathematics genius solved solved [P versus NP](https://en.wikipedia.org/wiki/P_%3D_NP_problem) but failed to write an understandable proof, it would all be for nothing.
 
 It's the same for testing. You'll know the shit has hit the fan when you're refactoring something and break a load of tests. "Balls. I'll fix the tests I guess", you murmur, bleary eyed and idiot-faced. However, when you examine the tests, you can't figure out what they're proving, why they're proving it or how it's actually proved!
 

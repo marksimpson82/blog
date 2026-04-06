@@ -13,7 +13,7 @@ tags:
   - tips
   - automapper
 ---
-I've recently been tinkering with WCF and, as many people already know, writing data transfer objects is a pain in the balls. Nobody likes writing repetitive, duplicate and tedious code, so I was delighted when I read about [AutoMapper](http://www.codeplex.com/AutoMapper). It works really nicely; with convention over configuration, you can bang out the entity => data transfer code in no time, the conversions are less error prone, the tests stay in sync and you're left to concentrate on more important things.
+I've recently been tinkering with WCF and, as many people already know, writing data transfer objects is a pain in the balls. Nobody likes writing repetitive, duplicate and tedious code, so I was delighted when I read about [AutoMapper](https://www.codeplex.com/AutoMapper). It works really nicely; with convention over configuration, you can bang out the entity => data transfer code in no time, the conversions are less error prone, the tests stay in sync and you're left to concentrate on more important things.
 
 Anyway, I immediately realised that I've used the same pattern in testing - with property initializers & test data 
 builders. I've [posted before]({% post_url 2009-04-10-the-test-data-builder-pattern-with-c-30 %}) about Test Data Builders and I'd recommend you read that post first.

@@ -15,7 +15,7 @@ I wanted to move my BF3 install to my SSD but couldn’t figure out how to do it
 
 From the EA forums:
 
-[http://forum.ea.com/eaforum/posts/list/7461348.page#17730650](http://forum.ea.com/eaforum/posts/list/7461348.page#17730650 "http://forum.ea.com/eaforum/posts/list/7461348.page#17730650")
+[https://forum.ea.com/eaforum/posts/list/7461348.page#17730650](https://forum.ea.com/eaforum/posts/list/7461348.page#17730650 "https://forum.ea.com/eaforum/posts/list/7461348.page#17730650")
 
 From SicklySquid:
 

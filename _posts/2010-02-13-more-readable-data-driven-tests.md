@@ -16,7 +16,7 @@ When the logic of a test method remains constant but the data varies, data-drive
 
 ### A simple example
 
-Let's take an example; testing Rob Conery's [PagedList implementation](http://blog.wekeroad.com/2007/12/10/aspnet-mvc-pagedlistt/). A page is basically a slice of the data returned by a linq query. If more data exists beyond the 'slice' represented by the PagedList<T> instance, its "HasNextPage" property should return true to indicate that it is available. Now, suppose we want to test whether a particular page has a next available page. Three things spring to mind that can influence the result: The page size, the current page index and the number of items in the list.
+Let's take an example; testing Rob Conery's [PagedList implementation](https://blog.wekeroad.com/2007/12/10/aspnet-mvc-pagedlistt/). A page is basically a slice of the data returned by a linq query. If more data exists beyond the 'slice' represented by the PagedList<T> instance, its "HasNextPage" property should return true to indicate that it is available. Now, suppose we want to test whether a particular page has a next available page. Three things spring to mind that can influence the result: The page size, the current page index and the number of items in the list.
 
 Here's a quick data-driven test for HasNextPage:
 

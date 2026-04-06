@@ -46,17 +46,17 @@ In the end, I decided to buy another WMO. They’ve long since been discontinued
 
 Personally, I bought some refurbished ones, plus a new one that was still in its (rather worn) box – it’d been sat on a shelf for 10 years, ha! I’d recommend going this route – there’s plenty of obscure product numbers & sites listing good/bad sensors, so you can do a bit of googling based on the seller’s pictures. It’s not an exact science, but the mice tend to be so cheap that it doesn’t matter if you buy a dud or two. My total outlay was about £25 for 3 mice. The two I’ve tested have the same product number of X802382. Both work fine.
 
-Finally, [modded WMOs](http://www.ebay.com/itm/Microsoft-Wheel-Mouse-Optical-WMO-Steelseries-MOD-100-NEW-5-Colors-/121179666270?pt=LH_DefaultDomain_0&var=&hash=item61d44f5bbb&rmvSB=true) from a specific seller on ebay are available, and the seller has a good reputation, so he’s perhaps worth a look.
+Finally, [modded WMOs](https://www.ebay.com/itm/Microsoft-Wheel-Mouse-Optical-WMO-Steelseries-MOD-100-NEW-5-Colors-/121179666270?pt=LH_DefaultDomain_0&var=&hash=item61d44f5bbb&rmvSB=true) from a specific seller on ebay are available, and the seller has a good reputation, so he’s perhaps worth a look.
 
 ## Overclocking – harder than it used to be
 
 I briefly touched on this in my previous post from 2011: if you don’t overclock the polling rate, the mouse performs worse. Depending on your sensitivity settings, this can be a deal-breaker and render it unusable.
 
-The tl;dr here is that the WMO (and its stablemates) offers “perfect control” to a speed up to 1m/s, but exhibits negative acceleration beyond this speed _[unless you overclock the mouse polling rate](http://www.overclock.net/t/1597441/digitally-signed-sweetlow-1000hz-mouse-driver)_. I won’t warble on about the nuts and bolts of this too much, as there’s a great [esreality article](http://www.esreality.com/?a=longpost&id=1265679&page=4) about it that explains it better than I can.
+The tl;dr here is that the WMO (and its stablemates) offers “perfect control” to a speed up to 1m/s, but exhibits negative acceleration beyond this speed _[unless you overclock the mouse polling rate](https://www.overclock.net/t/1597441/digitally-signed-sweetlow-1000hz-mouse-driver)_. I won’t warble on about the nuts and bolts of this too much, as there’s a great [esreality article](https://www.esreality.com/?a=longpost&id=1265679&page=4) about it that explains it better than I can.
 
 What I will say is that, if you’re a high sensitivity gamer and don’t fling the mouse around a lot, this may not be a significant issue. However, I play Overwatch with an eDPI of 3.1k (450 CPI * 7 sensitivity) which equates to roughly 43 cm for a 360. This is on the lower sensitivity side of things for OW. Hitting a 180 means travelling ~20cm across the pad. Unfortunately, I _easily_ hit the negative acceleration threshold @ 125hz, and my 180 degree turn looks more like a 100 degree bout of confusion.
 
-I’d had overclocking working with Windows 10 x64 previously using an unsigned driver in test mode, but for whatever reason, I just couldn’t get it to hit better than 125hz using [Sweetlow’s new signed driver](http://www.overclock.net/t/1597441/digitally-signed-sweetlow-1000hz-mouse-driver). It would downclock OK (so I could run it at 30hz), so I just assumed I’d got a dud mouse since it wouldn’t go past the default settings. This was not the case.
+I’d had overclocking working with Windows 10 x64 previously using an unsigned driver in test mode, but for whatever reason, I just couldn’t get it to hit better than 125hz using [Sweetlow’s new signed driver](https://www.overclock.net/t/1597441/digitally-signed-sweetlow-1000hz-mouse-driver). It would downclock OK (so I could run it at 30hz), so I just assumed I’d got a dud mouse since it wouldn’t go past the default settings. This was not the case.
 
 ## The state of play with the community-created driver
 
@@ -87,8 +87,8 @@ I’ve also heard rumblings about some games viewing this as dodgy (from an anti
   * %systemroot%\system32\drivers\usbport.sys  
   * %systemroot%\system32\drivers\usbxhci.sys
 * Create an account on overclock.net
-* Download the [signed driver](http://www.overclock.net/t/1597441/digitally-signed-sweetlow-1000hz-mouse-driver) and unzip it somewhere
-* Download the updated (non-signed) hidusbf.sys file from [this post](http://www.overclock.net/t/1597441/digitally-signed-sweetlow-1000hz-mouse-driver/480#post_25977633)
+* Download the [signed driver](https://www.overclock.net/t/1597441/digitally-signed-sweetlow-1000hz-mouse-driver) and unzip it somewhere
+* Download the updated (non-signed) hidusbf.sys file from [this post](https://www.overclock.net/t/1597441/digitally-signed-sweetlow-1000hz-mouse-driver/480#post_25977633)
 * Replace the hidusbf.sys in the signed driver directory (DRIVER/AMD64/hidusbf.sys) with the one you just grabbed
 * Open a cmd prompt with admin privileges and type the following commands 
   * `bcdedit -set loadoptions DISABLE_INTEGRITY_CHECKS`
@@ -101,7 +101,7 @@ I’ve also heard rumblings about some games viewing this as dodgy (from an anti
 * Set the polling rate to 1000hz or whatever you want
 * Click “install service”
 * Click “restart” (the button in the setup.exe, not restart your PC!)
-* [Check your mouserate](http://zowie.benq.com/en/support/mouse-rate-checker.html) – it should be north of 125hz
+* [Check your mouserate](https://zowie.benq.com/en/support/mouse-rate-checker.html) – it should be north of 125hz
 
 Thanks to sweetlow and co for this bit of magic.
 
@@ -121,7 +121,7 @@ You don’t need to strip the entire cable, just a section of it close to the mo
 
 I played with the WMO for a week or so; the negative acceleration coupled with my low sensitivity renders it unsuitable. I decided to try something new.
 
-So what to do?. [Rocketjumpninja's website](http://www.rocketjumpninja.com/top-40/) has some great mouse review articles & youtube links, including detailed size comparisons / side-by-side videos of various popular mice.
+So what to do?. [Rocketjumpninja's website](https://www.rocketjumpninja.com/top-40/) has some great mouse review articles & youtube links, including detailed size comparisons / side-by-side videos of various popular mice.
 
 Given that my hands are fairly long (22cm or so) and I palm grip when gaming, I thought the Zowie EC1-A or the Razer DeathAdder would be good. However,&nbsp;I tried the Zowie EC1-A and it didn't suit me. It was a good match for me length-wise and was comfortable to rest my hand on, but it's too wide for me to pick up without changing the way I grip it.
 

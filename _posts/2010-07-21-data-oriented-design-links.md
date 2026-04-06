@@ -14,7 +14,7 @@ I've been doing a little reading around data oriented design of late and thought
 
 **Prelude: Battling Dogma**
 
-All too often, games programmers butt up against dogmatic catch-all declarations of "virtual functions are slow!" For the general case, [this can be proved as a nonsense](http://assemblyrequired.crashworks.org/2009/01/19/how-slow-are-virtual-functions-really/) as virtual function calls are blatantly not slow! They're very, very fast. However, if someone said instead, "virtual functions are slow when iterating over large collections of heterogeneous types because of cache misses" then that's another matter, entirely. Unfortunately, we all too often hear the former declaration rather than the latter. It's neither compelling (as we can prove it is incorrect in the general case) nor edifying. Most programmers like to learn things, so it's nice to read some illuminating articles about a touchy subject.
+All too often, games programmers butt up against dogmatic catch-all declarations of "virtual functions are slow!" For the general case, [this can be proved as a nonsense](https://assemblyrequired.crashworks.org/2009/01/19/how-slow-are-virtual-functions-really/) as virtual function calls are blatantly not slow! They're very, very fast. However, if someone said instead, "virtual functions are slow when iterating over large collections of heterogeneous types because of cache misses" then that's another matter, entirely. Unfortunately, we all too often hear the former declaration rather than the latter. It's neither compelling (as we can prove it is incorrect in the general case) nor edifying. Most programmers like to learn things, so it's nice to read some illuminating articles about a touchy subject.
 
 **The gist of it**
 
@@ -24,16 +24,16 @@ The main benefit is reducing cache misses, but a nice side effect is the increas
 
 **Links**
 
-- [Games from Within Article](http://gamesfromwithin.com/data-oriented-design) - A high level article; Noel works through some disadvantages of object oriented design and then cites some examples where data oriented design can be employed to speed things up.
+- [Games from Within Article](https://gamesfromwithin.com/data-oriented-design) - A high level article; Noel works through some disadvantages of object oriented design and then cites some examples where data oriented design can be employed to speed things up.
 
-- [Pitfalls of Object Oriented Programming](http://research.scee.net/files/presentations/gcapaustralia09/Pitfalls_of_Object_Oriented_Programming_GCAP_09.pdf) - Tony Albrecht of Sony has some very interesting diagrams, slides, timings and statistics that lay out the costs of cache misses and branch prediction failures with very specific examples, then optimises via various means.
+- [Pitfalls of Object Oriented Programming](https://research.scee.net/files/presentations/gcapaustralia09/Pitfalls_of_Object_Oriented_Programming_GCAP_09.pdf) - Tony Albrecht of Sony has some very interesting diagrams, slides, timings and statistics that lay out the costs of cache misses and branch prediction failures with very specific examples, then optimises via various means.
 
-- [Practical Examples in Data Oriented Design](http://bitsquid.blogspot.com/2010/05/practical-examples-in-data-oriented.html) - Bitsquid engine programmers dish out some examples of designing with data access in mind. Higher level that the Sony presentation, but also very useful.
+- [Practical Examples in Data Oriented Design](https://bitsquid.blogspot.com/2010/05/practical-examples-in-data-oriented.html) - Bitsquid engine programmers dish out some examples of designing with data access in mind. Higher level that the Sony presentation, but also very useful.
 
-- [GameDev discussion thread](http://www.gamedev.net/community/forums/topic.asp?topic_id=575076) - Generally useful discussion thread. Has some code examples, too.
+- [GameDev discussion thread](https://www.gamedev.net/community/forums/topic.asp?topic_id=575076) - Generally useful discussion thread. Has some code examples, too.
 
-- [Typical C++ Bullshit](http://macton.smugmug.com/gallery/8936708_T6zQX/1/593426709_ZX4pZ#593426709_ZX4pZ) - Code annotated by cranky post-it notes. Not exactly an illuminating discussion or an article as such, but worth including for completeness.
+- [Typical C++ Bullshit](https://macton.smugmug.com/gallery/8936708_T6zQX/1/593426709_ZX4pZ#593426709_ZX4pZ) - Code annotated by cranky post-it notes. Not exactly an illuminating discussion or an article as such, but worth including for completeness.
 
 **Related**
 
-- [Game Entity Systems](http://t-machine.org/index.php/2007/09/03/entity-systems-are-the-future-of-mmog-development-part-1/) ****- The T=Machine blog has a series of posts on designing game entity systems. One part of the series deals with processing homogeneous data and why this makes it fast / more easily parallelisable.
+- [Game Entity Systems](https://t-machine.org/index.php/2007/09/03/entity-systems-are-the-future-of-mmog-development-part-1/) ****- The T=Machine blog has a series of posts on designing game entity systems. One part of the series deals with processing homogeneous data and why this makes it fast / more easily parallelisable.

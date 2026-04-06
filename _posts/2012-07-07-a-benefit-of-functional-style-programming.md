@@ -18,7 +18,7 @@ Ever since LINQ arrived in C# land, a lot of people have been using a functional
 
 I always chuckle when I read the words "functional style", because I picture grim marches across a barren landscape, brutalist architecture and people with beards. 
 
-One particular facet of programming in a functional style is where, rather than mutating an existing piece of data, input data is transformed / projected into something new via a [pure function](http://en.wikipedia.org/wiki/Pure_function). Since this style of programming limits the number of side-effects, it makes debugging a comparatively wonderful experience. 
+One particular facet of programming in a functional style is where, rather than mutating an existing piece of data, input data is transformed / projected into something new via a [pure function](https://en.wikipedia.org/wiki/Pure_function). Since this style of programming limits the number of side-effects, it makes debugging a comparatively wonderful experience. 
 
 ## The status quo
 

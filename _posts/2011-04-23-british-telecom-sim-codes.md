@@ -19,7 +19,7 @@ If you’re with a broadband provider other than BT, ask for the SIM code when y
 
 British Telecom have a habit of making things unusually difficult for their ‘cheap’ customers. Not only do they try and foist every single one of their sodding services on you when you only wish to make an enquiry, but they’re (deliberately or otherwise) quite adept at being very inconveniencing when it suits them.
 
-If you don’t have broadband with them and you’re moving home, you may need a **SIM code** (simultaneous provide code) to transfer your broadband smoothly. Failure to obtain this code means you can’t kick off the broadband transfer in parallel, meaning a much longer time period of downtime. After arranging my phone line transfer, I phoned up [BeUnlimited](http://bethere.co.uk) (an ISP I can thoroughly recommend) and was informed that I need a SIM code to move the broadband quickly.
+If you don’t have broadband with them and you’re moving home, you may need a **SIM code** (simultaneous provide code) to transfer your broadband smoothly. Failure to obtain this code means you can’t kick off the broadband transfer in parallel, meaning a much longer time period of downtime. After arranging my phone line transfer, I phoned up [BeUnlimited](https://bethere.co.uk) (an ISP I can thoroughly recommend) and was informed that I need a SIM code to move the broadband quickly.
 
 I then entered the catacombs that is BT’s cavernous automated phone system. After much swearing and several dead-ends (note: companies should **NEVER** tell me to hang up when I reach a dead-end – there should always be a ‘to speak to a human being, press 1’ option), I managed to get through to someone.
 

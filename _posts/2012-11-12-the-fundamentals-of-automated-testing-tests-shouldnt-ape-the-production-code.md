@@ -85,5 +85,5 @@ It’s a good question and the truth is, it’s often the case that it’s not c
 * Write out some notes on paper (I sometimes do the testing version of truth tables). 
 * Maybe you have a specification for this particular part. Use it to check the answer (stop laughing at the back, there! – it occasionally does happen; e.g. conventions for a maths library). 
 * Use an alternative method to come up with the same answer (it’s often the case that the same value can be calculated via multiple algorithms / schemes). 
-* Use an existing implementation to corroborate your findings. E.g. if you’re writing a test to make sure that JSON is validated correctly, then check that [JSONLint.com](http://jsonlint.com/) agrees with your test results. 
+* Use an existing implementation to corroborate your findings. E.g. if you’re writing a test to make sure that JSON is validated correctly, then check that [JSONLint.com](https://jsonlint.com/) agrees with your test results. 
 * If you’re not sure how to corroborate an exact answer, then check any invariants you’re aware of as a smoke test. If any of the invariants don’t hold, your answer is probably wrong.

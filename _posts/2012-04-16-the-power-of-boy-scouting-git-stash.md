@@ -13,7 +13,7 @@ tags:
   - git
   - git-stash
 ---
-No, I’m not advocating beavering your way to several badges while wearing ill-fitting shorts, a neckerchief fastened with a woggle and risking a criminal record. I’m talking about [The Boy Scout Rule](http://programmer.97things.oreilly.com/wiki/index.php/The_Boy_Scout_Rule). 
+No, I’m not advocating beavering your way to several badges while wearing ill-fitting shorts, a neckerchief fastened with a woggle and risking a criminal record. I’m talking about [The Boy Scout Rule](https://programmer.97things.oreilly.com/wiki/index.php/The_Boy_Scout_Rule). 
 
 The gist of it:
 
@@ -25,7 +25,7 @@ What if we followed a similar rule in our code: **"Always check a module in clea
 
 As a programmer, sometimes it’s doing the little things that makes everybody’s collective life a little bit easier. There’s a lot written about the practical benefits of doing this (namely: the ability to continually deliver without having to scrabble around in a dung-heap, weeping with shame) but, for my money, the most important thing is that it makes writing code more enjoyable on a day to day basis. 
 
-I always get irritated and furrow my brow when I find code that has been allowed to drift. When you think of the amount of times you run into a bewildering part of a codebase and spend 10 minutes scratching your head because something has a misleading name or there’s some dead code confusing the issue, why not just fix it up? Fine, you’ll probably have to spend a 5 to 10 minutes making the change (less with lovely refactoring tools like [ReSharper](http://www.jetbrains.com/resharper/)), but code is write once, read many. Code hardens like cement, so there’s no time like the present.
+I always get irritated and furrow my brow when I find code that has been allowed to drift. When you think of the amount of times you run into a bewildering part of a codebase and spend 10 minutes scratching your head because something has a misleading name or there’s some dead code confusing the issue, why not just fix it up? Fine, you’ll probably have to spend a 5 to 10 minutes making the change (less with lovely refactoring tools like [ReSharper](https://www.jetbrains.com/resharper/)), but code is write once, read many. Code hardens like cement, so there’s no time like the present.
 
 The mechanical process of Typing Shit and Testing your Changes usually takes little to no time at all. If you save a few people the same 10 minutes of teeth-gnashing frustration, then you have made a positive change. 
 
@@ -39,7 +39,7 @@ Nowadays, I’m trying to Just Do It. It’s 2012 folks. The tooling exists to m
 
 ### Perforce
 
-I’ve used perforce extensively. Perforce [introduced shelving](http://www.perforce.com/perforce/doc.current/manuals/cmdref/shelve.html) a while back. In short, shelving allows you to store your WIP changelist on the P4 server without it being a bona-fida commit. You can use this for storing WIP changelists and reverting them locally. This allows you to jump onto something else without committing changes beforehand. Handy. 
+I’ve used perforce extensively. Perforce [introduced shelving](https://www.perforce.com/perforce/doc.current/manuals/cmdref/shelve.html) a while back. In short, shelving allows you to store your WIP changelist on the P4 server without it being a bona-fida commit. You can use this for storing WIP changelists and reverting them locally. This allows you to jump onto something else without committing changes beforehand. Handy. 
 
 Even more handy is that anyone can un-shelve your shelved changelists. 
 
@@ -49,7 +49,7 @@ Git is a really cool bit of kit. Caveat Emptor: I’m not sure if it’ll shit t
 
 With Git, if you create a local feature branch for every single thing you work on, you’re pretty much 90% of the way there. 
 
-If you don’t want want to commit your work in progress changes before starting work on the distraction, you can simply use [Git Stash](http://book.git-scm.com/4_stashing.html) instead. Git stash pushes your work in progress changes onto a local stack for safe-keeping. Once the stash command has been issued, you’re back to a clean state and ready to work on something else. At any point in the future, you can resume where you left off by typing git stash pop.
+If you don’t want want to commit your work in progress changes before starting work on the distraction, you can simply use [Git Stash](https://book.git-scm.com/4_stashing.html) instead. Git stash pushes your work in progress changes onto a local stack for safe-keeping. Once the stash command has been issued, you’re back to a clean state and ready to work on something else. At any point in the future, you can resume where you left off by typing git stash pop.
 
 This makes it incredibly simple to hop around and fix up whatever the hell is annoying you at any given moment without polluting a changeset with unrelated fixes. 
 

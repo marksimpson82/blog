@@ -35,8 +35,8 @@ Like MusicCast, it works for certain use-cases but it doesn't really suit my nee
 ## Option: Run a cable from the PC sound card to the stereo
 No. I've got enough cables around the place, thanks.
 
-## Solution: [TuneBlade](http://www.tuneblade.com/)
-I honestly feel like a bit of a dope, as [TuneBlade](http://www.tuneblade.com/) has been around for a while and is an AirPlay-compatible implementation for Windows that can stream to receivers. A license is a mere £8 -- great value!
+## Solution: [TuneBlade](https://www.tuneblade.com/)
+I honestly feel like a bit of a dope, as [TuneBlade](https://www.tuneblade.com/) has been around for a while and is an AirPlay-compatible implementation for Windows that can stream to receivers. A license is a mere £8 -- great value!
 
 Steps:
 1. Install TuneBlade

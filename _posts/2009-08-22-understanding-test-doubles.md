@@ -11,7 +11,7 @@ tags:
   - testing
   - tips
 ---
-There is a bewildering array of types of 'mock' object available to a tester. The canonical list of test doubles was probably coined by the venerable Martin Fowler in his article ["Mocks Aren't Stubs"](http://martinfowler.com/articles/mocksArentStubs.html) and, to me, this list is fairly complete and makes sense. The reason it makes sense is that I've manually written classes that perform these roles.
+There is a bewildering array of types of 'mock' object available to a tester. The canonical list of test doubles was probably coined by the venerable Martin Fowler in his article ["Mocks Aren't Stubs"](https://martinfowler.com/articles/mocksArentStubs.html) and, to me, this list is fairly complete and makes sense. The reason it makes sense is that I've manually written classes that perform these roles.
 
   * I needed to fill out a parameter list with non-null objects, so I created a dumb class with absolutely no implementation.
   * I wanted to listen in on additions to a list, so I wrote a class that stored the objects, acting as a spy.
@@ -25,7 +25,7 @@ For this reason, I personally advocate keeping new testers away from mocking fra
 
 ### Information Overload
 
-Even when no additional frameworks are involved (i.e. when using vanilla xUnit), writing good unit tests involves a steep learning curve. It's easy to take a wrong turn and the quality of the tests written will improve only with experience/guidance. I was not surprised when I read [Roy Osherove's blog](http://weblogs.asp.net/rosherove/archive/2008/09/20/goodbye-mocks-farewell-stubs.aspx) and discovered that the majority of organisations' attempts to embrace unit testing resulted in failure.
+Even when no additional frameworks are involved (i.e. when using vanilla xUnit), writing good unit tests involves a steep learning curve. It's easy to take a wrong turn and the quality of the tests written will improve only with experience/guidance. I was not surprised when I read [Roy Osherove's blog](https://weblogs.asp.net/rosherove/archive/2008/09/20/goodbye-mocks-farewell-stubs.aspx) and discovered that the majority of organisations' attempts to embrace unit testing resulted in failure.
 
 Mocking frameworks like Rhino Mocks are absolutely excellent tools, but it's yet another thing to learn. Suddenly the type of object (mock, strict mock, stub etc.) affects the result of the test. It took me a week to get my head around it, so it doesn't surprise me when I see newcomers totally abusing these frameworks. Not only does this create a maintenance nightmare, but it sours their first taste of testing.
 
@@ -40,7 +40,7 @@ Warning bells should also start ringing when you return a mock and assert that i
 ### One step at a time
 1. Learn to sit up before you crawl. Write simple xUnit tests that involve state-based testing. It doesn't have to be great, isolated code. Even writing tests that involve scores of classes is a good way to start. Finer granularity is something that comes with experience.
 2. Crawl before you walk. Start to experiment and find better ways of testing pieces of functionality. Ask yourself whether the test is useful, maintainable etc. Will other parts of the system break it if they change? Can you make the components and tests themselves finer grained? This stage should be about developing your sense of what constitutes a good test.
-3. Walk before you run. Begin to experiment with different types of test doubles, but **hand roll them**. Yes, it's painful at times, but it will give you a better understanding of roles in tests and the different types of test doubles, even if you don't have names for them yet. Furthermore, constantly having to update your hand rolled stubs when disparate parts of your class changes will also give you an appreciation for the [interface segregation principle](http://www.globalnerdy.com/wordpress/wp-content/uploads/2009/07/interface_segregation_principle.jpg).
+3. Walk before you run. Begin to experiment with different types of test doubles, but **hand roll them**. Yes, it's painful at times, but it will give you a better understanding of roles in tests and the different types of test doubles, even if you don't have names for them yet. Furthermore, constantly having to update your hand rolled stubs when disparate parts of your class changes will also give you an appreciation for the [interface segregation principle](https://www.globalnerdy.com/wordpress/wp-content/uploads/2009/07/interface_segregation_principle.jpg).
 4. Finally, install a mocking framework and start sprinting.
 
 If you do sprint head-first into a wall, you will be better equipped to understand where you went wrong, as you understand the fundamentals. You will also have a better grasp of the terminology, as it will be grounded in real, tangible code you've written.

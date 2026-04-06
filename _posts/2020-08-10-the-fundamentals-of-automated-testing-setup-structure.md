@@ -93,7 +93,7 @@ There's multiple things I don't like about this.
 
 ### Problem: the code jumps around a lot. 
 Because framework methods are 'automagic' (they're similar to
-[Template Methods](http://wiki.c2.com/?TemplateMethodPattern), but are often called via reflection), the code no longer 
+[Template Methods](https://wiki.c2.com/?TemplateMethodPattern), but are often called via reflection), the code no longer 
 reads in a straight line -- it jumps around. 
 
 Where do you naturally begin reading the code? 
@@ -162,8 +162,8 @@ Tests are consumers of your API, and if you're having to perform awkward state m
 
 ### Solutions
 1. [Use Factories]({% post_url 2012-11-11-the-fundamentals-of-automated-testing-use-factories %})
-1. [Object Mother](http://wiki.c2.com/?ObjectMother) (read the caveats, though)
-1. [Test Data Builders](http://www.natpryce.com/articles/000714.html)
+1. [Object Mother](https://wiki.c2.com/?ObjectMother) (read the caveats, though)
+1. [Test Data Builders](https://www.natpryce.com/articles/000714.html)
 
 Each of these alternatives is relatively simple, can be called directly by a test method and offers some level of 
 configurability. Factory methods are the easiest to get going with. 

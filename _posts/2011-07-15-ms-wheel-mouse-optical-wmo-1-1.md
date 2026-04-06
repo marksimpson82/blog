@@ -60,7 +60,7 @@ Before I delve into specifics, here’s some guidelines for purchasing a new gam
 
 ### Laser Mice Suck
 
-Firstly, steer well clear of Laser Mice - their tracking sucks. They're expensive. Even people who are endorsed by these brands [don’t use these mice](http://news.fatal1ty.com/fatal1ty-blog/fatal1ty-frags-blog-3rd-frag-mouse-sensitivity/) – laser has not yet caught up with the best optical has to offer, so don’t be fooled by the notion that newer is better.
+Firstly, steer well clear of Laser Mice - their tracking sucks. They're expensive. Even people who are endorsed by these brands [don’t use these mice](https://news.fatal1ty.com/fatal1ty-blog/fatal1ty-frags-blog-3rd-frag-mouse-sensitivity/) – laser has not yet caught up with the best optical has to offer, so don’t be fooled by the notion that newer is better.
 
 ### DPI is overrated
 
@@ -68,7 +68,7 @@ All of this DPI nonsense seems to have little to do with mouse performance and t
 
 Older mice with lower DPI can potentially track better than newer laser mice with 5600000000000 bajillion DPI. In short, it’s largely a marketing gimmick.
 
-Most of the professional quake players [use 400 or 800 DPI](http://www.esreality.com/index.php?a=post&id=2009534) coupled with a low sensitivity, so why would you ever need a 5600 DPI mouse? Answers on a postcard.
+Most of the professional quake players [use 400 or 800 DPI](https://www.esreality.com/index.php?a=post&id=2009534) coupled with a low sensitivity, so why would you ever need a 5600 DPI mouse? Answers on a postcard.
 
 ### Mouse Drivers Aren’t Always Needed
 
@@ -76,7 +76,7 @@ If your mouse is perfectly serviceable without installing drivers, try the mouse
 
 ### Kill Windows Mouse Acceleration
 
-Like [Poison Sockets](http://www.youtube.com/watch?v=D2gqThOfHu4), Windows Mouse Acceleration is a hazard to your health. It’s terrible. [Switch it off](http://www.techpowerup.com/downloads/763/CPL_Mouse_Fix.html) using the [CPL mouse fix](http://www.techpowerup.com/downloads/763/CPL_Mouse_Fix.html). This version works with Windows 7 64 bit – I can’t guarantee anything else, but there’s another version that works with XP floating around.
+Like [Poison Sockets](https://www.youtube.com/watch?v=D2gqThOfHu4), Windows Mouse Acceleration is a hazard to your health. It’s terrible. [Switch it off](https://www.techpowerup.com/downloads/763/CPL_Mouse_Fix.html) using the [CPL mouse fix](https://www.techpowerup.com/downloads/763/CPL_Mouse_Fix.html). This version works with Windows 7 64 bit – I can’t guarantee anything else, but there’s another version that works with XP floating around.
 
 Mouse acceleration means that physical distance you move the mouse isn’t the sole factor for your aiming. If you use it, it should be a conscious decision, not something foisted upon you by windows in a ham-fisted fashion.
 
@@ -84,7 +84,7 @@ If you insist on using mouse acceleration, either use the driver settings for yo
 
 ### Negative Acceleration
 
-[Even with today’s space-age technology and fretful nerdery, mouse tracking is not yet perfect.](http://www.esreality.com/index.php?a=longpost&id=1265679&page=4)
+[Even with today’s space-age technology and fretful nerdery, mouse tracking is not yet perfect.](https://www.esreality.com/index.php?a=longpost&id=1265679&page=4)
 
 Most optical gaming mice on the market today can handle extreme speeds without losing their minds (as in, it’s almost humanly impossible to totally totally baffle the sensor while furiously turning around). However, if you play with a low sensitivity and use a large mouse mat (I’m talking at least > 20cm of mouse movement to turn 360 degrees) there is the possibility of suffering from negative acceleration.
 
@@ -92,24 +92,24 @@ Negative acceleration occurs when the sensor continues to recognise input, but c
 
 The optimum mouse setting is one where physically moving the mouse the same distance maps to the same logical game input. Negative acceleration erodes this consistency.
 
-[The ESRreality MouseScore](http://www.esreality.com/index.php?a=longpost&id=1265679&page=4) offers the clearest explanation.
+[The ESRreality MouseScore](https://www.esreality.com/index.php?a=longpost&id=1265679&page=4) offers the clearest explanation.
 
-It should be noted that, but for all the worst offenders, this is only a concern for low sensitivity gamers, and certain mice have workarounds available ([such as increasing the USB polling rate](http://www.overclock.net/mice/596276-changing-usb-polling-rate-1000hz-lower.html) via Windows).
+It should be noted that, but for all the worst offenders, this is only a concern for low sensitivity gamers, and certain mice have workarounds available ([such as increasing the USB polling rate](https://www.overclock.net/mice/596276-changing-usb-polling-rate-1000hz-lower.html) via Windows).
 
 ## The Contenders
 
-After researching the pitfalls, I did a cursory bit of [reading around](http://www.esreality.com/index.php?a=post&id=1836580) and discovered that roughly half of the best competitive Quake Live players use (or used) one of the following (crappy-looking) mice:
+After researching the pitfalls, I did a cursory bit of [reading around](https://www.esreality.com/index.php?a=post&id=1836580) and discovered that roughly half of the best competitive Quake Live players use (or used) one of the following (crappy-looking) mice:
 
 <li style="list-style-type: none">
   <ul>
     <li>
-      <a href="http://www.microsoft.com/uk/hardware/mouseandkeyboard/productdetails.aspx?pid=008">Microsoft Wheel Mouse Optical</a> (commonly abbreviated to <strong>WMO</strong> or <strong>WMO 1.1</strong>),
+      <a href="https://www.microsoft.com/uk/hardware/mouseandkeyboard/productdetails.aspx?pid=008">Microsoft Wheel Mouse Optical</a> (commonly abbreviated to <strong>WMO</strong> or <strong>WMO 1.1</strong>),
     </li>
     <li>
-      <a href="http://www.microsoft.com/uk/hardware/oempartners/ProductDetails.aspx?pid=018">IntelliMouse Optical</a> (<strong>IMO</strong>)
+      <a href="https://www.microsoft.com/uk/hardware/oempartners/ProductDetails.aspx?pid=018">IntelliMouse Optical</a> (<strong>IMO</strong>)
     </li>
     <li>
-      <a href="http://www.microsoft.com/hardware/en-us/p/intellimouse-explorer-3.0">IntelliMouse Explorer 3.0</a> (<strong>IME 3.0</strong>).
+      <a href="https://www.microsoft.com/hardware/en-us/p/intellimouse-explorer-3.0">IntelliMouse Explorer 3.0</a> (<strong>IME 3.0</strong>).
     </li>
   </ul>
 </li>
@@ -128,7 +128,7 @@ Anyway, I chose...
 
 ## The Wheel Mouse Optical 1.1
 
-After drinking in the details posted in various nerd forums, I plumped for the WMO 1.1 at [£14.99 from Maplins](http://www.maplin.co.uk/microsoft-wheel-mouse-optical-33021) (product code: D66-00074) ordered via Amazon.
+After drinking in the details posted in various nerd forums, I plumped for the WMO 1.1 at [£14.99 from Maplins](https://www.maplin.co.uk/microsoft-wheel-mouse-optical-33021) (product code: D66-00074) ordered via Amazon.
 
 As far as I can tell, there’s no problem with stock or versions. If you get one that was manufactured in the last 90 years, it ought to be a version with the sensor that’s good for gaming.
 
@@ -138,7 +138,7 @@ As far as I can tell, there’s no problem with stock or versions. If you get on
 
 My first port of call was to uninstall my old logitech setpoint mouse drivers. I then plugged in the new mouse and cancelled the intellipoint driver installation process. There’s no need to install drivers for this mouse, so it’s one less thing to worry about.
 
-Next, I installed [the CPL mouse fix](http://www.techpowerup.com/downloads/763/CPL_Mouse_Fix.html) to remove windows mouse acceleration.
+Next, I installed [the CPL mouse fix](https://www.techpowerup.com/downloads/763/CPL_Mouse_Fix.html) to remove windows mouse acceleration.
 
 Finally, to minimise the chances of encountering negative acceleration, I overclocked my USB polling rate to 500hz. This was quite fiddly to do, but beyond a few reboots and Avira complaining about phantom viruses, it wasn’t a big deal.
 
@@ -150,13 +150,13 @@ A quick test showed everything was in order.
 
 As an avid PC headbanger, I’ve always favoured large desks. In fact, I don’t understand why many PC owners fret over mice and monitors but often overlook the cornerstone of the PC experience: The desk and the chair.
 
-I’m using a [Influx Curva 1200 Right-Handed Wave Desk](http://www.ukofficedirect.co.uk/influx-curva-1200-desk-wave-prd_154850.aspx) coupled with a [Steelseries QcK+](http://shop.steelseries.com/index.php/surfaces/steelseries-qck-plus.html) mouse pad. Both are fantastic products. The Curva is solidly constructed, is a perfect height and affords me plenty of room.
+I’m using a [Influx Curva 1200 Right-Handed Wave Desk](https://www.ukofficedirect.co.uk/influx-curva-1200-desk-wave-prd_154850.aspx) coupled with a [Steelseries QcK+](https://shop.steelseries.com/index.php/surfaces/steelseries-qck-plus.html) mouse pad. Both are fantastic products. The Curva is solidly constructed, is a perfect height and affords me plenty of room.
 
 I’ve got a 24” + 20” monitor dual screen setup, and there’s still room for a 45cm mouse mat and a few other bits and pieces. At £150 it’s not a budget buy, but given how much I use my PC, I think it’s well worth it.
 
 [<img style="background-image: none; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; padding-top: 0px; border: 0px;" title="image" src="https://defragdev.com/blog/images/2011/07/image_thumb2.png" alt="image" width="244" height="244" border="0" />](https://defragdev.com/blog/images/2011/07/image2.png) + [<img style="background-image: none; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; padding-top: 0px; border: 0px;" title="image" src="https://defragdev.com/blog/images/2011/07/image_thumb3.png" alt="image" width="244" height="244" border="0" />](https://defragdev.com/blog/images/2011/07/image3.png)
 
-Regarding the size of the mousepad: I used to think anything over 30 cm was overkill, but having a 45 cm pad makes a large difference. It covers such a large part of my desk that I no longer have to worry about positioning the pad – it’s _everywhere_, so I can get comfy. A decade ago, my TFC clanmates used to constantly mock me for [my OCD style mouse mat positioning](http://defrag.urbanup.com/87179). The words still ring in my ears. I cried sometimes, but no longer.
+Regarding the size of the mousepad: I used to think anything over 30 cm was overkill, but having a 45 cm pad makes a large difference. It covers such a large part of my desk that I no longer have to worry about positioning the pad – it’s _everywhere_, so I can get comfy. A decade ago, my TFC clanmates used to constantly mock me for [my OCD style mouse mat positioning](https://defrag.urbanup.com/87179). The words still ring in my ears. I cried sometimes, but no longer.
 
 Compared to the standard size QcK, it also affords me the luxury of using a lower mouse sensitivity.
 
@@ -186,4 +186,4 @@ Yes, I am a nerd.
 
 ## Additional References
 
-[Fragtality’s epic gaming mice guide](http://forums.majorleaguegaming.com/topic/165005-fragtalitys-epic-gaming-mice-guide-for-pc-shooting-games/)
+[Fragtality’s epic gaming mice guide](https://forums.majorleaguegaming.com/topic/165005-fragtalitys-epic-gaming-mice-guide-for-pc-shooting-games/)

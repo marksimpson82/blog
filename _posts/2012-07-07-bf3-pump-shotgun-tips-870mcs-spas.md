@@ -16,13 +16,13 @@ Firstly, just so you can see that I can actually use shotguns to a vaguely compe
 
 {% include video id="oe7vgDS0yzY" provider="youtube" %}
 
-Firstly, if you’re a shotgun user in BF3, ditch the auto shotguns. They’ve only got enough punch to kill a couple of people with one clip. Grab yourself an [870MCS](http://battlefield.wikia.com/wiki/870MCS) or the [SPAS 12](http://battlefield.wikia.com/wiki/SPAS-12). Both of these shotguns are one shot, one kill and have plenty of potential for decimating entire squads with a single clip.
+Firstly, if you’re a shotgun user in BF3, ditch the auto shotguns. They’ve only got enough punch to kill a couple of people with one clip. Grab yourself an [870MCS](https://battlefield.wikia.com/wiki/870MCS) or the [SPAS 12](https://battlefield.wikia.com/wiki/SPAS-12). Both of these shotguns are one shot, one kill and have plenty of potential for decimating entire squads with a single clip.
 
 ## Which one?
 
 If you’re using buckshot or flechette, it’s up for debate. The 870MCS does more damage per shot, has a wider cone of fire, pumps more slowly and generally has faster pellet velocity. Both are good choices.
 
-However, according to the stats, if you’re using slug rounds (read on, and I will recommend them over the other ammo types), [the SPAS is the way to go](http://symthic.com/charts.php?class=7&sort=Class&adsc=ASC&attc=None). When using slugs, all of these differences excluding the pump time disappear.
+However, according to the stats, if you’re using slug rounds (read on, and I will recommend them over the other ammo types), [the SPAS is the way to go](https://symthic.com/charts.php?class=7&sort=Class&adsc=ASC&attc=None). When using slugs, all of these differences excluding the pump time disappear.
 
 The slug is an ammunition type that means the shotgun fires a single bullet rather than 11 or 12 pellets. I.e. it is pretty much all or nothing. Since the 870MCS and the SPAS have identical stats other than the pump speed when using slugs, it makes sense to take the shotgun with the fastest pump time.
 
@@ -39,7 +39,7 @@ A very brief summary.
 **tl;dr summary:**
 Buckshot and Flechette are a lot more forgiving, but have reduced versatility. Slug is versatile, but has no spread, so aim and timing is paramount. The first two ammo types are like using a hammer. The slug is like a surgical instrument. I’d recommend using buckshot and flechette as training wheels, but progress to slug as soon as you’re able.
 
-Check out LevelCap’s youtube [shotgun ammo video](http://www.youtube.com/watch?v=0amPLAAnjIg&feature=g-u-u) if you want to know more about ammo types. I’m just going to focus on slug, as I believe it to be the best & most versatile ammo to use once you’re up to speed.
+Check out LevelCap’s youtube [shotgun ammo video](https://www.youtube.com/watch?v=0amPLAAnjIg&feature=g-u-u) if you want to know more about ammo types. I’m just going to focus on slug, as I believe it to be the best & most versatile ammo to use once you’re up to speed.
 
 ## Slugs ain’t easy
 
