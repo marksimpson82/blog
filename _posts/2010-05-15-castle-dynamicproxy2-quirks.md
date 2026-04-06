@@ -40,11 +40,43 @@ The most salient point is #2. I'll elaborate.
 
 Say you have an interface called IBoxer like this:
 
-<img class="alignnone" src="images/iboxer.png" alt="" width="213" height="124" /> 
+```c#
+public interface IBoxer
+{
+  void StraightLeft();
+  void StraightRight();
+  void OneTwo();
+  void VictoryCry();
+}
+```
 
 ... and you implement it like this:
 
-<img class="alignnone" src="images/rocky.png" alt="" width="473" height="384" /> 
+```c#
+public class Rocky : IBoxer
+{
+  public void StraightLeft() 
+  { 
+    Console.WriteLine("Throwing a left"); 
+  }
+  
+  public void StraightRight()
+  {
+    Console.WriteLine("Throwing a right"); 
+  }
+
+  public void OneTwo()
+  {
+    StraightLeft();
+    StraightRight();
+  }
+
+  public void VictoryCry()
+  {
+    Console.WriteLine("AAAAAADRIIAAAAAAAAN!);
+  }
+}
+```
 
 If you then turn to aspect oriented programming and decide to gather statistics on punches thrown for the duration of a boxing round, it's a reasonable assumption that you can simply proxy the IBoxer interface and intercept only the StraightLeft/StraightRight punch calls, tally them up and report the metrics (ignore whether this is a good idea to be doing this, it's a contrived example). On the face of it this isn't a horrible idea. However, it won't work as expected.
 

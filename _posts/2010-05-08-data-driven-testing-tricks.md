@@ -43,7 +43,31 @@ other tools do not flag it as unused).
 You can then fill up and yield individual TestCaseData instances in the same 
 fashion as before. Once again, NUnit does the mapping and the heavy lifting for us.
 
-<img class="alignnone" src="images/passing_more_complicated_types.png" alt="" width="604" height="379" /> 
+```c#
+[TestFixture]
+public class NonIntrinsicDataDrivenTests
+{
+  public IEnumerable<TestCaseData> Hoorah_Data
+  { 
+    get
+    {
+      // yield anything we want, really
+      yield return new TestCaseData(new StringBuilder("starting string"), 15);
+      yield return new TestCaseData(new StringBuilder("another string"), 14);
+    }
+  }
+
+  [TestCaseSource("Hoorah_Data)]
+  public void SomeArbitraryTest(StringBuilder sb, int expectedLength)
+  {
+    // Arrange & Act
+    int length = sb.ToString().Length;
+
+    // Assert
+    Assert.That(length, Is.EqualTo(expectedLength))
+  }
+}
+```
 
 If you do not require any of the fancy SetDescription, ExpectedException etc. stuff associated with the TestCaseData type, you can skip one piece of ceremony by simply yielding your own arbitrary type instead (i.e. change the IEnumerable<TestCaseData> to IEnumerable<MyType> and then simply yield return new MyType()).
 
@@ -53,7 +77,35 @@ The simplest case is that you want to vary which methods are called. For example
 
 Here's an example from Stackoverflow that [I answered recently](https://stackoverflow.com/questions/2784685/how-do-i-simplify-these-nunit-tests/2784829#2784829) where the author wanted to call one of three different static methods, each with the same signature and asserts. The solution was to examine the method signature of the call and then use the appropriate Func<> type ([Funcs and Actions are convenience delegates provided by the .NET framework](https://msdn.microsoft.com/en-us/library/018hxwa8.aspx)). It was then easy to parametrise the test by passing in a delegates targeting the appropriate methods.
 
-<img class="alignnone" src="images/passing_delegates.png" alt="" width="584" height="443" /> 
+```c#
+[TestFixture]
+public class SomeTestFixture
+{
+  public IEnumerable<Func<ScriptResource, StartInfo>> TestCases
+  {
+    get
+    {
+      yield return Platform1StartInfo.CreateOneRunning;
+      yield return Platform2StartInfo.CreateOneRunning;
+      yield return Platform3StartInfo.CreateOneRunning;
+    }
+  }
+
+  [TestCaseSource("TestCases")]
+  public void MyDataDrivenTest(Func<ScriptResource, StartInfo> creator)
+  {
+    // Arrange
+    var sr = ScriptResource.Default;
+    var process = creator(sr);
+
+    // Act
+    var result = process.DoSomething();
+
+    // Assert
+    Assert.That(result, Is.GreaterThanOrEqualTo(0));
+  }
+}
+```
 
 ### More advanced applications
 

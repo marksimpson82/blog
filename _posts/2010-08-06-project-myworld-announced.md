@@ -14,6 +14,6 @@ tags:
 ---
 We finally announced our [minature-version-of-real-world-as-a-platform-for-games project](https://playmyworld.com) last week. Image shamelessly nicked from [Luke's blog](https://lukehalliwell.wordpress.com/2010/08/05/project-myworld/):
 
-[<img title="myworld_o2arena_afternoon_001" src="images/2010/08/myworld_o2arena_afternoon_001-300x174.jpg" alt="" width="300" height="174" />](images/2010/08/myworld_o2arena_afternoon_001.jpg)
+![Project MyWorld showing the Millenium Dome]({{ '/assets/images/2010/08/myworld_o2arena_afternoon_001.jpg' | relative_url }})
 
 I've worked on this for over 2 and a half years (in test engineering and software engineering capacities) and learned a hell of a lot during that period. It's not finished yet, but [head on over and check it out](https://playmyworld.com/) :D

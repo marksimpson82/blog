@@ -17,7 +17,7 @@ When you're on Windows, the suck factor is much higher because Windows doesn't n
 ## Option: Use the WXC-50's built-in web app
 Yeah, you can use this to play mp3s and whatnot, but it's borderline unusable.
 
-| ![yamaha_wxc50_oh_dear.jpg](https://defragdev.com/blog/images/2025/12/yamaha_wxc50_oh_dear.jpg) | 
+| ![The WXC-50 web interface is borderline unusable]({{ '/assets/images/2025/12/yamaha_wxc50_oh_dear.jpg' | relative_url }}) | 
 |:--:| 
 | *A decidedly odd interface* |
 

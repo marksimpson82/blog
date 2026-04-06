@@ -20,7 +20,28 @@ Let's take an example; testing Rob Conery's [PagedList implementation](https://b
 
 Here's a quick data-driven test for HasNextPage:
 
-<img class="alignnone" src="https://defragdev.com/blog/images/simple_data_driven.png" alt="" width="689" height="361" /> 
+```c#
+[TestFixture]
+public class SimpleDataDrivenTest
+{
+  [TestCase(1, 1, 0)]
+  [TestCase(1, 2, 0)]
+  [TestCase(4, 2, 1)]
+  [TestCase(10, 10, 0)] // etc
+  public void HashextPage_WhenNextPageDoesNotExist_ReturnsFalse(int itemCount, int pageSize, int pageIndex)
+  {
+    var pagedList = CreatePagedList(itemCount, pageSize, pageIndex);
+    Assert.That(pagedList. HasliextPage, Is.False,
+      "shouldn't be a next page, as there are not enough items");
+
+}
+  private IPagedList CreatePagedList(int itemCount, int pageSize, int pageIndex)
+  {
+  // imagine this creates a new instance of Pagedlist<T> with the above arguments as inputs
+  throw new NotImplementedException();
+  }
+}
+```
 
 As you can see, the method itself is readable, but the parametrised values fed in via the [TestCase] attribute are not. It's really hard to keep everything in your head and remember what each number maps to in the function, especially when the method parameter types are all identical. If you have a list of 20 [TestCase] attributes, you start wondering what's for your tea and forget that the second value is the (checks image) page size. Mince. Mince for tea.
 
@@ -30,12 +51,52 @@ Hmm, if only we could those TestCases more readable; something like object initi
 
 My friend Hughel helped me come up with this one and it works quite well. Simply subclass the TestCaseAttribute class and add your own properties to represent the test parameters. It gets a little bit hairy when you have to access the Arguments array directly (especially since Attributes can be _weird_), but in practice, it works fine. In most of the tests, we're only interested in parametrising three things, so it's simple to add them as properties.
 
-<img class="alignnone" src="https://defragdev.com/blog/images/custom_testcase.png" alt="" width="392" height="407" /> 
+```c#
+public class PageTestCaseAttribute : TestCaseAttribute
+{
+  public PageTestCaseAttribute() : base(0, 0, 0) {}
+  public int ItemCount
+  {
+    get { return (int) Arguments[0]; }
+    set { Arguments[0] = value; }
+  }
+
+  public int PageSize
+  {
+    get { return (int) Arguments[1]; }
+    set { Arguments[1] = value; }
+  }
+
+  public int PageIndex
+  {
+    get { return (int) Arguments[2]; }
+    set { Arguments[2] = value; }
+  }
+}
+```
 
 ### The end result
 
 Finally, we apply these attributes to our data-driven test, significantly improving the readability!
 
-<img class="alignnone" src="https://defragdev.com/blog/images/readable_data_driven.png" alt="" width="567" height="248" /> 
+```c#
+[TestFixture]
+public class ReadableDataDrivenTests
+{
+  [PageTestCase(ItemCount = 1, PageSize = 1, PageIndex = 0)]
+  [PageTestCase(ItemCount = 1, PageSize = 2, PageIndex = 0)]
+  [PageTestCase(ItemCount = 4, PageSize = 2, PageIndex = 1)]
+  [PageTestCase(ItemCount = 10, PageSize = 10, PageIndex = 0)]
+  public void HasNextPage_WhenNextPageDoesNotExist_ReturnsFalse(
+    int itemCount, int pageSize, int pageIndex)
+    {
+      var pagedList = CreatePageList(itemCount, pageSize, pageIndex);
 
-I would hasten to add that I don't recommend using this approach willy-nilly - only when you have a large amount of tests that are parametrised by the same data types, causing the test cases to become hard to follow. I've used the [TestCaseSource] attribute and the [TestCase] attribute a lot in the past and most of the time it's not a problem.
+      Assert.That(pagedList.HasNextPage, Is.False,
+        "shouldn't be a next page, as there are not enough items");
+    }
+  )
+}
+```
+
+I would hasten to add that I don't recommend using this approach willy-nilly - only when you have a large amount of tests that are parametrised by the same data types, causing the test cases to become hard to follow. I've used the `[TestCaseSource]` attribute and the `[TestCase]` attribute a lot in the past and most of the time it's not a problem.

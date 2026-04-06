@@ -31,33 +31,15 @@ Unfortunately, tools were really ... rudimentary back then. These days pretty mu
 
 Back when tools weren't so great, to find leaks in a level, I used the big block method. It's a very simple technique. Say we have a rubbish, leaky level like so (top down view):
 
-<div style="width: 363px" class="wp-caption alignnone">
-  <img title="Big block" src="https://defragdev.com/blog/images/bigBlockProblem.png" alt="A level, yesterday." width="353" height="289" />
-  
-  <p class="wp-caption-text">
-    A leaky level, yesterday.
-  </p>
-</div>
+**(broken link: image showed a map in the level editor)**
 
 If one of those connections between walls/floors/ceilings/whatever is not tight, it will leak. We cannot see the site of the leak using our eyes. We cannot be sure where the leak is by simply scrutinising each wall joint or entity. What we can do instead, though, is place a big block over ~50% of the level.
 
-<div style="width: 363px" class="wp-caption alignnone">
-  <img title="50% of the map is now covered" src="https://defragdev.com/blog/images/bigBlockStep1.png" alt="50% of the map is now covered" width="353" height="289" />
-  
-  <p class="wp-caption-text">
-    The red area is a newly created solid block
-  </p>
-</div>
+**(broken link: image showed a solid block being placed over half the map area)**
 
 If we compile and find that the leak has disappeared, we know that the leak was definitely in the area that is now covered by the block. On the other hand, if the leak is still present, it's in the other 50% of the level that remains uncovered. To hone in on the problem area, all we have to do is recursively add blocks to the problem area:
 
-<div style="width: 363px" class="wp-caption alignnone">
-  <img title="Recursively adding blocks half the size of the previous block..." src="https://defragdev.com/blog/images/bigBlockStep2.png" alt="Recursively adding blocks half the size of the previous block..." width="353" height="289" />
-  
-  <p class="wp-caption-text">
-    A smaller block has been added
-  </p>
-</div>
+**(broken link: image showed an image with a block of half the previous one)**
 
 We then recompile and check to see if the leak has disappeared as before. Notice that in **two** steps, we've narrowed down the problem's location to an area of **25%** of the original size! The next step will yield a further 12.5% reduction. We quickly hone in on the problem.
 
