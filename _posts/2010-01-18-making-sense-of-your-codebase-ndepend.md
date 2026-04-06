@@ -16,7 +16,7 @@ I was given an NDepend license to play around with (thanks to Patrick) and said 
 ### What is NDepend?
 [NDepend](https://www.ndepend.com/Features.aspx) is a piece of software that allows developers to analyse and visualise their code in many interesting ways. Here's an ancient relic from my hard drive, revived in NDepend:
 
-![NDepend application screenshot]({{ '/assets/images/whole_app.png' | relative_url }})
+![NDepend application screenshot]({{ '/assets/images/2010/01/whole_app.png' | relative_url }})
 
 As you can see, there's quite a lot of functionality included. NDepend includes features that allow you to trawl your code for quality problems, identify architectural constraints that have been breached, find untested, complicated code or pinpoint changes between builds and much more. This post will merely scratch the surface, but will hopefully provide some decent information on what NDepend can do for you and your team.
 
@@ -39,7 +39,7 @@ At the time of writing, 82 separate metrics are available; the metrics are group
 
 To write a query, you just tap it into the query editor:
 
-![NDepend Query Editor]({{ '/assets/images/query_editor.png' | relative_url }})
+![NDepend Query Editor]({{ '/assets/images/2010/01/query_editor.png' | relative_url }})
 
 ### Don't be Paralysed by Choice
 While it is a hugely powerful program, I found it overwhelming to begin with. The default analysis of your code will result in a verbose report including every metric under the sun; some of these are unarguably very useful (Cyclomatic complexity, IL nesting depth) whereas others have a more narrow purpose (suggesting which attributes should be sealed, boxing and unboxing warnings and so on).
