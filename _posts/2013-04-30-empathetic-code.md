@@ -21,7 +21,7 @@ I’ve worked with some terrible libraries in the past and the worst ones all ha
 
 On the other hand, I’ve occasionally picked up libraries/frameworks that make an extra effort to guide you along the correct path. The author of the code understood where users were likely to stumble.
 
-[<img title="image" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; border-left: 0px; display: inline; padding-right: 0px" alt="image" src="https://defragdev.com/blog/images/2013/04/image_thumb.png" width="244" height="190" border="0" />](https://defragdev.com/blog/images/2013/04/image.png)
+![Two people with minds connected]({{ '/assets/images/2013/04/empathy.png' | relative_url }})
 
 It doesn’t matter whether it’s a carefully designed API you’re crafting for external use or internal code that will only be viewed and modified by engineers inside the company, you can always do something extra, especially if it’s something that’s already tripped you up.
 
@@ -66,6 +66,7 @@ The user wants to run the colour task.
 ```bash
 run.exe colours
 ```
+
 ```
 Output:
 
@@ -105,7 +106,7 @@ If it is possible to collect _all_ of the errors before failing (or at least all
 
 Here’s what you need to collect errors (pseudo C# – close enough)
 
-```csharp
+```c#
 public class ErrorMessageBuilder  
 {  
   private StringBuilder m_errors = new StringBuilder()
