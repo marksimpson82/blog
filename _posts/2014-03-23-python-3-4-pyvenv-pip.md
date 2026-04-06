@@ -48,7 +48,7 @@ At this point, you can start installing stuff with pip!
 pip install beautifulsoup4
 ```
 
-![Installing beautifulsoup with pip]({{ '/assets/images/2014/03/image.png' | relative_url }})
+![Installing beautifulsoup with pip]({{ '/assets/images/2014/03/pip_install.png' | relative_url }})
 
 Not bad. Much simpler than in olden times.
 
@@ -58,10 +58,10 @@ Not bad. Much simpler than in olden times.
 
 I’m running v3.0 of PyCharm at home, so I can’t speak for earlier versions. To associate a virtual environment with your project, click File –> Settings, then find “Python Interpreters” under “Project Interpreter”.
 
-![pycharm env editor, showing executables]({{ '/assets/images/2014/03/image1.png' | relative_url }})
+![pycharm env editor, showing executables]({{ '/assets/images/2014/03/pycharm_interpreter.png' | relative_url }})
 
 Click the + at the top right hand pane of the window, then select “Local”. Navigate to the virtual env directory you just created, then find the Python executable under the scripts dir.
 
-![pycharm, selecting the interpreter]({{ '/assets/images/2014/03/image2.png' | relative_url }})
+![pycharm, selecting the interpreter]({{ '/assets/images/2014/03/pycharm_interpreter2.png' | relative_url }})
 
 You can now associate this virtual environment with your project. PyCharm automatically switches it up when you load your projects. No more cross contamination of packages!

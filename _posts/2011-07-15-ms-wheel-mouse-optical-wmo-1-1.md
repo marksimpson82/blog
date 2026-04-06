@@ -33,7 +33,7 @@ _*may not be true_
 I’ve been gleefully using MX5xx series mice for the best part of a decade. The MX518 is a fine, spangly beast. It looks a bit like this:
 
 **An MX518, yesterday.**
-![MX518]({{ '/assets/images/2011/07/image.png' | relative_url }})
+![Logitech MX518 mouse]({{ '/assets/images/2011/07/mx518.png' | relative_url }})
 
 However, I recently stumbled across the ‘feature’ the MX518 has that’s commonly referred to as “angle snapping”, “prediction” or “correction”. What is angle snapping? Well, at the hardware or driver level, if your movements stay under some arbitrary threshold, the mouse input is subtly altered to keep your ‘lines’ straight.
 
@@ -108,7 +108,7 @@ After drinking in the details posted in various nerd forums, I plumped for the W
 As far as I can tell, there’s no problem with stock or versions. If you get one that was manufactured in the last 90 years, it ought to be a version with the sensor that’s good for gaming.
 
 **The WMO 1.1**
-![MX518]({{ '/assets/images/2011/07/image1.png' | relative_url }})
+![MX518]({{ '/assets/images/2011/07/wmo.png' | relative_url }})
 
 My first port of call was to uninstall my old logitech setpoint mouse drivers. I then plugged in the new mouse and cancelled the intellipoint driver installation process. There’s no need to install drivers for this mouse, so it’s one less thing to worry about.
 
@@ -121,21 +121,19 @@ Overclocking the USB polling rate increases the ‘perfect control’ region fro
 A quick test showed everything was in order.
 
 ## Desk and Mousepad
-
 As an avid PC headbanger, I’ve always favoured large desks. In fact, I don’t understand why many PC owners fret over mice and monitors but often overlook the cornerstone of the PC experience: The desk and the chair.
 
-I’m using a [Influx Curva 1200 Right-Handed Wave Desk](https://www.ukofficedirect.co.uk/influx-curva-1200-desk-wave-prd_154850.aspx) coupled with a [Steelseries QcK+](https://shop.steelseries.com/index.php/surfaces/steelseries-qck-plus.html) mouse pad. Both are fantastic products. The Curva is solidly constructed, is a perfect height and affords me plenty of room.
+I’m using a [Influx Curva 1200 Right-Handed Wave Desk](https://www.ukofficedirect.co.uk/influx-curva-1200-desk-wave-prd_154850.aspx) coupled with a [Steelseries QcK+](https://shop.steelseries.com/index.php/surfaces/steelseries-qck-plus.html) mouse pad. Both are fantastic products. The Curva is solidly constructed, is a perfect height and gives me plenty of room.
 
 I’ve got a 24” + 20” monitor dual screen setup, and there’s still room for a 45cm mouse mat and a few other bits and pieces. At £150 it’s not a budget buy, but given how much I use my PC, I think it’s well worth it.
 
-[<img style="background-image: none; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; padding-top: 0px; border: 0px;" title="image" src="https://defragdev.com/blog/images/2011/07/image_thumb2.png" alt="image" width="244" height="244" border="0" />](https://defragdev.com/blog/images/2011/07/image2.png) + [<img style="background-image: none; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; padding-top: 0px; border: 0px;" title="image" src="https://defragdev.com/blog/images/2011/07/image_thumb3.png" alt="image" width="244" height="244" border="0" />](https://defragdev.com/blog/images/2011/07/image3.png)
+![Steelseries QcK+]({{ '/assets/images/2011/07/steelseries_qck.png' | relative_url }})
 
 Regarding the size of the mousepad: I used to think anything over 30 cm was overkill, but having a 45 cm pad makes a large difference. It covers such a large part of my desk that I no longer have to worry about positioning the pad – it’s _everywhere_, so I can get comfy. A decade ago, my TFC clanmates used to constantly mock me for [my OCD style mouse mat positioning](https://defrag.urbanup.com/87179). The words still ring in my ears. I cried sometimes, but no longer.
 
 Compared to the standard size QcK, it also affords me the luxury of using a lower mouse sensitivity.
 
 ## Sensitivity
-
 I’m an arm player in that I use my forearm to move the mouse as opposed to my wrist/fingers. I used to be a high sensitivity wrist/fingers player when I had a small desk. I prefer using my arm; it’s more precise and I suffer from fewer PC-related mousing strains.
 
 One sweep across the entire pad turns about 400 degrees (so probably about ~40cm for a 360 degree turn). Because of its weight, this was slightly cumbersome with the MX518. The WMO is much lighter and glides easily.
@@ -145,7 +143,6 @@ Generally speaking, the lower your mouse sensitivity, the more precise you can b
 Also, once you’re familiar with a game, the need to sharply turn around often abates as you react less and predict more.
 
 ## Testing and Conclusion
-
 I’m impressed with the WMO. For £14.99 and a bit of tinkering, it’s a great mouse and, with my settings, the tracking seems to be borderline flawless.
 
 It’s definitely not as grippy as the MX5XX series so if you’re a sweaty git, you may find it becomes slippery due to the lack of a rubbery finish. Thankfully, I don’t sweat at all when sitting at the PC so this is not an issue for me.
@@ -159,5 +156,4 @@ The only real downsides I’ve encountered were the phantom clicking mouse wheel
 Yes, I am a nerd.
 
 ## Additional References
-
 [Fragtality’s epic gaming mice guide](https://forums.majorleaguegaming.com/topic/165005-fragtalitys-epic-gaming-mice-guide-for-pc-shooting-games/)
