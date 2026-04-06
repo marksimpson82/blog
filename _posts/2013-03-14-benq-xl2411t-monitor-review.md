@@ -14,10 +14,9 @@ tags:
 Before I review the Benq, it’s worth giving a bit of background about the monitors I’ve owned up till now.
 
 ## Dell P1110
+![Dell P1110 21" CRT monitor]({{ '/assets/images/2013/03/dell_p1110.png' | relative_url }})
 
-[<img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px; border-top-width: 0px" alt="image" src="https://defragdev.com/blog/images/2013/03/image_thumb.png" width="236" height="244" border="0" />](https://defragdev.com/blog/images/2013/03/image.png)
-
-My first ‘serious’ bit of monitor kit was a [Dell P1110 21” Trintron ‘Flat Screen’ CRT](https://reviews.cnet.com/crt-monitors/dell-ultrascan-p1110-crt/4505-3175_7-30590653.html) (it was flat screen in the sense that it wasn’t a fishbowl and the viewable area was only 19.8” – how the advertisers got away with this for so long always mystified me). The P1110 could easily pump out 100hz and beyond at anything below 1600×1200. It was circa ~2002 and I was a poor student, so I picked it up refurbished for a couple of hundred quid, half-expecting to get ripped off or scammed.
+My first "serious" bit of monitor kit was a [Dell P1110 21” Trintron ‘Flat Screen’ CRT](https://reviews.cnet.com/crt-monitors/dell-ultrascan-p1110-crt/4505-3175_7-30590653.html) (it was flat screen in the sense that it wasn’t a fishbowl and the viewable area was only 19.8” – how the advertisers got away with this for so long always mystified me). The P1110 could easily pump out 100hz and beyond at anything below 1600×1200. It was circa ~2002 and I was a poor student, so I picked it up refurbished for a couple of hundred quid, half-expecting to get ripped off or scammed.
 
 Best purchase **ever**.
 
@@ -28,24 +27,22 @@ Anyway, following the natural order of things, my CRT gave up on me about 6 year
 Oh dear.
 
 ## Enter the TFT – Viewsonic VP201B & L2442WD-VA
-
 My first LCD monitor was a Viewsonic VP201B featuring a (by today’s standards) very old VA-based panel. I was still a skint student, so I got it second hand.
 
-[<img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px; border-top-width: 0px" alt="image" src="https://defragdev.com/blog/images/2013/03/image_thumb1.png" width="244" height="184" border="0" />](https://defragdev.com/blog/images/2013/03/image1.png)
+![Viewsonic VP201B 20" TFT monitor]({{ '/assets/images/2013/03/viewsonic_vp201b.png' | relative_url }})
 
 To say I was underwhelmed would be generous - gaming was like a bad joke. The screen was awash with smeared colours and black trails. The colours were decent and it used less power compared to my old CRT, but that’s the best I could say for it. Failure. It was akin to being drunk and having cataracts after possessing 20/20 vision.
 
-I then upgraded to a [cheapo 24&" LCD](https://www.techradar.com/reviews/pc-mac/monitors-and-projectors/monitors/ocuk-value-l2442wd-va-430316/review) (well, it was £210) that had a decent VA panel, pretty much no input lag and half-decent pixel response.
+I then upgraded to a [cheapo 24" LCD](https://www.techradar.com/reviews/pc-mac/monitors-and-projectors/monitors/ocuk-value-l2442wd-va-430316/review) (well, it was £210) that had a decent VA panel, pretty much no input lag and half-decent pixel response.
 
-[<img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px; border-top-width: 0px" alt="image" src="https://defragdev.com/blog/images/2013/03/image_thumb2.png" width="204" height="176" border="0" />](https://defragdev.com/blog/images/2013/03/image2.png)
+![OCUK L2442WD-VA 24" TFT monitor]({{ '/assets/images/2013/03/l2442wd.png' | relative_url }})
 
 It was an order of magnitude better than the first LCD I bought and, with the memory of my CRT fading, I was relatively satisfied when playing FPS games. It was _acceptable_ and not much more.
 
 I've always wanted to buy a better monitor and was tempted when the samsung 120hz displays started hitting the market but, there was always something holding me back - be it input lag, ghosting, colours, price etc. I was tempted by the precursor to the XL2411T but didn't purchase it for some reason. This time I decided to pull the trigger.
 
 ## Benq XL2411T
-
-[<img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px; border-top-width: 0px" alt="image" src="https://defragdev.com/blog/images/2013/03/image_thumb3.png" width="244" height="190" border="0" />](https://defragdev.com/blog/images/2013/03/image3.png)
+![Benq XL2411T 24" 144hz TFT Monitor]({{ '/assets/images/2013/03/benq_xl2411t.png' | relative_url }})
 
 [The XL2411T boasts 144hz, rapid pixel response and pretty much no input lag](https://www.google.co.uk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&cad=rja&ved=0CEIQFjAC&url=http%3A%2F%2Fpcmonitors.info%2Freviews%2Fbenq-xl2411t&ei=VSdBUaKYMcGw0AWC1YHIBA&usg=AFQjCNGvIPEjHoWcjWWQ6znZOBGahbnbZQ&bvm=bv.43287494,d.d2k). The linked review measures input lag at 2ms – most LCD monitors suffer from input lag in the range of 10ms to (in really bad cases) 60ms. 2ms is negligible; you’ll struggle to find better.
 
@@ -77,4 +74,4 @@ I was messing about trying out new guns in BF3 and still managed a 4 to 5 KDR. I
 
 **Update**: I just tried Quake Live @ 120hz. It wasn't as good as I was expecting it to be. I play QL with everything set to low (flat-shaded walls etc) and for whatever reason, rotating the camera still causes noticeable motion blur. It’s hard to describe, but it’s definitely there. I’ll try the Lightboost hack at some point – hopefully that will improve matters.
 
-[<img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" alt="image" src="https://defragdev.com/blog/images/2013/03/image_thumb4.png" width="810" height="352" border="0" />](https://defragdev.com/blog/images/2013/03/image4.png)
+![BF3 scores trending upwards]({{ '/assets/images/2013/03/bf3_scores.png' | relative_url }})
