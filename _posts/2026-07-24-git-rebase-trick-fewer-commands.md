@@ -1,5 +1,5 @@
 ---
-title: "git trick -- git fetch origin <src>:<dest>"
+title: "git trick -- git fetch origin main:main"
 date: 2026-07-24T00:00:00+00:00
 author: Mark Simpson
 layout: single
