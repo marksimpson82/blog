@@ -9,8 +9,6 @@ tags:
   - jj
 ---
 
-**Note**: This blog post was hand-written -- I am not a robot 🤖🔫.
-
 ## git has some rough edges
 Git has been around a long time (I've been using it since around 2011, where'd the time go?) and doesn't seem to be going anywhere. The main advantage with git is the flexibility -- if you can think of doing something, you probably _can_ do it. The downside is that its cli commands often lack comfort and consistency (and I'm saying that as someone who has a good grasp of its internals and is often the friendly "please help me fix my git disaster" guy).
 
@@ -133,3 +131,5 @@ git history split 1660b81 -- '*.md'
 Git is taking a leaf out of [`jj` aka `jujutsu`](https://docs.jj-vcs.dev/latest/)'s book by upgrading its history editing ergonomics. This is a positive for users regardless of which tool 'wins'.
 
  **Aside**: I've been playing with `jj` at home, and I'm quietly impressed. I'll write more on that shortly.
+
+**Note**: This blog post was hand-written -- I am not a robot 🤖🔫.

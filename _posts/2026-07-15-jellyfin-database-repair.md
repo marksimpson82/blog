@@ -10,8 +10,6 @@ tags:
   - synology
 ---
 
-**Note**: This blog post was hand-written -- I am not a robot 🤖🔫. I used Gemini to get direction on running the `sqlite3` command, though.
-
 I recently encountered a problem where my Jellyfin media server stopped processing / displaying new media. For my particular case, it was a simple fix. 
 
 At the time of writing, my Jellyfin version was: `10.11.11`
@@ -59,3 +57,5 @@ If you're running an older version, you may have multiple database files to cont
 
 ## I _really_ like Jellyfin
 This was the first issue I've run into after a few years of Jellyfin bliss. Kudos to the maintainers.
+
+**Note**: This blog post was hand-written -- I am not a robot 🤖🔫. I used Gemini to get direction on running the `sqlite3` command, though.
