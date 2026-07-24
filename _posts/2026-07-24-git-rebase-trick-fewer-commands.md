@@ -18,7 +18,7 @@ A decent percentage of git users know what rebase does. In its simplest form, it
 We branched off `main` a while back (commit `m3` to be precise), but after fetching the latest version of `main`, we can see new commits were made: `[m4, m5]`. 
 ```
 m1  m2  m3  m4  m5
--o---o---o---o---o branch: main
+o---o---o---o---o branch: main
          \
           a1  a2
           o---o branch: a
@@ -28,10 +28,10 @@ We want to update our branch `a` (with commits `[a1, a2]`) so that it's branched
 
 ```
 m1  m2  m3  m4  m5
--o---o---o---o---o branch: main
-                  \
-                   a1' a2'
-                   o---o branch: a
+o---o---o---o---o branch: main
+                 \
+                  a1' a2'
+                  o---o branch: a
 ```
 **Note**: The commits `[a1', a2']` (pronounced a1 prime, a2 prime) no longer have the same commit hashes, even if the underlying change content is identical -- a commit hash is calculated using the parent commit(s), message, file contents and more. The parent commit has changed, so the hash has too.
 
