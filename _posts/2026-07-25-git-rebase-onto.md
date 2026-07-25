@@ -1,5 +1,5 @@
 ---
-title: "git-rebase-onto"
+title: "git rebase --onto"
 date: 2026-07-25T00:00:00+00:00
 author: Mark Simpson
 layout: single
