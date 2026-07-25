@@ -10,6 +10,11 @@ bundle exec jekyll serve
 ```
 
 ## Cheat sheet
+### Internal blog link
+```md
+[text goes here]({% post_url 2009-05-11-testable-code-happens-to-be-better-designed-code %})
+```
+
 ### Include image via markdown (will find dead links), no thumbnail
 ```md
 ![alt text]({{ '/assets/images/YYYY/MM/some_image.png' | relative_url }})
