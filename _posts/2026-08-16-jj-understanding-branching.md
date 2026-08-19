@@ -57,7 +57,7 @@ Author: Mark Simpson
 ```
 
 In git technical land, a branch is little more than a pointer to a commit. When you create a branch, switch to it and create a commit:
-1. A new commit node is appended to the DAG
+1. A new commit node is appended to the [Directed Acyclic Graph (DAG)](https://en.wikipedia.org/wiki/Directed_acyclic_graph)
 1. The new node's parent pointer is linked to the previous commit 
 1. The `.git/refs/heads/<$branch_name>` file is automatically updated with the tip's commit hash*
 
